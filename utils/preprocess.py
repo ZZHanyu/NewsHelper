@@ -24,39 +24,49 @@ class charactors_hander:
     
     def display_elements(self):
         return self._raw_str
+    
+    def _remove_empty_line(self, single_chunk):
+        for index, row in single_chunk.iterrows():
+            if pandas.isnull(row['title']) or pandas.isnull(row['text']) or pandas.isnull(row['label']):
+                single_chunk.drop(index, inplace=True)
+            elif type(row['title']) != str or type(row['text']) != str or type(row['label']) != int:
+                single_chunk.drop(index, inplace=True)
+            elif len(row['title']) < 5 or len(row['text']) < 5:
+                single_chunk.drop(index, inplace=True)
+        return single_chunk
 
     def run(self):
         # try:
-        for chunk in tqdm(self._meta_data, desc="Layer1: Data Preprocess"):
+        for chunk in tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True ):
             # Step1: check whether empty
                 # if a blank dectected, then delete this line
             # self._remove_empty(chunk, 'title', 'text', 'label')
 
             # STEP 1: Remove empty line (Remove dirty data)
-            chunk = chunk[(chunk['title'].notnull()) & (chunk['title'].dtypes == object)]
-            
-            chunk = chunk[(chunk['text'].apply(lambda x: True if (x != None) & (type(x) == str) else False))]
-            chunk = chunk[(chunk['label'].notnull()) & (chunk['label'].dtypes == int)]
+            chunk = self._remove_empty_line(single_chunk=chunk)
+            # chunk = chunk[(chunk['title'].notnull()) & (chunk['title'].dtypes == object)]
+            # chunk = chunk[(chunk['text'].apply(lambda x: True if (x != None) & (type(x) == str) else False))]
+            # chunk = chunk[(chunk['label'].notnull()) & (chunk['label'].dtypes == int)]
 
-            for index, row in chunk.iterrows():
+            for index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
                 #print(f"index = {index}\n context = {row}, \ntitle = {row['title']}\n type = {type(row['title'])},\n length={len(row['title'])} \n")
                             
                 # STEP 2: Lower all charactors in string
                 row['title'] = row['title'].lower()
                 row['text'] = row['text'].lower()
 
-                print(f"{len(row['text'])}\n")
+                # print(f"{len(row['text'])}\n")
                 
                 # split
                 row['title'] = row['title'].split()
                 row['text'] = row['text'].split()
 
                 # tokenizer
-                print(f"{row['text']} {len(row['text'])} {type(row['text'])}\n")
+                # print(f"{row['text']} {len(row['text'])} {type(row['text'])}\n")
                 encoder_title = self.tokenizer(row['title'], padding=True, return_tensors='pt')
                 encoder_text = self.tokenizer(row['text'], padding=True,  return_tensors='pt')
-                #print(f"token result = title = {encoder_title}\n text = {encoder_text}\n\n")
-                #time.sleep(5)
+                # print(f"token result = title = {encoder_title}\n text = {encoder_text}\n\n")
+                # time.sleep(5)
                 self._json_result[index] = (encoder_title, encoder_text, row['label'])
         print(self._json_result)
                 #print(f"**After modify : \t title = {row['title']}, context = {row['text']}, label = {row['label']} \n\n")
