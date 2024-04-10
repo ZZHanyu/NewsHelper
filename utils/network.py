@@ -29,7 +29,8 @@ class trainer():
     
     def _data_reader(self):
         # check files
-        json_path = self.args.result_path + "tokenized" + self.args.date_time
+        
+        json_path = self.args.result_path + "tokenized.json"
         if not os.path.exists(json_path):
             assert 1==2, print(f"ERROR! The JSON does NOT exists!\n")
         else:

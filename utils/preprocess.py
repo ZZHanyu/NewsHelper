@@ -50,16 +50,32 @@ class charactors_hander():
     def _dataset_divder(self):
         pass
 
-    def _save_to_file(self):
+    def _save_to_file(self, count_num):
         # current_time = datetime.now()
         # formatted_time = current_time.strftime("%Y_%m_%d_%H")
-        with open(self.args.result_path + "tokenized" + self.args.date_time, 'a+') as json_file:
+        with open(self.args.result_path + "tokenized" + {str(count_num)} + ".json", 'a+') as json_file:
             json.dump(self._json_result, json_file, sort_keys=True, indent=4)
 
+    def _file_exist_checker(self, chunk_idx) -> bool:
+        if not os.path.exists(self.args.result_path + "tokenized{}.json".format(chunk_idx)):
+            return False
+        else:
+            return True
+
+
+
+
     def run(self):
-        json_path = self.args.result_path + "tokenized" + self.args.date_time
+
+            
+
         if not os.path.exists(json_path):
-            for chunk in tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True ):
+            for index, chunk in enumerate(tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True)):
+                # Check wether specifc file number exist:
+                if self._file_exist_checker(index):
+                    print(f"file tokenized{index} already existed!\n")
+                    continue
+                
                 # Step1: check whether empty
                     # if a blank dectected, then delete this line
                 # self._remove_empty(chunk, 'title', 'text', 'label')
@@ -98,12 +114,13 @@ class charactors_hander():
                     # L2 normlization: (NO NEED)
                     # encoder_text = self._normalize(encoder_text)
                     # print(f"\n\n ********** After norm2, text = {encoder_text} \nSize text = {encoder_text.size()} ")
-                    # Need to solve : High memory usage!
+
                     
+                    # Need to solve : High memory usage!
                     # Memory Saver
-                    if index % 1000 == 0:
+                    if index % 1000 == 0 and index//1000 != 0:
                         print(f"\n **** Length = {len(self._json_result)} \n ")
-                        self._save_to_file()
+                        self._save_to_file(count_num=index//1000)
                         self._json_result = {} # release memory
                         self._json_result[index] = (encoder_text['input_ids'].numpy().tolist(), row['label'])
                     else:
@@ -111,8 +128,9 @@ class charactors_hander():
                     # time.sleep(5)
 
             print(self._json_result)
+
             try:
-                self._save_to_file()
+                self._save_to_file(count_num=index//1000)
                 print(f"\nSave to json file succeed!\n")
             except Exception as e:
                 print(f"\nERROR! save file failed, {e}")
