@@ -60,7 +60,6 @@ class main:
     def forward(self):
         self._dataloader()
         self._data_preprocess()
-        # self._lstm_net()
         lstmNet = network.trainer(main_args=args)
         lstmNet.start()
 
@@ -72,7 +71,7 @@ class main:
 parser = argparse.ArgumentParser(description="Parameters for Classifier")
 parser.add_argument("--dataset_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/data/", help="the path of your dataset")
 parser.add_argument("--dataset_name", type=str, default='fake-news-classification', help="the dataset name from kaggle")
-parser.add_argument("--chunk_size", type=int, default=10000, help="control how many lines read once")
+parser.add_argument("--chunk_size", type=int, default=500, help="control how many lines read once")
 parser.add_argument("--max_epochs", type=int, default=10000, help="epochs of training")
 parser.add_argument("--train_persentage", type=float, default=0.8, help="dataset persentage used for training")
 parser.add_argument("--result_path", type=str, default="result/", help="result output destnation file")
