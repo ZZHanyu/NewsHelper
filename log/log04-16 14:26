@@ -1,0 +1,319 @@
+INFO:root:
+ ======== Start Log Recording :04-16 14:26 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
+
+INFO:root:
+ ** Round 0 : Batch size = 97 , avg loss = 0.2030245053508984
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.00016441091429442167 -->grad_value: -0.1036619320511818 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 7.912487490102649e-05 -->grad_value: 5.884376150788739e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -7.418275345116854e-06 -->grad_value: -0.0001659174740780145 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0040543293580412865 -->grad_value: -0.0001659174740780145 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 1.7240759916603565e-05 -->grad_value: -0.06693869829177856 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 5.477233207784593e-05 -->grad_value: -1.6338624391210033e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.001020701602101326 -->grad_value: -8.416386117460206e-05 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.002920385915786028 -->grad_value: -8.416386117460206e-05 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00016584023251198232 -->grad_value: -0.0005682244664058089 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 6.23499508947134e-05 -->grad_value: -0.000365560146747157 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.004304530564695597 -->grad_value: 0.03656046837568283 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.001454426208510995 -->grad_value: 0.03656046837568283 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 7.3994669946841896e-06 -->grad_value: 2.006931754294783e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.001161447842605412 -->grad_value: -0.0019349753856658936 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight 0.00024446274619549513 -->grad_value: -0.0019349753856658936 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0013290385250002146 -->grad_value: 0.2596632242202759 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03091917373239994 -->grad_value: -94.13308715820312 
+
+INFO:root:
+ ** Round 1 : Batch size = 97 , avg loss = 0.039356153940895366
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.00010200944961979985 -->grad_value: 1633825792.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 8.634687401354313e-05 -->grad_value: -258173.421875 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -9.245268302038312e-05 -->grad_value: 4868566.5 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004139360971748829 -->grad_value: 4868566.5 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -7.867789827287197e-05 -->grad_value: 7372101120.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 5.452457116916776e-05 -->grad_value: 52067.54296875 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0008808256243355572 -->grad_value: 16249671.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0030602614860981703 -->grad_value: 16249671.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0001644082076381892 -->grad_value: -106717576.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 7.229347102111205e-05 -->grad_value: -94251352.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.004736826289445162 -->grad_value: 4086383872.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.0018867218168452382 -->grad_value: 4086383872.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 7.841154001653194e-06 -->grad_value: -26440958.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.001440797932446003 -->grad_value: 945270272.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -3.488862421363592e-05 -->grad_value: 945270272.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0012639191700145602 -->grad_value: -28918349824.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03070240654051304 -->grad_value: 2579616235520.0 
+
+INFO:root:
+ ** Round 2 : Batch size = 99 , avg loss = 0.2673159878479165
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 5.0858972826972604e-05 -->grad_value: 1633825792.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00010090513387694955 -->grad_value: -258173.421875 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0002772980951704085 -->grad_value: 4868566.5 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004324205219745636 -->grad_value: 4868566.5 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.00025250916951335967 -->grad_value: 7372101120.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.8117559344973415e-05 -->grad_value: 52067.54296875 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0006178417825140059 -->grad_value: 16249671.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0033232425339519978 -->grad_value: 16249671.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0001634409127291292 -->grad_value: -106717576.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.273523755837232e-05 -->grad_value: -94251352.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.0060196248814463615 -->grad_value: 4086383872.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.0031695186626166105 -->grad_value: 4086383872.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 1.320459705311805e-05 -->grad_value: -26440958.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.0021853195503354073 -->grad_value: 945270272.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007794109405949712 -->grad_value: 945270272.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011669546365737915 -->grad_value: -28918349824.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03419801592826843 -->grad_value: 2579616235520.0 
+
+INFO:root:
+ ** Round 3 : Batch size = 96 , avg loss = 0.5526671398523225
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 5.157024133950472e-05 -->grad_value: -0.0001228097826242447 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00010119038779521361 -->grad_value: -2.248411412608675e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.00027834129286929965 -->grad_value: 3.4247781854901405e-07 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004325247835367918 -->grad_value: 3.4247781854901405e-07 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0002500551054254174 -->grad_value: -0.008286062628030777 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.7837071178946644e-05 -->grad_value: -3.335125242642789e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.000617892830632627 -->grad_value: -4.476601134228986e-08 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.003323192708194256 -->grad_value: -4.476601134228986e-08 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00016268416948150843 -->grad_value: -6.0146039686515e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.304304694524035e-05 -->grad_value: 9.217000069838832e-07 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006039260886609554 -->grad_value: 0.00019246080773882568 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.003189153503626585 -->grad_value: 0.00019246080773882568 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 1.4822282537352294e-05 -->grad_value: 3.380010298315028e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.002196728950366378 -->grad_value: -0.00011145506869070232 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007908202242106199 -->grad_value: -0.00011145506869070232 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011654684785753489 -->grad_value: -0.0011854830663651228 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03425150737166405 -->grad_value: -0.4176606237888336 
+
+INFO:root:
+ ** Round 4 : Batch size = 100 , avg loss = 0.5108531192180089
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 4.8122863518074155e-05 -->grad_value: 0.00021354894852265716 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.0001012563006952405 -->grad_value: -3.1903290675927565e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0002761390642262995 -->grad_value: 3.7438604749695514e-07 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.00432304572314024 -->grad_value: 3.7438604749695514e-07 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0002537606342229992 -->grad_value: -0.006965364329516888 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.743269528262317e-05 -->grad_value: 9.631353492522976e-09 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0006195196183398366 -->grad_value: 1.9980420802312437e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0033215670846402645 -->grad_value: 1.9980420802312437e-06 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00016185051936190575 -->grad_value: -1.3775516890746076e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.304306149715558e-05 -->grad_value: 2.8185322662466206e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006039260886609554 -->grad_value: 0.0006090623210184276 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.003189153503626585 -->grad_value: 0.0006090623210184276 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 1.8561833712738007e-05 -->grad_value: -3.6649043977377005e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.002196728950366378 -->grad_value: -0.0003601298958528787 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007908202242106199 -->grad_value: -0.0003601298958528787 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011654684785753489 -->grad_value: -0.005865735001862049 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03425150737166405 -->grad_value: -1.381762981414795 
+
+INFO:root:
+ ** Round 5 : Batch size = 97 , avg loss = 0.4234283300975971
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 4.543547402136028e-05 -->grad_value: -0.0009891223162412643 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00010148771980311722 -->grad_value: 5.6033947259948036e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0002758826594799757 -->grad_value: -1.9625256300059846e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004322790540754795 -->grad_value: -1.9625256300059846e-06 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0002552906807977706 -->grad_value: -0.011065761558711529 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.7113011532928795e-05 -->grad_value: -1.6327611263022845e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0006209787679836154 -->grad_value: 2.1993982954882085e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0033201093319803476 -->grad_value: 2.1993982954882085e-06 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0001613581262063235 -->grad_value: -2.7916063118027523e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.304306149715558e-05 -->grad_value: 7.709491001151036e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006039260886609554 -->grad_value: 0.00126176280900836 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.003189153503626585 -->grad_value: 0.00126176280900836 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 2.02674709726125e-05 -->grad_value: 2.761684527285979e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.002196728950366378 -->grad_value: -0.0006343507557176054 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007908202242106199 -->grad_value: -0.0006343507557176054 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011654684785753489 -->grad_value: -0.009516347199678421 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03425150737166405 -->grad_value: -2.4787509441375732 
+
+INFO:root:
+ ** Round 6 : Batch size = 95 , avg loss = 0.45352040991481196
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 4.4668850023299456e-05 -->grad_value: 0.004403126426041126 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00010150668822461739 -->grad_value: -2.5678141923890507e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0002760774805210531 -->grad_value: 5.841556230734568e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004322985652834177 -->grad_value: 5.841556230734568e-06 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.00025484900106675923 -->grad_value: -0.00020920777751598507 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.712058580480516e-05 -->grad_value: -8.119346972534913e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0006214349996298552 -->grad_value: 9.459797638555756e-07 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0033196532167494297 -->grad_value: 9.459797638555756e-07 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0001613890053704381 -->grad_value: -3.62681457772851e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.304306149715558e-05 -->grad_value: 8.799880561127793e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006039260886609554 -->grad_value: 0.001197026576846838 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.003189153503626585 -->grad_value: 0.001197026576846838 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 2.0008956198580563e-05 -->grad_value: 8.022070687729865e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.002196728950366378 -->grad_value: -0.0004854697035625577 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007908202242106199 -->grad_value: -0.0004854697035625577 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011654684785753489 -->grad_value: -0.008385877124965191 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03425150737166405 -->grad_value: -1.9366956949234009 
+
+INFO:root:
+ ** Round 7 : Batch size = 98 , avg loss = 0.5110082269032374
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 4.396197618916631e-05 -->grad_value: 0.0028877127915620804 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00010152665345231071 -->grad_value: -2.2701280499859422e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0002765184617601335 -->grad_value: 3.7637648802046897e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0043234266340732574 -->grad_value: 3.7637648802046897e-06 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.000254080950981006 -->grad_value: -3.531858965288848e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 4.7165121941361576e-05 -->grad_value: -1.037552479488113e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight 0.0006220414070412517 -->grad_value: 1.303499175264733e-06 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0033190478570759296 -->grad_value: 1.303499175264733e-06 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00016141447122208774 -->grad_value: -4.279365748516284e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 9.304306149715558e-05 -->grad_value: 1.114187398343347e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006039260886609554 -->grad_value: 0.0015536281280219555 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.003189153503626585 -->grad_value: 0.0015536281280219555 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 1.9254061044193804e-05 -->grad_value: 1.0532696251175366e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.00044384098146110773 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.002196728950366378 -->grad_value: -0.000670206209179014 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0007908202242106199 -->grad_value: -0.000670206209179014 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0011654684785753489 -->grad_value: -0.009611398912966251 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.03425150737166405 -->grad_value: -2.5808050632476807 
+

@@ -1,0 +1,249 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (base) taotao@ZhyPro14 FYP % python3 classifier.py\
+\
+ Devices selected = mps \
+\
+The tokenizer class you load from this checkpoint is not the same type as the class this function is called from. It may result in unexpected tokenization. \
+The tokenizer class you load from this checkpoint is 'BertTokenizer'. \
+The class this function is called from is 'PreTrainedTokenizerFast'.\
+\
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)\
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>\
+\
+Processing in a single chunk...: 97it [00:00, 206.31it/s]\
+Processing in a single chunk...: 89it [00:00, 197.24it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 0: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:10<00:00,  9.44it/s]\
+Batch No. 0: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:10<00:00, 10.86it/s]\
+ ** Round 0 : Batch size = 97 , avg loss = 51.555449867985914\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0030600284226238728 -->grad_value: 142392000512.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00011710100079653785 -->grad_value: 12903346.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0017259317683055997 -->grad_value: 376263968.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.004277214873582125 -->grad_value: 376263968.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0025493809953331947 -->grad_value: -33446842368.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -9.089601371670142e-05 -->grad_value: 425850.375\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0038837718311697245 -->grad_value: -60767028.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.003512071445584297 -->grad_value: -60767028.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0005735417362302542 -->grad_value: 164105216.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.0017569777555763721 -->grad_value: -398396800.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02940489538013935 -->grad_value: 28947138560.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.03429662436246872 -->grad_value: 28947138560.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -2.5084460503421724e-05 -->grad_value: 42932496.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.010254941880702972 -->grad_value: 3261298688.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.01281928364187479 -->grad_value: 3261298688.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.0048897480592131615 -->grad_value: -265372549120.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.14950183033943176 -->grad_value: 69263419244544.0\
+Processing in a single chunk...: 97it [00:00, 154.11it/s]\
+Processing in a single chunk...: 85it [00:00, 179.80it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 1: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:11<00:00,  8.56it/s]\
+Batch No. 1: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:11<00:00,  9.99it/s]\
+ ** Round 1 : Batch size = 97 , avg loss = 52.577319587628864\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0054386635310947895 -->grad_value: 142392000512.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 7.355968409683555e-05 -->grad_value: 12903346.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.004903922323137522 -->grad_value: 376263968.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0074552083387970924 -->grad_value: 376263968.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.005503728054463863 -->grad_value: -33446842368.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 7.583748083561659e-05 -->grad_value: 425850.375\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.007767769508063793 -->grad_value: -60767028.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.00739606749266386 -->grad_value: -60767028.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.000798846478573978 -->grad_value: 164105216.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.0033938586711883545 -->grad_value: -398396800.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.0634043738245964 -->grad_value: 28947138560.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.06829610466957092 -->grad_value: 28947138560.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -6.548349483637139e-05 -->grad_value: 42932496.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.022609390318393707 -->grad_value: 3261298688.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.02517373487353325 -->grad_value: 3261298688.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.011808854527771473 -->grad_value: -265372549120.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.34515833854675293 -->grad_value: 69263419244544.0\
+Processing in a single chunk...: 99it [00:00, 222.11it/s]\
+Processing in a single chunk...: 83it [00:00, 227.37it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 2: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 99/99 [00:10<00:00,  9.21it/s]\
+Batch No. 2: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 99/99 [00:10<00:00,  8.43it/s]\
+ ** Round 2 : Batch size = 99 , avg loss = 53.535353535353536\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007862215861678123 -->grad_value: 142392000512.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.822281385306269e-05 -->grad_value: 12903346.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008144947700202465 -->grad_value: 376263968.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010696225799620152 -->grad_value: 376263968.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008513323031365871 -->grad_value: -33446842368.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0002452985499985516 -->grad_value: 425850.375\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01171542052179575 -->grad_value: -60767028.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011343720369040966 -->grad_value: -60767028.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0010307168122380972 -->grad_value: 164105216.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.0050391461700201035 -->grad_value: -398396800.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09785498678684235 -->grad_value: 28947138560.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10274671018123627 -->grad_value: 28947138560.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010791411477839574 -->grad_value: 42932496.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035295531153678894 -->grad_value: 3261298688.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03785987198352814 -->grad_value: 3261298688.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01860656961798668 -->grad_value: -265372549120.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5440899133682251 -->grad_value: 69263419244544.0\
+Processing in a single chunk...: 96it [00:00, 157.46it/s]\
+Processing in a single chunk...: 90it [00:00, 177.30it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 3: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 96/96 [00:13<00:00,  7.22it/s]\
+Batch No. 3:  99%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9612  | 95/96 [00:13<00:00, 10.94it/s]\
+ ** Round 3 : Batch size = 96 , avg loss = 58.333333333333336\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007907130755484104 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.7372705517336726e-05 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008204813115298748 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010756092146039009 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008569085039198399 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00024843370192684233 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01178849209100008 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011416791938245296 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00103503349237144 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.005069504491984844 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09849228709936142 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10338400304317474 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010871176345972344 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035531215369701385 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03809555619955063 -->grad_value: 0.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01873101107776165 -->grad_value: 0.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5477737784385681 -->grad_value: 0.0\
+Processing in a single chunk...: 100it [00:00, 169.96it/s]\
+Processing in a single chunk...: 85it [00:00, 203.00it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 4: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 100/100 [00:12<00:00,  8.12it/s]\
+Batch No. 4: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 100/100 [00:12<00:00,  8.67it/s]\
+ ** Round 4 : Batch size = 100 , avg loss = 55.0\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007907130755484104 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.7372756449040025e-05 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008204814046621323 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010756092146039009 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008569085039198399 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00024843370192684233 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01178849209100008 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011416791938245296 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00103503349237144 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.005069504491984844 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09849229454994202 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10338400304317474 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010871179983951151 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035531215369701385 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03809555619955063 -->grad_value: 0.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01873101107776165 -->grad_value: 0.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5477737784385681 -->grad_value: 0.0\
+Processing in a single chunk...: 97it [00:00, 273.80it/s]\
+Processing in a single chunk...: 69it [00:00, 294.27it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 5: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:10<00:00,  9.61it/s]\
+Batch No. 5: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 97/97 [00:10<00:00, 12.20it/s]\
+ ** Round 5 : Batch size = 97 , avg loss = 45.36082474226804\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007907130755484104 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.7372756449040025e-05 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008204814046621323 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010756092146039009 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008569085039198399 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00024843370192684233 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01178849209100008 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011416791938245296 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00103503349237144 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.005069504491984844 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09849229454994202 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10338400304317474 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010871179983951151 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035531215369701385 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03809555619955063 -->grad_value: 0.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01873101107776165 -->grad_value: 0.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5477737784385681 -->grad_value: 0.0\
+Processing in a single chunk...: 95it [00:00, 195.56it/s]\
+Processing in a single chunk...: 83it [00:00, 184.27it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 6: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 95/95 [00:11<00:00,  7.93it/s]\
+Batch No. 6: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 95/95 [00:11<00:00,  7.08it/s]\
+ ** Round 6 : Batch size = 95 , avg loss = 48.421052631578945\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007907130755484104 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.7372756449040025e-05 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008204814046621323 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010756092146039009 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008569085039198399 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00024843370192684233 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01178849209100008 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011416791938245296 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00103503349237144 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.005069504491984844 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09849229454994202 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10338400304317474 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010871179983951151 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035531215369701385 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03809555619955063 -->grad_value: 0.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01873101107776165 -->grad_value: 0.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5477737784385681 -->grad_value: 0.0\
+Processing in a single chunk...: 98it [00:00, 210.60it/s]\
+Processing in a single chunk...: 94it [00:00, 213.03it/s]                                                                                                                                /Users/taotao/Documents/GitHub/FYP/utils/network.py:52: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).\
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)\
+Batch No. 7: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 98/98 [00:13<00:00,  7.34it/s]\
+Batch No. 7: 100%|\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 98/98 [00:13<00:00,  6.92it/s]\
+ ** Round 7 : Batch size = 98 , avg loss = 55.10204081632653\
+\
+-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.007907130755484104 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 2.7372756449040025e-05 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008204814046621323 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.010756092146039009 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.008569085039198399 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00024843370192684233 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01178849209100008 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.011416791938245296 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00103503349237144 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.005069504491984844 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.09849229454994202 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.10338400304317474 -->grad_value: 0.0\
+-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00010871179983951151 -->grad_value: 0.0\
+-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00013698634575121105 -->grad_value: 0.0\
+-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035531215369701385 -->grad_value: 0.0\
+-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03809555619955063 -->grad_value: 0.0\
+-->name: linear.weight -->grad_requirs: True --weight 0.01873101107776165 -->grad_value: 0.0\
+-->name: linear.bias -->grad_requirs: True --weight -0.5477737784385681 -->grad_value: 0.0\
+Layer1: Data Preprocess: 8it [01:38, 12.26s/it]^C\
+Traceback (most recent call last):\
+  File "/Users/taotao/Documents/GitHub/FYP/classifier.py", line 84, in <module>\
+    main_progress.forward()\
+  File "/Users/taotao/Documents/GitHub/FYP/classifier.py", line 64, in forward\
+    self._data_preprocess()\
+  File "/Users/taotao/Documents/GitHub/FYP/classifier.py", line 56, in _data_preprocess\
+    data_handler.run()\
+  File "/Users/taotao/Documents/GitHub/FYP/utils/preprocess.py", line 63, in run\
+    for index, chunk in enumerate(tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True)):\
+  File "/opt/anaconda3/lib/python3.11/site-packages/tqdm/std.py", line 1178, in __iter__\
+    for obj in iterable:\
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1668, in __next__\
+    return self.get_chunk()\
+           ^^^^^^^^^^^^^^^^\
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1777, in get_chunk\
+    return self.read(nrows=size)\
+           ^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1748, in read\
+    ) = self._engine.read(  # type: ignore[attr-defined]\
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read\
+    chunks = self._reader.read_low_memory(nrows)\
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+  File "parsers.pyx", line 855, in pandas._libs.parsers.TextReader.read_low_memory\
+  File "parsers.pyx", line 904, in pandas._libs.parsers.TextReader._read_rows\
+  File "parsers.pyx", line 879, in pandas._libs.parsers.TextReader._tokenize_rows\
+  File "parsers.pyx", line 890, in pandas._libs.parsers.TextReader._check_tokenize_status\
+  File "parsers.pyx", line 2058, in pandas._libs.parsers.raise_parser_error\
+pandas.errors.ParserError: Error tokenizing data. C error: Calling read(nbytes) on source failed. Try engine='python'.\
+(base) taotao@ZhyPro14 FYP % }
