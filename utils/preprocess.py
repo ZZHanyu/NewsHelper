@@ -86,7 +86,9 @@ class charactors_hander():
                 # print(f"\n The encodered text is = {encoder_text['input_ids']}\n length = {encoder_text['input_ids'].size()} \n")
                 # temp = np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant')
                 # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
-                chunk_tokenized.append( (encoder_text['input_ids'], row['label']) )
+                chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
+                
+                
                 # print(f"size after = {temp.shape}")
             
             self._LSTM_NetWork.start(chunk_tokenized, index)

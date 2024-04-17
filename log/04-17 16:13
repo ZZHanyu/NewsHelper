@@ -1,0 +1,7 @@
+INFO:root:
+ ======== Start Log Recording :04-17 16:13 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
+

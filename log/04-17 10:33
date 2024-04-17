@@ -1,0 +1,46 @@
+INFO:root:
+ ======== Start Log Recording :04-17 10:33 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
+
+INFO:root:
+ ** Round 0 : Batch size = 23 , avg loss = 0.0072522083874386935
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0002860910608433187 -->grad_value: 6.310504977591336e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.00014328006363939494 -->grad_value: -7.011718317073701e-09 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight 0.002333897165954113 -->grad_value: 2.1591245058516506e-07 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight 0.0008770807180553675 -->grad_value: 2.1591245058516506e-07 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0001203451247420162 -->grad_value: 0.00020618259441107512 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 7.390015525743365e-06 -->grad_value: -1.3100700968493584e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0016031459672376513 -->grad_value: 4.112414160317712e-07 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0023242870811372995 -->grad_value: 4.112414160317712e-07 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0004982136888429523 -->grad_value: -5.482323103933595e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.0005717632593587041 -->grad_value: -3.868870408041403e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.007781598251312971 -->grad_value: 0.0001060975919244811 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.007149379700422287 -->grad_value: 0.0001060975919244811 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.000545240007340908 -->grad_value: -1.875075895441114e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -6.932418182259426e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.0028252957854419947 -->grad_value: 3.7645131669705734e-05 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.005127047188580036 -->grad_value: 3.7645131669705734e-05 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight -0.0030322447419166565 -->grad_value: -0.0016013884451240301 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight -0.022943902760744095 -->grad_value: 0.05142311751842499 
+

@@ -1,0 +1,2229 @@
+INFO:root:
+ ======== Start Log Recording :04-17 16:06 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
+
+INFO:root:
+ ** Round 0 : Batch size = 23 , avg loss = 0.678670655126157
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.000213623046875 -->grad_value: -0.014792210422456264 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.004290421027690172 -->grad_value: -0.014277273789048195 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0008119670674204826 -->grad_value: -7.167131843743846e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.00035323199699632823 -->grad_value: -4.6533887143596075e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0019502730574458838 -->grad_value: 0.0003805806045420468 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.005168468691408634 -->grad_value: 0.0003805806045420468 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0012298040091991425 -->grad_value: -0.0001256295945495367 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -0.00024045132158789784 -->grad_value: -9.096575581679645e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0010323922615498304 -->grad_value: -0.00013594483607448637 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.010114088654518127 -->grad_value: -0.00013594483607448637 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0004058715421706438 -->grad_value: -5.039629286329728e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.00018892870866693556 -->grad_value: -5.901318331780203e-07 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.0022105174139142036 -->grad_value: 0.0006693885079585016 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.0042487261816859245 -->grad_value: 0.0006693885079585016 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 7.831113907741383e-05 -->grad_value: -7.21093726951949e-08 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.0006839148118160665 -->grad_value: 0.00010230558109469712 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.0006855588871985674 -->grad_value: 0.00010230558109469712 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight 0.00038073339965194464 -->grad_value: 0.00013091813889332116 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.011699080467224121 -->grad_value: -0.02421976998448372 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight -0.00883917510509491 -->grad_value: -0.06589027494192123 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.003185850102454424 -->grad_value: -3.361016273498535 
+
+INFO:root:
+ ** Round 1 : Batch size = 24 , avg loss = 0.7087761747340361
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0001938343048096 -->grad_value: 0.008171196095645428 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.01336793601512909 -->grad_value: 0.04640932381153107 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0001500621874583885 -->grad_value: 0.0010259818518534303 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0003935704880859703 -->grad_value: 7.88200225088076e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.003062365809455514 -->grad_value: -0.0003336212248541415 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.006280561909079552 -->grad_value: -0.0003336212248541415 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.001629401813261211 -->grad_value: 0.0012024082243442535 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -0.0001488321868237108 -->grad_value: 2.6420499921187e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.007117074448615313 -->grad_value: 0.000479853741126135 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.016198771074414253 -->grad_value: 0.000479853741126135 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0008583343587815762 -->grad_value: -4.627270755008794e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight 0.00010690065391827375 -->grad_value: 1.5297241588996258e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.009217046201229095 -->grad_value: 0.00022752562654204667 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.011255254037678242 -->grad_value: 0.00022752562654204667 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0004286887706257403 -->grad_value: -7.540959927609947e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.006106494460254908 -->grad_value: -0.00025263079442083836 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.006108137778937817 -->grad_value: -0.00025263079442083836 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight 0.0004937176126986742 -->grad_value: -1.5862995496718213e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.01524723507463932 -->grad_value: 0.022854050621390343 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight -0.0098169120028615 -->grad_value: 0.11111761629581451 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.0063378093764185905 -->grad_value: 2.816652774810791 
+
+INFO:root:
+ ** Round 2 : Batch size = 25 , avg loss = 0.7223171424865723
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9963374137878418 -->grad_value: 0.005892022978514433 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.007841809652745724 -->grad_value: -0.18683727085590363 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0009603614453226328 -->grad_value: -0.0007643050048500299 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0005888288142159581 -->grad_value: 1.5150124454521574e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.008265912532806396 -->grad_value: 0.0037590251304209232 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.011484108865261078 -->grad_value: 0.0037590251304209232 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0020883120596408844 -->grad_value: -3.842812293441966e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00029124971479177475 -->grad_value: -8.123726047415403e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01423233188688755 -->grad_value: 9.677802154328674e-05 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.02331402897834778 -->grad_value: 9.677802154328674e-05 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0011708152014762163 -->grad_value: 1.686358359620499e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0005774140590801835 -->grad_value: 7.131114398362115e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.015697095543146133 -->grad_value: 0.0027699267957359552 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.017735302448272705 -->grad_value: 0.0027699267957359552 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0005430837627500296 -->grad_value: 7.057863058435032e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.010904253460466862 -->grad_value: 0.00031161223887465894 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.010905897244811058 -->grad_value: 0.00031161223887465894 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight 0.00016895911539904773 -->grad_value: 0.00042451321496628225 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.017992796376347542 -->grad_value: 0.03260111063718796 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight -0.008781042881309986 -->grad_value: -0.1892988532781601 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.017010398209095 -->grad_value: -0.3492772877216339 
+
+INFO:root:
+ ** Round 3 : Batch size = 25 , avg loss = 0.6850528001785279
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9983072280883789 -->grad_value: 0.019415993243455887 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight 0.006983519997447729 -->grad_value: -0.18497499823570251 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.004939955193549395 -->grad_value: 0.0005065376753918827 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0005057936650700867 -->grad_value: -2.4570890673203394e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.00612593675032258 -->grad_value: -0.010119352489709854 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.009344133548438549 -->grad_value: -0.010119352489709854 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.002015757141634822 -->grad_value: 4.847424861509353e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0002615741977933794 -->grad_value: 7.622364819326322e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.018956279382109642 -->grad_value: -0.00015789976168889552 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.02803797647356987 -->grad_value: -0.00015789976168889552 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0011544267181307077 -->grad_value: -8.406778420066985e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0009698439389467239 -->grad_value: -6.789713324906188e-08 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.014781266450881958 -->grad_value: -0.001300288480706513 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.01681947335600853 -->grad_value: -0.001300288480706513 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.00044593526399694383 -->grad_value: -1.9374788280401845e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.01146384421736002 -->grad_value: 0.00041978410445153713 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.011465488001704216 -->grad_value: 0.00041978410445153713 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -9.958063310477883e-05 -->grad_value: -4.184367571724579e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.020605450496077538 -->grad_value: -0.02421390637755394 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight -0.005154567304998636 -->grad_value: -0.039467472583055496 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.018055114895105362 -->grad_value: -1.0875989198684692 
+
+INFO:root:
+ ** Round 4 : Batch size = 24 , avg loss = 0.8151675562063853
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0013741254806519 -->grad_value: -0.12510263919830322 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.011923735961318016 -->grad_value: 1.1546339988708496 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.002677333541214466 -->grad_value: 0.00040813733357936144 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006318640080280602 -->grad_value: 0.0002447768929414451 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.022123394533991814 -->grad_value: 0.04898490756750107 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.025341590866446495 -->grad_value: 0.04898490756750107 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0008947234600782394 -->grad_value: -0.0003880782751366496 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.00020311371190473437 -->grad_value: 2.2505712422571378e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.01930815726518631 -->grad_value: -0.0010265095625072718 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.028389854356646538 -->grad_value: -0.0010265095625072718 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0013924792874604464 -->grad_value: 9.66253901424352e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0010284861782565713 -->grad_value: 2.2761471427656943e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02690373733639717 -->grad_value: 0.004685601219534874 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.028941944241523743 -->grad_value: 0.004685601219534874 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0005651707760989666 -->grad_value: 7.332816494454164e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.021423079073429108 -->grad_value: 0.002310223877429962 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.021424725651741028 -->grad_value: 0.002310223877429962 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.00017228015349246562 -->grad_value: 0.0001194622163893655 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.028085732832551003 -->grad_value: 0.06392501294612885 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight -0.002065824344754219 -->grad_value: -0.4109538793563843 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.004178399220108986 -->grad_value: -2.689882516860962 
+
+INFO:root:
+ ** Round 5 : Batch size = 25 , avg loss = 0.6785549831390381
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9995355010032654 -->grad_value: -0.023777086287736893 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.025495335459709167 -->grad_value: 0.11333025991916656 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0017024371773004532 -->grad_value: -0.0002295181038789451 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006660475046373904 -->grad_value: -2.4506177851435496e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030607035383582115 -->grad_value: -0.000873061188030988 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.033825233578681946 -->grad_value: -0.000873061188030988 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0026927723083645105 -->grad_value: -0.0003189256531186402 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -0.00029965004068799317 -->grad_value: 1.9015593579752021e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.020702308043837547 -->grad_value: 0.0004979327786713839 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.029784005135297775 -->grad_value: 0.0004979327786713839 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0017000918742269278 -->grad_value: -2.0681245587184094e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0009660477517172694 -->grad_value: -8.169350621756166e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.0331348180770874 -->grad_value: -0.0003041505115106702 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.03517302870750427 -->grad_value: -0.0003041505115106702 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0007368342485278845 -->grad_value: -1.006085540211643e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.025162674486637115 -->grad_value: 0.00016895464796107262 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.025164319202303886 -->grad_value: 0.00016895464796107262 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0002927964669652283 -->grad_value: -2.407235479040537e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.034796975553035736 -->grad_value: -0.0009635405149310827 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.004947055131196976 -->grad_value: -0.14474938809871674 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.004466581158339977 -->grad_value: -1.1497405767440796 
+
+INFO:root:
+ ** Round 6 : Batch size = 24 , avg loss = 0.6974504378934702
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9999140501022339 -->grad_value: -0.00011227931827306747 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.028351135551929474 -->grad_value: 0.0016449764370918274 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0011787568219006062 -->grad_value: 0.0006814502994529903 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006528048543259501 -->grad_value: -1.107242496800609e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.031188633292913437 -->grad_value: -0.0003120488836430013 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03440683335065842 -->grad_value: -0.0003120488836430013 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0033314654137939215 -->grad_value: 9.547565423417836e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.9118975615128875e-05 -->grad_value: -1.7285236708630691e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.023213688284158707 -->grad_value: 0.00023172952933236957 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03229537978768349 -->grad_value: 0.00023172952933236957 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0015761642716825008 -->grad_value: 1.5025126458567684e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0008453060872852802 -->grad_value: -8.084552405307477e-07 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.0328613743185997 -->grad_value: 0.00033446575980633497 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.034899577498435974 -->grad_value: 0.00033446575980633497 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0008258152520284057 -->grad_value: -1.3134588243701728e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.02578207477927208 -->grad_value: 0.00010014213330578059 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.02578371949493885 -->grad_value: 0.00010014213330578059 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.00025902214110828936 -->grad_value: -0.00011988791811745614 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.03590972721576691 -->grad_value: 0.007411499973386526 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.008577652275562286 -->grad_value: 0.017913062125444412 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.001679655397310853 -->grad_value: 0.8849923610687256 
+
+INFO:root:
+ ** Round 7 : Batch size = 24 , avg loss = 0.7244105264544487
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0010660886764526 -->grad_value: -0.09145739674568176 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02874474972486496 -->grad_value: -0.041708946228027344 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.000953929265961051 -->grad_value: -0.00037809263449162245 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006292402977123857 -->grad_value: -1.6908155885175802e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.03119848296046257 -->grad_value: -0.00012155220611020923 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03441667929291725 -->grad_value: -0.00012155220611020923 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.00499328039586544 -->grad_value: -0.0005426016869023442 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -0.00010181500692851841 -->grad_value: 2.714736183406785e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.017142266035079956 -->grad_value: -0.0008028589654713869 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.026223959401249886 -->grad_value: -0.0008028589654713869 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0017298295861110091 -->grad_value: -3.5109037526126485e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0008893877966329455 -->grad_value: 6.455906259361655e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.03755665570497513 -->grad_value: 0.004009575583040714 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.039594866335392 -->grad_value: 0.004009575583040714 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0008090854389593005 -->grad_value: 3.6921519495081156e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.026810526847839355 -->grad_value: -0.00033935351530089974 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.026812169700860977 -->grad_value: -0.00033935351530089974 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0002974371309392154 -->grad_value: 0.0003221945953555405 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.037485964596271515 -->grad_value: 0.021848849952220917 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.01405719667673111 -->grad_value: 0.15218742191791534 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.0073325373232364655 -->grad_value: 0.4740692973136902 
+
+INFO:root:
+ ** Round 8 : Batch size = 25 , avg loss = 0.6821855306625366
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0036598443984985 -->grad_value: 0.10690893977880478 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02706417441368103 -->grad_value: 0.08116644620895386 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.001586921513080597 -->grad_value: 0.000552246579900384 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006192039581947029 -->grad_value: -6.8682861638080794e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030772406607866287 -->grad_value: -8.741830242797732e-05 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03399060666561127 -->grad_value: -8.741830242797732e-05 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.003197471145540476 -->grad_value: 0.0015586388763040304 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0006314609199762344 -->grad_value: -9.756717190612108e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02549460157752037 -->grad_value: 0.0024143841583281755 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03457629680633545 -->grad_value: 0.0024143841583281755 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0019731721840798855 -->grad_value: -2.957186097773956e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0009103313204832375 -->grad_value: 1.0923454283329193e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.04400153458118439 -->grad_value: -6.402510916814208e-05 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.04603974148631096 -->grad_value: -6.402510916814208e-05 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0006872707745060325 -->grad_value: 3.5042035051446874e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.030183464288711548 -->grad_value: 0.00022519705817103386 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.030185110867023468 -->grad_value: 0.00022519705817103386 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0001266979961656034 -->grad_value: 6.828379264334217e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.03960564732551575 -->grad_value: 0.019747812300920486 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.012931404635310173 -->grad_value: 0.18482981622219086 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.0010397692676633596 -->grad_value: 2.5710761547088623 
+
+INFO:root:
+ ** Round 9 : Batch size = 25 , avg loss = 0.7010059034824372
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0070867538452148 -->grad_value: -0.11117839068174362 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.026562200859189034 -->grad_value: 0.04603240638971329 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0016280021518468857 -->grad_value: -0.0011108926264569163 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006458613206632435 -->grad_value: -2.369162302784389e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030600152909755707 -->grad_value: -0.0007153134793043137 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03381834924221039 -->grad_value: -0.0007153134793043137 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0028399417642503977 -->grad_value: -0.00033413106575608253 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0011636388953775167 -->grad_value: -7.186527000158094e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.030446451157331467 -->grad_value: -0.0010771066881716251 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03952814266085625 -->grad_value: -0.0010771066881716251 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.00227778940461576 -->grad_value: -7.577711585327052e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0005381163209676743 -->grad_value: -2.721947748796083e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.04836134612560272 -->grad_value: 0.0008397382916882634 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.050399553030729294 -->grad_value: 0.0008397382916882634 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0007673025829717517 -->grad_value: -3.6803039620281197e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.033357106149196625 -->grad_value: -4.274477396393195e-05 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.033358752727508545 -->grad_value: -4.274477396393195e-05 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.00014116454985924065 -->grad_value: 3.326779551571235e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.040696583688259125 -->grad_value: -0.021453190594911575 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.009691457264125347 -->grad_value: -0.028070688247680664 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.0006474985275417566 -->grad_value: -2.6640632152557373 
+
+INFO:root:
+ ** Round 10 : Batch size = 24 , avg loss = 0.6328670494258404
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0097616910934448 -->grad_value: -0.030328797176480293 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.028368864208459854 -->grad_value: 0.11908747255802155 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.002029643626883626 -->grad_value: -0.0003009474603459239 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006598402978852391 -->grad_value: 2.1229643607512116e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.03056757152080536 -->grad_value: 0.0005367159610614181 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03378576785326004 -->grad_value: 0.0005367159610614181 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.003594920039176941 -->grad_value: -0.0005187024944461882 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0011426357086747885 -->grad_value: 1.2761020116158761e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.027319762855768204 -->grad_value: -0.000559087609872222 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.036401454359292984 -->grad_value: -0.000559087609872222 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0024379033129662275 -->grad_value: -4.954419637215324e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0003364522126503289 -->grad_value: -8.09584071248537e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05059027671813965 -->grad_value: -0.00029967635055072606 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.05262848734855652 -->grad_value: -0.00029967635055072606 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0008868704317137599 -->grad_value: -1.2088319181202678e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.033653490245342255 -->grad_value: -7.031110726529732e-06 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.033655136823654175 -->grad_value: -7.031110726529732e-06 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.00044056292972527444 -->grad_value: 0.00011846469715237617 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.04110674187541008 -->grad_value: -0.003903263248503208 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.010459420271217823 -->grad_value: -0.015649590641260147 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.00167359400074929 -->grad_value: 0.8971791863441467 
+
+INFO:root:
+ ** Round 11 : Batch size = 25 , avg loss = 0.6838237357139587
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0112783908843994 -->grad_value: -0.05073203891515732 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.029010338708758354 -->grad_value: -0.08113584667444229 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.002622321480885148 -->grad_value: -0.0009896617848426104 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006730239256285131 -->grad_value: 2.0684437913587317e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.03061063587665558 -->grad_value: -0.0004686617758125067 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03382883220911026 -->grad_value: -0.0004686617758125067 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0036167101934552193 -->grad_value: -8.365226676687598e-05 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0011537640821188688 -->grad_value: -6.844445010756317e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.025692593306303024 -->grad_value: -0.0011271878611296415 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0347742885351181 -->grad_value: -0.0011271878611296415 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0024964301846921444 -->grad_value: -1.794232730389922e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0004217345267534256 -->grad_value: 3.440149885136634e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.053583357483148575 -->grad_value: 0.0016845905920490623 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.055621568113565445 -->grad_value: 0.0016845905920490623 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0009411188075318933 -->grad_value: 6.730108736974216e-08 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.031590286642313004 -->grad_value: -0.0005354392342269421 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.031591929495334625 -->grad_value: -0.0005354392342269421 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0007721185102127492 -->grad_value: 0.00033900595735758543 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.04261959716677666 -->grad_value: 0.010823504999279976 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.010308545082807541 -->grad_value: 0.27959945797920227 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.013392471708357334 -->grad_value: 3.3859219551086426 
+
+INFO:root:
+ ** Round 12 : Batch size = 24 , avg loss = 0.6801746538452184
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.008935570716858 -->grad_value: 0.03211517632007599 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.031084537506103516 -->grad_value: 0.023905888199806213 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0024528291542083025 -->grad_value: 0.0016168965958058834 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006724552949890494 -->grad_value: -8.822282325127162e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0315735824406147 -->grad_value: 0.0021596394944936037 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03479177877306938 -->grad_value: 0.0021596394944936037 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.003388530109077692 -->grad_value: 0.0003037772257812321 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0010715230600908399 -->grad_value: 1.088691760742222e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02623298205435276 -->grad_value: 0.0010264415759593248 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03531467542052269 -->grad_value: 0.0010264415759593248 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002561685862019658 -->grad_value: -5.680731192114763e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0004448071704246104 -->grad_value: 8.229278137150686e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.056773316115140915 -->grad_value: 0.001194903627038002 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.058811530470848083 -->grad_value: 0.001194903627038002 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0011174383107572794 -->grad_value: -5.223499101703055e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.033416278660297394 -->grad_value: 0.0003321924014016986 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.033417921513319016 -->grad_value: 0.0003321924014016986 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0008471036562696099 -->grad_value: -4.011717828689143e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.045604683458805084 -->grad_value: 0.006023018155246973 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.007395704742521048 -->grad_value: -0.021156959235668182 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.02744329907000065 -->grad_value: -0.03895995020866394 
+
+INFO:root:
+ ** Round 13 : Batch size = 24 , avg loss = 0.6500240086267391
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0095460414886475 -->grad_value: -0.1160772517323494 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.030303793027997017 -->grad_value: -0.10461831092834473 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0026342354249209166 -->grad_value: -0.001484480919316411 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006591583369299769 -->grad_value: -4.281443580111954e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.031739287078380585 -->grad_value: -0.001532133319415152 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.034957483410835266 -->grad_value: -0.001532133319415152 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0031471659895032644 -->grad_value: -0.0004679794074036181 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0009842514991760254 -->grad_value: 7.169704190346238e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02529919520020485 -->grad_value: -0.000923195737414062 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03438088670372963 -->grad_value: -0.000923195737414062 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0026740720495581627 -->grad_value: -2.6312129648431437e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0005064450087957084 -->grad_value: 1.071816950570792e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05846413969993591 -->grad_value: 0.000267604598775506 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.060502342879772186 -->grad_value: 0.000267604598775506 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0012440510326996446 -->grad_value: 6.336171054499573e-08 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.034361012279987335 -->grad_value: 0.0004049725830554962 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03436265513300896 -->grad_value: 0.0004049725830554962 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0010424297070130706 -->grad_value: 0.00015183238429017365 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.0461730994284153 -->grad_value: -0.013015294447541237 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.008577847853302956 -->grad_value: -0.21631723642349243 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.020101284608244896 -->grad_value: -2.910698890686035 
+
+INFO:root:
+ ** Round 14 : Batch size = 23 , avg loss = 0.5318781447232418
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0120265483856201 -->grad_value: -0.05699414014816284 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02854856662452221 -->grad_value: -0.08817452937364578 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.00325221149250865 -->grad_value: -0.0023549057077616453 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006545250653289258 -->grad_value: -7.597519925184315e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.031102996319532394 -->grad_value: -0.002964106621220708 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.034321192651987076 -->grad_value: -0.002964106621220708 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0032978318631649017 -->grad_value: -0.0001733636308927089 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0010265879100188613 -->grad_value: -1.151244305219734e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02485404536128044 -->grad_value: -0.0005172101082280278 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03393574059009552 -->grad_value: -0.0005172101082280278 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0027209031395614147 -->grad_value: -1.4884669781167759e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0005283133941702545 -->grad_value: -1.749859166011447e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05805714428424835 -->grad_value: -0.0006183094228617847 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.060095351189374924 -->grad_value: -0.0006183094228617847 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0012136080767959356 -->grad_value: 2.3390284695778973e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.03343209624290466 -->grad_value: -0.00020715800928883255 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.033433735370635986 -->grad_value: -0.00020715800928883255 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0012248365674167871 -->grad_value: 0.00021246622782200575 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.045049577951431274 -->grad_value: -0.014201055280864239 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.01135979127138853 -->grad_value: -0.1977955847978592 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.01571081019937992 -->grad_value: 0.7354729771614075 
+
+INFO:root:
+ ** Round 15 : Batch size = 25 , avg loss = 0.6519098333083093
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.012990951538086 -->grad_value: -0.038159217685461044 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02646450884640217 -->grad_value: -0.08867881447076797 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.003439088352024555 -->grad_value: 0.0029737455770373344 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006387954344972968 -->grad_value: 9.621257049730048e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030602887272834778 -->grad_value: 0.00011155405081808567 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03382108733057976 -->grad_value: 0.00011155405081808567 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0036960728466510773 -->grad_value: 0.00023061936371959746 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0011412063613533974 -->grad_value: -1.9875966472682194e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02638898231089115 -->grad_value: 0.0005494114011526108 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.03547067940235138 -->grad_value: 0.0005494114011526108 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002719782292842865 -->grad_value: 7.098889000189956e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0004766348283737898 -->grad_value: -7.850454494473524e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05719125270843506 -->grad_value: 0.00035258964635431767 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.05922945588827133 -->grad_value: 0.00035258964635431767 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.001158394617959857 -->grad_value: 4.315869546189788e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.03414415195584297 -->grad_value: 0.0007711527869105339 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.034145794808864594 -->grad_value: 0.0007711527869105339 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0011571228969842196 -->grad_value: -0.0005809123395010829 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.044941745698451996 -->grad_value: 0.007202670909464359 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.011342492885887623 -->grad_value: 0.2922185957431793 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.010624881833791733 -->grad_value: -0.5721318125724792 
+
+INFO:root:
+ ** Round 16 : Batch size = 25 , avg loss = 0.6666557598114013
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.012512445449829 -->grad_value: -0.03171849250793457 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02485475316643715 -->grad_value: -0.10938353836536407 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.003039086237549782 -->grad_value: -0.0013027980457991362 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006187322433106601 -->grad_value: 9.978998605220113e-08 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030550416558980942 -->grad_value: -0.002425763290375471 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03376861661672592 -->grad_value: -0.002425763290375471 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.003874231595546007 -->grad_value: 0.0003560078330338001 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0011499860556796193 -->grad_value: -1.5102300494618248e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.02577568218111992 -->grad_value: -0.0006044999463483691 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.0348573736846447 -->grad_value: -0.0006044999463483691 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002742687240242958 -->grad_value: -6.11676114203874e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.00040693909977562726 -->grad_value: -1.976302155526355e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05667603388428688 -->grad_value: -0.00020427122944965959 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.05871424078941345 -->grad_value: -0.00020427122944965959 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.001129895099438727 -->grad_value: -5.110031906951917e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035028427839279175 -->grad_value: 0.001253727707080543 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.035030070692300797 -->grad_value: 0.001253727707080543 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0010067946277558804 -->grad_value: 4.967658969690092e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.04484685882925987 -->grad_value: -0.01185544952750206 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.010286473669111729 -->grad_value: -0.42501670122146606 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.002412582980468869 -->grad_value: -4.180335521697998 
+
+INFO:root:
+ ** Round 17 : Batch size = 25 , avg loss = 0.6462859057448804
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 1.0042915344238281 -->grad_value: 0.18800650537014008 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02586434595286846 -->grad_value: 0.31082043051719666 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.003226608969271183 -->grad_value: -0.0005495483055710793 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006135881994850934 -->grad_value: 4.658141733671073e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030489321798086166 -->grad_value: 0.003090896410867572 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.033707521855831146 -->grad_value: 0.003090896410867572 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.004193618893623352 -->grad_value: 0.0007735202671028674 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0013833603588864207 -->grad_value: -4.797471774509177e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.03201695531606674 -->grad_value: 0.0025210753083229065 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.04109864681959152 -->grad_value: 0.0025210753083229065 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002804167801514268 -->grad_value: 3.0260475796239916e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0003932940599042922 -->grad_value: -1.273154794034781e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05585631728172302 -->grad_value: -0.0015286116395145655 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.05789452791213989 -->grad_value: -0.0015286116395145655 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0011319052428007126 -->grad_value: -2.4024188860494178e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.035002700984478 -->grad_value: -0.0003122900961898267 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.03500434383749962 -->grad_value: -0.0003122900961898267 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0010633249767124653 -->grad_value: 0.0001482659426983446 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.043905653059482574 -->grad_value: 0.0015651397407054901 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.009084288962185383 -->grad_value: 0.1795380562543869 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.0005580056458711624 -->grad_value: 0.7073490619659424 
+
+INFO:root:
+ ** Round 18 : Batch size = 25 , avg loss = 0.6147414694074541
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.999909520149231 -->grad_value: -0.012672366574406624 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.025744568556547165 -->grad_value: -0.14099055528640747 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0033798683434724808 -->grad_value: -0.001244071521796286 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006215260946191847 -->grad_value: -6.006346666254103e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.030484043061733246 -->grad_value: 0.0012128931703045964 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03370223939418793 -->grad_value: 0.0012128931703045964 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0040785400196909904 -->grad_value: 0.001558331772685051 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0014860094524919987 -->grad_value: -1.206033175549237e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.031690143048763275 -->grad_value: -0.0002502946590539068 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.040771838277578354 -->grad_value: -0.0002502946590539068 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002735439920797944 -->grad_value: 5.807353318232344e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0001972331665456295 -->grad_value: -0.00011287764937151223 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.05767481029033661 -->grad_value: 0.0037037688307464123 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.05971302092075348 -->grad_value: 0.0037037688307464123 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.0011006700806319714 -->grad_value: -5.829529982293025e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.033870384097099304 -->grad_value: 0.0010494785383343697 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.033872026950120926 -->grad_value: 0.0010494785383343697 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0012669407296925783 -->grad_value: 8.101217827061191e-05 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.044915542006492615 -->grad_value: 0.012844270095229149 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.010765545070171356 -->grad_value: -0.4722464084625244 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.0037213959731161594 -->grad_value: -2.475616455078125 
+
+INFO:root:
+ ** Round 19 : Batch size = 25 , avg loss = 0.8165221399068833
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9931126832962036 -->grad_value: 0.22102323174476624 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02545645460486412 -->grad_value: 0.2523641884326935 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0031074057333171368 -->grad_value: 0.0025222415570169687 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.0006380537524819374 -->grad_value: 2.489192775101401e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.031159657984972 -->grad_value: 0.0015415721572935581 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.03437785431742668 -->grad_value: 0.0015415721572935581 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.004077117890119553 -->grad_value: 0.00012530299136415124 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.0015510856173932552 -->grad_value: -3.861900097490434e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0357038788497448 -->grad_value: 0.003180923406034708 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.044785574078559875 -->grad_value: 0.003180923406034708 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.002642436418682337 -->grad_value: 4.519140020420309e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -4.9518755986355245e-05 -->grad_value: 1.44021978485398e-05 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.06102266162633896 -->grad_value: 0.0007723734597675502 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.06306086480617523 -->grad_value: 0.0007723734597675502 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.001024869503453374 -->grad_value: 1.5877401892794296e-05 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.03870759159326553 -->grad_value: 0.0015977772418409586 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.038709238171577454 -->grad_value: 0.0015977772418409586 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0009559571626596153 -->grad_value: -0.0007732778904028237 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.04802209138870239 -->grad_value: 0.035210080444812775 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.007859932258725166 -->grad_value: 0.98395836353302 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.01686970889568329 -->grad_value: 5.725318908691406 
+
+INFO:root:
+ ** Round 20 : Batch size = 23 , avg loss = 0.7796519032639005
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9890860915184021 -->grad_value: 0.34380099177360535 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.02546991966664791 -->grad_value: 0.00046323612332344055 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.0024562913458794355 -->grad_value: 0.0034757149405777454 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight -0.000586591602768749 -->grad_value: -1.6042356946854852e-05 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.031728219240903854 -->grad_value: 0.0013905683299526572 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.034946415573358536 -->grad_value: 0.0013905683299526572 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.004558148328214884 -->grad_value: 0.0007172152400016785 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 0.001723941881209612 -->grad_value: -7.384940090560121e-07 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0400073304772377 -->grad_value: 0.002863462083041668 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight -0.04908902570605278 -->grad_value: 0.002863462083041668 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight 0.0026298980228602886 -->grad_value: 1.9118756426905748e-06 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -7.058319897623733e-05 -->grad_value: 1.6308677004417405e-06 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.06240847706794739 -->grad_value: 0.00046671112067997456 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.06444668769836426 -->grad_value: 0.00046671112067997456 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight 0.001101685338653624 -->grad_value: 8.562428774894215e-07 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight -0.0002780426002573222 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.043395981192588806 -->grad_value: 0.001268652849830687 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.04339762404561043 -->grad_value: 0.001268652849830687 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.0006407081382349133 -->grad_value: -0.0003506758948788047 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight -0.05067255720496178 -->grad_value: 0.03106662631034851 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.002759668044745922 -->grad_value: 0.8972909450531006 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight -0.0288678091019392 -->grad_value: 2.367572784423828 
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4485], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4557], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4638], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8688], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4587], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4481], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6212], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5401], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4578], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4621], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4537], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4542], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5116], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4664], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4505], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4476], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8158], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4844], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4611], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4736], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5936], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4663], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4658], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4750], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4506], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5431], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4709], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8243], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4580], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5420], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9271], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4472], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4489], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4576], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4708], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4550], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4572], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4640], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4683], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4630], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4531], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4548], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9228], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4568], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4744], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6000], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4629], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4539], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4593], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6369], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4566], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4888], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8680], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4484], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4855], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4480], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4563], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4604], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5962], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5371], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4837], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4538], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6599], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5705], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6040], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5742], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5017], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4699], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6757], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4463], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5288], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5904], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4764], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8882], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9123], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4601], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4607], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4520], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5024], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5672], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5715], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4498], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5147], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4620], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4544], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6584], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6118], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7912], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4581], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6403], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9114], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6446], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5026], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5311], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4799], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6372], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4631], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5773], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5044], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8479], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6510], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6673], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4519], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5784], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4822], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5684], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5102], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4524], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4490], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9197], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5655], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7457], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4626], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4676], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4834], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4695], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4813], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.3882633913340157% **
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4485], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4557], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4638], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8688], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4587], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4481], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6212], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5401], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4578], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4621], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4537], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4542], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5116], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4664], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4505], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4476], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8158], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4844], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4611], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4736], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5936], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4663], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4658], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4750], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4506], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5431], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4709], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8243], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4580], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5420], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9271], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4472], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4489], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4576], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4708], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4550], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4572], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4640], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4683], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4630], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4531], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4548], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9228], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4568], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4744], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6000], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4629], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4539], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4593], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6369], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4566], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4888], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8680], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4484], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4855], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4480], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4563], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4604], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5962], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5371], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4837], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4538], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6599], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5705], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6040], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5742], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5017], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4699], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6757], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4463], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5288], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5904], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4764], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8882], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9123], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4601], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4607], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4520], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5024], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5672], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5715], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4498], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5147], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4620], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4544], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6584], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6118], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7912], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4581], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6403], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9114], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6446], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5026], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5311], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4799], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6372], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4631], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5773], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5044], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8479], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6510], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6673], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4519], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5784], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4822], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5684], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5102], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4524], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4490], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9197], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5655], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7457], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4626], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4676], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4834], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4695], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4813], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.3882633913340157% **
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4485], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4557], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4638], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8688], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4587], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4481], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6212], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5401], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4578], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4621], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4537], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4542], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5116], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4664], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4505], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4476], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8158], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4844], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4611], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4736], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5936], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4663], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4658], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4750], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4506], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5431], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4709], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8243], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4580], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5420], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9271], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4472], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4489], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4576], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4708], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4550], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4572], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4640], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4683], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4630], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4531], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4548], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9228], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4568], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4744], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6000], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4629], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4539], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4593], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6369], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4566], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4888], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8680], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4484], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4855], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4480], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4563], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4604], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5962], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5371], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4837], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4538], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6599], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5705], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6040], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5742], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5017], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4699], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6757], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4463], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5288], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5904], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4764], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8882], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9123], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4601], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4607], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4520], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5024], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5672], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5715], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4498], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5147], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4620], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4544], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6584], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6118], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7912], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4581], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6403], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9114], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6446], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5026], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5311], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4799], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6372], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4631], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5773], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5044], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8479], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6510], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6673], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4519], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5784], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4822], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5684], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5102], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4524], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4490], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9197], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5655], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7457], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4626], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4676], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4834], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4695], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4813], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.3882633913340157% **
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4485], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4557], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4638], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8688], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4587], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4481], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6212], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5401], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4578], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4621], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4537], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4542], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5116], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4664], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4505], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4476], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8158], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4844], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4611], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4736], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5936], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4663], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4658], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4750], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4506], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5431], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4709], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8243], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4580], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5420], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9271], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4472], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4489], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4576], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4708], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4550], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4572], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4640], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4683], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4630], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4531], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4548], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9228], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4568], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4744], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6000], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4629], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4539], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4593], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6369], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4566], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4888], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8680], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4484], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4855], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4480], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4563], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4604], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5962], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5371], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4837], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4538], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6599], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5705], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6040], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5742], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5017], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4699], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6757], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4463], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5288], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5904], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4764], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8882], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9123], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4601], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4607], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4520], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5024], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5672], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5715], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4498], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5147], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4620], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4544], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6584], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6118], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7912], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4581], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6403], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9114], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6446], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5026], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5311], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4799], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6372], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4631], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5773], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5044], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8479], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6510], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6673], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4519], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5784], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4822], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5684], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5102], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4524], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4490], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9197], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5655], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7457], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4626], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4676], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4834], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4695], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4813], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.3882633913340157% **
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4485], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4557], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4638], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8688], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4587], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4481], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6212], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5401], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4578], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4621], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4537], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4542], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5116], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4664], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4505], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4476], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8158], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4844], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4611], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4736], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5936], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4663], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4658], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4750], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4506], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4526], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5431], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4709], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8243], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4580], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5420], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9271], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4472], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4489], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4576], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4708], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4549], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4575], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4550], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4562], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4572], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4640], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4683], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5707], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4681], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4630], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4531], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4548], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9228], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4568], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4744], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6000], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6474], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4629], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4539], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4593], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6369], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4566], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4888], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8680], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4521], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4513], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4484], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4855], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4480], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4589], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4552], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4518], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4545], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4563], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4604], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4586], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5962], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4497], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5371], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4551], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4837], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4538], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4560], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6599], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4555], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5705], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6040], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5742], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4511], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5017], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4564], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4509], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4699], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6757], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4502], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4463], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5288], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5904], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4764], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4478], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.8882], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9123], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4601], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4607], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4520], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4503], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5024], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4536], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5672], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5715], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4498], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5147], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4573], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4620], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4544], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6584], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6118], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7912], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4581], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4543], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4532], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6403], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4547], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4582], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.9114], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4530], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6446], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5026], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5311], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4799], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6372], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4631], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5802], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5773], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4541], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4554], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4507], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.5044], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.8479], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.6510], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4535], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.6673], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4519], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5784], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4822], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5684], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5102], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4524], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4540], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4490], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4561], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4612], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.9197], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5655], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.7457], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4569], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4626], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4676], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4834], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4528], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4695], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4558], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4813], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.3882633913340157% **
+
+INFO:root:TEST Processing --> pred = tensor([0.5553], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4508], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4527], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4591], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.5616], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4614], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4583], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.4522], device='mps:0', grad_fn=<SigmoidBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.4831], device='mps:0', grad_fn=<SigmoidBackward0>) target = 1.0

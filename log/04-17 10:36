@@ -1,0 +1,1138 @@
+INFO:root:
+ ======== Start Log Recording :04-17 10:36 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
+
+INFO:root:
+ ** Round 0 : Batch size = 23 , avg loss = 0.26557154349148215
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.00039568531792610884 -->grad_value: 16248172544.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00045939418487250805 -->grad_value: 1604702.125 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0028022255282849073 -->grad_value: 27215640.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0007394740823656321 -->grad_value: 27215640.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0008706919616088271 -->grad_value: 566776704.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -6.730310269631445e-05 -->grad_value: -158175.8125 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0037054973654448986 -->grad_value: 7845288.5 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0019391544628888369 -->grad_value: 7845288.5 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00025978765916079283 -->grad_value: 473769952.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0005015148781239986 -->grad_value: 84142608.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.006740889046341181 -->grad_value: 20347060224.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.0049097067676484585 -->grad_value: 20347060224.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -3.6556572013068944e-05 -->grad_value: 137887424.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.0017725826473906636 -->grad_value: 5667778560.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.005071530118584633 -->grad_value: 5667778560.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0004396284348331392 -->grad_value: -17899868160.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.041442085057497025 -->grad_value: 8006262063104.0 
+
+INFO:root:
+ ** Round 1 : Batch size = 24 , avg loss = 0.4166666666666667
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0010781665332615376 -->grad_value: 16248172544.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00026448661810718477 -->grad_value: 1604702.125 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.004902803339064121 -->grad_value: 27215640.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0028400514274835587 -->grad_value: 27215640.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0015863344306126237 -->grad_value: 566776704.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -3.1318537367042154e-05 -->grad_value: -158175.8125 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004429586231708527 -->grad_value: 7845288.5 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0012150645488873124 -->grad_value: 7845288.5 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0006361455889418721 -->grad_value: 473769952.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.001078703673556447 -->grad_value: 84142608.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02162088453769684 -->grad_value: 20347060224.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.01978970319032669 -->grad_value: 20347060224.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0006069206283427775 -->grad_value: 137887424.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.010692382231354713 -->grad_value: 5667778560.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.013991329818964005 -->grad_value: 5667778560.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.002131670480594039 -->grad_value: -17899868160.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.016727523878216743 -->grad_value: 8006262063104.0 
+
+INFO:root:
+ ** Round 2 : Batch size = 25 , avg loss = 0.48
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013077902840450406 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.0001990737218875438 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.005608413368463516 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0035456614568829536 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018296514172106981 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.9143582903780043e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004674933385103941 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009697172790765762 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0007634558714926243 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012721687089651823 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02660142257809639 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.024770241230726242 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.000797384069301188 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013663768768310547 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.01696271449327469 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.00270250765606761 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.008469636552035809 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 3 : Batch size = 25 , avg loss = 0.52
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013277416583150625 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019341218285262585 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056696184910833836 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036068677436560392 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018506122287362814 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8097212887369096e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004696105606853962 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009485445916652679 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0007745536277070642 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012889804784208536 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.027034223079681396 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02520303800702095 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.00081397604662925 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013921975158154964 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.01722092181444168 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.002752111991867423 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.0077520450577139854 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 4 : Batch size = 24 , avg loss = 0.5833333333333334
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.001329214428551495 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019299564883112907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.005674129351973534 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.003611377440392971 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.001852148910984397 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.802055339794606e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.00469766091555357 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009469892829656601 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.000775374413933605 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.001290221232920885 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706615999341011 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.025234978646039963 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008152027148753405 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013941029086709023 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017239976674318314 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.00275577325373888 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007699090056121349 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 5 : Batch size = 25 , avg loss = 0.56
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293469091877341 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295825040899217 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745330803096294 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036117825657129288 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522862810641527 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013728549703956e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697800613939762 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468502830713987 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0007754481630399823 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903327587991953 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.027069028466939926 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523784711956978 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153130183927715 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942740857601166 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241686582565308 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561020106077194 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007694333791732788 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 6 : Batch size = 24 , avg loss = 0.4583333333333333
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.001329356455244124 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295563106425107 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745619513094425 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.003611811436712742 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522959435358644 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.801323378458619e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697809927165508 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468402713537216 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.0007754535763524473 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903406750410795 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706923335790634 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.025238052010536194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153208764269948 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942863792181015 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241809517145157 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.002756125293672085 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.0076939999125897884 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 7 : Batch size = 24 , avg loss = 0.5
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523805946111679 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561259921640158 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970575928688 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 8 : Batch size = 25 , avg loss = 0.48
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 9 : Batch size = 25 , avg loss = 0.68
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 10 : Batch size = 24 , avg loss = 0.5416666666666666
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 11 : Batch size = 25 , avg loss = 0.44
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 12 : Batch size = 24 , avg loss = 0.5416666666666666
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 13 : Batch size = 24 , avg loss = 0.625
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 14 : Batch size = 23 , avg loss = 0.5652173913043478
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 15 : Batch size = 25 , avg loss = 0.6
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 16 : Batch size = 25 , avg loss = 0.68
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 17 : Batch size = 25 , avg loss = 0.52
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 18 : Batch size = 25 , avg loss = 0.68
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 19 : Batch size = 25 , avg loss = 0.32
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:
+ ** Round 20 : Batch size = 23 , avg loss = 0.43478260869565216
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight -0.0013293565716594458 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 0.00019295552920084447 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0056745633482933044 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0036118123680353165 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight -0.0018522965256124735 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight -1.8013219232670963e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.004697810392826796 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.0009468395728617907 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1 -->grad_requirs: True --weight -0.00077545375097543 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1 -->grad_requirs: True --weight -0.0012903409078717232 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1 -->grad_requirs: True --weight -0.02706924080848694 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1 -->grad_requirs: True --weight -0.02523806132376194 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_ih_l1_reverse -->grad_requirs: True --weight -0.0008153212256729603 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.weight_hh_l1_reverse -->grad_requirs: True --weight 0.00021879977430216968 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l1_reverse -->grad_requirs: True --weight -0.013942869380116463 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_hh_l1_reverse -->grad_requirs: True --weight -0.017241815105080605 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.weight -->grad_requirs: True --weight 0.0027561262249946594 -->grad_value: 0.0 
+
+INFO:root:-->name: linear.bias -->grad_requirs: True --weight 0.007693970110267401 -->grad_value: 0.0 
+
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:
+** TEST RESULT --> Accurary = 2.0129648584100988% **
+
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0

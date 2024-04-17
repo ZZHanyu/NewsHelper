@@ -1,0 +1,38 @@
+INFO:root:
+ ======== Start Log Recording :04-17 16:38 ========
+
+INFO:root:
+ Model Initialization = LSTM(8, 128, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(8, 128, bidirectional=True)>
+
+INFO:root:
+ ** Round 0 : Batch size = 23 , avg loss = 0.6594719847907191
+
+INFO:root:-->name: normalization.weight -->grad_requirs: True --weight 0.9996725916862488 -->grad_value: -0.02617783099412918 
+
+INFO:root:-->name: normalization.bias -->grad_requirs: True --weight -0.0021487604826688766 -->grad_value: -0.019932065159082413 
+
+INFO:root:-->name: lstm.weight_ih_l0 -->grad_requirs: True --weight 0.000694635440595448 -->grad_value: -0.00038919999497011304 
+
+INFO:root:-->name: lstm.weight_hh_l0 -->grad_requirs: True --weight 4.7776364226592705e-05 -->grad_value: -2.493051624696818e-06 
+
+INFO:root:-->name: lstm.bias_ih_l0 -->grad_requirs: True --weight -0.0006353576900437474 -->grad_value: -0.0009147374657914042 
+
+INFO:root:-->name: lstm.bias_hh_l0 -->grad_requirs: True --weight -0.0013363359030336142 -->grad_value: -0.0009147374657914042 
+
+INFO:root:-->name: lstm.weight_ih_l0_reverse -->grad_requirs: True --weight 0.0005082980496808887 -->grad_value: -0.0002515210653655231 
+
+INFO:root:-->name: lstm.weight_hh_l0_reverse -->grad_requirs: True --weight 5.163867899682373e-05 -->grad_value: 0.0 
+
+INFO:root:-->name: lstm.bias_ih_l0_reverse -->grad_requirs: True --weight -0.0003872495726682246 -->grad_value: -0.00030291423900052905 
+
+INFO:root:-->name: lstm.bias_hh_l0_reverse -->grad_requirs: True --weight 0.004215444438159466 -->grad_value: -0.00030291423900052905 
+
+INFO:root:-->name: linears.0.weight -->grad_requirs: True --weight -0.00018856672977562994 -->grad_value: -0.0003165308153256774 
+
+INFO:root:-->name: linears.0.bias -->grad_requirs: True --weight 0.006939219776540995 -->grad_value: -0.0665067508816719 
+
+INFO:root:-->name: linears.3.weight -->grad_requirs: True --weight 0.02394227869808674 -->grad_value: -0.15317825973033905 
+
+INFO:root:-->name: linears.3.bias -->grad_requirs: True --weight 0.014095371589064598 -->grad_value: -3.4171624183654785 
+
