@@ -8,6 +8,19 @@ import numpy as np
 from datetime import datetime
 import os
 import logging
+import torch
+
+import pickle
+from numpy import dot
+from numpy.linalg import norm
+from huggingface_hub import hf_hub_download
+
+import re
+from gensim.models import Word2Vec
+import gensim.downloader
+
+import urllib
+
 
 # utils
 from utils import network
@@ -23,6 +36,16 @@ class charactors_hander():
         self._json_result = {}
         self.args = main_args
         self._LSTM_NetWork = network.trainer(main_args=main_args)
+        
+        print(f"Loading models from gensim, name: fasttext-wiki-news-subwords-300 ....\n")
+        try:
+            self.embedding_model = gensim.downloader.load('fasttext-wiki-news-subwords-300')
+        except Exception as e:
+            print(f"\nERROR! Gensim Loading Failed! \n")
+        
+        print(f"** Load Successfully!\n")
+        self.embedding_dim = self.embedding_model.vector_size
+
 
 
     def _split_single_word(self) -> list:
@@ -59,6 +82,21 @@ class charactors_hander():
             return False
         else:
             return True
+        
+
+
+    def _words_embeddings(self, sentences):
+
+        for idx in range(len(sentences)):
+            if self.embedding_model.has_index_for(sentences[idx]):
+                sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
+            else:
+                sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
+                # torch.zeros(self.embedding_dim, dtype=torch.float32 )
+        return torch.tensor(sentences)
+
+
+
 
 
     def run(self):
@@ -77,19 +115,27 @@ class charactors_hander():
                 
                 # STEP 2: Lower all charactors in string
                 text_merge = text_merge.lower()
-                
-                # STEP 3: Split string into charactor list
-                text_merge = text_merge.split()
-                # print(f"\nHOW many words inside a sequence = {len(text_merge)}\n")
 
-                encoder_text = self.tokenizer(text=text_merge, max_length=8, padding='max_length', truncation=True, return_tensors='pt')
+                # remove all punctuation
+                text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
+                text_merge = re.findall(r'\b\w+\b', text_merge)
+
+                # STEP 3: Split string into charactor list
+                #text_merge = text_merge.split()
+                # print(f"\nHOW many words inside a sequence = {len(text_merge)}\n")
+                
+                # encoder_text = self.tokenizer(text=text_merge, max_length=8, padding='max_length', truncation=True, return_tensors='pt')
+                
                 # print(f"\n The encodered text is = {encoder_text['input_ids']}\n length = {encoder_text['input_ids'].size()} \n")
                 # temp = np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant')
                 # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
-                chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
                 
+                #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
+                text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
+                chunk_tokenized.append((text_merge, row['label']))
                 
                 # print(f"size after = {temp.shape}")
+            
             
             self._LSTM_NetWork.start(chunk_tokenized, index)
                 

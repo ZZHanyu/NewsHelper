@@ -1,0 +1,4 @@
+INFO:root:
+ ======== Start Log Recording :04-18 15:48 ========
+
+INFO:gensim.models.keyedvectors:loading projection weights from Namespace(dataset_path='/Users/taotao/Documents/GitHub/FYP/data/', dataset_name='fake-news-classification', chunk_size=100, max_epochs=30, test_batch=5, train_persentage=0.8, result_path='result/', date_time='2024_04_18', logging_path='/Users/taotao/Documents/GitHub/FYP/log/', pretrianed_emb_path='/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/')

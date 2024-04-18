@@ -5,6 +5,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 import torch.nn.functional as F
+import torch.nn.init as init
 import os
 import json
 import time
@@ -12,6 +13,9 @@ import numpy as np
 from tqdm import tqdm
 import logging
 from datetime import datetime, timedelta
+
+import gensim
+
 
 # utils
 # from classifier import main
@@ -32,47 +36,51 @@ class trainer():
     def __init__(self, main_args) -> None:
         self.args = main_args
         self.learn_rate_decay = 0.9
-        self._model = LstmNet(main_args).to(device)
-        self.optimizer = torch.optim.Adam(self._model.parameters(), lr=1e-3)
-        self.loss = nn.BCELoss()
+        self.model = LstmNet(main_args).to(device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
+        self.loss = nn.BCEWithLogitsLoss()
         self.normalize = nn.BatchNorm1d(num_features=8).to(device)
         self._test_data = []
 
 
     def _train(self, batch, idx:int):
         Accurary = 0
-        self.optimizer.zero_grad() # clean all grad
         # Every 2 epochs/batches, lower the learning rate
         if idx % 3 == 0:
             for param in self.optimizer.param_groups:
                 param['lr'] = param['lr'] * self.learn_rate_decay
+                self.optimizer.zero_grad() # clean all grad
+
         
         for data_idx in tqdm(range(len(batch)), desc="Batch No. {}".format(idx)):
-            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)
+            # feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)
+            feature = batch[data_idx][0].to(device)
             # feature = self.normalize(feature)
-            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=False)
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=True)
             # target = batch[data_idx][1]
-            y_pred = self._model.forward(feature)
+            y_pred = self.model.forward(feature)
             # print(f"\n RESULT = predicted = {y_pred} and target = {target}\n")
             loss = self.loss(y_pred, target)
             loss.backward()
             self.optimizer.step()
+            
             if y_pred >= 0.5 and target[0] == 1:
                 Accurary += 1
             elif y_pred < 0.5 and target[0] == 0:
                 Accurary += 1
             
         Accurary /= len(batch)    
-        logging.info(f"\n ** Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary}%\n")
-        print(f"\n ** Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary}%\n")
-        for name, parms in self._model.named_parameters():
+        logging.info(f"\n ** Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        print(f"\n ** Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        for name, parms in self.model.named_parameters():
+            # print(f"grad = {parms.grad} \n and type = {type(parms.grad)}\n")
             # print(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)}")
             logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
-        
+
 
 
     def _test(self):
-        self._model.eval()
+        self.model.eval()
         test_true = 0 
         totoal_lenght = 0
         for single_batch in tqdm(self._test_data, desc="TEST Dataset"):
@@ -88,7 +96,7 @@ class trainer():
                 # target = torch.tensor(target, dtype=torch.float32, device=device, requires_grad=True)
 
                 # print(f"\nfeature --> {feature} \n --> {type(feature)} \n --> size  {feature.size()}")
-                y_pred = self._model.forward(feature)
+                y_pred = self.model.forward(feature)
                 logging.info(f"TEST Processing --> pred = {y_pred} target = {target}")
                 # STEP activiate function:
                 if y_pred >= 0.5 and target == 1:
@@ -120,7 +128,13 @@ class trainer():
 class LstmNet(nn.Module):
     def __init__(self, args) -> None:
         super(LstmNet, self).__init__()
-        self.normalization = nn.BatchNorm1d(num_features=8)
+        self.main_args = args
+
+
+        # weight = self._load_pretrained_embedding_weight()
+        #self.embedding = nn.Embedding.from_pretrained(weight, freeze=True)
+
+        self.normalization = nn.BatchNorm1d(num_features=300)
 
         self.lstm = nn.LSTM(input_size=8,
                             hidden_size=128, 
@@ -136,12 +150,26 @@ class LstmNet(nn.Module):
             nn.Dropout(0.25),
             nn.Linear(64, 1) # [hidden dim, num class]
         )
+
+        self.linears.apply(self.init_weights) # inilize weight
     
         # self._max_epochs = args.max_epochs
         # self._threshold = 0.5
         print(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
         logging.info(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
 
+
+    def init_weights(self, m):
+        if isinstance(m, nn.Linear):
+            # 使用均匀分布初始化权重
+            init.xavier_uniform_(m.weight)
+            # 初始化偏置为0
+            init.constant_(m.bias, 0.0)
+
+    def _load_pretrained_embedding_weight(self):
+        model = gensim.models.KeyedVectors.load_word2vec_format(self.main_args)
+        weights = torch.FloatTensor(model.vectors) # formerly syn0, which is soon deprecated
+        return weights
     
     def forward(self, tensor_data:torch.tensor):
         # print(f"Shape tensor data = {tensor_data.size()},\n truth_v = {truth_v.size()}\n")
