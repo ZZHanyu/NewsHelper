@@ -1,0 +1,60 @@
+INFO:root:
+ ======== Start Log Recording :04-19 17:38 ========
+
+INFO:root:
+ Model Initialization = LSTM(300, 128, num_layers=2, dropout=0.1, bidirectional=True)
+ *Parameters = <bound method Module.parameters of LSTM(300, 128, num_layers=2, dropout=0.1, bidirectional=True)>
+
+INFO:gensim.models.keyedvectors:loading projection weights from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-04-19T17:39:34.307254', 'gensim': '4.3.0', 'python': '3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:49:36) [Clang 16.0.6 ]', 'platform': 'macOS-14.4.1-arm64-arm-64bit', 'event': 'load_word2vec_format'}
+INFO:root:
+ ** Round 0 : Batch size = 97 , Accurary = 50.51546391752577%
+
+INFO:root:
+ ** Round 1 : Batch size = 97 , Accurary = 47.42268041237113%
+
+INFO:root:
+ ** Round 2 : Batch size = 99 , Accurary = 46.464646464646464%
+
+INFO:root:
+ ** Round 3 : Batch size = 96 , Accurary = 41.66666666666667%
+
+INFO:root:
+ ** Round 4 : Batch size = 100 , Accurary = 45.0%
+
+INFO:root:
+ ** Round 5 : Batch size = 97 , Accurary = 54.63917525773196%
+
+INFO:root:
+ ** Round 6 : Batch size = 95 , Accurary = 51.578947368421055%
+
+INFO:root:
+ ** Round 7 : Batch size = 98 , Accurary = 44.89795918367347%
+
+INFO:root:
+ ** Round 8 : Batch size = 99 , Accurary = 49.494949494949495%
+
+INFO:root:
+ ** Round 9 : Batch size = 99 , Accurary = 48.484848484848484%
+
+INFO:root:
+ ** Round 10 : Batch size = 97 , Accurary = 50.51546391752577%
+
+INFO:root:
+ ** Round 11 : Batch size = 98 , Accurary = 43.87755102040816%
+
+INFO:root:
+ ** Round 12 : Batch size = 97 , Accurary = 46.391752577319586%
+
+INFO:root:
+ ** Round 13 : Batch size = 96 , Accurary = 47.91666666666667%
+
+INFO:root:
+ ** Round 14 : Batch size = 100 , Accurary = 50.0%
+
+INFO:root:
+ ** Round 15 : Batch size = 97 , Accurary = 54.63917525773196%
+
+INFO:root:
+ ** Round 16 : Batch size = 98 , Accurary = 51.02040816326531%
+

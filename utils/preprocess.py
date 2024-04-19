@@ -37,13 +37,15 @@ class charactors_hander():
         self.args = main_args
         self._LSTM_NetWork = network.trainer(main_args=main_args)
         
-        print(f"Loading models from gensim, name: fasttext-wiki-news-subwords-300 ....\n")
+        print(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
+        logging.info(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
         try:
-            self.embedding_model = gensim.downloader.load('fasttext-wiki-news-subwords-300')
+            self.embedding_model = gensim.downloader.load(main_args.pretrained_embedding_model_name)
         except Exception as e:
-            print(f"\nERROR! Gensim Loading Failed! \n")
+            print(f"\nERROR! Gensim Loading Failed! \nError contents : {e} \n")
         
         print(f"** Load Successfully!\n")
+        logging.info(f"** Load Successfully!\n")
         self.embedding_dim = self.embedding_model.vector_size
 
 
@@ -116,9 +118,10 @@ class charactors_hander():
                 # STEP 2: Lower all charactors in string
                 text_merge = text_merge.lower()
 
-                # remove all punctuation
+                # remove all punctuation and split
                 text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
                 text_merge = re.findall(r'\b\w+\b', text_merge)
+                
 
                 # STEP 3: Split string into charactor list
                 #text_merge = text_merge.split()
@@ -132,6 +135,10 @@ class charactors_hander():
                 
                 #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
                 text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
+
+                if single_index % 13 == 0:
+                    logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+
                 chunk_tokenized.append((text_merge, row['label']))
                 
                 # print(f"size after = {temp.shape}")
