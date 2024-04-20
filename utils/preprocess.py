@@ -95,7 +95,8 @@ class charactors_hander():
             else:
                 sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
                 # torch.zeros(self.embedding_dim, dtype=torch.float32 )
-        return torch.tensor(sentences)
+        # return torch.tensor(sentences)
+        return sentences
 
 
 
@@ -134,8 +135,9 @@ class charactors_hander():
                 # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
                 
                 #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
-                text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
-
+                
+                #text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
+                text_merge = self._words_embeddings(text_merge)
                 if single_index % 13 == 0:
                     logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
 

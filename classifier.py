@@ -66,6 +66,10 @@ class main:
         lstmNet = network.trainer(main_args=args)
         lstmNet.start()
 
+    # def print_arguments(self):
+        
+
+
 
 
 
@@ -83,7 +87,8 @@ parser.add_argument("--date_time", type=str, default=datetime.now().strftime("%Y
 parser.add_argument("--logging_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/log/", help="log file recorded path")
 parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", help="path store pretrianed embeddings model")
 parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
-parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model", help="trained model saving path")
+parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
+parser.add_argument("--batch_model", type=bool, default=True, help="whether using batch during train step")
 args = parser.parse_args()
 
 main_progress = main(args)
