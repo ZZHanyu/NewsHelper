@@ -20,6 +20,8 @@ from gensim.models import Word2Vec
 import gensim.downloader
 
 import urllib
+import math
+
 
 
 # utils
@@ -27,8 +29,13 @@ from utils import network
 
 
 class charactors_hander():
-    def __init__(self, chunks: pandas.io.parsers.readers.TextFileReader, main_args) -> None:
-        # super().__init__(main_args)
+    def __init__(self, 
+                 chunks: pandas.io.parsers.readers.TextFileReader, 
+                 main_args,
+                 total_len) -> None:
+        self.datalen = total_len
+        # self.train_set = None
+        # self.test_set = None
         self._meta_data = chunks
         self.tokenizer = PreTrainedTokenizerFast.from_pretrained('bert-base-uncased')
         # self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -49,6 +56,19 @@ class charactors_hander():
         self.embedding_dim = self.embedding_model.vector_size
 
 
+    # def dataset_divider(self):
+    #     # length = math.floor(len(self._meta_data))
+
+    #     print(f"\n length = {length}")
+        
+    #     if self.datalen > 0:
+    #         train_num = math.floor(self.datalen * self.args.train_persentage)
+    #         self.train_set = self._meta_data[:train_num]
+    #         test_num = self.datalen - train_num
+    #         self.test_set = self._meta_data[train_num+1:test_num]
+    #     else:
+    #         logging.info("\n ***** ERROR! Located on dataset_divider!\n")
+    #         raise Exception("\n ERROR: Dataset diveded failed! \n")
 
     def _split_single_word(self) -> list:
         return self._raw_str.split()
@@ -71,9 +91,6 @@ class charactors_hander():
         for j in len(text):
             text[j] = text[j] / norm2
         return text
-    
-    def _dataset_divder(self):
-        pass
 
     # def _save_to_file(self, count_num):
     #     with open(self.args.result_path + "tokenized{}.npy".format(str(count_num)), 'a+') as json_file:
@@ -103,50 +120,139 @@ class charactors_hander():
 
 
     def run(self):
-        for index, chunk in enumerate(tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True)):
-            # Check wether specifc file number exist:
-            # if self._file_exist_checker(index):
-            #     print(f"File tokenized{index} already existed!\n")
-            #     continue
+        flag = True
+        test_tokenized = []
 
+        # train
+        for index, chunk in enumerate(tqdm(self._meta_data, desc="TextFileReader in Progress...", leave=True)):
             # STEP 1: Remove empty line
             chunk = self._remove_empty_line(single_chunk=chunk)
             chunk_tokenized = [] # initiaize and re-initiaze
-            for single_index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
-                # Concating the news title and main body            
-                text_merge = row['title'] + row['text']
-                
-                # STEP 2: Lower all charactors in string
-                text_merge = text_merge.lower()
+            
 
-                # remove all punctuation and split
-                text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
-                text_merge = re.findall(r'\b\w+\b', text_merge)
-                
+            if flag == True:
+                # Train epoch
+                for single_index, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Train Processing in chunk index {index} ..."):
+                    if single_index > self.datalen:
+                        flag = False
+                        continue
+                        
+                    # Concating the news title and main body            
+                    text_merge = row['title'] + row['text']
+                    
+                    # STEP 2: Lower all charactors in string
+                    text_merge = text_merge.lower()
 
-                # STEP 3: Split string into charactor list
-                #text_merge = text_merge.split()
-                # print(f"\nHOW many words inside a sequence = {len(text_merge)}\n")
-                
-                # encoder_text = self.tokenizer(text=text_merge, max_length=8, padding='max_length', truncation=True, return_tensors='pt')
-                
-                # print(f"\n The encodered text is = {encoder_text['input_ids']}\n length = {encoder_text['input_ids'].size()} \n")
-                # temp = np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant')
-                # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
-                
-                #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
-                
-                #text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
-                text_merge = self._words_embeddings(text_merge)
-                if single_index % 13 == 0:
-                    logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+                    # STEP 3: Split string into charactor list
+                    # remove all punctuation and split
+                    text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
+                    text_merge = re.findall(r'\b\w+\b', text_merge)
 
-                chunk_tokenized.append((text_merge, row['label']))
+                    text_merge = self._words_embeddings(text_merge)
+                    if single_index % 13 == 0:
+                        logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+                    chunk_tokenized.append((text_merge, row['label']))
+                self._LSTM_NetWork.start(chunk_tokenized, index, flag)
+            elif flag == False:
+                # Test epoch
+                for single_index, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {index} ..."):
+                    # Concating the news title and main body            
+                    text_merge = row['title'] + row['text']
+                    
+                    # STEP 2: Lower all charactors in string
+                    text_merge = text_merge.lower()
+
+                    # STEP 3: Split string into charactor list
+                    # remove all punctuation and split
+                    text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
+                    text_merge = re.findall(r'\b\w+\b', text_merge)
+
+                    text_merge = self._words_embeddings(text_merge)
+                    if single_index % 13 == 0:
+                        logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+                    test_tokenized.append((text_merge, row['label']))
+        self._LSTM_NetWork.start(test_tokenized, index, flag)
+
+        
+        # # test
+        # for index, chunk in enumerate(tqdm(self.train_set, desc="Train in Progress", leave=True)):
+        #     # STEP 1: Remove empty line
+        #     chunk = self._remove_empty_line(single_chunk=chunk)
+        #     chunk_tokenized = [] # initiaize and re-initiaze
+
+        #     for single_index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
+        #         # Concating the news title and main body            
+        #         text_merge = row['title'] + row['text']
                 
-                # print(f"size after = {temp.shape}")
+        #         # STEP 2: Lower all charactors in string
+        #         text_merge = text_merge.lower()
+
+        #         # STEP 3: Split string into charactor list
+        #         # remove all punctuation and split
+        #         text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
+        #         text_merge = re.findall(r'\b\w+\b', text_merge)
+
+        #         text_merge = self._words_embeddings(text_merge)
+        #         if single_index % 13 == 0:
+        #             logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+        #         chunk_tokenized.append((text_merge, row['label']))
+        # self._LSTM_NetWork.start(chunk_tokenized, index, flag=False)
+
+
+
+
+
+
+
+
+
+
+        # for index, chunk in enumerate(tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True)):
+        #     # Check wether specifc file number exist:
+        #     # if self._file_exist_checker(index):
+        #     #     print(f"File tokenized{index} already existed!\n")
+        #     #     continue
+
+        #     # STEP 1: Remove empty line
+        #     chunk = self._remove_empty_line(single_chunk=chunk)
+        #     chunk_tokenized = [] # initiaize and re-initiaze
             
             
-            self._LSTM_NetWork.start(chunk_tokenized, index)
+        #     for single_index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
+        #         # Concating the news title and main body            
+        #         text_merge = row['title'] + row['text']
+                
+        #         # STEP 2: Lower all charactors in string
+        #         text_merge = text_merge.lower()
+
+        #         # remove all punctuation and split
+        #         text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
+        #         text_merge = re.findall(r'\b\w+\b', text_merge)
+                
+
+        #         # STEP 3: Split string into charactor list
+        #         #text_merge = text_merge.split()
+        #         # print(f"\nHOW many words inside a sequence = {len(text_merge)}\n")
+                
+        #         # encoder_text = self.tokenizer(text=text_merge, max_length=8, padding='max_length', truncation=True, return_tensors='pt')
+                
+        #         # print(f"\n The encodered text is = {encoder_text['input_ids']}\n length = {encoder_text['input_ids'].size()} \n")
+        #         # temp = np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant')
+        #         # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
+                
+        #         #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
+                
+        #         #text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
+        #         text_merge = self._words_embeddings(text_merge)
+        #         if single_index % 13 == 0:
+        #             logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
+
+        #         chunk_tokenized.append((text_merge, row['label']))
+                
+        #         # print(f"size after = {temp.shape}")
+            
+            
+        #     self._LSTM_NetWork.start(chunk_tokenized, index)
                 
 
 
