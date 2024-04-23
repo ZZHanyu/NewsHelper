@@ -10,6 +10,8 @@ from torchvision.transforms import ToTensor
 from utils import preprocess
 # from utils import custom_dataloader
 from utils import network
+from utils import topicModel
+
 
 # other modules
 import opendatasets as od
@@ -22,6 +24,7 @@ class main:
         self.args = main_args
         self._chunks = None
         self._total_length = 0
+        self._topic_model = None
 
     def datarow_count(self):
         with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
@@ -64,20 +67,40 @@ class main:
         except Exception as e:
             logging.info(f"\n ERROR! CSV count Failed! \n")
         
+
         data_handler = preprocess.charactors_hander(chunks=self._chunks,
-                                                    main_args=self.args,
-                                                    total_len=self._total_length)
+                                                main_args=self.args,
+                                                total_len=self._total_length)
+
         data_handler.run()
+
+    def _topic_modeling(self):
+        self._topic_model = topicModel.LDA_topic_model()
+
+
 
     def _lstm_net(self):
         lstm = network.LstmNet(self.args)
         lstm.forward()
 
     def forward(self):
-        self._dataloader()
-        self._data_preprocess()
-        lstmNet = network.trainer(main_args=args)
-        lstmNet.start()
+        if self.args.LDA_only == False:
+            try:
+                self._dataloader()
+                self._data_preprocess()
+            except Exception as e:
+                logging.info(f"\n \t An ERROR Happend! \n Now saving model...\n")
+
+            # lstmNet = network.trainer(main_args=args)
+            # lstmNet.start()
+        else:
+            try:
+                self._topic_model()
+            except Exception as e:
+                logging.info(f"ERROR in topic modeling! errInfo: {e} \n")
+        
+        logging.info("\n Programing Finished!\n")
+        
 
     
             
@@ -103,7 +126,8 @@ parser.add_argument("--logging_path", type=str, default="/Users/taotao/Documents
 parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", help="path store pretrianed embeddings model")
 parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
 parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
-parser.add_argument("--batch_model", type=bool, default=False, help="whether using batch during train step")
+parser.add_argument("--batch_model", type=bool, default=True, help="whether using batch during train step")
+parser.add_argument("--LDA_only", type=bool, default=False, help="whether start from train")
 args = parser.parse_args()
 
 main_progress = main(args)

@@ -13,6 +13,7 @@ import numpy as np
 from tqdm import tqdm
 import logging
 from datetime import datetime, timedelta
+import copy
 
 import gensim
 
@@ -43,6 +44,8 @@ class trainer():
         self.loss = nn.BCEWithLogitsLoss()
         self.normalize = nn.BatchNorm1d(num_features=8).to(device)
         self._test_data = []
+        self._best_model_state = None
+        self._flag = True
 
     def display_all_params(self):
         print("\n\n *** starting print param:\n")
@@ -99,13 +102,16 @@ class trainer():
                     Accurary += 1
                 elif y_pred < 0.5 and target[0] == 0:
                     Accurary += 1
-                if data_idx % 13 == 0:
-                    for name, parms in self.model.named_parameters():
-                        # print(f"\n -->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {parms.grad}")
-                        logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
+                # if data_idx % 13 == 0:
+                #     for name, parms in self.model.named_parameters():
+                #         # print(f"\n -->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {parms.grad}")
+                #         logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
             
-            if idx % 100 < 2 and idx > 10000:
+            if idx % 100 == 0 and idx > 100:
                 self._save_model()
+                for name, parms in self.model.named_parameters():
+                    logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
+
             if len(batch) > 0:
                 Accurary /= len(batch)    
             else:
@@ -157,7 +163,6 @@ class trainer():
 
         totoal_lenght = len(batch)
         for single_data in batch:
-            
             feature = torch.tensor(single_data[0], dtype=torch.float32, device=device, requires_grad=True)
             # target = torch.tensor([single_data[1]], dtype=torch.float32, device=device, requires_grad=False)
             target = single_data[1]
@@ -182,21 +187,29 @@ class trainer():
         #     logging.info(param_tensor, "\t", self.model.state_dict()[param_tensor].size())
         # for var_name in self.optimizer.state_dict():
         #     logging.info(var_name, "\t", self.optimizer.state_dict()[var_name])
-        
-        try:
-            torch.save(self.model.state_dict(), f'{self.args.model_save_path}model{self.args.date_time}.pth')
-        except Exception as e:
-            print(f"\n ERROR MODEL SAVING! {e}\n")
-            logging.info(f"\n** Model saving ERROR, {e}\n")
-        logging.info(f"** Model Saving Sucessfully!\n")
+        if self._flag:
+            self._best_model_state = copy.deepcopy(self.model.state_dict())
+        else:
+            torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
+
+    def _force_save_model(self):
+        self._best_model_state = copy.deepcopy(self.model.state_dict())
+        torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
+        logging.info("Force Saving Sucessful!\n")
         
 
-    def start(self, batch: list, idx:int, flag:int):
-        if flag:
-            self._train(batch, idx)
-        else:
-            self._save_model()
-            self._test(batch)
+    def start(self, batch: list, idx:int, flag: bool):
+        self._flag = flag
+        try:
+            if self._flag:
+                self._train(batch, idx)
+            else:
+                self._save_model()
+                self._test(batch)
+        except Exception as e:
+            logging.info(f" \n\t *** ERROR in train and test, now start force saving...\n")
+            self._force_save_model()
+
 
         
         
