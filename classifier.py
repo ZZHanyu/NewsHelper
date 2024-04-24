@@ -19,17 +19,36 @@ import os
 from datetime import datetime, timedelta
 import logging
 
+
+
 class main:
     def __init__(self, main_args) -> None:
         self.args = main_args
         self._chunks = None
         self._total_length = 0
         self._topic_model = None
+        self.device = None
+        self.data_handler = preprocess.charactors_hander(chunks=self._chunks,
+                                                main_args=self.args,
+                                                total_len=self._total_length,
+                                                device=self.device)
+        
 
     def datarow_count(self):
         with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
             self._total_length = sum(1 for row in fileobject)
         logging.info(f"\n ** DataFile have {self._total_length} rows of data! \n")
+
+    def _select_device(self):
+        # check avaliable devices
+        if torch.cuda.is_available():
+            self.device = torch.device("cuda")
+        elif torch.backends.mps.is_available():
+            if torch.backends.mps.is_built():
+                self.device = torch.device("mps")
+        else:
+            self.device = torch.device("cpu")
+        logging.info(f"\n *** Devices selected = {self.device} ! \n")
         
 
     def _dataloader(self):
@@ -65,18 +84,12 @@ class main:
         try:
             self.datarow_count()
         except Exception as e:
-            logging.info(f"\n ERROR! CSV count Failed! \n")
+            logging.info(f"\n ERROR! CSV count Failed! {e} \n")
         
-
-        data_handler = preprocess.charactors_hander(chunks=self._chunks,
-                                                main_args=self.args,
-                                                total_len=self._total_length)
-
-        data_handler.run()
+        self.data_handler.run()
 
     def _topic_modeling(self):
         self._topic_model = topicModel.LDA_topic_model()
-
 
 
     def _lstm_net(self):
@@ -84,6 +97,7 @@ class main:
         lstm.forward()
 
     def forward(self):
+        self._select_device()
         if self.args.LDA_only == False:
             try:
                 self._dataloader()
@@ -93,11 +107,15 @@ class main:
 
             # lstmNet = network.trainer(main_args=args)
             # lstmNet.start()
-        else:
-            try:
-                self._topic_model()
-            except Exception as e:
-                logging.info(f"ERROR in topic modeling! errInfo: {e} \n")
+        elif self.args.LDA_only == True:
+            # try:
+            print("ok")
+            topic_model = topicModel.LDA_topic_model(self.args,
+                                                     self.device,
+                                                     self.data_handler.get_classifier_model())
+            result = topic_model.forward()
+            # except Exception as e:
+                # logging.info(f"ERROR in topic modeling! errInfo: {e} \n")
         
         logging.info("\n Programing Finished!\n")
         
@@ -127,7 +145,8 @@ parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Do
 parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
 parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
 parser.add_argument("--batch_model", type=bool, default=True, help="whether using batch during train step")
-parser.add_argument("--LDA_only", type=bool, default=False, help="whether start from train")
+parser.add_argument("--LDA_only", type=bool, default=True, help="whether start from train")
+parser.add_argument("--LDA_model_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", help="LDA model path")
 args = parser.parse_args()
 
 main_progress = main(args)

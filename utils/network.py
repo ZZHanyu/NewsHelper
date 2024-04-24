@@ -20,8 +20,6 @@ import gensim
 
 # utils
 # from classifier import main
-
-
 # check avaliable devices
 if torch.cuda.is_available():
     device = torch.device("cuda")
@@ -30,12 +28,14 @@ elif torch.backends.mps.is_available():
         device = torch.device("mps")
 else:
     device = torch.device("cpu")
-print(f"\n Devices selected = {device} \n")
 logging.info(f"\n *** Devices selected = {device} ! \n")
 
 
 class trainer():
-    def __init__(self, main_args) -> None:
+    def __init__(self,
+                main_args,
+                device) -> None:
+        
         self.args = main_args
         self.learn_rate_decay = 0.9
         self.model = LstmNet(main_args).to(device)

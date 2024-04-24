@@ -22,34 +22,39 @@ import gensim.downloader
 
 # utils
 from utils import network
+from utils import model
 
 
-class charactors_hander():
+class charactors_hander(model.module):
     def __init__(self, 
                  chunks: pandas.io.parsers.readers.TextFileReader, 
                  main_args,
-                 total_len) -> None:
+                 total_len,
+                 device) -> None:
+        
+        super().__init__(main_args=main_args,
+                         device=device,
+                        )
         self.datalen = total_len
-        # self.train_set = None
-        # self.test_set = None
         self._meta_data = chunks
-        self.tokenizer = PreTrainedTokenizerFast.from_pretrained('bert-base-uncased')
-        # self.tokenizer.pad_token = self.tokenizer.eos_token
-        self.tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-        self._json_result = {}
-        self.args = main_args
-        self._LSTM_NetWork = network.trainer(main_args=main_args)
-        
-        print(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
-        logging.info(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
-        try:
-            self.embedding_model = gensim.downloader.load(main_args.pretrained_embedding_model_name)
-        except Exception as e:
-            print(f"\nERROR! Gensim Loading Failed! \nError contents : {e} \n")
-        
-        print(f"** Load Successfully!\n")
-        logging.info(f"** Load Successfully!\n")
+        self._LSTM_NetWork = network.trainer(main_args=main_args,
+                                             device=device)
         self.embedding_dim = self.embedding_model.vector_size
+
+        # try:
+        #     logging.info(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
+        #     self.embedding_model = gensim.downloader.load(main_args.pretrained_embedding_model_name)
+        # except Exception as e:
+        #     print(f"\nERROR! Gensim Loading Failed! \nError contents : {e} \n")
+        
+        # print(f"** Load Successfully!\n")
+        # logging.info(f"** Load Successfully!\n")
+        
+        # self.tokenizer = PreTrainedTokenizerFast.from_pretrained('bert-base-uncased')
+        # self.tokenizer.pad_token = self.tokenizer.eos_token
+        # self.tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+        # self._json_result = {}
+        # self.args = main_args
 
 
     # def dataset_divider(self):
@@ -66,11 +71,17 @@ class charactors_hander():
     #         logging.info("\n ***** ERROR! Located on dataset_divider!\n")
     #         raise Exception("\n ERROR: Dataset diveded failed! \n")
 
+    def get_classifier_model(self):
+        return self._LSTM_NetWork
+
     def _split_single_word(self) -> list:
         return self._raw_str.split()
     
     def display_elements(self):
         return self._raw_str
+    
+    def remove_empty_line(self, single_chunk):
+        self._remove_empty_line(self, single_chunk=single_chunk)
     
     def _remove_empty_line(self, single_chunk):
         for index, row in single_chunk.iterrows():
@@ -118,7 +129,6 @@ class charactors_hander():
     def run(self):
         flag = True
         test_tokenized = []
-
         # train
         for index, chunk in enumerate(tqdm(self._meta_data, desc="TextFileReader in Progress...", leave=True)):
             # STEP 1: Remove empty line
@@ -148,7 +158,7 @@ class charactors_hander():
                     if single_index % 13 == 0:
                         logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
                     chunk_tokenized.append((text_merge, row['label']))
-                self._LSTM_NetWork.start(chunk_tokenized, index, flag)
+                self._LSTM_NetWork.start(chunk_tokenized, index, flag, self.device)
             elif flag == False:
                 # Test epoch
                 for single_index, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {index} ..."):
@@ -167,7 +177,7 @@ class charactors_hander():
                     if single_index % 13 == 0:
                         logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
                     test_tokenized.append((text_merge, row['label']))
-        self._LSTM_NetWork.start(test_tokenized, index, flag)
+        self._LSTM_NetWork.start(test_tokenized, index, flag, self.device)
 
         
         # # test
