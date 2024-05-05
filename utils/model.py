@@ -23,11 +23,14 @@ class module():
 
         pass
 
-    def forward():
+    def forward(self):
         pass
 
 
-    def run():
+    def run(self):
         pass
 
+
+    def train(self):
+        pass
 

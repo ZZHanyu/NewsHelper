@@ -36,6 +36,7 @@ class trainer():
                 main_args,
                 device) -> None:
         
+        print("\nNow inital trainer..\n")        
         self.args = main_args
         self.learn_rate_decay = 0.9
         self.model = LstmNet(main_args).to(device)
@@ -46,98 +47,106 @@ class trainer():
         self._test_data = []
         self._best_model_state = None
         self._flag = True
+        self._result_list = []
+        self.best_accurary = 0        
+        print("\nTrainer inital succefully!\n")        
+
+
 
     def display_all_params(self):
         print("\n\n *** starting print param:\n")
         for param in self.model.parameters():
             print(f"\n --> param = {param} --> type = {type(param)} --> size = {param.size()}\n")
 
-    def train(self):
-        pass
+
+    def _mini_batch(self, 
+                    batch: list, 
+                    idx: int)-> float:
+        
+        logging.info("*** \t batch model = True ")
+        target_set = []
+        feature = []
+        batch_size = len(batch)
+
+        for data_idx in tqdm(range(batch_size), desc="Batch No. {}".format(idx)):
+            feature.append(batch[data_idx][0])
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=True)
+            target_set.append(target)
+        feature = torch.tensor(feature, requires_grad=True).to(device)
+        target_set = torch.tensor(target_set, requires_grad=True)
+        y_pred = self.model.forward_with_batch(tensor_data=feature,
+                                                batch_size=batch_size)
+        self.optimizer.zero_grad() # clean all grad
+        loss = self.loss(y_pred, target_set)
+        loss.backward()
+        self.optimizer.step()
 
 
-    def _train(self, batch, idx:int):
-        self.model.train()
 
-        if self.args.batch_model == True:
-            logging.info("*** \t batch model = True ")
-            target_set = []
-            feature = []
-            batch_size = len(batch)
-
-            for data_idx in tqdm(range(batch_size), desc="Batch No. {}".format(idx)):
-                feature.append(batch[data_idx][0])
-                target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=True)
-                target_set.append(target)
-            feature = torch.tensor(feature, requires_grad=True).to(device)
-            target_set = torch.tensor(target_set, requires_grad=True)
-            y_pred = self.model.forward_with_batch(tensor_data=feature,
-                                                   batch_size=batch_size)
+    def _single_step(self, batch, idx) -> float:
+        logging.info("*** \t batch model = False")
+        Accurary = 0
+        # # Every 2 epochs/batches, lower the learning rate
+        # if idx % 3 == 0:
+        #     for param in self.optimizer.param_groups:
+        #         param['lr'] = param['lr'] * self.learn_rate_decay
+            
+        # pass required :
+        #   batch, idx
+        for data_idx in tqdm(range(len(batch)), desc="Batch No. {}".format(idx), leave= True):
+            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)
+            # feature = batch[data_idx][0].to(device)
+            #feature = torch.tensor(feature, requires_grad=True).to(device)
+            # feature = self.normalize(feature)
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=True)
+            # target = batch[data_idx][1]
+            y_pred = self.model.forward(feature)
             self.optimizer.zero_grad() # clean all grad
-            loss = self.loss(y_pred, target_set)
+            loss = self.loss(y_pred, target)
             loss.backward()
             self.optimizer.step()
+            # calculate accuary rate
+            if y_pred >= 0.5 and target[0] == 1:
+                Accurary += 1
+            elif y_pred < 0.5 and target[0] == 0:
+                Accurary += 1
+            # if data_idx % 13 == 0:
+            #     for name, parms in self.model.named_parameters():
+            #         # print(f"\n -->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {parms.grad}")
+            #         logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
+        
+        # set checkpoint in case of break
+        if idx % 100 == 0 and idx > 100:
+            self.save_model()
+            for name, parms in self.model.named_parameters():
+                logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
+
+        if len(batch) > 0:
+            Accurary /= len(batch)    
         else:
-            logging.info("*** \t batch model = False")
-            Accurary = 0
-            # # Every 2 epochs/batches, lower the learning rate
-            # if idx % 3 == 0:
-            #     for param in self.optimizer.param_groups:
-            #         param['lr'] = param['lr'] * self.learn_rate_decay
+            pass
+        logging.info(f"\n ** Training Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        print(f"\n ** Training Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        
 
-            for data_idx in tqdm(range(len(batch)), desc="Batch No. {}".format(idx)):
-                feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=device, requires_grad=True)
-                # feature = batch[data_idx][0].to(device)
-                #feature = torch.tensor(feature, requires_grad=True).to(device)
-                # feature = self.normalize(feature)
-                target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=device, requires_grad=True)
-                # target = batch[data_idx][1]
-                y_pred = self.model.forward(feature)
-                self.optimizer.zero_grad() # clean all grad
-                loss = self.loss(y_pred, target)
-                loss.backward()
-                self.optimizer.step()
-                # calculate accuary rate
-                if y_pred >= 0.5 and target[0] == 1:
-                    Accurary += 1
-                elif y_pred < 0.5 and target[0] == 0:
-                    Accurary += 1
-                # if data_idx % 13 == 0:
-                #     for name, parms in self.model.named_parameters():
-                #         # print(f"\n -->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {parms.grad}")
-                #         logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
+
+    
+    def train(self, 
+               batch:list, 
+               idx:int):
+
+        self.model.train()
+        if self.args.batch_model == True:
+            self._mini_batch(batch=batch, idx=idx)
+        else:
+            self._single_step(batch=batch, idx=idx)
+
             
-            if idx % 100 == 0 and idx > 100:
-                self._save_model()
-                for name, parms in self.model.named_parameters():
-                    logging.info(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
 
-            if len(batch) > 0:
-                Accurary /= len(batch)    
-            else:
-                pass
-            logging.info(f"\n ** Training Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
-            print(f"\n ** Training Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
-
-                # print(f"\n RESULT = predicted = {y_pred} and target = {target}\n")
-                # loss = self.loss(y_pred, target)
-                # loss.backward()
-                
-                
-                
-                #self.optimizer.step()
-            # y_pred_set = torch.tensor(y_pred_set, requires_grad=True)
-            # target_set = torch.tensor(target_set, requires_grad=True)
-            # loss = self.loss(y_pred_set, target_set)
-            # loss.backward()
-            # self.optimizer.step()
-
-    def test(self):
-        pass
-
-    def _test(self, batch):
+    def test(self, batch:list):
         self.model.eval()
         test_true = 0 
+        test_result = 0
         # totoal_lenght = 0
 
         # for single_batch in tqdm(self._test_data, desc="TEST Dataset"):
@@ -180,9 +189,18 @@ class trainer():
                 test_true += 1
             elif y_pred.item() < 0.5 and target == 0:
                 test_true += 1
-        logging.info(f"\n** TEST RESULT --> Accurary = {(test_true / totoal_lenght) * 100}% **\n")
+        test_result = (test_true / totoal_lenght) * 100
+        logging.info(f"\n** TEST RESULT --> Accurary = {test_result}")
+        # if better accuary get, then save
+        if test_result > self.best_accurary:
+            self.best_accurary = test_result
+            self.save_model()
+        else:
+            pass
+
+        return test_result
     
-    def _save_model(self):
+    def save_model(self):
         # for param_tensor in self.model.state_dict():
         #     logging.info(param_tensor, "\t", self.model.state_dict()[param_tensor].size())
         # for var_name in self.optimizer.state_dict():
@@ -192,23 +210,31 @@ class trainer():
         else:
             torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
 
-    def _force_save_model(self):
+    def save_model(self, ):
+        pass
+
+    def force_save_model(self):
         self._best_model_state = copy.deepcopy(self.model.state_dict())
         torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
         logging.info("Force Saving Sucessful!\n")
         
 
-    def start(self, batch: list, idx:int, flag: bool):
+    def start(self, 
+              batch: list, 
+              idx:int, 
+              flag: bool,
+              total_chunk):
+        
         self._flag = flag
         try:
             if self._flag:
-                self._train(batch, idx)
+                self.train(batch, idx, total_chunk)
             else:
-                self._save_model()
-                self._test(batch)
+                self.save_model()
+                self.test(batch)
         except Exception as e:
             logging.info(f" \n\t *** ERROR in train and test, now start force saving...\n")
-            self._force_save_model()
+            self.force_save_model()
 
 
         

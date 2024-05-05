@@ -8,12 +8,11 @@ import numpy as np
 from datetime import datetime
 import os
 import logging
-import torch
+import math
 
 import pickle
 from numpy import dot
 from numpy.linalg import norm
-from huggingface_hub import hf_hub_download
 
 import re
 from gensim.models import Word2Vec
@@ -32,14 +31,16 @@ class charactors_hander(model.module):
                  total_len,
                  device) -> None:
         
+        print("\nNow inital charactors_hander...\n")
         super().__init__(main_args=main_args,
-                         device=device,
-                        )
+                         device=device,)
         self.datalen = total_len
         self._meta_data = chunks
         self._LSTM_NetWork = network.trainer(main_args=main_args,
                                              device=device)
         self.embedding_dim = self.embedding_model.vector_size
+
+        print("\ncharactors_hander inital succefuly\n")
 
         # try:
         #     logging.info(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
@@ -98,6 +99,7 @@ class charactors_hander(model.module):
         for j in len(text):
             text[j] = text[j] / norm2
         return text
+    
 
     # def _save_to_file(self, count_num):
     #     with open(self.args.result_path + "tokenized{}.npy".format(str(count_num)), 'a+') as json_file:
@@ -110,7 +112,6 @@ class charactors_hander(model.module):
             return True
         
 
-
     def _words_embeddings(self, sentences):
 
         for idx in range(len(sentences)):
@@ -121,63 +122,103 @@ class charactors_hander(model.module):
                 # torch.zeros(self.embedding_dim, dtype=torch.float32 )
         # return torch.tensor(sentences)
         return sentences
+    
+
+    def _train(self):
+        pass
 
 
+    def _string_handler(self, raw_text):
+        # STEP 1: Lower all charactors in string
+        raw_text = raw_text.lower()
+
+        # STEP 2: Split string into charactor list
+        # remove all punctuation and split
+        raw_text = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',raw_text).strip()
+        raw_text = re.findall(r'\b\w+\b', raw_text)
+
+        # STEP 3: embedding string into vector represeation
+        processed_text = self._words_embeddings(raw_text)
+        return processed_text
+    
+
+    def arg_max(self):
+
+        pass
 
 
 
     def run(self):
-        flag = True
-        test_tokenized = []
-        # train
-        for index, chunk in enumerate(tqdm(self._meta_data, desc="TextFileReader in Progress...", leave=True)):
-            # STEP 1: Remove empty line
-            chunk = self._remove_empty_line(single_chunk=chunk)
-            chunk_tokenized = [] # initiaize and re-initiaze
-            
+        # Train
+        # Epoches
+        test_result = []
+        for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.{}".format(epoch_idx), leave=True):
+            flag = True # flag == True : Training Progress, flag == False : Testing Progress
+            test_tokenized = []
 
-            if flag == True:
-                # Train epoch
-                for single_index, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Train Processing in chunk index {index} ..."):
-                    if single_index > self.datalen:
+            try:
+                # single banch in epoch
+                for index, chunk in enumerate(tqdm(self._meta_data, desc="TextFileReader in Progress...", leave=True)):
+                    # STEP 1: Remove empty line
+                    chunk = self._remove_empty_line(single_chunk=chunk)
+                    chunk_tokenized = None # initiaize and re-initiaze
+
+                    # Check whether train progress or test progress
+                    if index > math.floor(self.args.train_persentage * index):
                         flag = False
-                        continue
-                        
-                    # Concating the news title and main body            
-                    text_merge = row['title'] + row['text']
+
+                    # Train chunk
+                    if flag == True:
+                        for row in tqdm(chunk.iterrows(), leave=True, desc=f"* Train Processing in chunk index {index} ..."):
+                            chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+                        # self._LSTM_NetWork.start(chunk_tokenized, index, flag, num_total_chunk)
+                        self._LSTM_NetWork.train(batch=chunk_tokenized, index=index)
                     
-                    # STEP 2: Lower all charactors in string
-                    text_merge = text_merge.lower()
-
-                    # STEP 3: Split string into charactor list
-                    # remove all punctuation and split
-                    text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
-                    text_merge = re.findall(r'\b\w+\b', text_merge)
-
-                    text_merge = self._words_embeddings(text_merge)
-                    if single_index % 13 == 0:
-                        logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
-                    chunk_tokenized.append((text_merge, row['label']))
-                self._LSTM_NetWork.start(chunk_tokenized, index, flag, self.device)
-            elif flag == False:
-                # Test epoch
-                for single_index, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {index} ..."):
-                    # Concating the news title and main body            
-                    text_merge = row['title'] + row['text']
                     
-                    # STEP 2: Lower all charactors in string
-                    text_merge = text_merge.lower()
+                    # Test epoch
+                    # -   test need calculate the average accurary
+                    # -   average accurary need saved when each epoch finished
+                                    
+                    elif flag == False:
+                        self._LSTM_NetWork.save_model()
+                        for row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {index} ..."):
+                            test_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+                # self._LSTM_NetWork.start(test_tokenized, index, flag, num_total_chunk)
+                test_result.append(self._LSTM_NetWork.test(batch=test_tokenized))
+            except Exception as e:
+                self._LSTM_NetWork.force_save_model()
+        
 
-                    # STEP 3: Split string into charactor list
-                    # remove all punctuation and split
-                    text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
-                    text_merge = re.findall(r'\b\w+\b', text_merge)
 
-                    text_merge = self._words_embeddings(text_merge)
-                    if single_index % 13 == 0:
-                        logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
-                    test_tokenized.append((text_merge, row['label']))
-        self._LSTM_NetWork.start(test_tokenized, index, flag, self.device)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         
         # # test

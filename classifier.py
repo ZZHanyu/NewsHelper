@@ -26,18 +26,23 @@ class main:
         self.args = main_args
         self._chunks = None
         self._total_length = 0
+        self._chunk_number = 0
         self._topic_model = None
         self.device = None
-        self.data_handler = preprocess.charactors_hander(chunks=self._chunks,
-                                                main_args=self.args,
-                                                total_len=self._total_length,
-                                                device=self.device)
+        self.data_handler = None
+        #           preprocess.charactors_hander(chunks=self._chunks,
+        #                                         main_args=self.args,
+        #                                         total_len=self._total_length,
+        #                                         device=self.device)
         
 
     def datarow_count(self):
         with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
             self._total_length = sum(1 for row in fileobject)
         logging.info(f"\n ** DataFile have {self._total_length} rows of data! \n")
+        # calculate the total chunk number
+        self._chunk_number = self._total_length // self.args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
+
 
     def _select_device(self):
         # check avaliable devices
@@ -81,15 +86,22 @@ class main:
             Params:
 
         '''
+        self._data_preprocess_model()
         try:
             self.datarow_count()
         except Exception as e:
             logging.info(f"\n ERROR! CSV count Failed! {e} \n")
-        
+
         self.data_handler.run()
 
     def _topic_modeling(self):
         self._topic_model = topicModel.LDA_topic_model()
+
+    def _data_preprocess_model(self):
+        self.data_handler = preprocess.charactors_hander(chunks=self._chunks,
+                                                main_args=self.args,
+                                                total_len=self._total_length,
+                                                device=self.device)
 
 
     def _lstm_net(self):
@@ -145,8 +157,9 @@ parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Do
 parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
 parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
 parser.add_argument("--batch_model", type=bool, default=True, help="whether using batch during train step")
-parser.add_argument("--LDA_only", type=bool, default=True, help="whether start from train")
+parser.add_argument("--LDA_only", type=bool, default=False, help="whether start from train")
 parser.add_argument("--LDA_model_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", help="LDA model path")
+parser.add_argument("--num_epoches", type=int, default=10, help="epoch means train thourgh a whole dataset")
 args = parser.parse_args()
 
 main_progress = main(args)
