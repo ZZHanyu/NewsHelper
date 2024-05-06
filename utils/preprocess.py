@@ -17,66 +17,70 @@ from numpy.linalg import norm
 import re
 from gensim.models import Word2Vec
 import gensim.downloader
+import opendatasets as od
+import pandas as pd
 
 
 # utils
-from utils import network
-from utils import model
+
+# from other package
+from main_class import main
 
 
-class charactors_hander(model.module):
-    def __init__(self, 
-                 chunks: pandas.io.parsers.readers.TextFileReader, 
-                 main_args,
-                 total_len,
-                 device) -> None:
-        
+class data_handler(main):
+    def __init__(self) -> None:
         print("\nNow inital charactors_hander...\n")
-        super().__init__(main_args=main_args,
-                         device=device,)
-        self.datalen = total_len
-        self._meta_data = chunks
-        self._LSTM_NetWork = network.trainer(main_args=main_args,
-                                             device=device)
+        super().__init__()
+        self.datalen = None
+        self._chunks = None
+        self.embedding_model = gensim.downloader.load(self.args.pretrained_embedding_model_name)
         self.embedding_dim = self.embedding_model.vector_size
-
+        self.csv_total_len = 0
+        self.chunk_number = 0
+        self.data_generator = None
+        self._tokenized_chunks = []
         print("\ncharactors_hander inital succefuly\n")
 
-        # try:
-        #     logging.info(f"Loading models from gensim, name: {main_args.pretrained_embedding_model_name} ....\n")
-        #     self.embedding_model = gensim.downloader.load(main_args.pretrained_embedding_model_name)
-        # except Exception as e:
-        #     print(f"\nERROR! Gensim Loading Failed! \nError contents : {e} \n")
+    def __call__(self, *args: time.Any, **kwds: time.Any) -> time.Any:
+        self._dataloader()
+        self.csv_total_len, self.chunk_number = self.datarow_count()
+        self.data_generator = self.run()
+
+        return super().__call__(*args, **kwds)
+
+
+    def get_len_of_total_chunk(self):
+        return len(self._tokenized_chunks)
+
+
+    def datarow_count(self) -> tuple:
+        with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
+            total_length = sum(1 for row in fileobject)
+        logging.info(f"\n ** DataFile have {total_length} rows of data! \n")
         
-        # print(f"** Load Successfully!\n")
-        # logging.info(f"** Load Successfully!\n")
-        
-        # self.tokenizer = PreTrainedTokenizerFast.from_pretrained('bert-base-uncased')
-        # self.tokenizer.pad_token = self.tokenizer.eos_token
-        # self.tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-        # self._json_result = {}
-        # self.args = main_args
+        # calculate the total chunk number
+        chunk_number = self._total_length // self.args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
+        logging.info(f"\n ** DataFile have {chunk_number} chunks! \n")
+        return (total_length, chunk_number)
 
 
-    # def dataset_divider(self):
-    #     # length = math.floor(len(self._meta_data))
-
-    #     print(f"\n length = {length}")
-        
-    #     if self.datalen > 0:
-    #         train_num = math.floor(self.datalen * self.args.train_persentage)
-    #         self.train_set = self._meta_data[:train_num]
-    #         test_num = self.datalen - train_num
-    #         self.test_set = self._meta_data[train_num+1:test_num]
-    #     else:
-    #         logging.info("\n ***** ERROR! Located on dataset_divider!\n")
-    #         raise Exception("\n ERROR: Dataset diveded failed! \n")
-
-    def get_classifier_model(self):
-        return self._LSTM_NetWork
-
-    def _split_single_word(self) -> list:
-        return self._raw_str.split()
+    def _dataloader(self):
+        '''
+            ---------- Dataset Loader ----------
+            Objective:
+                - using batchs(chunks) to load csv line by line
+            Params:
+                - args: chunk size defined
+            Return:
+                - wda
+        '''
+        if not os.path.exists(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv'):
+            print(f"The file path {self.args.dataset_path + 'WELFake_Dataset.csv'} is missing! Now downloading...\n")
+            # kaggle datasets download -d saurabhshahane/fake-news-classification
+            od.download('https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification', data_dir=self.args.dataset_path)
+        else:
+            self._chunks = pd.read_csv(self.args.dataset_path + self.args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=self.args.chunk_size)
+    
     
     def display_elements(self):
         return self._raw_str
@@ -105,6 +109,7 @@ class charactors_hander(model.module):
     #     with open(self.args.result_path + "tokenized{}.npy".format(str(count_num)), 'a+') as json_file:
     #         json.dump(self._json_result, json_file, sort_keys=True, indent=4)
 
+
     def _file_exist_checker(self, chunk_idx) -> bool:
         if not os.path.exists(self.args.result_path + "tokenized{}.npy".format(chunk_idx)):
             return False
@@ -113,19 +118,13 @@ class charactors_hander(model.module):
         
 
     def _words_embeddings(self, sentences):
-
         for idx in range(len(sentences)):
             if self.embedding_model.has_index_for(sentences[idx]):
                 sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
             else:
                 sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
-                # torch.zeros(self.embedding_dim, dtype=torch.float32 )
-        # return torch.tensor(sentences)
-        return sentences
-    
 
-    def _train(self):
-        pass
+        return sentences
 
 
     def _string_handler(self, raw_text):
@@ -143,51 +142,21 @@ class charactors_hander(model.module):
     
 
     def arg_max(self):
-
         pass
 
 
 
     def run(self):
-        # Train
-        # Epoches
-        test_result = []
-        for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.{}".format(epoch_idx), leave=True):
-            flag = True # flag == True : Training Progress, flag == False : Testing Progress
-            test_tokenized = []
-
-            try:
-                # single banch in epoch
-                for index, chunk in enumerate(tqdm(self._meta_data, desc="TextFileReader in Progress...", leave=True)):
-                    # STEP 1: Remove empty line
-                    chunk = self._remove_empty_line(single_chunk=chunk)
-                    chunk_tokenized = None # initiaize and re-initiaze
-
-                    # Check whether train progress or test progress
-                    if index > math.floor(self.args.train_persentage * index):
-                        flag = False
-
-                    # Train chunk
-                    if flag == True:
-                        for row in tqdm(chunk.iterrows(), leave=True, desc=f"* Train Processing in chunk index {index} ..."):
-                            chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
-                        # self._LSTM_NetWork.start(chunk_tokenized, index, flag, num_total_chunk)
-                        self._LSTM_NetWork.train(batch=chunk_tokenized, index=index)
-                    
-                    
-                    # Test epoch
-                    # -   test need calculate the average accurary
-                    # -   average accurary need saved when each epoch finished
-                                    
-                    elif flag == False:
-                        self._LSTM_NetWork.save_model()
-                        for row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {index} ..."):
-                            test_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
-                # self._LSTM_NetWork.start(test_tokenized, index, flag, num_total_chunk)
-                test_result.append(self._LSTM_NetWork.test(batch=test_tokenized))
-            except Exception as e:
-                self._LSTM_NetWork.force_save_model()
-        
+        # only handle data and save to self.tokenized_chunk
+        for chunk_idx, chunk in enumerate(tqdm(self._chunks, desc="TextFileReader in Progress...", leave=True)):
+            # STEP 1: Remove empty line
+            chunk = self._remove_empty_line(single_chunk=chunk)
+            chunk_tokenized = [] # initiaize and re-initiaze
+            for row in chunk.iterrows():
+                chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+                # [ [01231232] , [21131313],  [2134123232] , .....]
+            yield chunk_tokenized
+            # self._tokenized_chunks.append(chunk_tokenized)
 
 
 
@@ -195,111 +164,36 @@ class charactors_hander(model.module):
 
 
 
+        # # Train
+        # # Epoches
+        # test_result = []
+        # for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.{}".format(epoch_idx), leave=True):
+        #     flag = True # flag == True : Training Progress, flag == False : Testing Progress
+        #     test_tokenized = []
 
+        #     for chunk_idx, chunk in enumerate(tqdm(self._chunks, desc="TextFileReader in Progress...", leave=True)):
+        #         # STEP 1: Remove empty line
+        #         chunk = self._remove_empty_line(single_chunk=chunk)
+        #         chunk_tokenized = None # initiaize and re-initiaze
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        #         # Train chunk
+        #         if flag == True:
+        #             for single_idx, row in tqdm(chunk.iterrows(), leave=True, desc=f"* Train Processing in chunk index {chunk_idx} ..."):
+        #                     # Check whether train progress or test progress
+        #                 if single_idx > math.floor(self.args.train_persentage * total_length_num):
+        #                     flag = False
+        #                 chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+        #             self._LSTM_NetWork.train(batch=chunk_tokenized, index=chunk_idx)
+                
+        #         # Test epoch
+        #         # -   test need calculate the average accurary
+        #         # -   average accurary need saved when each epoch finished
+                                
+        #         elif flag == False:
+        #             self._LSTM_NetWork.save_model()
+        #             for row in tqdm(chunk.iterrows(), leave=True, desc=f"* Testing Processing in chunk index {chunk_idx} ..."):
+        #                 test_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+        #     # self._LSTM_NetWork.start(test_tokenized, index, flag, num_total_chunk)
+        #     test_result.append(self._LSTM_NetWork.test(batch=test_tokenized))
 
         
-        # # test
-        # for index, chunk in enumerate(tqdm(self.train_set, desc="Train in Progress", leave=True)):
-        #     # STEP 1: Remove empty line
-        #     chunk = self._remove_empty_line(single_chunk=chunk)
-        #     chunk_tokenized = [] # initiaize and re-initiaze
-
-        #     for single_index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
-        #         # Concating the news title and main body            
-        #         text_merge = row['title'] + row['text']
-                
-        #         # STEP 2: Lower all charactors in string
-        #         text_merge = text_merge.lower()
-
-        #         # STEP 3: Split string into charactor list
-        #         # remove all punctuation and split
-        #         text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
-        #         text_merge = re.findall(r'\b\w+\b', text_merge)
-
-        #         text_merge = self._words_embeddings(text_merge)
-        #         if single_index % 13 == 0:
-        #             logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
-        #         chunk_tokenized.append((text_merge, row['label']))
-        # self._LSTM_NetWork.start(chunk_tokenized, index, flag=False)
-
-
-
-
-
-
-
-
-
-
-        # for index, chunk in enumerate(tqdm(self._meta_data, desc="Layer1: Data Preprocess", leave=True)):
-        #     # Check wether specifc file number exist:
-        #     # if self._file_exist_checker(index):
-        #     #     print(f"File tokenized{index} already existed!\n")
-        #     #     continue
-
-        #     # STEP 1: Remove empty line
-        #     chunk = self._remove_empty_line(single_chunk=chunk)
-        #     chunk_tokenized = [] # initiaize and re-initiaze
-            
-            
-        #     for single_index, row in tqdm(chunk.iterrows(), leave=True, desc="Processing in a single chunk..."):
-        #         # Concating the news title and main body            
-        #         text_merge = row['title'] + row['text']
-                
-        #         # STEP 2: Lower all charactors in string
-        #         text_merge = text_merge.lower()
-
-        #         # remove all punctuation and split
-        #         text_merge = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',text_merge).strip()
-        #         text_merge = re.findall(r'\b\w+\b', text_merge)
-                
-
-        #         # STEP 3: Split string into charactor list
-        #         #text_merge = text_merge.split()
-        #         # print(f"\nHOW many words inside a sequence = {len(text_merge)}\n")
-                
-        #         # encoder_text = self.tokenizer(text=text_merge, max_length=8, padding='max_length', truncation=True, return_tensors='pt')
-                
-        #         # print(f"\n The encodered text is = {encoder_text['input_ids']}\n length = {encoder_text['input_ids'].size()} \n")
-        #         # temp = np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant')
-        #         # chunk_tokenized.append((np.pad(encoder_text['input_ids'], ((0,0), (0, 512 - encoder_text['input_ids'].shape[1])), mode='constant'), [row['label']]))
-                
-        #         #chunk_tokenized.append( (encoder_text['input_ids'], row['label']))
-                
-        #         #text_merge = torch.tensor(self._words_embeddings(text_merge), requires_grad=True)
-        #         text_merge = self._words_embeddings(text_merge)
-        #         if single_index % 13 == 0:
-        #             logging.info(f"--> No.{single_index} --> embedding vectors = \n\t{text_merge}\n")
-
-        #         chunk_tokenized.append((text_merge, row['label']))
-                
-        #         # print(f"size after = {temp.shape}")
-            
-            
-        #     self._LSTM_NetWork.start(chunk_tokenized, index)
-                
-
-
