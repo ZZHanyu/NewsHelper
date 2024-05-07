@@ -16,18 +16,15 @@ import os
 import re
 
 from utils import model
+from main_class import main
 
 
 
-class LDA_topic_model(model.module):
+class LDA_topic_model(model.module, main):
     def __init__(self,
-                main_args,
-                device,
                 classifier_model) -> None:
-        
-        super().__init__(main_args=main_args,
-                         device=device,
-                         )
+    
+        super().__init__()
 
         # # DataLoader
         self._classifier_model = classifier_model

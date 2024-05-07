@@ -18,6 +18,8 @@ import opendatasets as od
 import os
 from datetime import datetime, timedelta
 import logging
+from functools import wraps
+import time
 
 '''
     Super main class
@@ -61,6 +63,35 @@ class main(object):
             device = torch.device("cpu")
         logging.info(f"\n *** Devices selected = {device} ! \n")
         return device
+    
+    @staticmethod
+    def decorated_logging(func):
+        '''
+            Logging decorator:
+                - packed function into auto logging outer 
+            Functional:
+                - record function information like name, parameters , run time etc.
+        '''
+
+        @wraps(func)
+        def decorate():
+            logging.info(f"\n------------- func name : {func.__code__.co_name} -------------\n",
+                        f"func argcount = {func.__code__.co_argcount}\n",
+                        f"func co varnames = {func.__code__.co_varnames}\n",
+                        f"co_file name = {func.__code__.co_filename}\n",
+                        f"co_consts = {func.__code__.co_consts}\n",
+                        f"co_firstlineno = {func.__code__.co_firstlineno}\n",
+                        f"co_kwonlyargcount = {func.__code__.co_kwonlyargcount}\n",
+                        f"co_nlocals = {func.__code__.co_nlocals}\n")
+            start_time = time.time()
+            ret = func()
+            end_time = time.time()
+            logging.info(f"Total Run time of {func.__code__.co_name} is {end_time - start_time} \n -------------END funcLogger-------------\n")
+            return ret
+
+        return decorate
+
+
 
 
         

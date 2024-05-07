@@ -41,29 +41,26 @@ class data_handler(main):
         self._tokenized_chunks = []
         print("\ncharactors_hander inital succefuly\n")
 
-    def __call__(self, *args: time.Any, **kwds: time.Any) -> time.Any:
+    def __call__(self) -> None:
         self._dataloader()
-        self.csv_total_len, self.chunk_number = self.datarow_count()
+        self.datarow_count()
         self.data_generator = self.run()
-
-        return super().__call__(*args, **kwds)
-
+        
 
     def get_len_of_total_chunk(self):
         return len(self._tokenized_chunks)
 
 
-    def datarow_count(self) -> tuple:
+    def datarow_count(self):
         with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
-            total_length = sum(1 for row in fileobject)
-        logging.info(f"\n ** DataFile have {total_length} rows of data! \n")
+            self.csv_total_len = sum(1 for row in fileobject)
+        logging.info(f"\n ** DataFile have {self.csv_total_len} rows of csv data! \n")
         
         # calculate the total chunk number
-        chunk_number = self._total_length // self.args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
+        chunk_number = self.csv_total_len // self.args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
         logging.info(f"\n ** DataFile have {chunk_number} chunks! \n")
-        return (total_length, chunk_number)
 
-
+    @main.decorated_logging
     def _dataloader(self):
         '''
             ---------- Dataset Loader ----------
@@ -88,6 +85,7 @@ class data_handler(main):
     def remove_empty_line(self, single_chunk):
         self._remove_empty_line(self, single_chunk=single_chunk)
     
+    @main.decorated_logging
     def _remove_empty_line(self, single_chunk):
         for index, row in single_chunk.iterrows():
             if pandas.isnull(row['title']) or pandas.isnull(row['text']) or pandas.isnull(row['label']):
@@ -109,14 +107,14 @@ class data_handler(main):
     #     with open(self.args.result_path + "tokenized{}.npy".format(str(count_num)), 'a+') as json_file:
     #         json.dump(self._json_result, json_file, sort_keys=True, indent=4)
 
-
+    @main.decorated_logging
     def _file_exist_checker(self, chunk_idx) -> bool:
         if not os.path.exists(self.args.result_path + "tokenized{}.npy".format(chunk_idx)):
             return False
         else:
             return True
         
-
+    @main.decorated_logging
     def _words_embeddings(self, sentences):
         for idx in range(len(sentences)):
             if self.embedding_model.has_index_for(sentences[idx]):
@@ -125,7 +123,6 @@ class data_handler(main):
                 sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
 
         return sentences
-
 
     def _string_handler(self, raw_text):
         # STEP 1: Lower all charactors in string
@@ -145,7 +142,7 @@ class data_handler(main):
         pass
 
 
-
+    @main.decorated_logging
     def run(self):
         # only handle data and save to self.tokenized_chunk
         for chunk_idx, chunk in enumerate(tqdm(self._chunks, desc="TextFileReader in Progress...", leave=True)):
@@ -155,7 +152,7 @@ class data_handler(main):
             for row in chunk.iterrows():
                 chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
                 # [ [01231232] , [21131313],  [2134123232] , .....]
-            yield chunk_tokenized
+            yield chunk_tokenized, chunk_idx
             # self._tokenized_chunks.append(chunk_tokenized)
 
 

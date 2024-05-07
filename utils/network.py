@@ -20,11 +20,12 @@ import math
 # from other packages
 from utils import preprocess
 from utils import model
+from main_class import main
 
 
 class trainer(preprocess.data_handler):
     def __init__(self) -> None:
-        
+        super().__init__()
         print("\nNow inital trainer..\n")        
         self.model = LstmNet(self.args).to(self.device)
         # self.display_all_params()
@@ -125,31 +126,31 @@ class trainer(preprocess.data_handler):
             self.model.train()
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
-            try:
-                for single_chunk_idx, single_chunk in enumerate(tqdm(self._tokenized_chunks, leave=True, desc=f"Chunk No.{single_chunk_idx}")):
-                    if single_chunk_idx > math.floor(self.args.train_persentage * len(self.chunk_number)):
-                        self.test()
-                    else:
-                        if single_chunk_idx > 100 and single_chunk_idx % 77 == 0:
-                            self.display_all_params()
-                            self.save_model()
-                        match self.args.batch_model:
-                            case True:
-                                self._mini_batch(batch=single_chunk, idx=single_chunk_idx)
-                            case False:
-                                self._single_step(batch=single_chunk, idx=single_chunk_idx)
-                            case _:
-                                raise KeyError
-            except Exception as e:
-                self.force_save_model()
-                print(f"\n * ERROR {e}! But model have been saved! \n")
+            # try:
+            #     for single_chunk_idx, single_chunk in enumerate(tqdm(self._tokenized_chunks, leave=True, desc=f"Chunk No.{single_chunk_idx}")):
+            #         if single_chunk_idx > math.floor(self.args.train_persentage * len(self.chunk_number)):
+            #             self.test()
+            #         else:
+            #             if single_chunk_idx > 100 and single_chunk_idx % 77 == 0:
+            #                 self.display_all_params()
+            #                 self.save_model()
+            #             match self.args.batch_model:
+            #                 case True:
+            #                     self._mini_batch(batch=single_chunk, idx=single_chunk_idx)
+            #                 case False:
+            #                     self._single_step(batch=single_chunk, idx=single_chunk_idx)
+            #                 case _:
+            #                     raise KeyError
+            # except Exception as e:
+            #     self.force_save_model()
+            #     print(f"\n * ERROR {e}! But model have been saved! \n")
 
             
             # Version 2: Using data generator to handle raw data only when trainer need them 
             try:
                 while True:
                     try:
-                        single_chunk = next(self.data_generator)
+                        single_chunk, single_chunk_idx = next(self.data_generator)
                         match self.args.batch_model:
                             case True:
                                 self._mini_batch(batch=single_chunk, idx=single_chunk_idx)
@@ -207,8 +208,8 @@ class trainer(preprocess.data_handler):
 
 
 
-class LstmNet(nn.Module, model.module):
-    def __init__(self, args) -> None:
+class LstmNet(nn.Module, model.module, preprocess.data_handler):
+    def __init__(self) -> None:
         super(LstmNet, self).__init__()
 
         # weight = self._load_pretrained_embedding_weight()
@@ -235,7 +236,8 @@ class LstmNet(nn.Module, model.module):
         #self.init_weights()       
         logging.info(f"\n --> Model weight initalization succefuly!\n")
 
-        # self._max_epochs = args.max_epochs
+    
+    def __call__(self) -> None:
         self.display_model_info()
 
 
