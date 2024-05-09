@@ -27,7 +27,7 @@ class trainer(preprocess.data_handler):
     def __init__(self) -> None:
         super().__init__()
         print("\nNow inital trainer..\n")        
-        self.model = LstmNet(self.args).to(self.device)
+        self.model = LstmNet().to(self.device)
         # self.display_all_params()
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
         self.loss = nn.BCEWithLogitsLoss()
@@ -64,15 +64,14 @@ class trainer(preprocess.data_handler):
 
 
     def _mini_batch(self, 
-                    batch: list, 
-                    idx: int)-> None:
+                    batch: list)-> None:
         
         logging.info("*** \t batch model = True ")
         target_set = []
         feature = []
         batch_size = len(batch)
 
-        for data_idx in tqdm(range(batch_size), desc="Batch No. {}".format(idx)):
+        for data_idx in tqdm(range(batch_size), desc="MiniBatch Train"):
             feature.append(batch[data_idx][0])
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
             target_set.append(target)
@@ -89,13 +88,12 @@ class trainer(preprocess.data_handler):
 
 
     def _single_step(self, 
-                     batch:list,
-                     idx:int) -> float:
+                     batch:list) -> float:
         
         logging.info("*** \t batch model = False")
         Accurary = 0
 
-        for data_idx in tqdm(range(len(batch)), desc="Batch No. {}".format(idx), leave= True):
+        for data_idx in tqdm(range(len(batch)), desc="SGD", leave= True):
             feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=self.device, requires_grad=True)
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
             y_pred = self.model.forward(feature)
@@ -121,7 +119,7 @@ class trainer(preprocess.data_handler):
         
     
     def train(self):
-        for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.{}".format(epoch_idx), leave=True):
+        for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.", leave=True):
             logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
             self.model.train()
             # version 1: using old-school function, which store whole tokenzied dataset
@@ -150,20 +148,20 @@ class trainer(preprocess.data_handler):
             try:
                 while True:
                     try:
-                        single_chunk, single_chunk_idx = next(self.data_generator)
+                        single_chunk = next(self.data_generator)
+                        print(single_chunk)
                         match self.args.batch_model:
                             case True:
-                                self._mini_batch(batch=single_chunk, idx=single_chunk_idx)
+                                self._mini_batch(batch=single_chunk)
                             case False:
-                                self._single_step(batch=single_chunk, idx=single_chunk_idx)
+                                self._single_step(batch=single_chunk)
                             case _:
-                             raise KeyError
+                                raise KeyError
                     except StopIteration as e:
-                        print(f"\nERROR:{e}, had been seen!\n")
                         break
             except Exception as e:
                 self.force_save_model()
-                print(f"\nERROR:{e}, had been seen!\n")
+                print(f"\nERROR: ' {e} ' had been seen!\n")
            
                     
                 
@@ -211,7 +209,6 @@ class trainer(preprocess.data_handler):
 class LstmNet(nn.Module, model.module, preprocess.data_handler):
     def __init__(self) -> None:
         super(LstmNet, self).__init__()
-
         # weight = self._load_pretrained_embedding_weight()
         #self.embedding = nn.Embedding.from_pretrained(weight, freeze=True)
         # self.normalization = nn.BatchNorm1d(num_features=300)

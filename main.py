@@ -6,9 +6,8 @@ from utils import network
 
 
 
-super_class = main()
-data_handler = preprocess.data_handler()
-data_handler()
+#super_class = main()
+#data_handler = preprocess.data_handler()
 trainer = network.trainer()
 trainer.train()
 LSTM_net = network.LstmNet()

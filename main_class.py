@@ -34,8 +34,14 @@ class main(object):
 
     def __parser(self):
         parser = argparse.ArgumentParser(description="Parameters for Classifier")
-        parser.add_argument("--dataset_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/data/", help="the path of your dataset")
-        parser.add_argument("--dataset_name", type=str, default='fake-news-classification', help="the dataset name from kaggle")
+        parser.add_argument("--dataset_path", 
+                            type=str, 
+                            default="/Users/taotao/Documents/GitHub/FYP/data/", 
+                            help="the path of your dataset")
+        parser.add_argument("--dataset_name", 
+                            type=str, 
+                            default='fake-news-classification', 
+                            help="the dataset name from kaggle")
         parser.add_argument("--chunk_size", type=int, default=20, help="control how many lines read once / single batch size")
         parser.add_argument("--max_epochs", type=int, default=50, help="epochs of training")
         parser.add_argument("--test_batch", type=int, default=5, help="how many batch dataset used for testing")
@@ -74,7 +80,8 @@ class main(object):
         '''
 
         @wraps(func)
-        def decorate():
+        def decorate(*args, **kwargs):
+            ret = None
             logging.info(f"\n------------- func name : {func.__code__.co_name} -------------\n",
                         f"func argcount = {func.__code__.co_argcount}\n",
                         f"func co varnames = {func.__code__.co_varnames}\n",
@@ -84,7 +91,10 @@ class main(object):
                         f"co_kwonlyargcount = {func.__code__.co_kwonlyargcount}\n",
                         f"co_nlocals = {func.__code__.co_nlocals}\n")
             start_time = time.time()
-            ret = func()
+            if func(*args, **kwargs) == None:
+                pass
+            else:
+                ret = func(*args, **kwargs)
             end_time = time.time()
             logging.info(f"Total Run time of {func.__code__.co_name} is {end_time - start_time} \n -------------END funcLogger-------------\n")
             return ret
