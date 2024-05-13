@@ -27,25 +27,40 @@ import pandas as pd
 from main_class import main
 
 
-class data_handler(main):
+class data_handler(main): 
+    '''
+        abstract
+    '''
     def __init__(self) -> None:
-        print("\nNow inital charactors_hander...\n")
+        print(" Now inital Charactors_Handler...\n")
         super().__init__()
+
         self.datalen = None
         self._chunks = None
+
         self.csv_total_len = 0
         self.chunk_number = 0
-        self._tokenized_chunks = []
-        self.embedding_model =  gensim.downloader.load(self.args.pretrained_embedding_model_name)
-        self.embedding_dim = self.embedding_model.vector_size
+
+        self.embedding_model = None
+        self.embedding_dim = None
+        # self._init_embedding_model()
+        
         self._dataloader()
         self.datarow_count()
-        self.data_generator = data_handler_iterator()
         print("Charactors_hander inital succefuly")
-        
 
-    def get_len_of_total_chunk(self):
-        return len(self._tokenized_chunks)
+    def get_generator(self):
+        data_generator = data_handler_iterator()
+        data_iter = iter(data_generator)
+        return data_iter
+    
+    def _init_embedding_model(self):
+        if self.embedding_model == None:
+            logging.info(f"* Loading pretrained embedding model: {gensim.downloader.info(name=self.args.pretrained_embedding_model_name)}\n")
+            self.embedding_model = gensim.downloader.load(self.args.pretrained_embedding_model_name)
+            self.embedding_dim = self.embedding_model.vector_size
+        else:
+            pass
 
 
     def datarow_count(self):
@@ -78,7 +93,7 @@ class data_handler(main):
     
     def display_elements(self):
         return self._raw_str
-    
+
     
     def _remove_empty_line(self, single_chunk):
         for index, row in single_chunk.iterrows():
@@ -90,6 +105,7 @@ class data_handler(main):
                 single_chunk.drop(index, inplace=True)
         return single_chunk
 
+
     def _normalize(self, text):
         norm2 = np.linalg.norm(text)
         for j in len(text):
@@ -97,26 +113,32 @@ class data_handler(main):
         return text
     
 
-    # def _save_to_file(self, count_num):
-    #     with open(self.args.result_path + "tokenized{}.npy".format(str(count_num)), 'a+') as json_file:
-    #         json.dump(self._json_result, json_file, sort_keys=True, indent=4)
-
     def _file_exist_checker(self, chunk_idx) -> bool:
         if not os.path.exists(self.args.result_path + "tokenized{}.npy".format(chunk_idx)):
             return False
         else:
             return True
         
-    def _words_embeddings(self, sentences):
-        for idx in range(len(sentences)):
-            if self.embedding_model.has_index_for(sentences[idx]):
-                sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
-            else:
-                sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
+    def _words_embeddings(self, sentences, embedding_model):
+        if self.embedding_model == None and embedding_model == None:
+            print("Embedding model missing, NOW Loading...")
+            self._init_embedding_model()
+        elif embedding_model != None:
+            for idx in range(len(sentences)):
+                if embedding_model.has_index_for(sentences[idx]):
+                    sentences[idx] = embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
+                else:
+                    sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
+        else:
+            for idx in range(len(sentences)):
+                if self.embedding_model.has_index_for(sentences[idx]):
+                    sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
+                else:
+                    sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
 
         return sentences
 
-    def _string_handler(self, raw_text):
+    def _string_handler(self, raw_text, embedding_model):
         # STEP 1: Lower all charactors in string
         raw_text = raw_text.lower()
         # STEP 2: Split string into charactor list
@@ -125,7 +147,7 @@ class data_handler(main):
         raw_text = re.findall(r'\b\w+\b', raw_text)
 
         # STEP 3: embedding string into vector represeation
-        processed_text = self._words_embeddings(raw_text)
+        processed_text = self._words_embeddings(raw_text, embedding_model=embedding_model)
         return processed_text
     
 
@@ -146,12 +168,12 @@ class data_handler(main):
             chunk = self._remove_empty_line(single_chunk=chunk)
             print(f"\nAfter remove empty line = {chunk}\n")  
             for row in tqdm(chunk.iterrows(), desc="Handling single row in a chunk", leave=False):
-                print(row)
                 chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
                 # [ [01231232] , [21131313],  [2134123232] , .....]
-            print(f"\n ALL Done! chunk_tokenized = {chunk_tokenized}\n")
             yield chunk_tokenized
             continue
+
+    
 
 
 
@@ -160,31 +182,36 @@ class data_handler(main):
 
 
 class data_handler_iterator(data_handler):
+    '''
+    object class
+        - An iterator/ implement of abstract class : data handler
+    '''
+
     def __init__(self) -> None:
+        print("Start iterator building...\n")
         super().__init__()
+        self.embedding_model = super()._init_embedding_model()
+        print("\nIterator building Sucessfully!.\n")
+
 
     def __iter__(self):
+        self.chunk_iterator = next(self._chunks, None)
         return self
     
     def __next__(self):
         # only handle data and save to self.tokenized_chunk
-        while True:
+        
+        if isinstance(next(self._chunks, None), pd.DataFrame):
             chunk_tokenized = [] # initiaize and re-initiaze
-            chunk = next(self._chunks, None)
-            if chunk == None:
-                raise StopIteration
-                break
-            print(f"\n!Single chunk = {chunk}!\n")
+            chunk = self.chunk_iterator
             # STEP 1: Remove empty line
             chunk = self._remove_empty_line(single_chunk=chunk)
-            print(f"\nAfter remove empty line = {chunk}\n")  
-            for row in tqdm(chunk.iterrows(), desc="Handling single row in a chunk", leave=False):
-                print(row)
-                chunk_tokenized.append((self._string_handler(raw_text=row['title'] + row['text']), row['label']))
+            for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
+                chunk_tokenized.append((self._string_handler(raw_text=row[2] + row[3]), row[4]))
                 # [ [01231232] , [21131313],  [2134123232] , .....]
-            print(f"\n ALL Done! chunk_tokenized = {chunk_tokenized}\n")
-            yield chunk_tokenized
-            continue
+            return chunk_tokenized
+        else:
+            raise StopIteration
 
 
 

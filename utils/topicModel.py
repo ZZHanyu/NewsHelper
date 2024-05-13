@@ -20,7 +20,7 @@ from main_class import main
 
 
 
-class LDA_topic_model(model.module, main):
+class LDA_topic_model(model.module):
     def __init__(self,
                 classifier_model) -> None:
     

@@ -16,21 +16,31 @@ from main_class import main
 class module(main):
     def __init__(self) -> None:
         super().__init__()
-        # self.args = main_args
-        # self.device = device
-        # #self.tokenizer = PreTrainedTokenizerFast.from_pretrained('bert-base-uncased')
-        self.embedding_model = gensim.downloader.load(self.args.pretrained_embedding_model_name)
+        
 
-        pass
+
+    def get_data_iterator(self): # API
+        if self.data_generator != None:
+            return self.data_generator
+    
 
     def forward(self):
+        '''
+            abstract method
+        '''
         pass
 
 
     def run(self):
+        '''
+            abstract method
+        '''
         pass
 
 
     def train(self):
+        '''
+            abstract method
+        '''
         pass
 

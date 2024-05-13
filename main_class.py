@@ -52,7 +52,10 @@ class main(object):
         parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", help="path store pretrianed embeddings model")
         parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
         parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
-        parser.add_argument("--batch_model", type=bool, default=True, help="whether using batch during train step")
+        parser.add_argument("--batch_model",
+                             type=bool, 
+                             default=False, 
+                             help="whether using batch during train step")
         parser.add_argument("--LDA_only", type=bool, default=False, help="whether start from train")
         parser.add_argument("--LDA_model_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", help="LDA model path")
         parser.add_argument("--num_epoches", type=int, default=10, help="epoch means train thourgh a whole dataset")

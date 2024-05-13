@@ -25,14 +25,13 @@ from main_class import main
 
 class trainer(preprocess.data_handler):
     def __init__(self) -> None:
+        print("\n Now inital trainer..")        
         super().__init__()
-        print("\nNow inital trainer..\n")        
         self.model = LstmNet().to(self.device)
         # self.display_all_params()
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
         self.loss = nn.BCEWithLogitsLoss()
         self.normalize = nn.BatchNorm1d(num_features=8).to(self.device)
-        self._test_data = []
         self._best_model_state = None
         self._flag = True
         self._result_list = []
@@ -75,7 +74,7 @@ class trainer(preprocess.data_handler):
             feature.append(batch[data_idx][0])
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
             target_set.append(target)
-        feature = torch.tensor(feature, requires_grad=True).to(self.device)
+        feature = torch.tensor(feature, requires_grad=True).to(self.device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
         target_set = torch.tensor(target_set, requires_grad=True)
         y_pred = self.model.forward_with_batch(tensor_data=feature,
                                                 batch_size=batch_size)
@@ -112,13 +111,14 @@ class trainer(preprocess.data_handler):
             Accurary /= len(batch)    
         else:
             pass
-        logging.info(f"\n ** Training chunk id= {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
-        print(f"\n ** Training Round {idx} : Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        logging.info(f" Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        print(f" Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
         
         return Accurary
         
     
     def train(self):
+        data_generator = self.get_generator()
         for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.", leave=True):
             logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
             self.model.train()
@@ -145,23 +145,20 @@ class trainer(preprocess.data_handler):
 
             
             # Version 2: Using data generator to handle raw data only when trainer need them 
-            try:
-                while True:
-                    try:
-                        single_chunk = next(self.data_generator)
-                        print(single_chunk)
-                        match self.args.batch_model:
-                            case True:
-                                self._mini_batch(batch=single_chunk)
-                            case False:
-                                self._single_step(batch=single_chunk)
-                            case _:
-                                raise KeyError
-                    except StopIteration as e:
-                        break
-            except Exception as e:
-                self.force_save_model()
-                print(f"\nERROR: ' {e} ' had been seen!\n")
+            # try:
+            while True:
+                single_chunk = next(data_generator)
+                print(single_chunk)
+                match self.args.batch_model:
+                    case True:
+                        self._mini_batch(batch=single_chunk)
+                    case False:
+                        self._single_step(batch=single_chunk)
+                    case _:
+                        raise KeyError
+            # except Exception as e:
+            #     self.force_save_model()
+            #     print(f"\nERROR: ' {e} ' had been seen!\n")
            
                     
                 
@@ -206,13 +203,10 @@ class trainer(preprocess.data_handler):
 
 
 
-class LstmNet(nn.Module, model.module, preprocess.data_handler):
+class LstmNet(nn.Module, model.module):
     def __init__(self) -> None:
-        super(LstmNet, self).__init__()
-        # weight = self._load_pretrained_embedding_weight()
-        #self.embedding = nn.Embedding.from_pretrained(weight, freeze=True)
-        # self.normalization = nn.BatchNorm1d(num_features=300)
-
+        super().__init__()
+        
         self.lstm = nn.LSTM(input_size=300,
                             hidden_size=128, 
                             num_layers=2,

@@ -8,8 +8,10 @@ from utils import network
 
 #super_class = main()
 #data_handler = preprocess.data_handler()
+
+
+# sub-class model 
 trainer = network.trainer()
 trainer.train()
-LSTM_net = network.LstmNet()
 
 
