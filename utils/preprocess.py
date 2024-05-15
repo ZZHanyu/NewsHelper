@@ -47,6 +47,7 @@ class data_handler(main):
         
         self._dataloader()
         self.datarow_count()
+        self
         print("Charactors_hander inital succefuly")
 
     def get_generator(self):
@@ -119,35 +120,29 @@ class data_handler(main):
         else:
             return True
         
-    def _words_embeddings(self, sentences, embedding_model):
-        if self.embedding_model == None and embedding_model == None:
-            print("Embedding model missing, NOW Loading...")
+    def _words_embeddings(self, sentences):
+        if self.embedding_model == None:
+            print("\nEmbedding model missing, NOW Loading...\n")
             self._init_embedding_model()
-        elif embedding_model != None:
-            for idx in range(len(sentences)):
-                if embedding_model.has_index_for(sentences[idx]):
-                    sentences[idx] = embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
-                else:
-                    sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
-        else:
-            for idx in range(len(sentences)):
-                if self.embedding_model.has_index_for(sentences[idx]):
-                    sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
-                else:
-                    sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
+        
+        for idx in range(len(sentences)):
+            if self.embedding_model.has_index_for(sentences[idx]):
+                sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
+            else:
+                sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
 
         return sentences
 
-    def _string_handler(self, raw_text, embedding_model):
+    def _string_handler(self, raw_text):
         # STEP 1: Lower all charactors in string
         raw_text = raw_text.lower()
         # STEP 2: Split string into charactor list
-        # remove all punctuation and split
+            # remove all punctuation and split
         raw_text = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',raw_text).strip()
         raw_text = re.findall(r'\b\w+\b', raw_text)
 
         # STEP 3: embedding string into vector represeation
-        processed_text = self._words_embeddings(raw_text, embedding_model=embedding_model)
+        processed_text = self._words_embeddings(raw_text)
         return processed_text
     
 
@@ -186,32 +181,34 @@ class data_handler_iterator(data_handler):
     object class
         - An iterator/ implement of abstract class : data handler
     '''
-
     def __init__(self) -> None:
         print("Start iterator building...\n")
         super().__init__()
-        self.embedding_model = super()._init_embedding_model()
         print("\nIterator building Sucessfully!.\n")
 
-
     def __iter__(self):
-        self.chunk_iterator = next(self._chunks, None)
-        return self
-    
-    def __next__(self):
+        return self.generator()
+
+
+    def generator(self):
         # only handle data and save to self.tokenized_chunk
-        
-        if isinstance(next(self._chunks, None), pd.DataFrame):
+        while True:
+            if isinstance(next(self._chunks, None), pd.DataFrame):
+                chunk = self._chunks.get_chunk()
+            else:
+                raise StopIteration
+                break
             chunk_tokenized = [] # initiaize and re-initiaze
-            chunk = self.chunk_iterator
             # STEP 1: Remove empty line
             chunk = self._remove_empty_line(single_chunk=chunk)
             for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
                 chunk_tokenized.append((self._string_handler(raw_text=row[2] + row[3]), row[4]))
+                # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
+                # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
                 # [ [01231232] , [21131313],  [2134123232] , .....]
-            return chunk_tokenized
-        else:
-            raise StopIteration
+            yield chunk_tokenized
+            
+            
 
 
 

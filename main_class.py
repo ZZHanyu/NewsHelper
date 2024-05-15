@@ -26,9 +26,8 @@ import time
     Abstract super class : To avoid repeat defination
 '''
 class main(object):
-    def __init__(self) -> None:
+    def __init__(self):
         self.args = self.__parser()
-        logging.basicConfig(filename=self.args.logging_path + f'{self.args.date_time}', level=logging.INFO)
         self.device = self.__select_device()
 
 
@@ -72,6 +71,10 @@ class main(object):
             device = torch.device("cpu")
         logging.info(f"\n *** Devices selected = {device} ! \n")
         return device
+    
+    def _inital_logging(self):
+        logging.basicConfig(filename=self.args.logging_path + f'{self.args.date_time}', level=logging.INFO)
+
     
     @staticmethod
     def decorated_logging(func):

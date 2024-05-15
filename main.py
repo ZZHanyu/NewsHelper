@@ -4,6 +4,8 @@ from utils import model
 from utils import topicModel
 from utils import network
 
+import logging
+
 
 
 #super_class = main()

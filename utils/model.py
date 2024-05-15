@@ -14,15 +14,18 @@ from main_class import main
 
 
 class module(main):
-    def __init__(self) -> None:
+    def __init__(self):
         super().__init__()
         
+    def get_device(self):
+        return self.device
 
 
     def get_data_iterator(self): # API
         if self.data_generator != None:
             return self.data_generator
-    
+
+
 
     def forward(self):
         '''

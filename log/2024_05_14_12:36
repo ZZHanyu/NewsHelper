@@ -1,0 +1,23 @@
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:----------------- Epoch: 0 ----------------- 
+

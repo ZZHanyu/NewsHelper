@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
 import copy
 import gensim
 import math
+import pandas as pd
 
 # from other packages
 from utils import preprocess
@@ -28,7 +29,6 @@ class trainer(preprocess.data_handler):
         print("\n Now inital trainer..")        
         super().__init__()
         self.model = LstmNet().to(self.device)
-        # self.display_all_params()
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
         self.loss = nn.BCEWithLogitsLoss()
         self.normalize = nn.BatchNorm1d(num_features=8).to(self.device)
@@ -70,7 +70,7 @@ class trainer(preprocess.data_handler):
         feature = []
         batch_size = len(batch)
 
-        for data_idx in tqdm(range(batch_size), desc="MiniBatch Train"):
+        for data_idx in tqdm(range(batch_size), desc="MiniBatch Train", leave=False):
             feature.append(batch[data_idx][0])
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
             target_set.append(target)
@@ -92,7 +92,7 @@ class trainer(preprocess.data_handler):
         logging.info("*** \t batch model = False")
         Accurary = 0
 
-        for data_idx in tqdm(range(len(batch)), desc="SGD", leave= True):
+        for data_idx in tqdm(range(len(batch)), desc="SGD", leave= False):
             feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=self.device, requires_grad=True)
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
             y_pred = self.model.forward(feature)
@@ -111,8 +111,7 @@ class trainer(preprocess.data_handler):
             Accurary /= len(batch)    
         else:
             pass
-        logging.info(f" Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
-        print(f" Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+        logging.info(f" * Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
         
         return Accurary
         
@@ -122,6 +121,24 @@ class trainer(preprocess.data_handler):
         for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.", leave=True):
             logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
             self.model.train()
+            
+            # Version 2: Using data generator to handle raw data only when trainer need them 
+            try:
+                while next(data_generator, None) != None:
+                    single_chunk = next(data_generator, None)
+                    match self.args.batch_model:
+                        case True:
+                            self._mini_batch(batch=single_chunk)
+                        case False:
+                            self._single_step(batch=single_chunk)
+                        case _:
+                            raise KeyError
+            except Exception as e:
+                self.force_save_model()
+                print(f"\nERROR: ' {e} ' had been seen!\n")
+
+
+
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
             # try:
@@ -142,23 +159,6 @@ class trainer(preprocess.data_handler):
             # except Exception as e:
             #     self.force_save_model()
             #     print(f"\n * ERROR {e}! But model have been saved! \n")
-
-            
-            # Version 2: Using data generator to handle raw data only when trainer need them 
-            # try:
-            while True:
-                single_chunk = next(data_generator)
-                print(single_chunk)
-                match self.args.batch_model:
-                    case True:
-                        self._mini_batch(batch=single_chunk)
-                    case False:
-                        self._single_step(batch=single_chunk)
-                    case _:
-                        raise KeyError
-            # except Exception as e:
-            #     self.force_save_model()
-            #     print(f"\nERROR: ' {e} ' had been seen!\n")
            
                     
                 
@@ -204,9 +204,9 @@ class trainer(preprocess.data_handler):
 
 
 class LstmNet(nn.Module, model.module):
-    def __init__(self) -> None:
-        super().__init__()
-        
+    def __init__(self):
+        super(LstmNet, self).__init__()    
+        model.module.__init__(self)    
         self.lstm = nn.LSTM(input_size=300,
                             hidden_size=128, 
                             num_layers=2,
@@ -254,8 +254,8 @@ class LstmNet(nn.Module, model.module):
 
 
         # inital parameters
-        h0 = torch.randn(4, 128, device=self.device, dtype=torch.float32)
-        c0 = torch.randn(4, 128, device=self.device, dtype=torch.float32)
+        h0 = torch.randn(4, 128, device=self.get_device(), dtype=torch.float32)
+        c0 = torch.randn(4, 128, device=self.get_device(), dtype=torch.float32)
         
         # forward:
         # print(type(tensor_data))
