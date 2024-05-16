@@ -18,25 +18,89 @@ import gensim
 import math
 import pandas as pd
 
+# AutoML SMAC: Auto Searching Hyperparameters
+from ConfigSpace import Categorical, Configuration, ConfigurationSpace, Float, Integer
+from ConfigSpace.conditions import InCondition
+from smac import HyperparameterOptimizationFacade, Scenario
+
 # from other packages
 from utils import preprocess
 from utils import model
 from main_class import main
 
 
+'''
+Hyperparameters:
+- learn rate
+- batch size
+- epoch
+- optimizer
+- activation function
+- Number/size of Hidden layer and Nerous
+- 
+'''
+
+
+
+
+
+
+
+
+
+
+
+
 class trainer(preprocess.data_handler):
     def __init__(self) -> None:
         print("\n Now inital trainer..")        
-        super().__init__()
-        self.model = LstmNet().to(self.device)
+        self.model = LstmNet().to(main._device)
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
         self.loss = nn.BCEWithLogitsLoss()
-        self.normalize = nn.BatchNorm1d(num_features=8).to(self.device)
+        self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
         self._best_model_state = None
         self._flag = True
         self._result_list = []
         self.best_accurary = 0        
-        print("\nTrainer inital succefully!\n")        
+        print("\nTrainer inital succefully!\n")       
+
+    @property
+    def configspace(self) -> ConfigurationSpace:
+        cs = ConfigurationSpace(seed=0)
+
+        # 1 - Hyper-Parameter
+            # Hyper-Value
+        hidden_size = Integer("hidden_size", (16,512), default=128)
+        num_layers = Integer("num_layers", (1,8), default=2)
+        dropout = Float("LSTM_dropout", (0.0, 0.5), default=0.2)
+        learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
+            # Choose optimizer method
+        optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
+        loss = Categorical("Loss_Function", ["BCEWithLogitsLoss", "MSELoss"], default="BCEWithLogitsLoss")
+
+        # 2 - Create dependencies
+        # # 这些依赖关系的作用是确保在搜索超参数配置空间时，只有符合条件的组合才会被考虑，从而避免无效或不合理的配置。
+        # # 这在超参数调优过程中非常重要，因为它可以减少搜索空间，提高调优效率，并确保生成的配置能够在实际训练中使用。
+        
+        # use_degree = InCondition(child=degree, parent=kernel, values=["poly"])
+		# 		# 这意味着 degree 这个超参数仅在 kernel 为 "poly" 时才有效。换句话说，只有在选择了多项式核函数时，才需要设置多项式的次数（即 degree 超参数）。
+
+        # use_coef = InCondition(child=coef, parent=kernel, values=["poly", "sigmoid"])
+        #    # 这意味着 coef 这个超参数仅在 kernel 为 "poly" 或 "sigmoid" 时才有效。
+        #   # 换句话说，只有在选择了多项式核函数或 sigmoid 核函数时，才需要设置 coef 超参数。
+        
+        # use_gamma = InCondition(child=gamma, parent=kernel, values=["rbf", "poly", "sigmoid"])
+        #   # 这意味着 gamma 这个超参数仅在 kernel 为 "rbf"、 "poly" 或 "sigmoid" 时才有效。
+        #   # 换句话说，只有在选择了径向基核函数、多项式核函数或 sigmoid 核函数时，才需要设置 gamma 超参数。
+        
+        # use_gamma_value = InCondition(child=gamma_value, parent=gamma, values=["value"])
+		# 		# 这意味着 gamma_value 这个超参数仅在 gamma 为 "value" 时才有效。
+		# 		# 换句话说，只有在选择了手动指定 gamma 值时，才需要设置 gamma_value 超参数。
+
+        # Add hyperparameters and conditions to our configspace
+        cs.add_hyperparameters([hidden_size, num_layers, dropout, learn_rate, optimize_method, loss])
+        
+        return cs
 
 
     def display_all_params(self):
@@ -54,11 +118,11 @@ class trainer(preprocess.data_handler):
         if self._flag:
             self._best_model_state = copy.deepcopy(self.model.state_dict())
         else:
-            torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
+            torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
 
     def force_save_model(self):
         self._best_model_state = copy.deepcopy(self.model.state_dict())
-        torch.save(self._best_model_state, f'{self.args.model_save_path}model{self.args.date_time}.pth')
+        torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
         logging.info("Force Saving Sucessful!\n")
 
 
@@ -72,9 +136,9 @@ class trainer(preprocess.data_handler):
 
         for data_idx in tqdm(range(batch_size), desc="MiniBatch Train", leave=False):
             feature.append(batch[data_idx][0])
-            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
             target_set.append(target)
-        feature = torch.tensor(feature, requires_grad=True).to(self.device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
+        feature = torch.tensor(feature, requires_grad=True).to(main._device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
         target_set = torch.tensor(target_set, requires_grad=True)
         y_pred = self.model.forward_with_batch(tensor_data=feature,
                                                 batch_size=batch_size)
@@ -93,8 +157,8 @@ class trainer(preprocess.data_handler):
         Accurary = 0
 
         for data_idx in tqdm(range(len(batch)), desc="SGD", leave= False):
-            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=self.device, requires_grad=True)
-            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=self.device, requires_grad=True)
+            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
             y_pred = self.model.forward(feature)
             self.optimizer.zero_grad() # clean all grad
             loss = self.loss(y_pred, target)
@@ -117,16 +181,21 @@ class trainer(preprocess.data_handler):
         
     
     def train(self):
-        data_generator = self.get_generator()
-        for epoch_idx in tqdm(range(self.args.num_epoches), desc="Epoch No.", leave=True):
+        data_generator = super().get_generator()
+        for epoch_idx in tqdm(range(main._args.num_epoches), desc="Epoch No.", leave=True):
             logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
             self.model.train()
             
             # Version 2: Using data generator to handle raw data only when trainer need them 
             try:
-                while next(data_generator, None) != None:
+                while True:
                     single_chunk = next(data_generator, None)
-                    match self.args.batch_model:
+                    # epoch stop
+                    if single_chunk == None:
+                        self.save_model()
+                        break
+
+                    match main._args.batch_model:
                         case True:
                             self._mini_batch(batch=single_chunk)
                         case False:
@@ -134,11 +203,11 @@ class trainer(preprocess.data_handler):
                         case _:
                             raise KeyError
             except Exception as e:
+                print(f"\n{e}\n")
                 self.force_save_model()
-                print(f"\nERROR: ' {e} ' had been seen!\n")
+                break
 
-
-
+            {
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
             # try:
@@ -159,11 +228,35 @@ class trainer(preprocess.data_handler):
             # except Exception as e:
             #     self.force_save_model()
             #     print(f"\n * ERROR {e}! But model have been saved! \n")
-           
+            }
                     
-                
+    def auto_ml(self):
+        # SMAC Next, we create an object, holding general information about the run
+        scenario = Scenario(
+            self.configspace,
+            n_trials=50,
+        )
+        # we want to run the facade's default initial design, but we want to change the number
+        # of initial configs to 5.
+        initial_design = HyperparameterOptimizationFacade.get_initial_design(scenario, n_configs=5)
 
-            
+        # Now we use SMAC to find the best hyperparameters
+        smac = HyperparameterOptimizationFacade(
+            scenario,
+            self.train(),
+            initial_design=initial_design,
+            overwrite=True,  # If the run exists, we overwrite it; alternatively, we can continue from last state
+        )
+
+        incumbent = smac.optimize()
+        # Get cost of default configuration
+        default_cost = smac.validate(self.configspace.get_default_configuration())
+        logging.info(f"Default cost: {default_cost}")
+
+        # Let's calculate the cost of the incumbent
+        incumbent_cost = smac.validate(incumbent)
+        logging.info(f"Incumbent cost: {incumbent_cost}")
+        
 
     def test(self, batch:list):
         self.model.eval()
@@ -172,7 +265,7 @@ class trainer(preprocess.data_handler):
 
         totoal_lenght = len(batch)
         for single_data in batch:
-            feature = torch.tensor(single_data[0], dtype=torch.float32, device=self.device, requires_grad=True)
+            feature = torch.tensor(single_data[0], dtype=torch.float32, device=main._device, requires_grad=True)
             # target = torch.tensor([single_data[1]], dtype=torch.float32, device=device, requires_grad=False)
             target = single_data[1]
             # if single_data[1] == 1:
@@ -244,7 +337,7 @@ class LstmNet(nn.Module, model.module):
     
 
     def _load_pretrained_embedding_weight(self):
-        model = gensim.models.KeyedVectors.load_word2vec_format(self.args)
+        model = gensim.models.KeyedVectors.load_word2vec_format(main._args)
         weights = torch.FloatTensor(model.vectors) # formerly syn0, which is soon deprecated
         return weights
     
@@ -254,8 +347,9 @@ class LstmNet(nn.Module, model.module):
 
 
         # inital parameters
-        h0 = torch.randn(4, 128, device=self.get_device(), dtype=torch.float32)
-        c0 = torch.randn(4, 128, device=self.get_device(), dtype=torch.float32)
+        # 4 = 2 if bidirectional=True else 1, * num_layers, 
+        h0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
+        c0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
         
         # forward:
         # print(type(tensor_data))
@@ -286,8 +380,8 @@ class LstmNet(nn.Module, model.module):
         return pred
     
     def forward_with_batch(self, tensor_data: torch.tensor, batch_size: int):
-        h0 = torch.randn(4, batch_size , 128, device=self.device, dtype=torch.float32)
-        c0 = torch.randn(4, batch_size , 128, device=self.device, dtype=torch.float32)
+        h0 = torch.randn(4, batch_size , 128, device=main._device, dtype=torch.float32)
+        c0 = torch.randn(4, batch_size , 128, device=main._device, dtype=torch.float32)
         h, _ = self.lstm(tensor_data, (h0, c0))
         pred = F.sigmoid(self.linears(h[-1, : , :]))
         return pred

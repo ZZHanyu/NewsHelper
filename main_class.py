@@ -20,18 +20,29 @@ from datetime import datetime, timedelta
 import logging
 from functools import wraps
 import time
+from abc import ABC
+
 
 '''
     Super main class
     Abstract super class : To avoid repeat defination
 '''
-class main(object):
-    def __init__(self):
-        self.args = self.__parser()
-        self.device = self.__select_device()
+class main(ABC):
+    '''
+        abstract
+    '''
+
+    _args = None
+    _device = None
+
+    @classmethod
+    def initialize(cls):
+        cls._parser()
+        cls.__select_device()
 
 
-    def __parser(self):
+    @classmethod
+    def _parser(cls):
         parser = argparse.ArgumentParser(description="Parameters for Classifier")
         parser.add_argument("--dataset_path", 
                             type=str, 
@@ -41,39 +52,80 @@ class main(object):
                             type=str, 
                             default='fake-news-classification', 
                             help="the dataset name from kaggle")
-        parser.add_argument("--chunk_size", type=int, default=20, help="control how many lines read once / single batch size")
-        parser.add_argument("--max_epochs", type=int, default=50, help="epochs of training")
-        parser.add_argument("--test_batch", type=int, default=5, help="how many batch dataset used for testing")
-        parser.add_argument("--train_persentage", type=float, default=0.8, help="dataset persentage used for training")
-        parser.add_argument("--result_path", type=str, default="result/", help="result output destnation file")
-        parser.add_argument("--date_time", type=str, default=datetime.now().strftime("%Y_%m_%d_%H:%M"), help="date_form_Y_M_D_h_m")
-        parser.add_argument("--logging_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/log/", help="log file recorded path")
-        parser.add_argument("--pretrianed_emb_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", help="path store pretrianed embeddings model")
-        parser.add_argument("--pretrained_embedding_model_name", type=str, default="fasttext-wiki-news-subwords-300", help="pretrained embedding model name from gensim")
-        parser.add_argument("--model_save_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/trained_model/", help="trained model saving path")
+        parser.add_argument("--chunk_size", 
+                            type=int, 
+                            default=20, 
+                            help="control how many lines read once / single batch size")
+        parser.add_argument("--max_epochs", 
+                            type=int, 
+                            default=50, 
+                            help="epochs of training")
+        parser.add_argument("--test_batch", 
+                            type=int, 
+                            default=5, 
+                            help="how many batch dataset used for testing")
+        parser.add_argument("--train_persentage", 
+                            type=float, 
+                            default=0.8, 
+                            help="dataset persentage used for training")
+        parser.add_argument("--result_path", 
+                            type=str, 
+                            default="result/", 
+                            help="result output destnation file")
+        parser.add_argument("--date_time", 
+                            type=str, 
+                            default=datetime.now().strftime("%Y_%m_%d_%H:%M"), 
+                            help="date_form_Y_M_D_h_m")
+        parser.add_argument("--logging_path", 
+                            type=str, 
+                            default="/Users/taotao/Documents/GitHub/FYP/log/",
+                            help="log file recorded path")
+        parser.add_argument("--pretrianed_emb_path", 
+                            type=str, 
+                            default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", 
+                            help="path store pretrianed embeddings model")
+        parser.add_argument("--pretrained_embedding_model_name", 
+                            type=str, 
+                            default="fasttext-wiki-news-subwords-300", 
+                            help="pretrained embedding model name from gensim")
+        parser.add_argument("--model_save_path", 
+                            type=str, 
+                            default="/Users/taotao/Documents/GitHub/FYP/trained_model/", 
+                            help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
                              default=False, 
                              help="whether using batch during train step")
-        parser.add_argument("--LDA_only", type=bool, default=False, help="whether start from train")
-        parser.add_argument("--LDA_model_path", type=str, default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", help="LDA model path")
-        parser.add_argument("--num_epoches", type=int, default=10, help="epoch means train thourgh a whole dataset")
-        args = parser.parse_args()
-        return args
+        parser.add_argument("--LDA_only", 
+                            type=bool, 
+                            default=False,
+                            help="whether start from train")
+        parser.add_argument("--LDA_model_path", 
+                            type=str, 
+                            default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", 
+                            help="LDA model path")
+        parser.add_argument("--num_epoches", 
+                            type=int, 
+                            default=10, 
+                            help="epoch means train thourgh a whole dataset")
+        cls._args = parser.parse_args()
     
-    def __select_device(self):
+
+    @classmethod
+    def __select_device(cls):
         if torch.cuda.is_available():
-            device = torch.device("cuda")
+            cls._device = torch.device("cuda")
         elif torch.backends.mps.is_available():
             if torch.backends.mps.is_built():
-                device = torch.device("mps")
+                cls._device = torch.device("mps")
         else:
-            device = torch.device("cpu")
-        logging.info(f"\n *** Devices selected = {device} ! \n")
-        return device
-    
-    def _inital_logging(self):
-        logging.basicConfig(filename=self.args.logging_path + f'{self.args.date_time}', level=logging.INFO)
+            cls._device = torch.device("cpu")
+        logging.info(f"\n *** Devices selected = {cls._device} ! \n")
+
+
+    @classmethod
+    def _inital_logging(cls):
+        logging.basicConfig(filename=cls._args.logging_path + f'{cls._args.date_time}', level=logging.INFO)
 
     
     @staticmethod

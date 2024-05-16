@@ -4,15 +4,14 @@ from utils import model
 from utils import topicModel
 from utils import network
 
-import logging
 
 
 
-#super_class = main()
-#data_handler = preprocess.data_handler()
+# abstract class init
+main.initialize()
+preprocess.data_handler.initialize()
 
-
-# sub-class model 
+# start training
 trainer = network.trainer()
 trainer.train()
 

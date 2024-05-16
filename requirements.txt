@@ -1,11 +1,13 @@
-gensim==4.3.0
-huggingface_hub==0.22.2
+ConfigSpace==0.7.1
+ConfigSpace==0.7.1
+gensim==4.3.2
 lda==3.0.0
-matplotlib==3.8.0
+matplotlib==3.8.4
 numpy==1.26.4
 opendatasets==0.1.22
 pandas==2.2.2
+smac==2.0.2
 torch==2.2.2
 torchvision==0.17.2
-tqdm==4.65.0
+tqdm==4.66.4
 transformers==4.39.3

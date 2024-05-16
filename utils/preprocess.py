@@ -19,6 +19,7 @@ from gensim.models import Word2Vec
 import gensim.downloader
 import opendatasets as od
 import pandas as pd
+from abc import ABC, abstractmethod
 
 
 # utils
@@ -31,50 +32,48 @@ class data_handler(main):
     '''
         abstract
     '''
-    def __init__(self) -> None:
-        print(" Now inital Charactors_Handler...\n")
-        super().__init__()
 
-        self.datalen = None
-        self._chunks = None
+    _datalen = None
+    _chunks = None
+    _csv_total_len = None
+    _chunk_number = None
+    _embedding_model = None
+    _embedding_dim = None
 
-        self.csv_total_len = 0
-        self.chunk_number = 0
 
-        self.embedding_model = None
-        self.embedding_dim = None
-        # self._init_embedding_model()
+    @classmethod
+    def initialize(cls):
+        cls._dataloader()
+        cls._datarow_count()
         
-        self._dataloader()
-        self.datarow_count()
-        self
-        print("Charactors_hander inital succefuly")
 
-    def get_generator(self):
+    @classmethod
+    def get_generator(cls):
         data_generator = data_handler_iterator()
         data_iter = iter(data_generator)
         return data_iter
     
-    def _init_embedding_model(self):
-        if self.embedding_model == None:
-            logging.info(f"* Loading pretrained embedding model: {gensim.downloader.info(name=self.args.pretrained_embedding_model_name)}\n")
-            self.embedding_model = gensim.downloader.load(self.args.pretrained_embedding_model_name)
-            self.embedding_dim = self.embedding_model.vector_size
+    @classmethod
+    def _init_embedding_model(cls):
+        if cls._embedding_model == None:
+            logging.info(f"* Loading pretrained embedding model: {gensim.downloader.info(name=super()._args.pretrained_embedding_model_name)}\n")
+            cls._embedding_model = gensim.downloader.load(super()._args.pretrained_embedding_model_name)
+            cls._embedding_dim = cls._embedding_model.vector_size
         else:
             pass
 
-
-    def datarow_count(self):
-        with open(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
-            self.csv_total_len = sum(1 for row in fileobject)
-        logging.info(f"\n ** DataFile have {self.csv_total_len} rows of csv data! \n")
+    @classmethod
+    def _datarow_count(cls):
+        with open(super()._args.dataset_path + super()._args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
+            cls._csv_total_len = sum(1 for row in fileobject)
+        logging.info(f"\n ** DataFile have {cls._csv_total_len} rows of csv data! \n")
         
         # calculate the total chunk number
-        chunk_number = self.csv_total_len // self.args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
+        chunk_number = cls._csv_total_len // super()._args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
         logging.info(f"\n ** DataFile have {chunk_number} chunks! \n")
 
-
-    def _dataloader(self):
+    @classmethod
+    def _dataloader(cls):
         '''
             ---------- Dataset Loader ----------
             Objective:
@@ -84,19 +83,16 @@ class data_handler(main):
             Return:
                 - wda
         '''
-        if not os.path.exists(self.args.dataset_path + self.args.dataset_name + '/WELFake_Dataset.csv'):
-            print(f"The file path {self.args.dataset_path + 'WELFake_Dataset.csv'} is missing! Now downloading...\n")
+        if not os.path.exists(super()._args.dataset_path + super()._args.dataset_name + '/WELFake_Dataset.csv'):
+            print(f"The file path {super()._args.dataset_path + 'WELFake_Dataset.csv'} is missing! Now downloading...\n")
             # kaggle datasets download -d saurabhshahane/fake-news-classification
-            od.download('https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification', data_dir=self.args.dataset_path)
+            od.download('https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification', data_dir=super()._args.dataset_path)
         else:
-            self._chunks = pd.read_csv(self.args.dataset_path + self.args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=self.args.chunk_size)
-    
-    
-    def display_elements(self):
-        return self._raw_str
+            cls._chunks = pd.read_csv(super()._args.dataset_path + super()._args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=super()._args.chunk_size)
 
-    
-    def _remove_empty_line(self, single_chunk):
+
+    @classmethod
+    def _remove_empty_line(cls, single_chunk):
         for index, row in single_chunk.iterrows():
             if pandas.isnull(row['title']) or pandas.isnull(row['text']) or pandas.isnull(row['label']):
                 single_chunk.drop(index, inplace=True)
@@ -107,33 +103,37 @@ class data_handler(main):
         return single_chunk
 
 
-    def _normalize(self, text):
+    @classmethod
+    def _normalize(cls, text):
         norm2 = np.linalg.norm(text)
         for j in len(text):
             text[j] = text[j] / norm2
         return text
     
 
-    def _file_exist_checker(self, chunk_idx) -> bool:
-        if not os.path.exists(self.args.result_path + "tokenized{}.npy".format(chunk_idx)):
+    @classmethod
+    def _file_exist_checker(cls, chunk_idx) -> bool:
+        if not os.path.exists(super()._args.result_path + "tokenized{}.npy".format(chunk_idx)):
             return False
         else:
             return True
         
-    def _words_embeddings(self, sentences):
-        if self.embedding_model == None:
+    @classmethod   
+    def _words_embeddings(cls, sentences):
+        if cls._embedding_model == None:
             print("\nEmbedding model missing, NOW Loading...\n")
-            self._init_embedding_model()
+            cls._init_embedding_model()
         
         for idx in range(len(sentences)):
-            if self.embedding_model.has_index_for(sentences[idx]):
-                sentences[idx] = self.embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
+            if cls._embedding_model.has_index_for(sentences[idx]):
+                sentences[idx] = cls._embedding_model.get_vector(sentences[idx], norm=True).astype(np.float32)
             else:
-                sentences[idx] = np.zeros(shape=(self.embedding_dim), dtype=np.float32)
+                sentences[idx] = np.zeros(shape=(cls._embedding_dim), dtype=np.float32)
 
         return sentences
 
-    def _string_handler(self, raw_text):
+    @classmethod
+    def _string_handler(cls, raw_text):
         # STEP 1: Lower all charactors in string
         raw_text = raw_text.lower()
         # STEP 2: Split string into charactor list
@@ -142,12 +142,9 @@ class data_handler(main):
         raw_text = re.findall(r'\b\w+\b', raw_text)
 
         # STEP 3: embedding string into vector represeation
-        processed_text = self._words_embeddings(raw_text)
+        processed_text = cls._words_embeddings(raw_text)
         return processed_text
     
-
-    def arg_max(self):
-        pass
 
 
     def run(self):
@@ -181,32 +178,32 @@ class data_handler_iterator(data_handler):
     object class
         - An iterator/ implement of abstract class : data handler
     '''
+
     def __init__(self) -> None:
         print("Start iterator building...\n")
         super().__init__()
         print("\nIterator building Sucessfully!.\n")
 
+
     def __iter__(self):
-        return self.generator()
+        return self
 
 
-    def generator(self):
+    def __next__(self):
         # only handle data and save to self.tokenized_chunk
-        while True:
-            if isinstance(next(self._chunks, None), pd.DataFrame):
-                chunk = self._chunks.get_chunk()
-            else:
-                raise StopIteration
-                break
-            chunk_tokenized = [] # initiaize and re-initiaze
-            # STEP 1: Remove empty line
-            chunk = self._remove_empty_line(single_chunk=chunk)
-            for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
-                chunk_tokenized.append((self._string_handler(raw_text=row[2] + row[3]), row[4]))
-                # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
-                # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
-                # [ [01231232] , [21131313],  [2134123232] , .....]
-            yield chunk_tokenized
+        if isinstance(next(super()._chunks, None), pd.DataFrame):
+            chunk = super()._chunks.get_chunk()
+        else:
+            raise StopIteration
+        chunk_tokenized = [] # initiaize and re-initiaze
+        # STEP 1: Remove empty line
+        chunk = super()._remove_empty_line(single_chunk=chunk)
+        for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
+            chunk_tokenized.append((super()._string_handler(raw_text=row[2] + row[3]), row[4]))
+            # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
+            # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
+            # [ [01231232] , [21131313],  [2134123232] , .....]
+        return chunk_tokenized
             
             
 

@@ -14,6 +14,11 @@ from main_class import main
 
 
 class module(main):
+    '''
+        abstract
+    '''
+    
+
     def __init__(self):
         super().__init__()
         
