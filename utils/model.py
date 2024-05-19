@@ -51,4 +51,3 @@ class module(main):
             abstract method
         '''
         pass
-

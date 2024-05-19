@@ -13,6 +13,6 @@ preprocess.data_handler.initialize()
 
 # start training
 trainer = network.trainer()
-trainer.train()
+trainer.auto_ml()
 
 

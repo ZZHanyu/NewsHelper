@@ -41,6 +41,44 @@ Hyperparameters:
 '''
 
 
+class configs():
+    @property
+    def configspace(self) -> ConfigurationSpace:
+        cs = ConfigurationSpace(seed=0)
+
+        # 1 - Hyper-Parameter
+            # Hyper-Value
+        hidden_size = Integer("hidden_size", (16,512), default=128)
+        num_layers = Integer("num_layers", (1,8), default=2)
+        dropout = Float("LSTM_dropout", (0.0, 0.5), default=0.2)
+        learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
+            # Choose optimizer method
+        optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
+        loss = Categorical("Loss_Function", ["BCEWithLogitsLoss", "MSELoss"], default="BCEWithLogitsLoss")
+
+        # 2 - Create dependencies
+        # # 这些依赖关系的作用是确保在搜索超参数配置空间时，只有符合条件的组合才会被考虑，从而避免无效或不合理的配置。
+        # # 这在超参数调优过程中非常重要，因为它可以减少搜索空间，提高调优效率，并确保生成的配置能够在实际训练中使用。
+        
+        # use_degree = InCondition(child=degree, parent=kernel, values=["poly"])
+		# 		# 这意味着 degree 这个超参数仅在 kernel 为 "poly" 时才有效。换句话说，只有在选择了多项式核函数时，才需要设置多项式的次数（即 degree 超参数）。
+
+        # use_coef = InCondition(child=coef, parent=kernel, values=["poly", "sigmoid"])
+        #    # 这意味着 coef 这个超参数仅在 kernel 为 "poly" 或 "sigmoid" 时才有效。
+        #   # 换句话说，只有在选择了多项式核函数或 sigmoid 核函数时，才需要设置 coef 超参数。
+        
+        # use_gamma = InCondition(child=gamma, parent=kernel, values=["rbf", "poly", "sigmoid"])
+        #   # 这意味着 gamma 这个超参数仅在 kernel 为 "rbf"、 "poly" 或 "sigmoid" 时才有效。
+        #   # 换句话说，只有在选择了径向基核函数、多项式核函数或 sigmoid 核函数时，才需要设置 gamma 超参数。
+        
+        # use_gamma_value = InCondition(child=gamma_value, parent=gamma, values=["value"])
+		# 		# 这意味着 gamma_value 这个超参数仅在 gamma 为 "value" 时才有效。
+		# 		# 换句话说，只有在选择了手动指定 gamma 值时，才需要设置 gamma_value 超参数。
+
+        # Add hyperparameters and conditions to our configspace
+        cs.add_hyperparameters([hidden_size, num_layers, dropout, learn_rate, optimize_method, loss])
+        
+        return cs
 
 
 
@@ -54,14 +92,26 @@ Hyperparameters:
 class trainer(preprocess.data_handler):
     def __init__(self) -> None:
         print("\n Now inital trainer..")        
-        self.model = LstmNet().to(main._device)
-        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
-        self.loss = nn.BCEWithLogitsLoss()
-        self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+        # self.model = LstmNet().to(main._device)
+        # self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
+        # self.loss = nn.BCEWithLogitsLoss()
+        # self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+        # self._best_model_state = None
+        # self._flag = True
+        # self._result_list = []
+        # self.best_accurary = 0      
+        # self.config = configs()
+        self.model = None
+        self.optimizer = None
+        self.loss = None
+        self.normalize = None
         self._best_model_state = None
         self._flag = True
         self._result_list = []
-        self.best_accurary = 0        
+        self.best_accurary = 0  
+        self.config = configs()    
+
+
         print("\nTrainer inital succefully!\n")       
 
     @property
@@ -71,8 +121,15 @@ class trainer(preprocess.data_handler):
         # 1 - Hyper-Parameter
             # Hyper-Value
         hidden_size = Integer("hidden_size", (16,512), default=128)
+        hidden_size_linear = Integer("hidden_size_linear", (16,256), default=64)
+
         num_layers = Integer("num_layers", (1,8), default=2)
+
         dropout = Float("LSTM_dropout", (0.0, 0.5), default=0.2)
+        dropout_linear = Float("dropout_linear", (0.0, 0.5), default=0.2)
+
+        activation_linear = Categorical("activation", ["tanh", "relu", "LeakyReLU"], default="LeakyReLU")
+
         learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
             # Choose optimizer method
         optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
@@ -120,10 +177,13 @@ class trainer(preprocess.data_handler):
         else:
             torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
 
+
+
     def force_save_model(self):
         self._best_model_state = copy.deepcopy(self.model.state_dict())
         torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
         logging.info("Force Saving Sucessful!\n")
+
 
 
     def _mini_batch(self, 
@@ -146,7 +206,6 @@ class trainer(preprocess.data_handler):
         loss = self.loss(y_pred, target_set)
         loss.backward()
         self.optimizer.step()
-
 
 
 
@@ -179,8 +238,50 @@ class trainer(preprocess.data_handler):
         
         return Accurary
         
-    
-    def train(self):
+
+
+    def train(self, config: Configuration, seed: int = 0):
+        if self.model == None or self.optimizer == None or self.loss == None:
+            config_dict = config.get_dictionary()
+            
+            self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+
+
+            learn_rate = config_dict['Learning_Rate']
+
+            # optimize method choose
+            match config_dict['optimize_method']:
+                case 'Adam':
+                    self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=learn_rate)
+                case 'SGD':
+                    self.optimizer = torch.optim.SGD(params=self.model.parameters(), lr=learn_rate)
+                case 'Adagrad':
+                    self.optimizer = torch.optim.Adagrad(params=self.model.parameters(), lr=learn_rate)
+                case 'RMSprop':
+                    self.optimizer = torch.optim.RMSprop(params=self.model.parameters(), lr=learn_rate)
+                case _:
+                    raise ModuleNotFoundError
+        
+
+            # loss function choose
+            match config_dict['Loss_Function']:
+                case 'BCEWithLogitsLoss':
+                    self.loss = nn.BCEWithLogitsLoss()
+                case 'MSELoss':
+                    self.loss = nn.MSELoss()
+                case _:
+                    raise ModuleNotFoundError
+
+
+            self.model = LstmNet(hidden_size=config_dict['hidden_size'],
+                                hidden_size_linear=config_dict['hidden_size_linear'],
+                                num_layers=config_dict['num_layers'],
+                                dropout=config_dict['dropout'],
+                                dropout_linear=config_dict['dropout_linear'],
+                                activation_linear=config['activation_linear']
+                                ).to(main._device)
+
+                
         data_generator = super().get_generator()
         for epoch_idx in tqdm(range(main._args.num_epoches), desc="Epoch No.", leave=True):
             logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
@@ -199,7 +300,9 @@ class trainer(preprocess.data_handler):
                         case True:
                             self._mini_batch(batch=single_chunk)
                         case False:
-                            self._single_step(batch=single_chunk)
+                            Accuary = self._single_step(batch=single_chunk)
+                            cost = 1 - Accuary
+                            
                         case _:
                             raise KeyError
             except Exception as e:
@@ -233,17 +336,26 @@ class trainer(preprocess.data_handler):
     def auto_ml(self):
         # SMAC Next, we create an object, holding general information about the run
         scenario = Scenario(
-            self.configspace,
+            self.config.configspace,
+            walltime_limit=60,  # After 60 seconds, we stop the hyperparameter optimization
             n_trials=50,
+            min_budget=1,  # Train the MLP using a hyperparameter configuration for at least 5 epochs
+            max_budget=25,  # Train the MLP using a hyperparameter configuration for at most 25 epochs
+            n_workers=8,
         )
+
         # we want to run the facade's default initial design, but we want to change the number
         # of initial configs to 5.
         initial_design = HyperparameterOptimizationFacade.get_initial_design(scenario, n_configs=5)
 
+        # Create our intensifier
+        intensifier = intensifier_object(scenario, incumbent_selection="highest_budget")
+
+
         # Now we use SMAC to find the best hyperparameters
         smac = HyperparameterOptimizationFacade(
             scenario,
-            self.train(),
+            self.train,
             initial_design=initial_design,
             overwrite=True,  # If the run exists, we overwrite it; alternatively, we can continue from last state
         )
@@ -297,27 +409,46 @@ class trainer(preprocess.data_handler):
 
 
 class LstmNet(nn.Module, model.module):
-    def __init__(self):
-        super(LstmNet, self).__init__()    
-        model.module.__init__(self)    
-        self.lstm = nn.LSTM(input_size=300,
-                            hidden_size=128, 
-                            num_layers=2,
-                            bidirectional=True,
-                            dropout=0.2)
+    def __init__(self,
+                 hidden_size,
+                 hidden_size_linear,
+                 num_layers,
+                 dropout,
+                 dropout_linear,
+                 activation_linear):
         
-        # self.linear = nn.Linear(256, 1)
-        # self.dropout = nn.Dropout(0.2)
-
+        super(LstmNet, self).__init__()    
+        model.module.__init__(self)
+  
+        # construct LSTM layer
+        self.lstm = nn.LSTM(input_size=300,
+                            hidden_size=hidden_size, 
+                            num_layers=num_layers,
+                            bidirectional=True,
+                            dropout=dropout)
+        
+        activation = None
+        match activation_linear:
+            case 'tanh':
+                activation = nn.Tanh()
+            case 'relu':
+                activation = nn.ReLU()
+            case 'LeakyReLU':
+                activation = nn.LeakyReLU()
+            case _:
+                raise ModuleNotFoundError
+        
+        # construct linear layer (MLP)
         self.linears = nn.Sequential(
-            nn.Linear(256, 64), # [lstm hidden dim, num class]
-            nn.LeakyReLU(),
-            nn.Dropout(0.25),
-            nn.Linear(64, 1) # [hidden dim, num class]
+            nn.Linear(hidden_size*2, hidden_size_linear), # [lstm hidden dim, num class]
+            activation,
+            nn.Dropout(dropout_linear),
+            nn.Linear(hidden_size_linear, 1) # [hidden dim, num class]
         )
 
-        # initalize all weights
-        #self.init_weights()       
+        # init weight
+        self.init_weights()
+
         logging.info(f"\n --> Model weight initalization succefuly!\n")
 
     
@@ -325,7 +456,7 @@ class LstmNet(nn.Module, model.module):
         self.display_model_info()
 
 
-    def init_weights(self):
+    def init_weights(self) -> None:
         torch.nn.init.xavier_uniform(self.lstm.weight)
         torch.nn.init.xavier_uniform(self.linears.weight)
         
@@ -342,21 +473,14 @@ class LstmNet(nn.Module, model.module):
         return weights
     
     def forward(self, tensor_data:torch.tensor):
-        # print(f"Shape tensor data = {tensor_data.size()},\n truth_v = {truth_v.size()}\n")
-        # print(f"\n input = {tensor_data}, \n label = {truth_v}\n")
-
-
         # inital parameters
         # 4 = 2 if bidirectional=True else 1, * num_layers, 
         h0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
         c0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
         
-        # forward:
-        # print(type(tensor_data))
-        
         # Normalization:
         # tensor_data = self.normalization(tensor_data)
-        # print(f"\n After normalization = {tensor_data}")
+        
         h, _ = self.lstm(tensor_data, (h0, c0))
         # h = F.relu(h)
         # in [sequence_lenght,  hidden_feature_dim]

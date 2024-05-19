@@ -1,0 +1,376 @@
+{
+  "stats": {
+    "submitted": 20,
+    "finished": 20,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.8262641,
+      1716100465.8283432,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      1,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.830092,
+      1716100465.83102,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.832552,
+      1716100465.8335302,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      2,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.835232,
+      1716100465.8362901,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      1,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.83808,
+      1716100465.838868,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.8404858,
+      1716100465.841315,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      3,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.842915,
+      1716100465.843873,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      3,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.8456619,
+      1716100465.846551,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      4,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.848636,
+      1716100465.849521,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      4,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.851409,
+      1716100465.852389,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      4,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.854314,
+      1716100465.855181,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      5,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.8575108,
+      1716100465.85843,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      5,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.860553,
+      1716100465.861375,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      5,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100465.863298,
+      1716100465.864078,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      6,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.007178,
+      1716100466.00823,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      6,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.0110562,
+      1716100466.012189,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      6,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.015465,
+      1716100466.0166578,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      7,
+      null,
+      209652396,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.0202088,
+      1716100466.0213041,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      7,
+      null,
+      398764591,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.024043,
+      1716100466.0250611,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ],
+    [
+      7,
+      null,
+      924231285,
+      null,
+      Infinity,
+      0.0,
+      2,
+      1716100466.0278988,
+      1716100466.028886,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 248, in init_train\n    hidden_size_linear=config_dict['hidden_size_linear'],\n                       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'hidden_size_linear'\n",
+        "error": "KeyError('hidden_size_linear')"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "LSTM_dropout": 0.13343926053494215,
+      "Learning_Rate": 0.06206026389781386,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "hidden_size": 121,
+      "num_layers": 7,
+      "optimizer": "Adagrad"
+    },
+    "2": {
+      "LSTM_dropout": 0.3207474257797003,
+      "Learning_Rate": 0.010741124355513602,
+      "Loss_Function": "MSELoss",
+      "hidden_size": 423,
+      "num_layers": 4,
+      "optimizer": "RMSprop"
+    },
+    "3": {
+      "LSTM_dropout": 0.40014085406437516,
+      "Learning_Rate": 0.08912533221332357,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "hidden_size": 185,
+      "num_layers": 2,
+      "optimizer": "Adagrad"
+    },
+    "4": {
+      "LSTM_dropout": 0.08731377823278308,
+      "Learning_Rate": 0.038110956130623826,
+      "Loss_Function": "MSELoss",
+      "hidden_size": 363,
+      "num_layers": 5,
+      "optimizer": "Adam"
+    },
+    "5": {
+      "LSTM_dropout": 0.013726989272981882,
+      "Learning_Rate": 0.08221325048123487,
+      "Loss_Function": "MSELoss",
+      "hidden_size": 271,
+      "num_layers": 6,
+      "optimizer": "SGD"
+    },
+    "6": {
+      "LSTM_dropout": 0.4458865003910399,
+      "Learning_Rate": 0.008722058677157056,
+      "Loss_Function": "MSELoss",
+      "hidden_size": 400,
+      "num_layers": 6,
+      "optimizer": "Adam"
+    },
+    "7": {
+      "LSTM_dropout": 0.35759468318620974,
+      "Learning_Rate": 0.03835031746738952,
+      "Loss_Function": "MSELoss",
+      "hidden_size": 334,
+      "num_layers": 5,
+      "optimizer": "Adagrad"
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": "Acquisition Function Maximizer: Random Search (sorted)",
+    "7": "Acquisition Function Maximizer: Random Search (sorted)"
+  }
+}
