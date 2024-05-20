@@ -1,0 +1,1237 @@
+{
+  "stats": {
+    "submitted": 50,
+    "finished": 50,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182089.968278,
+      1716182089.974923,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.058264,
+      1716182090.060931,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.1860712,
+      1716182090.188268,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      4,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.3895822,
+      1716182090.39221,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      5,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.5472589,
+      1716182090.5499709,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      6,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.700646,
+      1716182090.703866,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      7,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182090.859781,
+      1716182090.862565,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      8,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182091.011641,
+      1716182091.0143092,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      9,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182091.1394932,
+      1716182091.1409879,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182091.8712351,
+      1716182091.874609,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      11,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182091.992036,
+      1716182091.9936168,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      12,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.134856,
+      1716182092.136564,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      13,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.282305,
+      1716182092.284113,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      14,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.4301782,
+      1716182092.4319339,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.5903869,
+      1716182092.591991,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.757484,
+      1716182092.75901,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182092.895898,
+      1716182092.897535,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      15,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182093.0400178,
+      1716182093.041622,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      16,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182093.1882188,
+      1716182093.1901262,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      17,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182093.3413062,
+      1716182093.342973,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      18,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182093.9871428,
+      1716182093.9887092,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.127928,
+      1716182094.129621,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.305821,
+      1716182094.3075478,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      21,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.456317,
+      1716182094.458048,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      22,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.6094122,
+      1716182094.610944,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      23,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.773788,
+      1716182094.7755089,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      24,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182094.9276538,
+      1716182094.929319,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      25,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182095.089008,
+      1716182095.0907679,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      26,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182095.252129,
+      1716182095.253737,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182095.423258,
+      1716182095.4251149,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182095.578638,
+      1716182095.580418,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      18,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182095.742931,
+      1716182095.7448268,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182095.896297,
+      1716182095.898201,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182096.059062,
+      1716182096.060744,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      27,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182096.7277849,
+      1716182096.729503,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      28,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182096.886842,
+      1716182096.888768,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      29,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182097.037846,
+      1716182097.039556,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      30,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182097.2096262,
+      1716182097.211369,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      31,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716182097.363641,
+      1716182097.3653471,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      18,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182097.515368,
+      1716182097.517108,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      27,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182097.7418492,
+      1716182097.743801,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      32,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182097.927397,
+      1716182097.9290938,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      33,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182098.1065001,
+      1716182098.108014,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      34,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716182098.305494,
+      1716182098.307341,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      35,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182099.512577,
+      1716182099.514264,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      36,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182099.701961,
+      1716182099.70384,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      37,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182099.8679569,
+      1716182099.869822,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      38,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182100.032255,
+      1716182100.033814,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      39,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182100.218749,
+      1716182100.2207701,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ],
+    [
+      40,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716182100.392341,
+      1716182100.3941271,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 257, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'num_epoches'\")"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.026695183321777734,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 121,
+      "hidden_size_linear": 223,
+      "num_layers": 4,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.4983903025276959,
+      "dropout_linear": 0.3860676749609411
+    },
+    "2": {
+      "Learning_Rate": 0.07775357396407054,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 310,
+      "hidden_size_linear": 40,
+      "num_layers": 5,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.16347259702160954,
+      "dropout_linear": 0.03367062984034419
+    },
+    "3": {
+      "Learning_Rate": 0.05009203149308451,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 263,
+      "hidden_size_linear": 88,
+      "num_layers": 7,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.07758809067308903,
+      "dropout_linear": 0.206784060690552
+    },
+    "4": {
+      "Learning_Rate": 0.001328535869130865,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 448,
+      "hidden_size_linear": 147,
+      "num_layers": 2,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.2717747073620558,
+      "dropout_linear": 0.3696934846229851
+    },
+    "5": {
+      "Learning_Rate": 0.024609052809793502,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 501,
+      "hidden_size_linear": 191,
+      "num_layers": 3,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.0568195809610188,
+      "dropout_linear": 0.18663898762315512
+    },
+    "6": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 286,
+      "hidden_size_linear": 118,
+      "num_layers": 6,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4458865003910399,
+      "dropout_linear": 0.48183138025051464
+    },
+    "7": {
+      "Learning_Rate": 0.03835031746738952,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 298,
+      "hidden_size_linear": 239,
+      "num_layers": 1,
+      "optimizer": "Adam"
+    },
+    "8": {
+      "Learning_Rate": 0.07781789352747555,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 413,
+      "hidden_size_linear": 127,
+      "num_layers": 7,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.3199605106637619,
+      "dropout_linear": 0.0716766437045232
+    },
+    "9": {
+      "Learning_Rate": 0.0944674450157879,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 147,
+      "hidden_size_linear": 202,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.009394900218177571,
+      "dropout_linear": 0.30881774853793853
+    },
+    "10": {
+      "Learning_Rate": 0.06865861048022065,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 75,
+      "hidden_size_linear": 98,
+      "num_layers": 8,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.4334418969338024,
+      "dropout_linear": 0.2858626817481754
+    },
+    "11": {
+      "Learning_Rate": 0.0869563616309627,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 278,
+      "hidden_size_linear": 106,
+      "num_layers": 2,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4942343060948812,
+      "dropout_linear": 0.31780080870164223
+    },
+    "12": {
+      "Learning_Rate": 0.024609052809793502,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 501,
+      "hidden_size_linear": 190,
+      "num_layers": 2,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.0,
+      "dropout_linear": 0.0
+    },
+    "13": {
+      "Learning_Rate": 0.05504773784517913,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 308,
+      "hidden_size_linear": 239,
+      "num_layers": 5,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.28558617307357204,
+      "dropout_linear": 0.3768142373784985
+    },
+    "14": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 250,
+      "hidden_size_linear": 131,
+      "num_layers": 6,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.4537425048629121,
+      "dropout_linear": 0.48183138025051464
+    },
+    "15": {
+      "Learning_Rate": 0.026695183321777734,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 164,
+      "hidden_size_linear": 207,
+      "num_layers": 1,
+      "optimizer": "RMSprop"
+    },
+    "16": {
+      "Learning_Rate": 0.05382688671553865,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 97,
+      "hidden_size_linear": 251,
+      "num_layers": 1,
+      "optimizer": "Adam"
+    },
+    "17": {
+      "Learning_Rate": 0.046452669013206056,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 108,
+      "hidden_size_linear": 137,
+      "num_layers": 4,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.3402030280076386,
+      "dropout_linear": 0.2670522355507574
+    },
+    "18": {
+      "Learning_Rate": 0.05871052082553865,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 477,
+      "hidden_size_linear": 71,
+      "num_layers": 7,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.088698633734065,
+      "dropout_linear": 0.10751649257742962
+    },
+    "19": {
+      "Learning_Rate": 0.05224325868295782,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 66,
+      "hidden_size_linear": 245,
+      "num_layers": 5,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.0,
+      "dropout_linear": 0.0056500877432064
+    },
+    "20": {
+      "Learning_Rate": 0.03835031746738952,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 295,
+      "hidden_size_linear": 239,
+      "num_layers": 4,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.009026753678676936,
+      "dropout_linear": 0.0
+    },
+    "21": {
+      "Learning_Rate": 0.03353915260314131,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 433,
+      "hidden_size_linear": 20,
+      "num_layers": 6,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.43638990127587785,
+      "dropout_linear": 0.22070981091050135
+    },
+    "22": {
+      "Learning_Rate": 0.08121054034965533,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 407,
+      "hidden_size_linear": 129,
+      "num_layers": 7,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.36825376987654557,
+      "dropout_linear": 0.09944260913634659
+    },
+    "23": {
+      "Learning_Rate": 0.02331031766542193,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 345,
+      "hidden_size_linear": 91,
+      "num_layers": 6,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.412458171474304,
+      "dropout_linear": 0.3704318287160513
+    },
+    "24": {
+      "Learning_Rate": 0.06808869656199926,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 293,
+      "hidden_size_linear": 107,
+      "num_layers": 7,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.127714814885875,
+      "dropout_linear": 0.4783569935030353
+    },
+    "25": {
+      "Learning_Rate": 0.06240905271849302,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 431,
+      "hidden_size_linear": 189,
+      "num_layers": 5,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.39860365695507444,
+      "dropout_linear": 0.1874780798793953
+    },
+    "26": {
+      "Learning_Rate": 0.08393238068944076,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 476,
+      "hidden_size_linear": 33,
+      "num_layers": 2,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.11270916184493734,
+      "dropout_linear": 0.1250991011696408
+    },
+    "27": {
+      "Learning_Rate": 0.0638385453484674,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 208,
+      "hidden_size_linear": 97,
+      "num_layers": 2,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.0,
+      "dropout_linear": 0.0
+    },
+    "28": {
+      "Learning_Rate": 0.0688104776260412,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 227,
+      "hidden_size_linear": 162,
+      "num_layers": 2,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.4534003714705861,
+      "dropout_linear": 0.03753018310009193
+    },
+    "29": {
+      "Learning_Rate": 0.05239557082393485,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 308,
+      "hidden_size_linear": 240,
+      "num_layers": 5,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.2607428078163349,
+      "dropout_linear": 0.38284335926609103
+    },
+    "30": {
+      "Learning_Rate": 0.026695183321777734,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 107,
+      "hidden_size_linear": 221,
+      "num_layers": 4,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.47155925468438037,
+      "dropout_linear": 0.382331991276117
+    },
+    "31": {
+      "Learning_Rate": 0.02645050606055544,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 491,
+      "hidden_size_linear": 195,
+      "num_layers": 2,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.031584287804810214,
+      "dropout_linear": 0.0
+    },
+    "32": {
+      "Learning_Rate": 0.04334975346988508,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 310,
+      "hidden_size_linear": 198,
+      "num_layers": 7,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.045179891057554204,
+      "dropout_linear": 0.16460748948379805
+    },
+    "33": {
+      "Learning_Rate": 0.06299900698302023,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 53,
+      "hidden_size_linear": 98,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.46832085931107503,
+      "dropout_linear": 0.25849608242315614
+    },
+    "34": {
+      "Learning_Rate": 0.036475992565781344,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 117,
+      "hidden_size_linear": 121,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.36089666915667445,
+      "dropout_linear": 0.37922195992221125
+    },
+    "35": {
+      "Learning_Rate": 0.03668019186183254,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 108,
+      "hidden_size_linear": 135,
+      "num_layers": 5,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.36268927557636593,
+      "dropout_linear": 0.2778875898655219
+    },
+    "36": {
+      "Learning_Rate": 0.08303593583576648,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 255,
+      "hidden_size_linear": 36,
+      "num_layers": 2,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.05336793012378693,
+      "dropout_linear": 0.12189967783881517
+    },
+    "37": {
+      "Learning_Rate": 0.02828207718938534,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 179,
+      "hidden_size_linear": 86,
+      "num_layers": 5,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.22150189287114644,
+      "dropout_linear": 0.20631752303225276
+    },
+    "38": {
+      "Learning_Rate": 0.05493762953092057,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 308,
+      "hidden_size_linear": 240,
+      "num_layers": 6,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.23426028960375123,
+      "dropout_linear": 0.3865857812577384
+    },
+    "39": {
+      "Learning_Rate": 0.05224325868295782,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 95,
+      "hidden_size_linear": 249,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.048516051154085194,
+      "dropout_linear": 0.025685772138801077
+    },
+    "40": {
+      "Learning_Rate": 0.04059009399591453,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 481,
+      "hidden_size_linear": 220,
+      "num_layers": 7,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.435273656001751,
+      "dropout_linear": 0.12819156137358279
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": null,
+    "7": null,
+    "8": null,
+    "9": null,
+    "10": "Acquisition Function Maximizer: Local Search",
+    "11": "Acquisition Function Maximizer: Local Search",
+    "12": "Acquisition Function Maximizer: Local Search",
+    "13": "Acquisition Function Maximizer: Local Search",
+    "14": "Acquisition Function Maximizer: Local Search",
+    "15": "Acquisition Function Maximizer: Local Search",
+    "16": "Acquisition Function Maximizer: Local Search",
+    "17": "Acquisition Function Maximizer: Local Search",
+    "18": "Acquisition Function Maximizer: Local Search",
+    "19": "Acquisition Function Maximizer: Local Search",
+    "20": "Acquisition Function Maximizer: Local Search",
+    "21": "Acquisition Function Maximizer: Local Search",
+    "22": "Acquisition Function Maximizer: Local Search",
+    "23": "Acquisition Function Maximizer: Local Search",
+    "24": "Random Search",
+    "25": "Random Search",
+    "26": "Random Search",
+    "27": "Acquisition Function Maximizer: Local Search",
+    "28": "Acquisition Function Maximizer: Local Search",
+    "29": "Acquisition Function Maximizer: Local Search",
+    "30": "Acquisition Function Maximizer: Local Search",
+    "31": "Acquisition Function Maximizer: Local Search",
+    "32": "Acquisition Function Maximizer: Local Search",
+    "33": "Acquisition Function Maximizer: Local Search",
+    "34": "Random Search",
+    "35": "Acquisition Function Maximizer: Local Search",
+    "36": "Random Search",
+    "37": "Acquisition Function Maximizer: Local Search",
+    "38": "Acquisition Function Maximizer: Local Search",
+    "39": "Acquisition Function Maximizer: Local Search",
+    "40": "Acquisition Function Maximizer: Local Search"
+  }
+}

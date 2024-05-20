@@ -1,0 +1,103 @@
+{
+  "incumbent_ids": [
+    15
+  ],
+  "rejected_config_ids": [],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        15
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 18,
+      "walltime": 0.9022281169891357
+    }
+  ],
+  "state": {
+    "tracker": {
+      "0,0": [
+        [
+          0,
+          [
+            {
+              "LSTM_dropout": 0.24522940430878354,
+              "Learning_Rate": 0.017968571719187885,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "hidden_size": 429,
+              "num_layers": 2,
+              "optimizer": "Adagrad"
+            },
+            {
+              "LSTM_dropout": 0.4319278029616157,
+              "Learning_Rate": 0.011762010277643689,
+              "Loss_Function": "MSELoss",
+              "hidden_size": 81,
+              "num_layers": 6,
+              "optimizer": "SGD"
+            },
+            {
+              "LSTM_dropout": 0.2172083127790604,
+              "Learning_Rate": 0.04537514748715898,
+              "Loss_Function": "MSELoss",
+              "hidden_size": 412,
+              "num_layers": 2,
+              "optimizer": "Adagrad"
+            },
+            {
+              "LSTM_dropout": 0.4721861949919668,
+              "Learning_Rate": 0.06963738544665779,
+              "Loss_Function": "MSELoss",
+              "hidden_size": 206,
+              "num_layers": 8,
+              "optimizer": "Adam"
+            },
+            {
+              "LSTM_dropout": 0.11370731398666162,
+              "Learning_Rate": 0.00247762605184921,
+              "Loss_Function": "MSELoss",
+              "hidden_size": 328,
+              "num_layers": 8,
+              "optimizer": "SGD"
+            },
+            {
+              "LSTM_dropout": 0.12717824088519647,
+              "Learning_Rate": 0.006734290650010226,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "hidden_size": 449,
+              "num_layers": 6,
+              "optimizer": "Adagrad"
+            },
+            {
+              "LSTM_dropout": 0.02901458016193781,
+              "Learning_Rate": 0.06794248342212175,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "hidden_size": 151,
+              "num_layers": 3,
+              "optimizer": "SGD"
+            },
+            {
+              "LSTM_dropout": 0.38266262690348263,
+              "Learning_Rate": 0.02409046970374553,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "hidden_size": 483,
+              "num_layers": 3,
+              "optimizer": "RMSprop"
+            },
+            {
+              "LSTM_dropout": 0.37433180992527365,
+              "Learning_Rate": 0.010038391287127127,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "hidden_size": 413,
+              "num_layers": 2,
+              "optimizer": "Adam"
+            }
+          ]
+        ]
+      ]
+    },
+    "next_bracket": 1
+  }
+}

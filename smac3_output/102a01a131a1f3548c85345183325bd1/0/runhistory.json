@@ -1,0 +1,1195 @@
+{
+  "stats": {
+    "submitted": 50,
+    "finished": 50,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.834851,
+      1716174228.8790112,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.845303,
+      1716174228.86524,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.856089,
+      1716174228.880707,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      4,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.8719518,
+      1716174228.884903,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      5,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.8845272,
+      1716174228.893993,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      6,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.912124,
+      1716174228.976924,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      7,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.956054,
+      1716174228.9587898,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      8,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.966618,
+      1716174229.031424,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      9,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174228.9696221,
+      1716174228.977231,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.5773592,
+      1716174229.5859892,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      11,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.611886,
+      1716174229.6174479,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      12,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.636679,
+      1716174229.641305,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      13,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.6454341,
+      1716174229.653357,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      14,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.656765,
+      1716174229.6624079,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      15,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.6589482,
+      1716174229.6636229,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      16,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.671817,
+      1716174229.677118,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      17,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.710797,
+      1716174229.721726,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      18,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174229.743813,
+      1716174229.812853,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.1490078,
+      1716174230.1622982,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.1771991,
+      1716174230.181831,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      21,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.1964989,
+      1716174230.204467,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      22,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.216798,
+      1716174230.252403,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      23,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.238962,
+      1716174230.357414,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      24,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.240389,
+      1716174230.278791,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      25,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.2423701,
+      1716174230.259872,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      26,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.249951,
+      1716174230.25282,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      27,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174230.26075,
+      1716174230.344675,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.2987719,
+      1716174230.343932,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.371319,
+      1716174230.3917189,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.419798,
+      1716174230.43966,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.446624,
+      1716174230.456909,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      11,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.460325,
+      1716174230.469087,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      12,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.492534,
+      1716174230.5029602,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.5355651,
+      1716174230.550625,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.557272,
+      1716174230.561318,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      21,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174230.5773902,
+      1716174230.583165,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      28,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.0338979,
+      1716174231.0475378,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      29,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.056742,
+      1716174231.067103,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      30,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.0825899,
+      1716174231.0948858,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      31,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.1063108,
+      1716174231.214259,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      32,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.1265101,
+      1716174231.165003,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      33,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.138557,
+      1716174231.188501,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      34,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.139519,
+      1716174231.162171,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      35,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.140906,
+      1716174231.181626,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      36,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716174231.150976,
+      1716174231.174367,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716174231.1652951,
+      1716174231.211474,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716174231.1799638,
+      1716174231.1927738,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716174231.2344599,
+      1716174231.248985,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      28,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174231.3142002,
+      1716174231.327203,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ],
+    [
+      29,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716174231.335003,
+      1716174231.341014,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 208, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 420, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in init_weights\n    torch.nn.init.xavier_uniform(self.lstm.parameters)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 603, in deprecated_init\n    return meth(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 316, in _calculate_fan_in_and_fan_out\n    dimensions = tensor.dim()\n                 ^^^^^^^^^^\nAttributeError: 'function' object has no attribute 'dim'\n",
+        "error": "AttributeError(\"'function' object has no attribute 'dim'\")"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "LSTM_dropout": 0.13343926053494215,
+      "Learning_Rate": 0.06206026389781386,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.4306699172593653,
+      "hidden_size": 262,
+      "hidden_size_linear": 247,
+      "num_layers": 8,
+      "optimizer": "Adadelta"
+    },
+    "2": {
+      "LSTM_dropout": 0.38875674549490213,
+      "Learning_Rate": 0.020314864518092945,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.05115876207128167,
+      "hidden_size": 278,
+      "hidden_size_linear": 39,
+      "num_layers": 3,
+      "optimizer": "Adam"
+    },
+    "3": {
+      "LSTM_dropout": 0.2504352009855211,
+      "Learning_Rate": 0.07869545043201186,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.15040323324501514,
+      "hidden_size": 398,
+      "hidden_size_linear": 153,
+      "num_layers": 2,
+      "optimizer": "Adagrad"
+    },
+    "4": {
+      "LSTM_dropout": 0.006593338679522276,
+      "Learning_Rate": 0.03919897406674922,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "dropout_linear": 0.27282787300646305,
+      "hidden_size": 134,
+      "hidden_size_linear": 133,
+      "num_layers": 5,
+      "optimizer": "Adadelta"
+    },
+    "5": {
+      "LSTM_dropout": 0.12300756480544806,
+      "Learning_Rate": 0.09825331211829559,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "dropout_linear": 0.3638665252365172,
+      "hidden_size": 167,
+      "hidden_size_linear": 187,
+      "num_layers": 1,
+      "optimizer": "SGD"
+    },
+    "6": {
+      "LSTM_dropout": 0.2744067519636624,
+      "Learning_Rate": 0.07152178474357823,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.21182739966945235,
+      "hidden_size": 337,
+      "hidden_size_linear": 121,
+      "num_layers": 8,
+      "optimizer": "RMSprop"
+    },
+    "7": {
+      "LSTM_dropout": 0.19172075941288885,
+      "Learning_Rate": 0.07917458655788563,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.4627983191463305,
+      "hidden_size": 51,
+      "hidden_size_linear": 36,
+      "num_layers": 1,
+      "optimizer": "RMSprop"
+    },
+    "8": {
+      "LSTM_dropout": 0.38907837547492524,
+      "Learning_Rate": 0.08700251470319945,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "dropout_linear": 0.23073968112646592,
+      "hidden_size": 403,
+      "hidden_size_linear": 44,
+      "num_layers": 6,
+      "optimizer": "Adam"
+    },
+    "9": {
+      "LSTM_dropout": 0.47233445852479194,
+      "Learning_Rate": 0.05218961369178968,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.38711684471710833,
+      "hidden_size": 242,
+      "hidden_size_linear": 152,
+      "num_layers": 1,
+      "optimizer": "Adadelta"
+    },
+    "10": {
+      "LSTM_dropout": 0.030112735814634917,
+      "Learning_Rate": 0.04386576533109742,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.019593896127160337,
+      "hidden_size": 360,
+      "hidden_size_linear": 176,
+      "num_layers": 1,
+      "optimizer": "Adagrad"
+    },
+    "11": {
+      "LSTM_dropout": 0.30846699843737846,
+      "Learning_Rate": 0.06706708058311976,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.048049203946981534,
+      "hidden_size": 75,
+      "hidden_size_linear": 79,
+      "num_layers": 6,
+      "optimizer": "SGD"
+    },
+    "12": {
+      "LSTM_dropout": 0.21851597689967073,
+      "Learning_Rate": 0.036377439986552844,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.302422759872523,
+      "hidden_size": 221,
+      "hidden_size_linear": 239,
+      "num_layers": 1,
+      "optimizer": "Adagrad"
+    },
+    "13": {
+      "LSTM_dropout": 0.4718740392573121,
+      "Learning_Rate": 0.021046152281773353,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.4882297325066979,
+      "hidden_size": 163,
+      "hidden_size_linear": 142,
+      "num_layers": 3,
+      "optimizer": "Adadelta"
+    },
+    "14": {
+      "LSTM_dropout": 0.3060478613612107,
+      "Learning_Rate": 0.06668000387741231,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.41897245374940195,
+      "hidden_size": 156,
+      "hidden_size_linear": 152,
+      "num_layers": 2,
+      "optimizer": "Adadelta"
+    },
+    "15": {
+      "LSTM_dropout": 0.3409101495517417,
+      "Learning_Rate": 0.012901340502508784,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.2343256008238508,
+      "hidden_size": 75,
+      "hidden_size_linear": 38,
+      "num_layers": 2,
+      "optimizer": "RMSprop"
+    },
+    "16": {
+      "LSTM_dropout": 0.34881559796363243,
+      "Learning_Rate": 0.05702397507408379,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "dropout_linear": 0.36963178969915084,
+      "hidden_size": 47,
+      "hidden_size_linear": 92,
+      "num_layers": 7,
+      "optimizer": "Adagrad"
+    },
+    "17": {
+      "LSTM_dropout": 0.179753950286893,
+      "Learning_Rate": 0.03154968080890915,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.48838054409516857,
+      "hidden_size": 174,
+      "hidden_size_linear": 154,
+      "num_layers": 5,
+      "optimizer": "SGD"
+    },
+    "18": {
+      "LSTM_dropout": 0.11154081632030916,
+      "Learning_Rate": 0.08811150867914505,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.4482732979255315,
+      "hidden_size": 370,
+      "hidden_size_linear": 210,
+      "num_layers": 8,
+      "optimizer": "Adam"
+    },
+    "19": {
+      "LSTM_dropout": 0.14871847542756683,
+      "Learning_Rate": 0.05013742494885096,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.35194429177018316,
+      "hidden_size": 321,
+      "hidden_size_linear": 125,
+      "num_layers": 2,
+      "optimizer": "RMSprop"
+    },
+    "20": {
+      "LSTM_dropout": 0.22356268930881368,
+      "Learning_Rate": 0.08817471883186674,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.2179324626328134,
+      "hidden_size": 90,
+      "hidden_size_linear": 114,
+      "num_layers": 1,
+      "optimizer": "Adadelta"
+    },
+    "21": {
+      "LSTM_dropout": 0.34973963765875216,
+      "Learning_Rate": 0.07252817543916586,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.4030969945230429,
+      "hidden_size": 96,
+      "hidden_size_linear": 184,
+      "num_layers": 6,
+      "optimizer": "SGD"
+    },
+    "22": {
+      "LSTM_dropout": 0.4232043362355639,
+      "Learning_Rate": 0.06925623369187581,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.44596167750783605,
+      "hidden_size": 447,
+      "hidden_size_linear": 32,
+      "num_layers": 3,
+      "optimizer": "SGD"
+    },
+    "23": {
+      "LSTM_dropout": 0.4763745057584925,
+      "Learning_Rate": 0.05813147453485952,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.18378093502394827,
+      "hidden_size": 512,
+      "hidden_size_linear": 153,
+      "num_layers": 7,
+      "optimizer": "Adam"
+    },
+    "24": {
+      "LSTM_dropout": 0.08234707824895637,
+      "Learning_Rate": 0.06215162536596136,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.4671069989623969,
+      "hidden_size": 321,
+      "hidden_size_linear": 145,
+      "num_layers": 5,
+      "optimizer": "Adadelta"
+    },
+    "25": {
+      "LSTM_dropout": 0.15597249773980093,
+      "Learning_Rate": 0.03982812401098704,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.4721861949919668,
+      "hidden_size": 383,
+      "hidden_size_linear": 134,
+      "num_layers": 2,
+      "optimizer": "SGD"
+    },
+    "26": {
+      "LSTM_dropout": 0.02901458016193781,
+      "Learning_Rate": 0.043447318389556504,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "dropout_linear": 0.18887591964624045,
+      "hidden_size": 105,
+      "hidden_size_linear": 21,
+      "num_layers": 1,
+      "optimizer": "Adadelta"
+    },
+    "27": {
+      "LSTM_dropout": 0.10844849219923697,
+      "Learning_Rate": 0.08310653503906669,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.06603405317257666,
+      "hidden_size": 483,
+      "hidden_size_linear": 86,
+      "num_layers": 5,
+      "optimizer": "RMSprop"
+    },
+    "28": {
+      "LSTM_dropout": 0.4951694736983522,
+      "Learning_Rate": 0.058835828184225045,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.2586895535770571,
+      "hidden_size": 192,
+      "hidden_size_linear": 247,
+      "num_layers": 3,
+      "optimizer": "SGD"
+    },
+    "29": {
+      "LSTM_dropout": 0.2682896055543611,
+      "Learning_Rate": 0.03200851491073856,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "dropout_linear": 0.4319278029616157,
+      "hidden_size": 87,
+      "hidden_size_linear": 149,
+      "num_layers": 6,
+      "optimizer": "SGD"
+    },
+    "30": {
+      "LSTM_dropout": 0.3315391015500504,
+      "Learning_Rate": 0.06290189454067896,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.35842984059629684,
+      "hidden_size": 396,
+      "hidden_size_linear": 74,
+      "num_layers": 1,
+      "optimizer": "RMSprop"
+    },
+    "31": {
+      "LSTM_dropout": 0.01032549973286434,
+      "Learning_Rate": 0.02736146806121542,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.2827106559292545,
+      "hidden_size": 465,
+      "hidden_size_linear": 19,
+      "num_layers": 8,
+      "optimizer": "Adadelta"
+    },
+    "32": {
+      "LSTM_dropout": 0.44833564652017105,
+      "Learning_Rate": 0.03835255477824808,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "dropout_linear": 0.05876592798101654,
+      "hidden_size": 258,
+      "hidden_size_linear": 156,
+      "num_layers": 7,
+      "optimizer": "RMSprop"
+    },
+    "33": {
+      "LSTM_dropout": 0.13166118836857532,
+      "Learning_Rate": 0.08726633903818506,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.19802985140364687,
+      "hidden_size": 388,
+      "hidden_size_linear": 40,
+      "num_layers": 4,
+      "optimizer": "Adadelta"
+    },
+    "34": {
+      "LSTM_dropout": 0.4371439833124735,
+      "Learning_Rate": 0.029309098247934595,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.006618428879449745,
+      "hidden_size": 188,
+      "hidden_size_linear": 51,
+      "num_layers": 8,
+      "optimizer": "Adagrad"
+    },
+    "35": {
+      "LSTM_dropout": 0.06845013584279946,
+      "Learning_Rate": 0.0960838574597194,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "dropout_linear": 0.15079931724047124,
+      "hidden_size": 407,
+      "hidden_size_linear": 81,
+      "num_layers": 3,
+      "optimizer": "Adadelta"
+    },
+    "36": {
+      "LSTM_dropout": 0.09356544587542237,
+      "Learning_Rate": 0.09039935565327442,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "dropout_linear": 0.4410207051149448,
+      "hidden_size": 243,
+      "hidden_size_linear": 190,
+      "num_layers": 4,
+      "optimizer": "RMSprop"
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": null,
+    "7": null,
+    "8": null,
+    "9": null,
+    "10": "Acquisition Function Maximizer: Random Search (sorted)",
+    "11": "Acquisition Function Maximizer: Random Search (sorted)",
+    "12": "Acquisition Function Maximizer: Random Search (sorted)",
+    "13": "Acquisition Function Maximizer: Random Search (sorted)",
+    "14": "Acquisition Function Maximizer: Random Search (sorted)",
+    "15": "Acquisition Function Maximizer: Random Search (sorted)",
+    "16": "Acquisition Function Maximizer: Random Search (sorted)",
+    "17": "Acquisition Function Maximizer: Random Search (sorted)",
+    "18": "Acquisition Function Maximizer: Random Search (sorted)",
+    "19": "Acquisition Function Maximizer: Random Search (sorted)",
+    "20": "Acquisition Function Maximizer: Random Search (sorted)",
+    "21": "Acquisition Function Maximizer: Random Search (sorted)",
+    "22": "Acquisition Function Maximizer: Random Search (sorted)",
+    "23": "Acquisition Function Maximizer: Random Search (sorted)",
+    "24": "Random Search",
+    "25": "Random Search",
+    "26": "Random Search",
+    "27": "Acquisition Function Maximizer: Random Search (sorted)",
+    "28": "Acquisition Function Maximizer: Random Search (sorted)",
+    "29": "Acquisition Function Maximizer: Random Search (sorted)",
+    "30": "Acquisition Function Maximizer: Random Search (sorted)",
+    "31": "Acquisition Function Maximizer: Random Search (sorted)",
+    "32": "Acquisition Function Maximizer: Random Search (sorted)",
+    "33": "Acquisition Function Maximizer: Random Search (sorted)",
+    "34": "Random Search",
+    "35": "Acquisition Function Maximizer: Random Search (sorted)",
+    "36": "Random Search"
+  }
+}

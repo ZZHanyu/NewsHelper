@@ -108,6 +108,12 @@ class main(ABC):
                             type=int, 
                             default=10, 
                             help="epoch means train thourgh a whole dataset")
+        parser.add_argument(
+            "-date",
+            type=str,
+            default=datetime.now().strftime("%Y_%m_%d"),
+            help="date_form_Y_M_D"
+        )
         cls._args = parser.parse_args()
     
 

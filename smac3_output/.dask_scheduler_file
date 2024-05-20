@@ -1,0 +1,419 @@
+{
+  "type": "Scheduler",
+  "id": "Scheduler-6120d690-b529-4e8e-b650-5fae2931b465",
+  "address": "tcp://127.0.0.1:55272",
+  "services": {
+    "dashboard": 55271
+  },
+  "started": 1716182083.588299,
+  "workers": {
+    "tcp://127.0.0.1:55318": {
+      "type": "Worker",
+      "id": 4,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-45k2y4ko",
+      "name": 4,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.564478,
+      "services": {
+        "dashboard": 55337
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 380616704,
+        "time": 1716182089.507721,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55283"
+    },
+    "tcp://127.0.0.1:55319": {
+      "type": "Worker",
+      "id": 0,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-jz7of10_",
+      "name": 0,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.563655,
+      "services": {
+        "dashboard": 55336
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 381403136,
+        "time": 1716182089.507825,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55275"
+    },
+    "tcp://127.0.0.1:55320": {
+      "type": "Worker",
+      "id": 7,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-3omvqp5g",
+      "name": 7,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.562965,
+      "services": {
+        "dashboard": 55328
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 381239296,
+        "time": 1716182089.50795,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55289"
+    },
+    "tcp://127.0.0.1:55321": {
+      "type": "Worker",
+      "id": 5,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-vdwuwpnk",
+      "name": 5,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.561357,
+      "services": {
+        "dashboard": 55330
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 382746624,
+        "time": 1716182089.50772,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55285"
+    },
+    "tcp://127.0.0.1:55322": {
+      "type": "Worker",
+      "id": 6,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-_3oawh7i",
+      "name": 6,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.5604422,
+      "services": {
+        "dashboard": 55329
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 382566400,
+        "time": 1716182089.508321,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55287"
+    },
+    "tcp://127.0.0.1:55323": {
+      "type": "Worker",
+      "id": 2,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-att3nexg",
+      "name": 2,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.558613,
+      "services": {
+        "dashboard": 55327
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 381403136,
+        "time": 1716182089.508208,
+        "host_net_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "host_disk_io": {
+          "read_bps": 0.0,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55279"
+    },
+    "tcp://127.0.0.1:55324": {
+      "type": "Worker",
+      "id": 3,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-jc831l8n",
+      "name": 3,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.560917,
+      "services": {
+        "dashboard": 55326
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 380223488,
+        "time": 1716182089.509092,
+        "host_net_io": {
+          "read_bps": 2034521.304333982,
+          "write_bps": 2034521.304333982
+        },
+        "host_disk_io": {
+          "read_bps": 81380852.17335929,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55281"
+    },
+    "tcp://127.0.0.1:55325": {
+      "type": "Worker",
+      "id": 1,
+      "host": "127.0.0.1",
+      "resources": {},
+      "local_directory": "/Users/taotao/Documents/GitHub/FYP/smac3_output/dask-scratch-space/worker-py6u_amm",
+      "name": 1,
+      "nthreads": 1,
+      "memory_limit": 2415919104,
+      "last_seen": 1716182089.562376,
+      "services": {
+        "dashboard": 55331
+      },
+      "metrics": {
+        "task_counts": {},
+        "bandwidth": {
+          "total": 100000000,
+          "workers": {},
+          "types": {}
+        },
+        "digests_total_since_heartbeat": {},
+        "managed_bytes": 0,
+        "spilled_bytes": {
+          "memory": 0,
+          "disk": 0
+        },
+        "transfer": {
+          "incoming_bytes": 0,
+          "incoming_count": 0,
+          "incoming_count_total": 0,
+          "outgoing_bytes": 0,
+          "outgoing_count": 0,
+          "outgoing_count_total": 0
+        },
+        "event_loop_interval": 0.02,
+        "cpu": 0.0,
+        "memory": 383074304,
+        "time": 1716182089.509412,
+        "host_net_io": {
+          "read_bps": 1810519.5747504274,
+          "write_bps": 1810519.5747504274
+        },
+        "host_disk_io": {
+          "read_bps": 246230662.16605812,
+          "write_bps": 0.0
+        },
+        "num_fds": 23
+      },
+      "status": "running",
+      "nanny": "tcp://127.0.0.1:55277"
+    }
+  }
+}

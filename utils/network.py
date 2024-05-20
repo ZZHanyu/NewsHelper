@@ -19,9 +19,25 @@ import math
 import pandas as pd
 
 # AutoML SMAC: Auto Searching Hyperparameters
-from ConfigSpace import Categorical, Configuration, ConfigurationSpace, Float, Integer
+from ConfigSpace import (
+    Categorical,
+    Configuration,
+    ConfigurationSpace,
+    EqualsCondition,
+    GreaterThanCondition,
+    Float,
+    InCondition,
+    Integer,
+)
 from ConfigSpace.conditions import InCondition
+
 from smac import HyperparameterOptimizationFacade, Scenario
+from smac import MultiFidelityFacade as MFFacade
+from smac import Scenario
+from smac.facade import AbstractFacade
+from smac.intensifier.hyperband import Hyperband
+from smac.intensifier.successive_halving import SuccessiveHalving
+
 
 # from other packages
 from utils import preprocess
@@ -49,39 +65,36 @@ class configs():
         # 1 - Hyper-Parameter
             # Hyper-Value
         hidden_size = Integer("hidden_size", (16,512), default=128)
+        hidden_size_linear = Integer("hidden_size_linear", (16,256), default=64)
+
+        dropout_linear = Float("dropout_linear", (0.0, 0.5), default=0)
+
+        activation_linear = Categorical("activation", ["tanh", "relu", "LeakyReLU"], default="LeakyReLU")
+
         num_layers = Integer("num_layers", (1,8), default=2)
-        dropout = Float("LSTM_dropout", (0.0, 0.5), default=0.2)
+        dropout = Float("LSTM_dropout", (0.0, 0.5), default=0)
         learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
+            
             # Choose optimizer method
         optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
         loss = Categorical("Loss_Function", ["BCEWithLogitsLoss", "MSELoss"], default="BCEWithLogitsLoss")
 
-        # 2 - Create dependencies
-        # # 这些依赖关系的作用是确保在搜索超参数配置空间时，只有符合条件的组合才会被考虑，从而避免无效或不合理的配置。
-        # # 这在超参数调优过程中非常重要，因为它可以减少搜索空间，提高调优效率，并确保生成的配置能够在实际训练中使用。
         
-        # use_degree = InCondition(child=degree, parent=kernel, values=["poly"])
-		# 		# 这意味着 degree 这个超参数仅在 kernel 为 "poly" 时才有效。换句话说，只有在选择了多项式核函数时，才需要设置多项式的次数（即 degree 超参数）。
-
-        # use_coef = InCondition(child=coef, parent=kernel, values=["poly", "sigmoid"])
-        #    # 这意味着 coef 这个超参数仅在 kernel 为 "poly" 或 "sigmoid" 时才有效。
-        #   # 换句话说，只有在选择了多项式核函数或 sigmoid 核函数时，才需要设置 coef 超参数。
-        
-        # use_gamma = InCondition(child=gamma, parent=kernel, values=["rbf", "poly", "sigmoid"])
-        #   # 这意味着 gamma 这个超参数仅在 kernel 为 "rbf"、 "poly" 或 "sigmoid" 时才有效。
-        #   # 换句话说，只有在选择了径向基核函数、多项式核函数或 sigmoid 核函数时，才需要设置 gamma 超参数。
-        
-        # use_gamma_value = InCondition(child=gamma_value, parent=gamma, values=["value"])
-		# 		# 这意味着 gamma_value 这个超参数仅在 gamma 为 "value" 时才有效。
-		# 		# 换句话说，只有在选择了手动指定 gamma 值时，才需要设置 gamma_value 超参数。
+        # 2 - HyperParameter's Condition
+        use_drop_out = GreaterThanCondition(child=dropout,
+                                   parent=num_layers,
+                                   value=1)
+        use_drop_out_linear = GreaterThanCondition(child=dropout_linear,
+                                          parent=num_layers,
+                                          value=1)
 
         # Add hyperparameters and conditions to our configspace
-        cs.add_hyperparameters([hidden_size, num_layers, dropout, learn_rate, optimize_method, loss])
-        
+        cs.add_hyperparameters([hidden_size, hidden_size_linear, num_layers, dropout, dropout_linear, learn_rate, optimize_method, loss, activation_linear])
+        # add conditions to configspace
+        cs.add_conditions([use_drop_out, use_drop_out_linear])
+
+
         return cs
-
-
-
 
 
 
@@ -110,54 +123,7 @@ class trainer(preprocess.data_handler):
         self._result_list = []
         self.best_accurary = 0  
         self.config = configs()    
-
-
         print("\nTrainer inital succefully!\n")       
-
-    @property
-    def configspace(self) -> ConfigurationSpace:
-        cs = ConfigurationSpace(seed=0)
-
-        # 1 - Hyper-Parameter
-            # Hyper-Value
-        hidden_size = Integer("hidden_size", (16,512), default=128)
-        hidden_size_linear = Integer("hidden_size_linear", (16,256), default=64)
-
-        num_layers = Integer("num_layers", (1,8), default=2)
-
-        dropout = Float("LSTM_dropout", (0.0, 0.5), default=0.2)
-        dropout_linear = Float("dropout_linear", (0.0, 0.5), default=0.2)
-
-        activation_linear = Categorical("activation", ["tanh", "relu", "LeakyReLU"], default="LeakyReLU")
-
-        learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
-            # Choose optimizer method
-        optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
-        loss = Categorical("Loss_Function", ["BCEWithLogitsLoss", "MSELoss"], default="BCEWithLogitsLoss")
-
-        # 2 - Create dependencies
-        # # 这些依赖关系的作用是确保在搜索超参数配置空间时，只有符合条件的组合才会被考虑，从而避免无效或不合理的配置。
-        # # 这在超参数调优过程中非常重要，因为它可以减少搜索空间，提高调优效率，并确保生成的配置能够在实际训练中使用。
-        
-        # use_degree = InCondition(child=degree, parent=kernel, values=["poly"])
-		# 		# 这意味着 degree 这个超参数仅在 kernel 为 "poly" 时才有效。换句话说，只有在选择了多项式核函数时，才需要设置多项式的次数（即 degree 超参数）。
-
-        # use_coef = InCondition(child=coef, parent=kernel, values=["poly", "sigmoid"])
-        #    # 这意味着 coef 这个超参数仅在 kernel 为 "poly" 或 "sigmoid" 时才有效。
-        #   # 换句话说，只有在选择了多项式核函数或 sigmoid 核函数时，才需要设置 coef 超参数。
-        
-        # use_gamma = InCondition(child=gamma, parent=kernel, values=["rbf", "poly", "sigmoid"])
-        #   # 这意味着 gamma 这个超参数仅在 kernel 为 "rbf"、 "poly" 或 "sigmoid" 时才有效。
-        #   # 换句话说，只有在选择了径向基核函数、多项式核函数或 sigmoid 核函数时，才需要设置 gamma 超参数。
-        
-        # use_gamma_value = InCondition(child=gamma_value, parent=gamma, values=["value"])
-		# 		# 这意味着 gamma_value 这个超参数仅在 gamma 为 "value" 时才有效。
-		# 		# 换句话说，只有在选择了手动指定 gamma 值时，才需要设置 gamma_value 超参数。
-
-        # Add hyperparameters and conditions to our configspace
-        cs.add_hyperparameters([hidden_size, num_layers, dropout, learn_rate, optimize_method, loss])
-        
-        return cs
 
 
     def display_all_params(self):
@@ -168,10 +134,6 @@ class trainer(preprocess.data_handler):
 
 
     def save_model(self):
-        # for param_tensor in self.model.state_dict():
-        #     logging.info(param_tensor, "\t", self.model.state_dict()[param_tensor].size())
-        # for var_name in self.optimizer.state_dict():
-        #     logging.info(var_name, "\t", self.optimizer.state_dict()[var_name])
         if self._flag:
             self._best_model_state = copy.deepcopy(self.model.state_dict())
         else:
@@ -240,77 +202,88 @@ class trainer(preprocess.data_handler):
         
 
 
-    def train(self, config: Configuration, seed: int = 0):
-        if self.model == None or self.optimizer == None or self.loss == None:
-            config_dict = config.get_dictionary()
+    def train(self, config: Configuration, seed: int = 0, budget: int = 25)-> float:
+        try:
+            if self.model == None or self.optimizer == None or self.loss == None:
+                config_dict = config.get_dictionary()
+                
+                self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+
+
+                learn_rate = config_dict['Learning_Rate']
+
+                self.model = LstmNet(hidden_size=config_dict['hidden_size'],
+                                    hidden_size_linear=config_dict['hidden_size_linear'],
+                                    num_layers=config_dict['num_layers'],
+                                    dropout=config_dict['LSTM_dropout'],
+                                    dropout_linear=config_dict['dropout_linear'],
+                                    activation_linear=config['activation']
+                                    ).to(main._device)
+
+                # optimize method choose
+                match config_dict['optimizer']:
+                    case 'Adam':
+                        self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=learn_rate)
+                    case 'SGD':
+                        self.optimizer = torch.optim.SGD(params=self.model.parameters(), lr=learn_rate)
+                    case 'Adagrad':
+                        self.optimizer = torch.optim.Adagrad(params=self.model.parameters(), lr=learn_rate)
+                    case 'RMSprop':
+                        self.optimizer = torch.optim.RMSprop(params=self.model.parameters(), lr=learn_rate)
+                    case _:
+                        raise ModuleNotFoundError
             
-            self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+
+                # loss function choose
+                match config_dict['Loss_Function']:
+                    case 'BCEWithLogitsLoss':
+                        self.loss = nn.BCEWithLogitsLoss()
+                    case 'MSELoss':
+                        self.loss = nn.MSELoss()
+                    case _:
+                        raise ModuleNotFoundError
 
 
-            learn_rate = config_dict['Learning_Rate']
-
-            # optimize method choose
-            match config_dict['optimize_method']:
-                case 'Adam':
-                    self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=learn_rate)
-                case 'SGD':
-                    self.optimizer = torch.optim.SGD(params=self.model.parameters(), lr=learn_rate)
-                case 'Adagrad':
-                    self.optimizer = torch.optim.Adagrad(params=self.model.parameters(), lr=learn_rate)
-                case 'RMSprop':
-                    self.optimizer = torch.optim.RMSprop(params=self.model.parameters(), lr=learn_rate)
-                case _:
-                    raise ModuleNotFoundError
-        
-
-            # loss function choose
-            match config_dict['Loss_Function']:
-                case 'BCEWithLogitsLoss':
-                    self.loss = nn.BCEWithLogitsLoss()
-                case 'MSELoss':
-                    self.loss = nn.MSELoss()
-                case _:
-                    raise ModuleNotFoundError
-
-
-            self.model = LstmNet(hidden_size=config_dict['hidden_size'],
-                                hidden_size_linear=config_dict['hidden_size_linear'],
-                                num_layers=config_dict['num_layers'],
-                                dropout=config_dict['dropout'],
-                                dropout_linear=config_dict['dropout_linear'],
-                                activation_linear=config['activation_linear']
-                                ).to(main._device)
+            
 
                 
-        data_generator = super().get_generator()
-        for epoch_idx in tqdm(range(main._args.num_epoches), desc="Epoch No.", leave=True):
-            logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
-            self.model.train()
+            data_generator = super().get_generator()
+            avg_cost = 0
+            count = 0
+
+            for epoch_idx in tqdm(range(main._args.num_epoches), desc="Epoch No.", leave=True):
+                logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
+                self.model.train()
+                
+                # Version 2: Using data generator to handle raw data only when trainer need them 
+                try:
+                    while True:
+                        single_chunk = next(data_generator, None)
+                        # epoch stop
+                        if single_chunk == None:
+                            self.save_model()
+                            break
+
+                        match main._args.batch_model:
+                            case True:
+                                self._mini_batch(batch=single_chunk)
+                            case False:
+                                Accuary = self._single_step(batch=single_chunk)
+                                count += 1
+                                avg_cost += (1 - Accuary)
+                            case _:
+                                raise KeyError
+                except Exception as e:
+                    print(f"\n{e}\n")
+                    self.force_save_model()
+                    break
             
-            # Version 2: Using data generator to handle raw data only when trainer need them 
-            try:
-                while True:
-                    single_chunk = next(data_generator, None)
-                    # epoch stop
-                    if single_chunk == None:
-                        self.save_model()
-                        break
-
-                    match main._args.batch_model:
-                        case True:
-                            self._mini_batch(batch=single_chunk)
-                        case False:
-                            Accuary = self._single_step(batch=single_chunk)
-                            cost = 1 - Accuary
-                            
-                        case _:
-                            raise KeyError
-            except Exception as e:
-                print(f"\n{e}\n")
-                self.force_save_model()
-                break
-
-            {
+        except Exception:
+            self.force_save_model()
+        avg_cost = avg_cost / count
+        return avg_cost
+        
+        {
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
             # try:
@@ -331,43 +304,49 @@ class trainer(preprocess.data_handler):
             # except Exception as e:
             #     self.force_save_model()
             #     print(f"\n * ERROR {e}! But model have been saved! \n")
-            }
-                    
+        }
+        
+
+
     def auto_ml(self):
-        # SMAC Next, we create an object, holding general information about the run
-        scenario = Scenario(
-            self.config.configspace,
-            walltime_limit=60,  # After 60 seconds, we stop the hyperparameter optimization
-            n_trials=50,
-            min_budget=1,  # Train the MLP using a hyperparameter configuration for at least 5 epochs
-            max_budget=25,  # Train the MLP using a hyperparameter configuration for at most 25 epochs
-            n_workers=8,
-        )
+        facades: list[AbstractFacade] = []
+        for intensifier_object in [SuccessiveHalving, Hyperband]:
+            # SMAC Next, we create an object, holding general information about the run
+            scenario = Scenario(
+                self.config.configspace,
+                walltime_limit=60,  # After 60 seconds, we stop the hyperparameter optimization
+                n_trials=50,
+                min_budget=1,  # Train the MLP using a hyperparameter configuration for at least 5 epochs
+                max_budget=25,  # Train the MLP using a hyperparameter configuration for at most 25 epochs
+                n_workers=1,
+            )
 
-        # we want to run the facade's default initial design, but we want to change the number
-        # of initial configs to 5.
-        initial_design = HyperparameterOptimizationFacade.get_initial_design(scenario, n_configs=5)
+            # we want to run the facade's default initial design, but we want to change the number
+            # of initial configs to 5.
+            initial_design = HyperparameterOptimizationFacade.get_initial_design(scenario, n_configs=5)
 
-        # Create our intensifier
-        intensifier = intensifier_object(scenario, incumbent_selection="highest_budget")
+            # Create our intensifier
+            intensifier = intensifier_object(scenario, incumbent_selection="highest_budget")
 
+            # Now we use SMAC to find the best hyperparameters
+            smac = MFFacade(
+                scenario,
+                self.train,
+                initial_design=initial_design,
+                intensifier = intensifier,
+                overwrite=True,  # If the run exists, we overwrite it; alternatively, we can continue from last state
+            )
 
-        # Now we use SMAC to find the best hyperparameters
-        smac = HyperparameterOptimizationFacade(
-            scenario,
-            self.train,
-            initial_design=initial_design,
-            overwrite=True,  # If the run exists, we overwrite it; alternatively, we can continue from last state
-        )
+            incumbent = smac.optimize()
+            # Get cost of default configuration
+            default_cost = smac.validate(self.config.configspace.get_default_configuration())
+            logging.info(f"Default cost: {default_cost}")
 
-        incumbent = smac.optimize()
-        # Get cost of default configuration
-        default_cost = smac.validate(self.configspace.get_default_configuration())
-        logging.info(f"Default cost: {default_cost}")
+            # Let's calculate the cost of the incumbent
+            incumbent_cost = smac.validate(incumbent)
+            logging.info(f"Incumbent cost: {incumbent_cost}")
 
-        # Let's calculate the cost of the incumbent
-        incumbent_cost = smac.validate(incumbent)
-        logging.info(f"Incumbent cost: {incumbent_cost}")
+            facades.append(smac)
         
 
     def test(self, batch:list):
@@ -380,13 +359,6 @@ class trainer(preprocess.data_handler):
             feature = torch.tensor(single_data[0], dtype=torch.float32, device=main._device, requires_grad=True)
             # target = torch.tensor([single_data[1]], dtype=torch.float32, device=device, requires_grad=False)
             target = single_data[1]
-            # if single_data[1] == 1:
-            #     target = [0,1] 
-            # else: 
-            #     target = [1,0]
-            # target = torch.tensor(target, dtype=torch.float32, device=device, requires_grad=True)
-
-            # print(f"\nfeature --> {feature} \n --> {type(feature)} \n --> size  {feature.size()}")
             y_pred = self.model.forward(feature)
             logging.info(f"TEST Processing --> pred = {y_pred} target = {target}")
             # STEP activiate function:
@@ -457,13 +429,33 @@ class LstmNet(nn.Module, model.module):
 
 
     def init_weights(self) -> None:
-        torch.nn.init.xavier_uniform(self.lstm.weight)
-        torch.nn.init.xavier_uniform(self.linears.weight)
+        for name, param in self.lstm.named_parameters():
+            if param.dim() > 2:
+                if 'weight' in name:
+                        torch.nn.init.xavier_uniform_(param)
+                elif 'bias' in name:
+                        torch.nn.init.xavier_uniform_(param, 0.0)
+
+        for name, param in self.linears.named_parameters():
+            if param.dim() > 2:     
+                if 'weight' in name:   
+                    torch.nn.init.xavier_uniform(param)
+                elif 'bias' in name:
+                    torch.nn.init.xavier_uniform_(param, 0.0)
+            
         
+        logging.info("initize model parameter done!\n")
 
     def display_model_info(self):
         print(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
         logging.info(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
+        for name, child in self.lstm.named_children():
+            logging.info(name, child) 
+        for name, module in self.lstm.named_modules():
+            logging.info(name, module)
+        for name, param in self.lstm.named_parameters():
+            logging.info(name, param)
+        
         print(f"\n")
     
 

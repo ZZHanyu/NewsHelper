@@ -1,0 +1,63 @@
+{
+  "incumbent_ids": [
+    1
+  ],
+  "rejected_config_ids": [],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 46,
+      "walltime": 2.2059199810028076
+    }
+  ],
+  "state": {
+    "tracker": {
+      "0,1": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.09903399135019647,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 119,
+              "hidden_size_linear": 140,
+              "num_layers": 3,
+              "optimizer": "RMSprop",
+              "LSTM_dropout": 0.14086505287697454,
+              "dropout_linear": 0.11585081323560226
+            },
+            {
+              "Learning_Rate": 0.05366255531876114,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "tanh",
+              "hidden_size": 273,
+              "hidden_size_linear": 224,
+              "num_layers": 2,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.334958273295455,
+              "dropout_linear": 0.16907947591842282
+            },
+            {
+              "Learning_Rate": 0.06631118952797908,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 201,
+              "hidden_size_linear": 188,
+              "num_layers": 7,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.03197763306049056,
+              "dropout_linear": 0.4706888523532493
+            }
+          ]
+        ]
+      ]
+    }
+  }
+}

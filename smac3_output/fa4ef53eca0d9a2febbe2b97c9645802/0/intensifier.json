@@ -1,0 +1,128 @@
+{
+  "incumbent_ids": [
+    15
+  ],
+  "rejected_config_ids": [],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        15
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 17,
+      "walltime": 1.4433510303497314
+    }
+  ],
+  "state": {
+    "tracker": {
+      "0,0": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.013698658165843038,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 137,
+              "hidden_size_linear": 88,
+              "num_layers": 7,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.15340504977259806,
+              "dropout_linear": 0.34069625530191894
+            },
+            {
+              "Learning_Rate": 0.018721217866166966,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 243,
+              "hidden_size_linear": 228,
+              "num_layers": 4,
+              "optimizer": "Adadelta",
+              "LSTM_dropout": 0.199512660851551,
+              "dropout_linear": 0.45202219645047886
+            },
+            {
+              "Learning_Rate": 0.02243945972718418,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "tanh",
+              "hidden_size": 377,
+              "hidden_size_linear": 183,
+              "num_layers": 7,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.01768121787774546,
+              "dropout_linear": 0.4782028613979744
+            },
+            {
+              "Learning_Rate": 0.06395085691470838,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 60,
+              "hidden_size_linear": 47,
+              "num_layers": 4,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.038478223493316366,
+              "dropout_linear": 0.2550084261591251
+            },
+            {
+              "Learning_Rate": 0.08221355214209261,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 225,
+              "hidden_size_linear": 79,
+              "num_layers": 1,
+              "optimizer": "SGD"
+            },
+            {
+              "Learning_Rate": 0.01899289271115677,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 293,
+              "hidden_size_linear": 125,
+              "num_layers": 6,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.47971667041671257,
+              "dropout_linear": 0.0644302827331601
+            },
+            {
+              "Learning_Rate": 0.051136785064820146,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 443,
+              "hidden_size_linear": 180,
+              "num_layers": 7,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.32278512222800193,
+              "dropout_linear": 0.19633783827354717
+            },
+            {
+              "Learning_Rate": 0.01606227686030079,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 108,
+              "hidden_size_linear": 72,
+              "num_layers": 3,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.331252285766338,
+              "dropout_linear": 0.207428434666782
+            },
+            {
+              "Learning_Rate": 0.079641183536988,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 215,
+              "hidden_size_linear": 164,
+              "num_layers": 2,
+              "optimizer": "Adadelta",
+              "LSTM_dropout": 0.12303159249548223,
+              "dropout_linear": 0.18027278024294613
+            }
+          ]
+        ]
+      ]
+    },
+    "next_bracket": 1
+  }
+}

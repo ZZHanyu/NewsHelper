@@ -1,0 +1,1187 @@
+{
+  "stats": {
+    "submitted": 50,
+    "finished": 50,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.2551758,
+      1716176826.263906,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.265022,
+      1716176826.298027,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.275531,
+      1716176826.3187468,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      4,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.2771862,
+      1716176826.317191,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      5,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.297426,
+      1716176826.372189,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      6,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.298872,
+      1716176826.353075,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      7,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.32278,
+      1716176826.326039,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 221, in train\n    dropout=config_dict['LSTM_dropout'],\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'LSTM_dropout'\n",
+        "error": "KeyError('LSTM_dropout')"
+      }
+    ],
+    [
+      8,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.330113,
+      1716176826.4085991,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      9,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.3774111,
+      1716176826.3873558,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176826.979232,
+      1716176826.984011,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      11,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.010415,
+      1716176827.012046,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 221, in train\n    dropout=config_dict['LSTM_dropout'],\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'LSTM_dropout'\n",
+        "error": "KeyError('LSTM_dropout')"
+      }
+    ],
+    [
+      12,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.0335948,
+      1716176827.0473118,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      13,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.0428119,
+      1716176827.070692,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      14,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.054066,
+      1716176827.059666,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      15,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.05498,
+      1716176827.056542,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 221, in train\n    dropout=config_dict['LSTM_dropout'],\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'LSTM_dropout'\n",
+        "error": "KeyError('LSTM_dropout')"
+      }
+    ],
+    [
+      16,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.0645142,
+      1716176827.066577,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 221, in train\n    dropout=config_dict['LSTM_dropout'],\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'LSTM_dropout'\n",
+        "error": "KeyError('LSTM_dropout')"
+      }
+    ],
+    [
+      17,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.078644,
+      1716176827.084594,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      18,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.1269472,
+      1716176827.133971,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.554259,
+      1716176827.606656,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.574971,
+      1716176827.59278,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      21,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.576137,
+      1716176827.592808,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      22,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.585931,
+      1716176827.6345751,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      23,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.586705,
+      1716176827.6124642,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      24,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.597416,
+      1716176827.612149,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      25,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.6013708,
+      1716176827.6093628,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      26,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.6098151,
+      1716176827.631544,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      27,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176827.6468868,
+      1716176827.677301,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.715433,
+      1716176827.7229388,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.738107,
+      1716176827.7737741,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.747589,
+      1716176827.779763,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.757508,
+      1716176827.762719,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      11,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.769296,
+      1716176827.770889,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 221, in train\n    dropout=config_dict['LSTM_dropout'],\n            ~~~~~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'LSTM_dropout'\n",
+        "error": "KeyError('LSTM_dropout')"
+      }
+    ],
+    [
+      12,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.771072,
+      1716176827.7839282,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.772253,
+      1716176827.8089888,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      20,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.7904599,
+      1716176827.806002,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      21,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176827.834246,
+      1716176827.847061,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      28,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.2701921,
+      1716176828.2778828,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      29,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.290189,
+      1716176828.3013551,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      30,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.314398,
+      1716176828.3346891,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      31,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.315829,
+      1716176828.331111,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      32,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.335862,
+      1716176828.3391318,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      33,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.337333,
+      1716176828.360793,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      34,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.338778,
+      1716176828.363086,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      35,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.3454862,
+      1716176828.362408,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      36,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716176828.380382,
+      1716176828.397321,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716176828.431689,
+      1716176828.4394372,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      10,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716176828.45564,
+      1716176828.4604049,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      19,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716176828.4663901,
+      1716176828.509011,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      28,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176828.487016,
+      1716176828.492765,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ],
+    [
+      29,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716176828.4976199,
+      1716176828.510891,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 184, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 257, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 218, in train\n    self.model = LstmNet(hidden_size=config_dict['hidden_size'],\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 430, in __init__\n    self.init_weights()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 444, in init_weights\n    torch.nn.init.xavier_uniform_(param, 0.0)\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 358, in xavier_uniform_\n    fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/torch/nn/init.py\", line 318, in _calculate_fan_in_and_fan_out\n    raise ValueError(\"Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\")\nValueError: Fan in and fan out can not be computed for tensor with fewer than 2 dimensions\n",
+        "error": "ValueError('Fan in and fan out can not be computed for tensor with fewer than 2 dimensions')"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.026695183321777734,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 121,
+      "hidden_size_linear": 223,
+      "num_layers": 4,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.4983903025276959,
+      "dropout_linear": 0.3860676749609411
+    },
+    "2": {
+      "Learning_Rate": 0.07775357396407054,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 310,
+      "hidden_size_linear": 40,
+      "num_layers": 5,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.16347259702160954,
+      "dropout_linear": 0.03367062984034419
+    },
+    "3": {
+      "Learning_Rate": 0.05009203149308451,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 263,
+      "hidden_size_linear": 88,
+      "num_layers": 7,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.07758809067308903,
+      "dropout_linear": 0.206784060690552
+    },
+    "4": {
+      "Learning_Rate": 0.001328535869130865,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 448,
+      "hidden_size_linear": 147,
+      "num_layers": 2,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.2717747073620558,
+      "dropout_linear": 0.3696934846229851
+    },
+    "5": {
+      "Learning_Rate": 0.024609052809793502,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 501,
+      "hidden_size_linear": 191,
+      "num_layers": 3,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.0568195809610188,
+      "dropout_linear": 0.18663898762315512
+    },
+    "6": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 286,
+      "hidden_size_linear": 118,
+      "num_layers": 6,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4458865003910399,
+      "dropout_linear": 0.48183138025051464
+    },
+    "7": {
+      "Learning_Rate": 0.03835031746738952,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 298,
+      "hidden_size_linear": 239,
+      "num_layers": 1,
+      "optimizer": "Adam"
+    },
+    "8": {
+      "Learning_Rate": 0.07781789352747555,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 413,
+      "hidden_size_linear": 127,
+      "num_layers": 7,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.3199605106637619,
+      "dropout_linear": 0.0716766437045232
+    },
+    "9": {
+      "Learning_Rate": 0.0944674450157879,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 147,
+      "hidden_size_linear": 202,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.009394900218177571,
+      "dropout_linear": 0.30881774853793853
+    },
+    "10": {
+      "Learning_Rate": 0.006031944908210691,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 64,
+      "hidden_size_linear": 25,
+      "num_layers": 6,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.002347738096273533,
+      "dropout_linear": 0.2861259528954367
+    },
+    "11": {
+      "Learning_Rate": 0.06169723034750695,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 70,
+      "hidden_size_linear": 39,
+      "num_layers": 1,
+      "optimizer": "SGD"
+    },
+    "12": {
+      "Learning_Rate": 0.04370882506039616,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 199,
+      "hidden_size_linear": 161,
+      "num_layers": 4,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.010053773093746776,
+      "dropout_linear": 0.28807866720891845
+    },
+    "13": {
+      "Learning_Rate": 0.09437537037067728,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 342,
+      "hidden_size_linear": 251,
+      "num_layers": 3,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.14470304647360055,
+      "dropout_linear": 0.36759701106129744
+    },
+    "14": {
+      "Learning_Rate": 0.061213451315014926,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 95,
+      "hidden_size_linear": 217,
+      "num_layers": 3,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.06589893120219609,
+      "dropout_linear": 0.33890826839811505
+    },
+    "15": {
+      "Learning_Rate": 0.06818521170735731,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 84,
+      "hidden_size_linear": 128,
+      "num_layers": 1,
+      "optimizer": "Adam"
+    },
+    "16": {
+      "Learning_Rate": 0.06976614328076722,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 424,
+      "hidden_size_linear": 194,
+      "num_layers": 1,
+      "optimizer": "SGD"
+    },
+    "17": {
+      "Learning_Rate": 0.03595719497837287,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 113,
+      "hidden_size_linear": 251,
+      "num_layers": 3,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.2932564674050416,
+      "dropout_linear": 0.12437657175997902
+    },
+    "18": {
+      "Learning_Rate": 0.022315932447735425,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 83,
+      "hidden_size_linear": 232,
+      "num_layers": 6,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.4877607525014429,
+      "dropout_linear": 0.09999826244820004
+    },
+    "19": {
+      "Learning_Rate": 0.029750720716004816,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 340,
+      "hidden_size_linear": 185,
+      "num_layers": 5,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.08581483863072026,
+      "dropout_linear": 0.46404064673279544
+    },
+    "20": {
+      "Learning_Rate": 0.044718066607976566,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 299,
+      "hidden_size_linear": 121,
+      "num_layers": 2,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.005857042092500986,
+      "dropout_linear": 0.3968488516787103
+    },
+    "21": {
+      "Learning_Rate": 0.06995093273899726,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 301,
+      "hidden_size_linear": 210,
+      "num_layers": 2,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.364995281212029,
+      "dropout_linear": 0.17267584034845135
+    },
+    "22": {
+      "Learning_Rate": 0.08464240316038808,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 309,
+      "hidden_size_linear": 230,
+      "num_layers": 7,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.17998903223918195,
+      "dropout_linear": 0.11196234403019006
+    },
+    "23": {
+      "Learning_Rate": 0.09527537366158334,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 164,
+      "hidden_size_linear": 104,
+      "num_layers": 8,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4279016711963055,
+      "dropout_linear": 0.009260897230306986
+    },
+    "24": {
+      "Learning_Rate": 0.016477768708226297,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 134,
+      "hidden_size_linear": 241,
+      "num_layers": 5,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.2949549881772855,
+      "dropout_linear": 0.3650610147583848
+    },
+    "25": {
+      "Learning_Rate": 0.031201380098005393,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 108,
+      "hidden_size_linear": 243,
+      "num_layers": 6,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.11370731398666162,
+      "dropout_linear": 0.12717824088519647
+    },
+    "26": {
+      "Learning_Rate": 0.005812335740784323,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 362,
+      "hidden_size_linear": 107,
+      "num_layers": 2,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.03362481573162429,
+      "dropout_linear": 0.33969638674928365
+    },
+    "27": {
+      "Learning_Rate": 0.02169752947000341,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 227,
+      "hidden_size_linear": 47,
+      "num_layers": 8,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.29320508309316334,
+      "dropout_linear": 0.4746594112078407
+    },
+    "28": {
+      "Learning_Rate": 0.09903399135019647,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 119,
+      "hidden_size_linear": 140,
+      "num_layers": 3,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.14086505287697454,
+      "dropout_linear": 0.11585081323560226
+    },
+    "29": {
+      "Learning_Rate": 0.05366255531876114,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 273,
+      "hidden_size_linear": 224,
+      "num_layers": 2,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.334958273295455,
+      "dropout_linear": 0.16907947591842282
+    },
+    "30": {
+      "Learning_Rate": 0.06631118952797908,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 201,
+      "hidden_size_linear": 188,
+      "num_layers": 7,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.03197763306049056,
+      "dropout_linear": 0.4706888523532493
+    },
+    "31": {
+      "Learning_Rate": 0.002074893436578211,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 153,
+      "hidden_size_linear": 152,
+      "num_layers": 8,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.4887475698722234,
+      "dropout_linear": 0.31522396843339556
+    },
+    "32": {
+      "Learning_Rate": 0.08966816259110381,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 28,
+      "hidden_size_linear": 44,
+      "num_layers": 4,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.3925764560115689,
+      "dropout_linear": 0.48078507727074926
+    },
+    "33": {
+      "Learning_Rate": 0.026339604449947696,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 246,
+      "hidden_size_linear": 111,
+      "num_layers": 6,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.24281379796731145,
+      "dropout_linear": 0.39960129367619585
+    },
+    "34": {
+      "Learning_Rate": 0.08743005378282846,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 323,
+      "hidden_size_linear": 19,
+      "num_layers": 3,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.4909146949091266,
+      "dropout_linear": 0.23918515351999403
+    },
+    "35": {
+      "Learning_Rate": 0.013698658165843038,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 137,
+      "hidden_size_linear": 88,
+      "num_layers": 7,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.15340504977259806,
+      "dropout_linear": 0.34069625530191894
+    },
+    "36": {
+      "Learning_Rate": 0.018721217866166966,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 243,
+      "hidden_size_linear": 228,
+      "num_layers": 4,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.199512660851551,
+      "dropout_linear": 0.45202219645047886
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol",
+    "2": "Initial Design: Sobol",
+    "3": "Initial Design: Sobol",
+    "4": "Initial Design: Sobol",
+    "5": "Initial Design: Sobol",
+    "6": null,
+    "7": null,
+    "8": null,
+    "9": null,
+    "10": "Acquisition Function Maximizer: Random Search (sorted)",
+    "11": "Acquisition Function Maximizer: Random Search (sorted)",
+    "12": "Acquisition Function Maximizer: Random Search (sorted)",
+    "13": "Acquisition Function Maximizer: Random Search (sorted)",
+    "14": "Acquisition Function Maximizer: Random Search (sorted)",
+    "15": "Acquisition Function Maximizer: Random Search (sorted)",
+    "16": "Acquisition Function Maximizer: Random Search (sorted)",
+    "17": "Acquisition Function Maximizer: Random Search (sorted)",
+    "18": "Acquisition Function Maximizer: Random Search (sorted)",
+    "19": "Acquisition Function Maximizer: Random Search (sorted)",
+    "20": "Acquisition Function Maximizer: Random Search (sorted)",
+    "21": "Acquisition Function Maximizer: Random Search (sorted)",
+    "22": "Acquisition Function Maximizer: Random Search (sorted)",
+    "23": "Acquisition Function Maximizer: Random Search (sorted)",
+    "24": "Random Search",
+    "25": "Random Search",
+    "26": "Random Search",
+    "27": "Acquisition Function Maximizer: Random Search (sorted)",
+    "28": "Acquisition Function Maximizer: Random Search (sorted)",
+    "29": "Acquisition Function Maximizer: Random Search (sorted)",
+    "30": "Acquisition Function Maximizer: Random Search (sorted)",
+    "31": "Acquisition Function Maximizer: Random Search (sorted)",
+    "32": "Acquisition Function Maximizer: Random Search (sorted)",
+    "33": "Acquisition Function Maximizer: Random Search (sorted)",
+    "34": "Random Search",
+    "35": "Acquisition Function Maximizer: Random Search (sorted)",
+    "36": "Random Search"
+  }
+}
