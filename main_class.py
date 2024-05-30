@@ -29,7 +29,7 @@ from abc import ABC
 '''
 class main(ABC):
     '''
-        abstract
+        abstract class - define Hyper-Parameter which used during whole program
     '''
 
     _args = None
@@ -44,10 +44,12 @@ class main(ABC):
     @classmethod
     def _parser(cls):
         parser = argparse.ArgumentParser(description="Parameters for Classifier")
-        parser.add_argument("--dataset_path", 
-                            type=str, 
-                            default="/Users/taotao/Documents/GitHub/FYP/data/", 
-                            help="the path of your dataset")
+        parser.add_argument(
+            "--dataset_path",                 
+            type=str, 
+            default="/Users/taotao/Documents/GitHub/FYP/data/", 
+            help="the path of your dataset"
+        )
         parser.add_argument("--dataset_name", 
                             type=str, 
                             default='fake-news-classification', 
@@ -90,7 +92,7 @@ class main(ABC):
                             help="pretrained embedding model name from gensim")
         parser.add_argument("--model_save_path", 
                             type=str, 
-                            default="/Users/taotao/Documents/GitHub/FYP/trained_model/", 
+                            default="/Users/taotao/Documents/GitHub/FYP/trained_model", 
                             help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
@@ -113,6 +115,13 @@ class main(ABC):
             type=str,
             default=datetime.now().strftime("%Y_%m_%d"),
             help="date_form_Y_M_D"
+        )
+        parser.add_argument(
+            "--max_padding_length",
+            type=int,
+            default=256,
+            help="Maxium length of sequence in LSTM input, over padding else truncate",
+            required=False
         )
         cls._args = parser.parse_args()
     

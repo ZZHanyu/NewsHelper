@@ -1,7 +1,3 @@
-INFO:root:
- ======== Start Log Recording :04-16 15:31 ========
-
-INFO:root:
- Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
- *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:90040a3f2da57b954fe132f15a5fca2360d9ad367744cc1a08737b49f0cb6687
+size 245

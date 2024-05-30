@@ -6,6 +6,8 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor
 import torch.nn.functional as F
 import torch.nn.init as init
+from torch.nn.utils.rnn import pad_sequence,pack_padded_sequence,pack_sequence,pad_packed_sequence
+
 import os
 import json
 import time
@@ -17,6 +19,9 @@ import copy
 import gensim
 import math
 import pandas as pd
+import warnings
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 
 # AutoML SMAC: Auto Searching Hyperparameters
 from ConfigSpace import (
@@ -37,6 +42,7 @@ from smac import Scenario
 from smac.facade import AbstractFacade
 from smac.intensifier.hyperband import Hyperband
 from smac.intensifier.successive_halving import SuccessiveHalving
+from smac.runhistory.runhistory import RunHistory
 
 
 # from other packages
@@ -45,19 +51,58 @@ from utils import model
 from main_class import main
 
 
-'''
-Hyperparameters:
-- learn rate
-- batch size
-- epoch
-- optimizer
-- activation function
-- Number/size of Hidden layer and Nerous
-- 
-'''
+
+class diagram_drawer():
+    '''
+        class used for draw diagram
+    '''
+    def __init__(self) -> None:
+        self.fig, self.ax = plt.subplots()
+        self.__graph = None
+        self.__batch_id = []
+        self.__accuary = []
+        self.flag = False
+
+    
+    def init_diagram(self, batch_id: int, accuary: float): 
+        self.__batch_id.append(batch_id)
+        self.__accuary.append(accuary)
+        self.__graph = self.ax.plot(self.__batch_id, self.__accuary, color= 'g')[0]
+        plt.xlabel("Batch id")
+        plt.ylabel("Accurary")
+        self.flag = True
+        plt.show()
 
 
-class configs():
+    def update_diagram(self, batch_id: int, accuary: float):
+        if self.__graph == None:
+            print("\n ** ERROR! no graph work found! \n")
+            raise ModuleNotFoundError        
+        self.__batch_id.append(batch_id)
+        self.__accuary.append(accuary)
+        self.__graph.set_xdata(self.__batch_id)
+        self.__graph.set_ydata(self.__accuary)
+        plt.show()
+
+
+
+
+
+
+
+
+
+class configs(preprocess.data_handler):
+    '''
+        Auto ML auto Hyperparameters config:
+            - learn rate
+            - batch size
+            - epoch
+            - optimizer
+            - activation function
+            - Number/size of Hidden layer and Nerous
+            -
+    '''
     @property
     def configspace(self) -> ConfigurationSpace:
         cs = ConfigurationSpace(seed=0)
@@ -74,9 +119,11 @@ class configs():
         num_layers = Integer("num_layers", (1,8), default=2)
         dropout = Float("LSTM_dropout", (0.0, 0.5), default=0)
         learn_rate = Float("Learning_Rate", (1e-5,1e-1), default=1e-3)
+
+        batch_size = Integer("batch_size", (8, 256), default=32)
             
             # Choose optimizer method
-        optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "Adadelta", "RMSprop"], default="Adam")
+        optimize_method = Categorical("optimizer", ["Adam", "SGD", "Adagrad", "RMSprop"], default="Adam")
         loss = Categorical("Loss_Function", ["BCEWithLogitsLoss", "MSELoss"], default="BCEWithLogitsLoss")
 
         
@@ -88,32 +135,38 @@ class configs():
                                           parent=num_layers,
                                           value=1)
 
+       
         # Add hyperparameters and conditions to our configspace
-        cs.add_hyperparameters([hidden_size, hidden_size_linear, num_layers, dropout, dropout_linear, learn_rate, optimize_method, loss, activation_linear])
+        cs.add_hyperparameters(
+            [hidden_size, 
+             hidden_size_linear, 
+             num_layers, 
+             dropout, 
+             dropout_linear, 
+             learn_rate, 
+             optimize_method, 
+             loss, 
+             activation_linear,
+             batch_size]
+        )
+        
         # add conditions to configspace
-        cs.add_conditions([use_drop_out, use_drop_out_linear])
-
+        cs.add_conditions(
+            [use_drop_out, 
+             use_drop_out_linear]
+        )
 
         return cs
-
-
-
-
+    
 
 
 
 class trainer(preprocess.data_handler):
+    '''
+        Our main train method
+    '''
     def __init__(self) -> None:
         print("\n Now inital trainer..")        
-        # self.model = LstmNet().to(main._device)
-        # self.optimizer = torch.optim.Adam(self.model.parameters(), lr=1e-3)
-        # self.loss = nn.BCEWithLogitsLoss()
-        # self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
-        # self._best_model_state = None
-        # self._flag = True
-        # self._result_list = []
-        # self.best_accurary = 0      
-        # self.config = configs()
         self.model = None
         self.optimizer = None
         self.loss = None
@@ -123,6 +176,8 @@ class trainer(preprocess.data_handler):
         self._result_list = []
         self.best_accurary = 0  
         self.config = configs()    
+        self.diagram_drawer = diagram_drawer()
+        # self.smac_model = True
         print("\nTrainer inital succefully!\n")       
 
 
@@ -138,7 +193,6 @@ class trainer(preprocess.data_handler):
             self._best_model_state = copy.deepcopy(self.model.state_dict())
         else:
             torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
-
 
 
     def force_save_model(self):
@@ -157,17 +211,26 @@ class trainer(preprocess.data_handler):
         batch_size = len(batch)
 
         for data_idx in tqdm(range(batch_size), desc="MiniBatch Train", leave=False):
-            feature.append(batch[data_idx][0])
+            feature.append(torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True))
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
             target_set.append(target)
-        feature = torch.tensor(feature, requires_grad=True).to(main._device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
-        target_set = torch.tensor(target_set, requires_grad=True)
-        y_pred = self.model.forward_with_batch(tensor_data=feature,
+        seq_len = [s.size(0) for s in feature]
+        pad_datas = pad_sequence(sequences=feature, padding_value=0.0, batch_first=False)
+        pad_datas = pack_padded_sequence(input=pad_datas, lengths=seq_len, enforce_sorted=False, batch_first=False)
+
+        # feature = torch.tensor(feature, requires_grad=True).to(main._device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
+        target_set = torch.tensor(target_set, dtype=torch.float32, device=main._device, requires_grad=True)
+        
+
+        y_pred = self.model.forward_with_batch(tensor_data=pad_datas, # feature
                                                 batch_size=batch_size)
         self.optimizer.zero_grad() # clean all grad
         loss = self.loss(y_pred, target_set)
         loss.backward()
         self.optimizer.step()
+
+        return loss
+    
 
 
 
@@ -175,7 +238,7 @@ class trainer(preprocess.data_handler):
                      batch:list) -> float:
         
         logging.info("*** \t batch model = False")
-        Accurary = 0
+        total_loss = 0
 
         for data_idx in tqdm(range(len(batch)), desc="SGD", leave= False):
             feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
@@ -184,41 +247,39 @@ class trainer(preprocess.data_handler):
             self.optimizer.zero_grad() # clean all grad
             loss = self.loss(y_pred, target)
             loss.backward()
+            total_loss += loss
             self.optimizer.step()
-            
-            # calculate accuary rate
-            if y_pred >= 0.5 and target[0] == 1:
-                Accurary += 1
-            elif y_pred < 0.5 and target[0] == 0:
-                Accurary += 1
-            
-        if len(batch) > 0:
-            Accurary /= len(batch)    
-        else:
-            pass
-        logging.info(f" * Batch size = {len(batch)} , Accurary = {Accurary * 100}%\n")
+               
+        total_loss /= len(batch)    
+        logging.info(f" * Batch size = {len(batch)} , avg_loss = {total_loss}%\n")
         
-        return Accurary
+        return total_loss
         
 
 
-    def train(self, config: Configuration, seed: int = 0, budget: int = 25)-> float:
-        try:
+
+    
+    def init_train(self, config: Configuration, seed: int = 0, budget: int = 25):
+        '''
+            Used for selecting a specfic hyperparameter
+        '''
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore")
             if self.model == None or self.optimizer == None or self.loss == None:
                 config_dict = config.get_dictionary()
                 
                 self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
 
-
                 learn_rate = config_dict['Learning_Rate']
 
-                self.model = LstmNet(hidden_size=config_dict['hidden_size'],
-                                    hidden_size_linear=config_dict['hidden_size_linear'],
-                                    num_layers=config_dict['num_layers'],
-                                    dropout=config_dict['LSTM_dropout'],
-                                    dropout_linear=config_dict['dropout_linear'],
-                                    activation_linear=config['activation']
-                                    ).to(main._device)
+                self.model = LstmNet(
+                        hidden_size=config_dict['hidden_size'],
+                        hidden_size_linear=config_dict['hidden_size_linear'],
+                        num_layers=config_dict['num_layers'],
+                        dropout=config_dict['LSTM_dropout'],
+                        dropout_linear=config_dict['dropout_linear'],
+                        activation_linear=config['activation']
+                    ).to(main._device)
 
                 # optimize method choose
                 match config_dict['optimizer']:
@@ -242,46 +303,71 @@ class trainer(preprocess.data_handler):
                         self.loss = nn.MSELoss()
                     case _:
                         raise ModuleNotFoundError
+                    
+        cost = self.train(batch_size = config['batch_size'])
+        return cost
 
 
-            
+    def train(self,
+              batch_size)-> float:  
+        
+        '''
+            Our train method:
+            1. SGD: every step optimized
+            2. mini-batch: after whole batch then updated
+        '''
+        single_epoch_bar = tqdm(total=preprocess.data_handler._chunk_number)        
+        self.model.train()
 
-                
-            data_generator = super().get_generator()
-            avg_cost = 0
-            count = 0
+        data_generator = super().get_generator(batch_size = batch_size)
+        avg_cost = 0
+        count = 0  
+        
+        # for every epoch, reset the data genertor
+        preprocess.data_handler.reset(batch_size)
 
-            for epoch_idx in tqdm(range(main._args.num_epoches), desc="Epoch No.", leave=True):
-                logging.info(f"----------------- Epoch: {epoch_idx} ----------------- \n")
-                self.model.train()
-                
-                # Version 2: Using data generator to handle raw data only when trainer need them 
-                try:
-                    while True:
-                        single_chunk = next(data_generator, None)
-                        # epoch stop
-                        if single_chunk == None:
-                            self.save_model()
-                            break
-
-                        match main._args.batch_model:
-                            case True:
-                                self._mini_batch(batch=single_chunk)
-                            case False:
-                                Accuary = self._single_step(batch=single_chunk)
-                                count += 1
-                                avg_cost += (1 - Accuary)
-                            case _:
-                                raise KeyError
-                except Exception as e:
-                    print(f"\n{e}\n")
-                    self.force_save_model()
+        # Version 2: Using data generator to handle raw data only when trainer need them 
+        try:
+            while True:
+                single_epoch_bar.update(1)
+                single_chunk_tuple = next(data_generator, None)
+                single_chunk_idx = single_chunk_tuple[0]
+                single_chunk = single_chunk_tuple[1]
+                # epoch error, stop and save
+                if not isinstance(single_chunk, list):
                     break
-            
-        except Exception:
+                
+                match main._args.batch_model:
+                    case True:
+                        step_loss = self._mini_batch(batch=single_chunk)
+                        print(f"\n single loss = {step_loss}\n")
+                    case False:
+                        step_loss = self._single_step(batch=single_chunk)
+                        print(f"\n single loss = {step_loss}\n")
+                    case _:
+                        raise KeyError
+                
+                with torch.no_grad():
+                    if not self.diagram_drawer.flag:
+                        # need init draw helper
+                        self.diagram_drawer.init_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
+                    else:
+                        self.diagram_drawer.update_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
+                
+                count += 1
+                avg_cost += (1 - step_loss)
+        except Exception as e:
+            print(f"\n -- Trainer Error! error is = \t{e}\n")
             self.force_save_model()
+        
+        print("\n** ALL DONE, NOW SAVEING MODE! **\n")        
+        self.save_model()
+        print("\nMODEL SAVED!\n")
         avg_cost = avg_cost / count
+        single_epoch_bar.close()
+        
         return avg_cost
+ 
         
         {
             # version 1: using old-school function, which store whole tokenzied dataset
@@ -309,44 +395,52 @@ class trainer(preprocess.data_handler):
 
 
     def auto_ml(self):
+        '''
+            define parameter selection strategy
+        '''
+
         facades: list[AbstractFacade] = []
-        for intensifier_object in [SuccessiveHalving, Hyperband]:
-            # SMAC Next, we create an object, holding general information about the run
+        for intensifier_object in [SuccessiveHalving, Hyperband]: # 两种不同的优化策略
+            '''
+            SuccessiveHalving : 实施连续减半，支持多保真度、多目标和多处理。此增强器的行为如下：-首先，将运行历史的配置添加到跟踪器中。
+
+            '''
             scenario = Scenario(
                 self.config.configspace,
                 walltime_limit=60,  # After 60 seconds, we stop the hyperparameter optimization
-                n_trials=50,
+                n_trials=500,  # Evaluate max 500 different trials
                 min_budget=1,  # Train the MLP using a hyperparameter configuration for at least 5 epochs
                 max_budget=25,  # Train the MLP using a hyperparameter configuration for at most 25 epochs
                 n_workers=1,
             )
 
-            # we want to run the facade's default initial design, but we want to change the number
-            # of initial configs to 5.
-            initial_design = HyperparameterOptimizationFacade.get_initial_design(scenario, n_configs=5)
+            print(f"\n * scenario = {scenario} \n")
+            
+            # 在开始训练前fetch 5个 random config parameters
+            initial_design = MFFacade.get_initial_design(scenario, n_configs=5)
 
             # Create our intensifier
             intensifier = intensifier_object(scenario, incumbent_selection="highest_budget")
 
-            # Now we use SMAC to find the best hyperparameters
             smac = MFFacade(
                 scenario,
-                self.train,
-                initial_design=initial_design,
+                self.init_train,
+                initial_design = initial_design,
                 intensifier = intensifier,
-                overwrite=True,  # If the run exists, we overwrite it; alternatively, we can continue from last state
+                overwrite=True,
             )
 
+            print(f"\n * smac = {smac}\n")
             incumbent = smac.optimize()
-            # Get cost of default configuration
-            default_cost = smac.validate(self.config.configspace.get_default_configuration())
-            logging.info(f"Default cost: {default_cost}")
 
-            # Let's calculate the cost of the incumbent
-            incumbent_cost = smac.validate(incumbent)
-            logging.info(f"Incumbent cost: {incumbent_cost}")
+            # run history display
+            print(f"\n *** here is the run history = {smac.runhistory}\n")
 
+            print(f"\n * incumbent = {incumbent}\n")
             facades.append(smac)
+
+
+    
         
 
     def test(self, batch:list):
@@ -381,6 +475,11 @@ class trainer(preprocess.data_handler):
 
 
 class LstmNet(nn.Module, model.module):
+    '''
+        Network:
+            - LSTM + Double-Linear
+    '''
+    
     def __init__(self,
                  hidden_size,
                  hidden_size_linear,
@@ -421,6 +520,10 @@ class LstmNet(nn.Module, model.module):
         # init weight
         self.init_weights()
 
+
+        self.hidden_size = hidden_size
+        self.num_layers = num_layers
+
         logging.info(f"\n --> Model weight initalization succefuly!\n")
 
     
@@ -446,6 +549,7 @@ class LstmNet(nn.Module, model.module):
         
         logging.info("initize model parameter done!\n")
 
+
     def display_model_info(self):
         print(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
         logging.info(f"\n Model Initialization = {self.lstm}\n *Parameters = {self.lstm.parameters}\n")
@@ -467,8 +571,8 @@ class LstmNet(nn.Module, model.module):
     def forward(self, tensor_data:torch.tensor):
         # inital parameters
         # 4 = 2 if bidirectional=True else 1, * num_layers, 
-        h0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
-        c0 = torch.randn(4, 128, device=main._device, dtype=torch.float32)
+        h0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
+        c0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
         
         # Normalization:
         # tensor_data = self.normalization(tensor_data)
@@ -495,10 +599,13 @@ class LstmNet(nn.Module, model.module):
 
         return pred
     
+
+
     def forward_with_batch(self, tensor_data: torch.tensor, batch_size: int):
-        h0 = torch.randn(4, batch_size , 128, device=main._device, dtype=torch.float32)
-        c0 = torch.randn(4, batch_size , 128, device=main._device, dtype=torch.float32)
+        h0 = torch.randn(2*self.num_layers, batch_size , self.hidden_size, device=main._device, dtype=torch.float32)
+        c0 = torch.randn(2*self.num_layers, batch_size , self.hidden_size, device=main._device, dtype=torch.float32)
         h, _ = self.lstm(tensor_data, (h0, c0))
+        h, _ = pad_packed_sequence(h)
         pred = F.sigmoid(self.linears(h[-1, : , :]))
         return pred
         

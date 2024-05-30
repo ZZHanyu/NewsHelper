@@ -1,0 +1,140 @@
+{
+  "incumbent_ids": [
+    1
+  ],
+  "rejected_config_ids": [
+    10,
+    15,
+    16,
+    17,
+    18,
+    27,
+    32,
+    33,
+    34
+  ],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 13,
+      "walltime": 0.13043785095214844
+    }
+  ],
+  "state": {
+    "tracker": {
+      "0,0": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.03668019186183254,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 108,
+              "hidden_size_linear": 135,
+              "num_layers": 5,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.36268927557636593,
+              "dropout_linear": 0.2778875898655219
+            },
+            {
+              "Learning_Rate": 0.08303593583576648,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 255,
+              "hidden_size_linear": 36,
+              "num_layers": 2,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.05336793012378693,
+              "dropout_linear": 0.12189967783881517
+            },
+            {
+              "Learning_Rate": 0.02828207718938534,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 179,
+              "hidden_size_linear": 86,
+              "num_layers": 5,
+              "optimizer": "RMSprop",
+              "LSTM_dropout": 0.22150189287114644,
+              "dropout_linear": 0.20631752303225276
+            },
+            {
+              "Learning_Rate": 0.05493762953092057,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 308,
+              "hidden_size_linear": 240,
+              "num_layers": 6,
+              "optimizer": "RMSprop",
+              "LSTM_dropout": 0.23426028960375123,
+              "dropout_linear": 0.3865857812577384
+            },
+            {
+              "Learning_Rate": 0.05224325868295782,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 95,
+              "hidden_size_linear": 249,
+              "num_layers": 4,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.048516051154085194,
+              "dropout_linear": 0.025685772138801077
+            },
+            {
+              "Learning_Rate": 0.04059009399591453,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 481,
+              "hidden_size_linear": 220,
+              "num_layers": 7,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.435273656001751,
+              "dropout_linear": 0.12819156137358279
+            },
+            {
+              "Learning_Rate": 0.0679471352443526,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "relu",
+              "hidden_size": 245,
+              "hidden_size_linear": 241,
+              "num_layers": 2,
+              "optimizer": "RMSprop",
+              "LSTM_dropout": 0.31303509202795715,
+              "dropout_linear": 0.26336381376014295
+            },
+            {
+              "Learning_Rate": 0.07865432702470433,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "tanh",
+              "hidden_size": 208,
+              "hidden_size_linear": 121,
+              "num_layers": 2,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.0,
+              "dropout_linear": 0.0
+            },
+            {
+              "Learning_Rate": 0.03582899646656787,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 298,
+              "hidden_size_linear": 228,
+              "num_layers": 2,
+              "optimizer": "Adadelta",
+              "LSTM_dropout": 0.02874803397892589,
+              "dropout_linear": 0.006082733213641656
+            }
+          ]
+        ]
+      ]
+    },
+    "next_bracket": 1
+  }
+}

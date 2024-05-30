@@ -1,0 +1,40 @@
+{
+  "stats": {
+    "submitted": 1,
+    "finished": 1,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716434078.600589,
+      1716434188.8821802,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 389, in train\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 59,
+      "hidden_size_linear": 251,
+      "num_layers": 6,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.30881774853793853,
+      "dropout_linear": 0.179753950286893
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Random"
+  }
+}

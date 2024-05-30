@@ -1,0 +1,42 @@
+{
+  "incumbent_ids": [
+    1
+  ],
+  "rejected_config_ids": [],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 13,
+      "walltime": 61.0623140335083
+    }
+  ],
+  "state": {
+    "tracker": {
+      "0,2": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.05488586225769321,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 59,
+              "hidden_size_linear": 251,
+              "num_layers": 6,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.30881774853793853,
+              "dropout_linear": 0.179753950286893
+            }
+          ]
+        ]
+      ]
+    },
+    "next_bracket": 1
+  }
+}

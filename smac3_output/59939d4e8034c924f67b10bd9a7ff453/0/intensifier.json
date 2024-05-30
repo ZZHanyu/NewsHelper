@@ -1,0 +1,165 @@
+{
+  "incumbent_ids": [
+    1
+  ],
+  "rejected_config_ids": [
+    10,
+    15,
+    16,
+    17,
+    18,
+    27,
+    32,
+    33,
+    34,
+    35,
+    44,
+    49,
+    50,
+    51,
+    52,
+    61,
+    66,
+    67,
+    68,
+    69,
+    78,
+    83,
+    84,
+    85,
+    86,
+    95,
+    100,
+    101,
+    102,
+    103,
+    112,
+    117,
+    118,
+    119,
+    120,
+    129,
+    134,
+    135,
+    136,
+    137,
+    146,
+    151,
+    152,
+    153,
+    154,
+    163,
+    168,
+    169,
+    170,
+    171,
+    180,
+    185,
+    186,
+    187,
+    188,
+    197,
+    202,
+    203,
+    204,
+    205,
+    214,
+    219,
+    220,
+    221,
+    222,
+    231,
+    236,
+    237,
+    238,
+    239,
+    248,
+    253,
+    254,
+    255,
+    256,
+    265,
+    270,
+    271,
+    272,
+    273
+  ],
+  "incumbents_changed": 1,
+  "trajectory": [
+    {
+      "config_ids": [
+        1
+      ],
+      "costs": [
+        Infinity
+      ],
+      "trial": 13,
+      "walltime": 1.2379989624023438
+    }
+  ],
+  "state": {
+    "tracker": {
+      "1,0": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.02771530836372953,
+              "Loss_Function": "MSELoss",
+              "activation": "tanh",
+              "hidden_size": 171,
+              "hidden_size_linear": 84,
+              "num_layers": 6,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.45557795167236137,
+              "dropout_linear": 0.40471291040805446
+            },
+            {
+              "Learning_Rate": 0.0627425248230169,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 419,
+              "hidden_size_linear": 242,
+              "num_layers": 1,
+              "optimizer": "RMSprop"
+            },
+            {
+              "Learning_Rate": 0.09350408896050637,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 287,
+              "hidden_size_linear": 94,
+              "num_layers": 4,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.013704427826337724,
+              "dropout_linear": 0.0
+            },
+            {
+              "Learning_Rate": 0.030512089968830747,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 140,
+              "hidden_size_linear": 81,
+              "num_layers": 2,
+              "optimizer": "Adadelta",
+              "LSTM_dropout": 0.022144291109804513,
+              "dropout_linear": 0.039669611010204345
+            },
+            {
+              "Learning_Rate": 0.09670461359851422,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "relu",
+              "hidden_size": 84,
+              "hidden_size_linear": 125,
+              "num_layers": 5,
+              "optimizer": "RMSprop",
+              "LSTM_dropout": 0.0,
+              "dropout_linear": 0.0
+            }
+          ]
+        ]
+      ]
+    },
+    "next_bracket": 2
+  }
+}

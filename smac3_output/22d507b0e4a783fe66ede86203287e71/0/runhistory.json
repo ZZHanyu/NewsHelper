@@ -1,0 +1,37 @@
+{
+  "stats": {
+    "submitted": 1,
+    "finished": 1,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      0.5079470518977945,
+      4732.13445687294,
+      1,
+      1716210289.938881,
+      1716215022.085096,
+      {}
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.026695183321777734,
+      "Loss_Function": "MSELoss",
+      "activation": "tanh",
+      "hidden_size": 121,
+      "hidden_size_linear": 223,
+      "num_layers": 4,
+      "optimizer": "RMSprop",
+      "LSTM_dropout": 0.4983903025276959,
+      "dropout_linear": 0.3860676749609411
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Sobol"
+  }
+}

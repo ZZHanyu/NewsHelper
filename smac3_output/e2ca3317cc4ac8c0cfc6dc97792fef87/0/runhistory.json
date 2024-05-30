@@ -1,0 +1,94 @@
+{
+  "stats": {
+    "submitted": 3,
+    "finished": 3,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716371783.929421,
+      1716371885.341197,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 246, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 279, in train\n    self.force_save_model()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 136, in force_save_model\n    torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'model_save_path'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'model_save_path'\")"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716371783.93752,
+      1716372037.277142,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 226, in train\n    raise ModuleNotFoundError\nModuleNotFoundError\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 279, in train\n    self.force_save_model()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 136, in force_save_model\n    torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'model_save_path'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'model_save_path'\")"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716371885.361491,
+      1716371954.896918,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 246, in train\n    for epoch_idx in tqdm(range(main._args.num_epoches), desc=\"Epoch No.\", leave=True):\n                                ^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'num_epoches'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 279, in train\n    self.force_save_model()\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 136, in force_save_model\n    torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'model_save_path'\n",
+        "error": "AttributeError(\"'NoneType' object has no attribute 'model_save_path'\")"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 59,
+      "hidden_size_linear": 251,
+      "num_layers": 6,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.30881774853793853,
+      "dropout_linear": 0.179753950286893
+    },
+    "2": {
+      "Learning_Rate": 0.07152178474357823,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 26,
+      "hidden_size_linear": 208,
+      "num_layers": 2,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.3060478613612107,
+      "dropout_linear": 0.21851597689967073
+    },
+    "3": {
+      "Learning_Rate": 0.06028030997340368,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 429,
+      "hidden_size_linear": 127,
+      "num_layers": 8,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.30846699843737846,
+      "dropout_linear": 0.34881559796363243
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Random",
+    "2": "Initial Design: Random",
+    "3": "Initial Design: Random"
+  }
+}

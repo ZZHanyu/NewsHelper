@@ -1,0 +1,40 @@
+{
+  "stats": {
+    "submitted": 1,
+    "finished": 1,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      96.4646782875061,
+      2,
+      1716436401.131698,
+      1716436497.598133,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/abstract_runner.py\", line 110, in run_wrapper\n    status, cost, runtime, additional_info = self.run(\n                                             ^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 238, in run\n    cost = self.crash_cost\n           ^^^^^^^^^^^^^^^\nAttributeError: 'TargetFunctionRunner' object has no attribute 'crash_cost'\n",
+        "error": "AttributeError(\"'TargetFunctionRunner' object has no attribute 'crash_cost'\")"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 59,
+      "hidden_size_linear": 251,
+      "num_layers": 6,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.30881774853793853,
+      "dropout_linear": 0.179753950286893
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Random"
+  }
+}

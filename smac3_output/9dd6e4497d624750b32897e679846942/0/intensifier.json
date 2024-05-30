@@ -1,0 +1,114 @@
+{
+  "incumbent_ids": [],
+  "rejected_config_ids": [],
+  "incumbents_changed": 0,
+  "trajectory": [],
+  "state": {
+    "tracker": {
+      "0,0": [
+        [
+          0,
+          [
+            {
+              "Learning_Rate": 0.05488586225769321,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 59,
+              "hidden_size_linear": 251,
+              "num_layers": 6,
+              "optimizer": "SGD",
+              "LSTM_dropout": 0.30881774853793853,
+              "dropout_linear": 0.179753950286893
+            },
+            {
+              "Learning_Rate": 0.07152178474357823,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "relu",
+              "hidden_size": 26,
+              "hidden_size_linear": 208,
+              "num_layers": 2,
+              "optimizer": "Adadelta",
+              "LSTM_dropout": 0.3060478613612107,
+              "dropout_linear": 0.21851597689967073
+            },
+            {
+              "Learning_Rate": 0.06028030997340368,
+              "Loss_Function": "MSELoss",
+              "activation": "relu",
+              "hidden_size": 429,
+              "hidden_size_linear": 127,
+              "num_layers": 8,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.30846699843737846,
+              "dropout_linear": 0.34881559796363243
+            },
+            {
+              "Learning_Rate": 0.05449286946785972,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 402,
+              "hidden_size_linear": 204,
+              "num_layers": 5,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.4718740392573121,
+              "dropout_linear": 0.030112735814634917
+            },
+            {
+              "Learning_Rate": 0.04237124338589709,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "tanh",
+              "hidden_size": 448,
+              "hidden_size_linear": 44,
+              "num_layers": 4,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.3409101495517417,
+              "dropout_linear": 0.33338335772283384
+            },
+            {
+              "Learning_Rate": 0.06706708058311976,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "tanh",
+              "hidden_size": 172,
+              "hidden_size_linear": 103,
+              "num_layers": 5,
+              "optimizer": "Adagrad",
+              "LSTM_dropout": 0.4941869190296131,
+              "dropout_linear": 0.051022405374014035
+            },
+            {
+              "Learning_Rate": 0.020895586841922522,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "relu",
+              "hidden_size": 141,
+              "hidden_size_linear": 128,
+              "num_layers": 2,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.05518757058215257,
+              "dropout_linear": 0.3281647947326367
+            },
+            {
+              "Learning_Rate": 0.013826913305347894,
+              "Loss_Function": "BCEWithLogitsLoss",
+              "activation": "relu",
+              "hidden_size": 424,
+              "hidden_size_linear": 39,
+              "num_layers": 7,
+              "optimizer": "Adam",
+              "LSTM_dropout": 0.4882297325066979,
+              "dropout_linear": 0.2343256008238508
+            },
+            {
+              "Learning_Rate": 0.09767634120815182,
+              "Loss_Function": "MSELoss",
+              "activation": "LeakyReLU",
+              "hidden_size": 35,
+              "hidden_size_linear": 84,
+              "num_layers": 1,
+              "optimizer": "SGD"
+            }
+          ]
+        ]
+      ]
+    }
+  }
+}

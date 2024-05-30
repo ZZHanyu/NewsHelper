@@ -30,7 +30,7 @@ from main_class import main
 
 class data_handler(main): 
     '''
-        abstract
+        abstract class - define a customer data loader + handler
     '''
 
     _datalen = None
@@ -42,17 +42,25 @@ class data_handler(main):
 
 
     @classmethod
-    def initialize(cls):
-        cls._dataloader()
+    def initialize(cls, batch_size = None):
+        cls._dataloader(batch_size)
         cls._datarow_count()
+
+
+    @classmethod
+    def reset(cls, batch_size = None):
+        cls._dataloader(batch_size = batch_size)
         
 
     @classmethod
-    def get_generator(cls):
+    def get_generator(cls, batch_size = None):
+        if cls._chunks == None:
+            cls.initialize()
         data_generator = data_handler_iterator()
         data_iter = iter(data_generator)
         return data_iter
     
+
     @classmethod
     def _init_embedding_model(cls):
         if cls._embedding_model == None:
@@ -62,6 +70,7 @@ class data_handler(main):
         else:
             pass
 
+
     @classmethod
     def _datarow_count(cls):
         with open(super()._args.dataset_path + super()._args.dataset_name + '/WELFake_Dataset.csv') as fileobject:
@@ -69,11 +78,12 @@ class data_handler(main):
         logging.info(f"\n ** DataFile have {cls._csv_total_len} rows of csv data! \n")
         
         # calculate the total chunk number
-        chunk_number = cls._csv_total_len // super()._args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
-        logging.info(f"\n ** DataFile have {chunk_number} chunks! \n")
+        cls._chunk_number = cls._csv_total_len // super()._args.chunk_size # this is estimate, because later iterator will delete some row in every chunk
+        logging.info(f"\n ** DataFile have {cls._chunk_number} chunks! \n")
+
 
     @classmethod
-    def _dataloader(cls):
+    def _dataloader(cls, batch_size):
         '''
             ---------- Dataset Loader ----------
             Objective:
@@ -83,12 +93,18 @@ class data_handler(main):
             Return:
                 - wda
         '''
+        if batch_size == None:
+            batch_size = main._args.chunk_size
+        else:
+            batch_size = batch_size
+
         if not os.path.exists(super()._args.dataset_path + super()._args.dataset_name + '/WELFake_Dataset.csv'):
             print(f"The file path {super()._args.dataset_path + 'WELFake_Dataset.csv'} is missing! Now downloading...\n")
             # kaggle datasets download -d saurabhshahane/fake-news-classification
             od.download('https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification', data_dir=super()._args.dataset_path)
+            cls._chunks = pd.read_csv(super()._args.dataset_path + super()._args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=batch_size)
         else:
-            cls._chunks = pd.read_csv(super()._args.dataset_path + super()._args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=super()._args.chunk_size)
+            cls._chunks = pd.read_csv(super()._args.dataset_path + super()._args.dataset_name + '/' +'WELFake_Dataset.csv', chunksize=batch_size)
 
 
     @classmethod
@@ -118,6 +134,7 @@ class data_handler(main):
         else:
             return True
         
+
     @classmethod   
     def _words_embeddings(cls, sentences):
         if cls._embedding_model == None:
@@ -131,6 +148,7 @@ class data_handler(main):
                 sentences[idx] = np.zeros(shape=(cls._embedding_dim), dtype=np.float32)
 
         return sentences
+
 
     @classmethod
     def _string_handler(cls, raw_text):
@@ -191,20 +209,30 @@ class data_handler_iterator(data_handler):
 
     def __next__(self):
         # only handle data and save to self.tokenized_chunk
-        if isinstance(next(super()._chunks, None), pd.DataFrame):
-            chunk = super()._chunks.get_chunk()
-        else:
-            raise StopIteration
-        chunk_tokenized = [] # initiaize and re-initiaze
-        # STEP 1: Remove empty line
-        chunk = super()._remove_empty_line(single_chunk=chunk)
-        for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
-            chunk_tokenized.append((super()._string_handler(raw_text=row[2] + row[3]), row[4]))
-            # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
-            # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
-            # [ [01231232] , [21131313],  [2134123232] , .....]
-        return chunk_tokenized
+        # atuple = enumerate(next(super()._chunks, None))
+        # print(atuple)
+        # index = atuple[0]
+        # chunk = atuple[1]
+
+        # if not isinstance(chunk, pd.DataFrame):
+        #     raise StopIteration
+        
+        for chunk_idx, chunk in enumerate(super()._chunks):
+            print(chunk_idx)
+        
+            chunk_tokenized = [] # initiaize and re-initiaze
+            # STEP 1: Remove empty line
+            chunk = super()._remove_empty_line(single_chunk=chunk)
+            for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
+                chunk_tokenized.append((super()._string_handler(raw_text=row[2] + row[3]), row[4]))
+                # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
+                # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
+                # [ [01231232] , [21131313],  [2134123232] , .....]
+            return chunk_idx, chunk_tokenized
             
+
+    def reset(self):
+        super().reset()
             
 
 

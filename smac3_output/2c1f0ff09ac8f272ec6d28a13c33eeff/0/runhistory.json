@@ -1,0 +1,314 @@
+{
+  "stats": {
+    "submitted": 13,
+    "finished": 13,
+    "running": 0
+  },
+  "data": [
+    [
+      1,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427623.537408,
+      1716427629.13822,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427629.141397,
+      1716427633.000681,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427633.0034409,
+      1716427637.3551822,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      4,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427637.3583648,
+      1716427642.123486,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      5,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427642.1266508,
+      1716427647.119115,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      6,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427647.122637,
+      1716427652.988492,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      7,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427652.992385,
+      1716427657.0275981,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      8,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427657.0308568,
+      1716427663.440452,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      9,
+      null,
+      209652396,
+      2.7777777777777777,
+      Infinity,
+      0.0,
+      2,
+      1716427663.444273,
+      1716427667.14781,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716427667.152909,
+      1716427671.7062888,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      2,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716427671.709671,
+      1716427676.329062,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      3,
+      null,
+      209652396,
+      8.333333333333332,
+      Infinity,
+      0.0,
+      2,
+      1716427676.332844,
+      1716427679.9954638,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ],
+    [
+      1,
+      null,
+      209652396,
+      25.0,
+      Infinity,
+      0.0,
+      2,
+      1716427679.999119,
+      1716427684.5970519,
+      {
+        "traceback": "Traceback (most recent call last):\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 186, in run\n    rval = self(config_copy, target_function, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.11/site-packages/smac/runner/target_function_runner.py\", line 259, in __call__\n    return algorithm(config, **algorithm_kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/taotao/Documents/GitHub/FYP/utils/network.py\", line 333, in train\n    avg_cost = avg_cost / count\n               ~~~~~~~~~^~~~~~~\nZeroDivisionError: division by zero\n",
+        "error": "ZeroDivisionError('division by zero')"
+      }
+    ]
+  ],
+  "configs": {
+    "1": {
+      "Learning_Rate": 0.05488586225769321,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 59,
+      "hidden_size_linear": 251,
+      "num_layers": 6,
+      "optimizer": "SGD",
+      "LSTM_dropout": 0.30881774853793853,
+      "dropout_linear": 0.179753950286893
+    },
+    "2": {
+      "Learning_Rate": 0.07152178474357823,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 26,
+      "hidden_size_linear": 208,
+      "num_layers": 2,
+      "optimizer": "Adadelta",
+      "LSTM_dropout": 0.3060478613612107,
+      "dropout_linear": 0.21851597689967073
+    },
+    "3": {
+      "Learning_Rate": 0.06028030997340368,
+      "Loss_Function": "MSELoss",
+      "activation": "relu",
+      "hidden_size": 429,
+      "hidden_size_linear": 127,
+      "num_layers": 8,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.30846699843737846,
+      "dropout_linear": 0.34881559796363243
+    },
+    "4": {
+      "Learning_Rate": 0.05449286946785972,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 402,
+      "hidden_size_linear": 204,
+      "num_layers": 5,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4718740392573121,
+      "dropout_linear": 0.030112735814634917
+    },
+    "5": {
+      "Learning_Rate": 0.04237124338589709,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 448,
+      "hidden_size_linear": 44,
+      "num_layers": 4,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.3409101495517417,
+      "dropout_linear": 0.33338335772283384
+    },
+    "6": {
+      "Learning_Rate": 0.06706708058311976,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "tanh",
+      "hidden_size": 172,
+      "hidden_size_linear": 103,
+      "num_layers": 5,
+      "optimizer": "Adagrad",
+      "LSTM_dropout": 0.4941869190296131,
+      "dropout_linear": 0.051022405374014035
+    },
+    "7": {
+      "Learning_Rate": 0.020895586841922522,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 141,
+      "hidden_size_linear": 128,
+      "num_layers": 2,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.05518757058215257,
+      "dropout_linear": 0.3281647947326367
+    },
+    "8": {
+      "Learning_Rate": 0.013826913305347894,
+      "Loss_Function": "BCEWithLogitsLoss",
+      "activation": "relu",
+      "hidden_size": 424,
+      "hidden_size_linear": 39,
+      "num_layers": 7,
+      "optimizer": "Adam",
+      "LSTM_dropout": 0.4882297325066979,
+      "dropout_linear": 0.2343256008238508
+    },
+    "9": {
+      "Learning_Rate": 0.09767634120815182,
+      "Loss_Function": "MSELoss",
+      "activation": "LeakyReLU",
+      "hidden_size": 35,
+      "hidden_size_linear": 84,
+      "num_layers": 1,
+      "optimizer": "SGD"
+    }
+  },
+  "config_origins": {
+    "1": "Initial Design: Random",
+    "2": "Initial Design: Random",
+    "3": "Initial Design: Random",
+    "4": "Initial Design: Random",
+    "5": "Initial Design: Random",
+    "6": "Custom",
+    "7": "Custom",
+    "8": "Custom",
+    "9": "Custom"
+  }
+}

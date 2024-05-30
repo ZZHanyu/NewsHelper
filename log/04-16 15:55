@@ -1,30 +1,3 @@
-INFO:root:
- ======== Start Log Recording :04-16 15:55 ========
-
-INFO:root:
- Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
- *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
-
-INFO:root:TEST Processing --> pred = tensor([0.0598], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0342], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0677], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0396], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0321], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0329], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0283], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0503], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0543], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0623], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0041], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0469], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0739], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0276], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0692], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0272], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0742], device='mps:0', grad_fn=<SelectBackward0>) target = 0.0
-INFO:root:TEST Processing --> pred = tensor([0.0141], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0138], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.0323], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
-INFO:root:TEST Processing --> pred = tensor([0.], device='mps:0', grad_fn=<SelectBackward0>) target = 1.0
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4f2c7a7af167cbae31c107dca741e43a27dc52f8c1fc5d786541683a87a3b67
+size 2763
