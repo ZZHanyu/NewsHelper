@@ -1,9 +1,0 @@
-INFO:root:
- ======== Start Log Recording :04-18 17:41 ========
-
-INFO:root:
- Model Initialization = LSTM(8, 128, num_layers=2, bidirectional=True)
- *Parameters = <bound method Module.parameters of LSTM(8, 128, num_layers=2, bidirectional=True)>
-
-INFO:gensim.models.keyedvectors:loading projection weights from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
-INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-04-18T17:43:27.924327', 'gensim': '4.3.0', 'python': '3.11.8 | packaged by conda-forge | (main, Feb 16 2024, 20:49:36) [Clang 16.0.6 ]', 'platform': 'macOS-14.4.1-arm64-arm-64bit', 'event': 'load_word2vec_format'}
