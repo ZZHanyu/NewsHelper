@@ -22,6 +22,7 @@ import pandas as pd
 import warnings
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+import random
 
 # AutoML SMAC: Auto Searching Hyperparameters
 from ConfigSpace import (
@@ -233,7 +234,6 @@ class trainer(preprocess.data_handler):
     
 
 
-
     def _single_step(self, 
                      batch:list) -> float:
         
@@ -255,7 +255,6 @@ class trainer(preprocess.data_handler):
         
         return total_loss
         
-
 
 
     
@@ -306,17 +305,116 @@ class trainer(preprocess.data_handler):
                     
         cost = self.train(batch_size = config['batch_size'])
         return cost
+    
 
 
-    def train(self,
-              batch_size)-> float:  
+    def manual_init_train(self):
+        '''
+            To init train config dict here
+        '''
+
+        # 使用random函数随机选择
+        
+        param_dict = {
+            "hidden_size" : [32, 64, 128, 256],
+            "hidden_size_linear" : [32, 64, 128, 256],
+            "num_layers" : [1, 2, 3, 4, 5, 6, 7, 8],
+            "dropout_linear" : [0.1, 0.2, 0.3, 0.4, 0.5],
+            "dropout": [0.1, 0.2, 0.3, 0.4, 0.5],
+            "activation_linear" : ["tanh", "relu", "LeakyReLU"],
+            "learn_rate": [1e-5, 1e-4, 1e-3, 1e-2],
+            "batch_size": [16, 32, 64, 128],
+            "optimize_method": ["Adam", "SGD", "Adagrad", "RMSprop"],
+            "loss": ["BCEWithLogitsLoss", "MSELoss"]
+        }
+
+
+        for _ in tqdm(range(self._args.num_epoches), desc="Epoch No.", leave=True):
+            param_selected = {
+                "hidden_size": None,
+                "hidden_size_linear": None,
+                "num_layers": None,
+                "dropout_linear": None,
+                "activation_linear": None,
+                "dropout": None,
+                "learn_rate": None,
+                "batch_size": None,
+                "optimize_method": None,
+                "loss": None,
+                "train_loss": None,
+                "test_loss":None
+            }
+
+            preprocess.data_handler.initialize(batch_size=param_selected['batch_size'])
+
+            print("\n --------param random choice--------\n")
+            for key, item in param_dict.items():
+                if param_selected.get(key, False):
+                    raise ValueError
+                else:
+                    param_selected[key] = random.choice(item)
+                    print(f"param : {key} --- value: {param_selected[key]}")
+
+
+            self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
+
+            learn_rate = param_selected['learn_rate']
+
+            self.model = LstmNet(
+                hidden_size=param_selected['hidden_size'],
+                hidden_size_linear=param_selected['hidden_size_linear'],
+                num_layers=param_selected['num_layers'],
+                dropout=param_selected['dropout'],
+                dropout_linear=param_selected['dropout_linear'],
+                activation_linear=param_selected['activation_linear']
+                ).to(main._device)
+
+
+            match param_selected['optimize_method']:
+                case 'Adam':
+                    self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=learn_rate)
+                case 'SGD':
+                    self.optimizer = torch.optim.SGD(params=self.model.parameters(), lr=learn_rate)
+                case 'Adagrad':
+                    self.optimizer = torch.optim.Adagrad(params=self.model.parameters(), lr=learn_rate)
+                case 'RMSprop':
+                    self.optimizer = torch.optim.RMSprop(params=self.model.parameters(), lr=learn_rate)
+                case _:
+                    raise ModuleNotFoundError
+                
+
+            # loss function choose
+            match param_selected['loss']:
+                case 'BCEWithLogitsLoss':
+                    self.loss = nn.BCEWithLogitsLoss()
+                case 'MSELoss':
+                    self.loss = nn.MSELoss()
+                case _:
+                    raise ModuleNotFoundError
+            
+            
+            avg_cost = self.train(batch_size = param_selected['batch_size'])
+            param_selected['train_loss'] = avg_cost
+
+            # now test
+            total_loss = self.test(batch_size= param_selected['batch_size'])
+            param_selected['test_loss'] = total_loss
+        
+        json_result = json.dump(param_selected)
+        with open('data.json', 'w') as f:
+            json.dump(json_result, f, indent=4)
+
+
+
+
+    def train(self, batch_size)-> float:  
         
         '''
             Our train method:
             1. SGD: every step optimized
             2. mini-batch: after whole batch then updated
         '''
-        single_epoch_bar = tqdm(total=preprocess.data_handler._chunk_number)        
+        single_epoch_bar = tqdm(total=preprocess.data_handler._csv_total_len, desc="inside single epoch", leave=False)        
         self.model.train()
 
         data_generator = super().get_generator(batch_size = batch_size)
@@ -329,7 +427,7 @@ class trainer(preprocess.data_handler):
         # Version 2: Using data generator to handle raw data only when trainer need them 
         try:
             while True:
-                single_epoch_bar.update(1)
+                single_epoch_bar.update(batch_size)
                 single_chunk_tuple = next(data_generator, None)
                 single_chunk_idx = single_chunk_tuple[0]
                 single_chunk = single_chunk_tuple[1]
@@ -367,6 +465,27 @@ class trainer(preprocess.data_handler):
         single_epoch_bar.close()
         
         return avg_cost
+    
+
+    def test(self, batch_size):
+        self.model.eval()
+        test_true = 0 
+        test_result = 0
+
+        data_generator = super().get_generator(batch_size = batch_size)
+
+        total_loss = 0
+
+        for _ in range(20):
+            single_chunk_tuple = next(data_generator, None)
+            single_chunk_idx = single_chunk_tuple[0]
+            single_chunk = single_chunk_tuple[1]
+            step_loss = self._single_step(batch=single_chunk)
+            total_loss += step_loss
+        
+        total_loss /= 20
+
+        return total_loss
  
         
         {
@@ -439,36 +558,6 @@ class trainer(preprocess.data_handler):
             print(f"\n * incumbent = {incumbent}\n")
             facades.append(smac)
 
-
-    
-        
-
-    def test(self, batch:list):
-        self.model.eval()
-        test_true = 0 
-        test_result = 0
-
-        totoal_lenght = len(batch)
-        for single_data in batch:
-            feature = torch.tensor(single_data[0], dtype=torch.float32, device=main._device, requires_grad=True)
-            # target = torch.tensor([single_data[1]], dtype=torch.float32, device=device, requires_grad=False)
-            target = single_data[1]
-            y_pred = self.model.forward(feature)
-            logging.info(f"TEST Processing --> pred = {y_pred} target = {target}")
-            # STEP activiate function:
-            if y_pred.item() >= 0.5 and target == 1:
-                test_true += 1
-            elif y_pred.item() < 0.5 and target == 0:
-                test_true += 1
-        test_result = (test_true / totoal_lenght) * 100
-        logging.info(f"\n** TEST RESULT --> Accurary = {test_result}")
-        # if better accuary get, then save
-        if test_result > self.best_accurary:
-            self.best_accurary = test_result
-            self.save_model()
-        else:
-            pass
-        return test_result
         
 
 
@@ -490,8 +579,15 @@ class LstmNet(nn.Module, model.module):
         
         super(LstmNet, self).__init__()    
         model.module.__init__(self)
-  
-        # construct LSTM layer
+
+
+        '''
+            Construct network layer:
+            two options: 
+                1, use smac to find best parameter (BETA) 
+                2, choose pre-defined parameters
+        '''
+
         self.lstm = nn.LSTM(input_size=300,
                             hidden_size=hidden_size, 
                             num_layers=num_layers,
@@ -516,6 +612,7 @@ class LstmNet(nn.Module, model.module):
             nn.Dropout(dropout_linear),
             nn.Linear(hidden_size_linear, 1) # [hidden dim, num class]
         )
+
 
         # init weight
         self.init_weights()

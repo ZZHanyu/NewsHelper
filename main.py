@@ -12,11 +12,14 @@ if __name__ == "__main__":
     multiprocessing.freeze_support()
     # abstract class init
     main.initialize()
-    preprocess.data_handler.initialize()
+    # preprocess.data_handler.initialize()
 
     # start training
     trainer = network.trainer()
-    trainer.auto_ml()
+    if main._args.use_smac == True:
+        trainer.auto_ml()
+    else:
+        trainer.manual_init_train()
 
 
     # # topic modeling

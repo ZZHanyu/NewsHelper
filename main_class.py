@@ -3,8 +3,8 @@ import pandas as pd
 import torch
 from torch import nn
 from torch.utils.data import DataLoader
-from torchvision import datasets
-from torchvision.transforms import ToTensor
+# from torchvision import datasets
+# from torchvision.transforms import ToTensor
 
 # utils
 # from utils import preprocess
@@ -121,6 +121,13 @@ class main(ABC):
             type=int,
             default=256,
             help="Maxium length of sequence in LSTM input, over padding else truncate",
+            required=False
+        )
+        parser.add_argument(
+            "--use_smac",
+            type=bool,
+            default= False,
+            help="Wether use smac3 to automatically find best parameters (beta)",
             required=False
         )
         cls._args = parser.parse_args()
