@@ -1,0 +1,1 @@
+{"hidden_size": 128, "hidden_size_linear": 128, "num_layers": 6, "dropout_linear": 0.3, "activation_linear": "tanh", "dropout": 0.4, "learn_rate": 0.01, "batch_size": 4, "optimize_method": "Adagrad", "loss": "BCEWithLogitsLoss", "train_loss": null, "test_loss": null}

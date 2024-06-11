@@ -1,0 +1,482 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 128
+INFO:root:param : hidden_size_linear --- value: 128
+INFO:root:param : num_layers --- value: 6
+INFO:root:param : dropout_linear --- value: 0.1
+INFO:root:param : dropout --- value: 0.1
+INFO:root:param : activation_linear --- value: LeakyReLU
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-12T00:51:04.486879', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'load_word2vec_format'}
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23476287722587585
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7652370929718018 ***** 
+
+INFO:root:
+ avg_cost = 0.7652370929718018!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 52.63157894736842% ---> avg_loss (test) -> 0.01198559533804655! ** 
+
+INFO:root:
+ ** total_loss = 0.01198559533804655!
+
+INFO:root:
+ ***** epoch : 0 result save to json done! 
+
+INFO:root:
+ epoch:0 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:1 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 128
+INFO:root:param : hidden_size_linear --- value: 128
+INFO:root:param : num_layers --- value: 5
+INFO:root:param : dropout_linear --- value: 0.1
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 0.01
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25054895877838135
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7494510412216187 ***** 
+
+INFO:root:
+ avg_cost = 0.7494510412216187!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 63.1578947368421% ---> avg_loss (test) -> 0.005874748807400465! ** 
+
+INFO:root:
+ ** total_loss = 0.005874748807400465!
+
+INFO:root:
+ ***** epoch : 1 result save to json done! 
+
+INFO:root:
+ epoch:1 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:2 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 256
+INFO:root:param : hidden_size_linear --- value: 128
+INFO:root:param : num_layers --- value: 7
+INFO:root:param : dropout_linear --- value: 0.1
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: LeakyReLU
+INFO:root:param : learn_rate --- value: 1e-05
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2674667239189148
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7325332760810852 ***** 
+
+INFO:root:
+ avg_cost = 0.7325332760810852!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 42.10526315789473% ---> avg_loss (test) -> 0.0! ** 
+
+INFO:root:
+ ** total_loss = 0.0!
+
+INFO:root:
+ ***** epoch : 2 result save to json done! 
+
+INFO:root:
+ epoch:2 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:3 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 32
+INFO:root:param : hidden_size_linear --- value: 64
+INFO:root:param : num_layers --- value: 6
+INFO:root:param : dropout_linear --- value: 0.2
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: LeakyReLU
+INFO:root:param : learn_rate --- value: 0.01
+INFO:root:param : optimize_method --- value: RMSprop
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2567014992237091
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7432985305786133 ***** 
+
+INFO:root:
+ avg_cost = 0.7432985305786133!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 63.1578947368421% ---> avg_loss (test) -> 0.00033074154634959996! ** 
+
+INFO:root:
+ ** total_loss = 0.00033074154634959996!
+
+INFO:root:
+ ***** epoch : 3 result save to json done! 
+
+INFO:root:
+ epoch:3 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:4 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 64
+INFO:root:param : hidden_size_linear --- value: 128
+INFO:root:param : num_layers --- value: 7
+INFO:root:param : dropout_linear --- value: 0.1
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: LeakyReLU
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : optimize_method --- value: RMSprop
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23562921583652496
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7643707990646362 ***** 
+
+INFO:root:
+ avg_cost = 0.7643707990646362!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 63.1578947368421% ---> avg_loss (test) -> 0.010600029490888119! ** 
+
+INFO:root:
+ ** total_loss = 0.010600029490888119!
+
+INFO:root:
+ ***** epoch : 4 result save to json done! 
+
+INFO:root:
+ epoch:4 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:5 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 128
+INFO:root:param : hidden_size_linear --- value: 128
+INFO:root:param : num_layers --- value: 7
+INFO:root:param : dropout_linear --- value: 0.5
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 1e-05
+INFO:root:param : optimize_method --- value: RMSprop
+INFO:root:param : loss --- value: BCEWithLogitsLoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.4607686996459961
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.5392313003540039 ***** 
+
+INFO:root:
+ avg_cost = 0.5392313003540039!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 63.1578947368421% ---> avg_loss (test) -> 0.023433057591319084! ** 
+
+INFO:root:
+ ** total_loss = 0.023433057591319084!
+
+INFO:root:
+ ***** epoch : 5 result save to json done! 
+
+INFO:root:
+ epoch:5 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:6 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 128
+INFO:root:param : hidden_size_linear --- value: 32
+INFO:root:param : num_layers --- value: 5
+INFO:root:param : dropout_linear --- value: 0.4
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : optimize_method --- value: RMSprop
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21646927297115326
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.7835307121276855 ***** 
+
+INFO:root:
+ avg_cost = 0.7835307121276855!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 63.1578947368421% ---> avg_loss (test) -> 0.00949150137603283! ** 
+
+INFO:root:
+ ** total_loss = 0.00949150137603283!
+
+INFO:root:
+ ***** epoch : 6 result save to json done! 
+
+INFO:root:
+ epoch:6 : Single epoch finished! 
+
+
+
+
+
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:7 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 64
+INFO:root:param : hidden_size_linear --- value: 64
+INFO:root:param : num_layers --- value: 1
+INFO:root:param : dropout_linear --- value: 0.4
+INFO:root:param : dropout --- value: 0.4
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 1e-05
+INFO:root:param : optimize_method --- value: Adagrad
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24702462553977966
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	Model save sucessful!
+
+INFO:root:
+	 **** AVG_Cost in 1 epoch = 0.752975344657898 ***** 
+
+INFO:root:
+ avg_cost = 0.752975344657898!
+
+INFO:root:
+**** train finished! now testing ....
+
+INFO:root: 
+	 ** Test Result: accuary -> 57.89473684210527% ---> avg_loss (test) -> 0.012403531931340694! ** 
+
+INFO:root:
+ ** total_loss = 0.012403531931340694!
+
+INFO:root:
+ ***** epoch : 7 result save to json done! 
+
+INFO:root:
+ epoch:7 : Single epoch finished! 
+
+
+
+
+
+

@@ -207,7 +207,7 @@ class trainer(preprocess.data_handler):
         if save_path != None:
             torch.save(self._best_model_state, f'{main._args.model_save_path}/{main._args.date_time}.pth')
         else:    
-            torch.save(self._best_model_state, f'{save_path}/{main._args.date_time}.pth')
+            torch.save(self._best_model_state, f'{save_path}/{main._args.date_time}model.pth')
         logging.info(f"\n\tModel save sucessful!\n")
 
 
@@ -353,8 +353,6 @@ class trainer(preprocess.data_handler):
             }
 
 
-
-
             preprocess.data_handler.initialize(batch_size=param_selected['batch_size'])
 
             print(f"\n --------epoch:{epoch_id} :param random choice--------\n")
@@ -364,7 +362,7 @@ class trainer(preprocess.data_handler):
                     raise ValueError
                 else:
                     if key == "batch_size":
-                        param_selected["batch_size"] = 4
+                        param_selected["batch_size"] = 2
                         continue
                     param_selected[key] = random.choice(item)
                     print(f"param : {key} --- value: {param_selected[key]}")
@@ -418,6 +416,7 @@ class trainer(preprocess.data_handler):
             
             try:
                 avg_cost = self.train(batch_size = param_selected['batch_size'], new_folder_path=new_folder_path)
+                logging.info(f"\n avg_cost = {avg_cost}!\n")
             except Exception as e:
                 print(f"\n ERROR ON Training: {e} \n")
                 logging.info(f"\n ERROR ON Training: {e} \n")
@@ -425,19 +424,28 @@ class trainer(preprocess.data_handler):
                 logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
 
 
-            param_selected['train_loss'] = avg_cost
+            # param_selected['train_loss'] = avg_cost
             logging.info(f"\n**** train finished! now testing ....\n")
 
             # now test
             total_loss = self.test(batch_size= param_selected['batch_size'])
-            param_selected['test_loss'] = total_loss.detach().cpu().numpy()
+            logging.info(f"\n ** total_loss = {total_loss}!\n")
+            # param_selected['test_loss'] = total_loss.cpu().numpy()
             # record testing result
-            json_result = json.dumps(param_selected)
+            try:
+                json_result = json.dumps(param_selected)
+            except Exception:
+                json_result = None
+                pass
             
-            with open('data.json', 'w') as f:
-                json.dump(json_result, f, indent=4)
-                logging.info(f"\n ***** epoch : {epoch_id} result save to json done! \n")
-            logging.info(f"\n epoch:{epoch_id} : Single epoch finished! \n\n\n\n\n\n")
+            if json_result != None:
+                with open('data.json', 'w') as f:
+                    json.dump(json_result, f, indent=4)
+                    logging.info(f"\n ***** epoch : {epoch_id} result save to json done! \n")
+                logging.info(f"\n epoch:{epoch_id} : Single epoch finished! \n\n\n\n\n\n")
+            else:
+                logging.info(f"\nERROR! some error occur in json saver, now pass this part...\n")
+                pass
             
 
 
