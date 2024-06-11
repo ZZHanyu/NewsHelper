@@ -1,0 +1,140 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 32
+INFO:root:param : hidden_size_linear --- value: 256
+INFO:root:param : num_layers --- value: 7
+INFO:root:param : dropout_linear --- value: 0.5
+INFO:root:param : dropout --- value: 0.5
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : batch_size --- value: 64
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-11T18:36:00.513087', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'load_word2vec_format'}
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25372764468193054
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25185754895210266
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2503625154495239
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25123661756515503
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25011175870895386
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25041159987449646
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2471218854188919
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.250244140625
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2504640221595764
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24808639287948608
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.250963032245636
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24540738761425018
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24858416616916656
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2529110014438629
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2506592273712158
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2550441324710846
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2516835629940033
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2466306835412979
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24559858441352844
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24919189512729645
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24769844114780426
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25112593173980713
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2487165927886963
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2559441328048706
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2533625662326813
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24993585050106049
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24969139695167542
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.248589888215065
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2522971034049988
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2505078911781311
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2483121007680893
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2494681179523468
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24987611174583435
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.252780020236969
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24772225320339203
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24972063302993774
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25233763456344604
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2485392838716507
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24853414297103882
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25454357266426086
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2493250072002411
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2477918118238449
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2462497502565384
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2492070347070694
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2467217594385147
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24724765121936798
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25499051809310913
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.256104975938797
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25604626536369324
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2469225823879242
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25000280141830444
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2499231994152069
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25149795413017273
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2537238895893097
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24941134452819824
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24914492666721344
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25194495916366577
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25094571709632874
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2541219890117645
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25151222944259644
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2478153258562088
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2536661624908447
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2505071759223938
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25149476528167725
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2516307532787323
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24816112220287323
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2478136122226715
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24975943565368652
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2508704364299774
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24891571700572968
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25021374225616455
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24970375001430511
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2500872313976288
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24977441132068634
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24797627329826355
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25347191095352173
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2498183399438858
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2508111894130707
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.250622421503067
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2473634034395218
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24598047137260437
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2503707706928253
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24825066328048706
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25006335973739624
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2522629499435425
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24927584826946259
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24879251420497894
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.251758873462677
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24487517774105072
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2501872181892395
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2482004016637802
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25071245431900024
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24573905766010284
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.251676082611084
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.257215678691864
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24872857332229614
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.253329336643219
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24845151603221893
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2521853446960449
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2530325949192047
+INFO:root:
+ ERROR ON Training: File /root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:31_0 cannot be opened. 
+

@@ -5,10 +5,17 @@ from utils import topicModel
 from utils import network
 
 import multiprocessing
+import logging
+from datetime import datetime, timedelta
+import time
 
 
 # Start of whole program:
 if __name__ == "__main__":
+    start_time = time.time()
+    logging.basicConfig(filename=f'/root/autodl-tmp/NewsHelper/log/{datetime.now().strftime("%Y_%m_%d_%H:%M")}.log', level=logging.INFO)
+    logging.info('\nStarted Logging...\n')
+
     multiprocessing.freeze_support()
     # abstract class init
     main.initialize()
@@ -25,3 +32,7 @@ if __name__ == "__main__":
     # # topic modeling
     # tp_model = topicModel.LDA_topic_model()
     # tp_model.forward()
+    end_time = time.time()
+
+    logging.info(f"\n ** Total time cost = {end_time - start_time} s! \n")
+    logging.info('\n----------------------- End loging -----------------------\n')

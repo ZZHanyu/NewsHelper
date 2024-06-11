@@ -162,6 +162,16 @@ class configs(preprocess.data_handler):
 
 
 
+
+
+
+
+
+
+
+
+
+
 class trainer(preprocess.data_handler):
     '''
         Our main train method
@@ -179,6 +189,9 @@ class trainer(preprocess.data_handler):
         self.config = configs()    
         self.diagram_drawer = diagram_drawer()
         # self.smac_model = True
+        self.save_folder = main._args.model_save_path + main._args.date_time
+
+
         print("\nTrainer inital succefully!\n")       
 
 
@@ -189,25 +202,17 @@ class trainer(preprocess.data_handler):
             print(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
 
 
-    def save_model(self):
-        if self._flag:
-            self._best_model_state = copy.deepcopy(self.model.state_dict())
-        else:
-            torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
-
-
-    def force_save_model(self):
+    def save_model(self, save_path = None):
         self._best_model_state = copy.deepcopy(self.model.state_dict())
-        torch.save(self._best_model_state, f'{main._args.model_save_path}model{main._args.date_time}.pth')
-        logging.info("Force Saving Sucessful!\n")
+        if save_path != None:
+            torch.save(self._best_model_state, f'{main._args.model_save_path}/{main._args.date_time}.pth')
+        else:    
+            torch.save(self._best_model_state, f'{save_path}/{main._args.date_time}.pth')
+        logging.info(f"\n\tModel save sucessful!\n")
 
 
 
-    def _mini_batch(self, 
-                    batch: list)-> None:
-        
-        logging.info("*** \t batch model = True ")
-        print("*** \t batch model = True ")
+    def _mini_batch(self, batch: list)-> None:
 
         target_set = []
         feature = []
@@ -237,10 +242,8 @@ class trainer(preprocess.data_handler):
     
 
 
-    def _single_step(self, 
-                     batch:list) -> float:
-        
-        logging.info("*** \t batch model = False")
+    def _single_step(self, batch:list) -> float:
+
         total_loss = 0
 
         for data_idx in tqdm(range(len(batch)), desc="Single Step Train", leave=False):
@@ -327,13 +330,13 @@ class trainer(preprocess.data_handler):
             "dropout": [0.1, 0.2, 0.3, 0.4, 0.5],
             "activation_linear" : ["tanh", "relu", "LeakyReLU"],
             "learn_rate": [1e-5, 1e-4, 1e-3, 1e-2],
-            "batch_size": [16, 32, 64, 128],
+            "batch_size": [8 ,16, 24, 32, 48, 64],
             "optimize_method": ["Adam", "SGD", "Adagrad", "RMSprop"],
             "loss": ["BCEWithLogitsLoss", "MSELoss"]
         }
 
 
-        for _ in tqdm(range(self._args.num_epoches), desc="Epoch No.", leave=True):
+        for epoch_id in tqdm(range(self._args.num_epoches), desc="Epoch No.", leave=True):
             param_selected = {
                 "hidden_size": None,
                 "hidden_size_linear": None,
@@ -349,14 +352,20 @@ class trainer(preprocess.data_handler):
                 "test_loss":None
             }
 
+
+
+
             preprocess.data_handler.initialize(batch_size=param_selected['batch_size'])
 
-            print("\n --------param random choice--------\n")
-            logging.info("\n --------param random choice--------\n")
+            print(f"\n --------epoch:{epoch_id} :param random choice--------\n")
+            logging.info(f"\n --------epoch:{epoch_id} : param random choice--------\n")
             for key, item in param_dict.items():
                 if param_selected.get(key, False):
                     raise ValueError
                 else:
+                    if key == "batch_size":
+                        param_selected["batch_size"] = 4
+                        continue
                     param_selected[key] = random.choice(item)
                     print(f"param : {key} --- value: {param_selected[key]}")
                     logging.info(f"param : {key} --- value: {param_selected[key]}")
@@ -398,37 +407,49 @@ class trainer(preprocess.data_handler):
                     raise ModuleNotFoundError
             
 
+            # made a folder to store model .pth and config parameter
+            new_folder_path = f'{self.save_folder}_{epoch_id}'
+            os.mkdir(path=new_folder_path)
+            with open(f'{new_folder_path}/config.json', 'w+') as f:
+                json.dump(param_selected, f)
+
+
             logging.info(f"\n**** inital done, now start training ....\n")
             
             try:
-                avg_cost = self.train(batch_size = param_selected['batch_size'])
+                avg_cost = self.train(batch_size = param_selected['batch_size'], new_folder_path=new_folder_path)
             except Exception as e:
                 print(f"\n ERROR ON Training: {e} \n")
                 logging.info(f"\n ERROR ON Training: {e} \n")
-                self.force_save_model()
+                self.save_model(new_folder_path)
+                logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
+
+
             param_selected['train_loss'] = avg_cost
             logging.info(f"\n**** train finished! now testing ....\n")
 
             # now test
             total_loss = self.test(batch_size= param_selected['batch_size'])
-            param_selected['test_loss'] = total_loss
+            param_selected['test_loss'] = total_loss.detach().cpu().numpy()
             # record testing result
             json_result = json.dumps(param_selected)
+            
             with open('data.json', 'w') as f:
                 json.dump(json_result, f, indent=4)
-                logging.info(f"\n ***** save to json done! \n")
-            logging.info(f"\n Single epoch finished! \n")
+                logging.info(f"\n ***** epoch : {epoch_id} result save to json done! \n")
+            logging.info(f"\n epoch:{epoch_id} : Single epoch finished! \n\n\n\n\n\n")
             
 
 
 
 
-    def train(self, batch_size)-> float:    
+    def train(self, batch_size, new_folder_path)-> float:    
         '''
             Our train method:
             1. SGD: every step optimized
             2. mini-batch: after whole batch then updated
         '''
+
         single_epoch_bar = tqdm(total=preprocess.data_handler._csv_total_len, desc="inside single epoch", leave=False)        
         self.model.train()
 
@@ -442,6 +463,10 @@ class trainer(preprocess.data_handler):
         # Version 2: Using data generator to handle raw data only when trainer need them 
         try:
             while True:
+                # a cuda memory release module:
+                if main._device == torch.device("cuda"):
+                    torch.cuda.empty_cache()
+
                 single_epoch_bar.update(batch_size)
                 single_chunk_tuple = next(data_generator, None)
                 single_chunk_idx = single_chunk_tuple[0]
@@ -449,36 +474,40 @@ class trainer(preprocess.data_handler):
                 # epoch error, stop and save
                 if not isinstance(single_chunk, list):
                     break
-                
                 match main._args.batch_model:
                     case True:
                         batch_loss = self._mini_batch(batch=single_chunk)
-                        print(f"\n batch loss = {batch_loss}\n")
                         avg_cost += (1 - batch_loss)
+                        print(f"\n batch loss = {batch_loss}\n")
+                        logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {batch_loss}")
                     case False:
                         step_loss = self._single_step(batch=single_chunk)
-                        print(f"\n single loss = {step_loss}\n")
                         avg_cost += (1 - step_loss)
+                        print(f"\n single loss = {step_loss}\n")
+                        logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {step_loss}")
                     case _:
                         raise KeyError
                 
-                with torch.no_grad():
-                    if not self.diagram_drawer.flag:
-                        # need init draw helper
-                        self.diagram_drawer.init_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
-                    else:
-                        self.diagram_drawer.update_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
+                # with torch.no_grad():
+                #     if not self.diagram_drawer.flag:
+                #         # need init draw helper
+                #         self.diagram_drawer.init_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
+                #     else:
+                #         self.diagram_drawer.update_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
                 
                 count += 1
         except Exception as e:
             print(f"\n -- Trainer Error! error is = \t{e}\n")
-            self.force_save_model()
+            self.save_model(new_folder_path)
         
-        print("\n** ALL DONE, NOW SAVEING MODE! **\n")        
-        self.save_model()
+
+        print("\n** 1 epoch Done, Now SAVEING model! **\n")        
+        self.save_model(new_folder_path)
         print("\nMODEL SAVED!\n")
+
         avg_cost = avg_cost / count
-        print(f"\n\t **** AVG_Cost = {avg_cost} ***** \n")
+        print(f"\n\t **** AVG_Cost in 1 epoch = {avg_cost} ***** \n")
+        logging.info(f"\n\t **** AVG_Cost in 1 epoch = {avg_cost} ***** \n")
         single_epoch_bar.close()
         
         return avg_cost
@@ -488,7 +517,6 @@ class trainer(preprocess.data_handler):
         self.model.eval()
         total_sample = 0
         test_true = 0 
-        test_result = 0
 
         data_generator = super().get_generator(batch_size = batch_size)
 
@@ -505,11 +533,22 @@ class trainer(preprocess.data_handler):
                 feature = torch.tensor(single_chunk[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
                 target = torch.tensor([single_chunk[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
                 y_pred = self.model.forward(feature)
+                
+                if y_pred >= 0.5 and target[0] == 1:
+                    test_true += 1
+                elif y_pred <= 0.5 and target[0] == 0:
+                    test_true += 1
+                else:
+                    continue
+                
                 loss = self.loss(y_pred, target)
                 total_loss += loss
                 
         total_loss /= 20
-        print(f" \n\t ** Test message: avg_loss (test) is {total_loss}! ** \n")
+        total_accuary = test_true / total_sample
+        print(f" \n\t ** Test message: accuary -> {total_accuary * 100}% ---> avg_loss (test) -> {total_loss}! ** \n")
+        logging.info(f" \n\t ** Test Result: accuary -> {total_accuary * 100}% ---> avg_loss (test) -> {total_loss}! ** \n")
+
         return total_loss
         {
             # version 1: using old-school function, which store whole tokenzied dataset
@@ -530,7 +569,7 @@ class trainer(preprocess.data_handler):
             #                 case _:
             #                     raise KeyError
             # except Exception as e:
-            #     self.force_save_model()
+            #     self.save_model()
             #     print(f"\n * ERROR {e}! But model have been saved! \n")
         }
         

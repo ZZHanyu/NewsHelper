@@ -200,7 +200,7 @@ class data_handler_iterator(data_handler):
     '''
 
     def __init__(self) -> None:
-        print("Start iterator building...\n")
+        print("\nStart iterator building...\n")
         super().__init__()
         print("\nIterator building Sucessfully!.\n")
 
@@ -219,9 +219,7 @@ class data_handler_iterator(data_handler):
         # if not isinstance(chunk, pd.DataFrame):
         #     raise StopIteration
         
-        for chunk_idx, chunk in enumerate(super()._chunks):
-            print(chunk_idx)
-        
+        for chunk_idx, chunk in enumerate(super()._chunks):        
             chunk_tokenized = [] # initiaize and re-initiaze
             # STEP 1: Remove empty line
             chunk = super()._remove_empty_line(single_chunk=chunk)

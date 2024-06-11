@@ -39,7 +39,7 @@ class main(ABC):
     def initialize(cls):
         cls._parser()
         cls.__select_device()
-        cls._inital_logging()
+        # cls._inital_logging()
 
 
     @classmethod
@@ -82,7 +82,7 @@ class main(ABC):
         parser.add_argument("--logging_path", 
                             type=str,
                             default="./log/", 
-                            #default="/Users/taotao/Documents/GitHub/FYP/log/",
+                            #default="/Users/taotao/Documents/GitHub/FYP/log/","autodl-tmp/NewsHelper/log"
                             help="log file recorded path")
         parser.add_argument("--pretrianed_emb_path", 
                             type=str, 
@@ -94,7 +94,7 @@ class main(ABC):
                             help="pretrained embedding model name from gensim")
         parser.add_argument("--model_save_path", 
                             type=str, 
-                            default="./trained_model", 
+                            default="/root/autodl-tmp/NewsHelper/trained_model/", 
                             help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
@@ -150,7 +150,7 @@ class main(ABC):
 
     @classmethod
     def _inital_logging(cls):
-        logging.basicConfig(filename=f'{cls._args.logging_path}{cls._args.date_time}', level=logging.INFO)
+        logging.basicConfig(filename=f'{cls._args.logging_path}{cls._args.date_time}.log', level=logging.INFO)
         logging.info('Started Logging...\n')
     
     @staticmethod

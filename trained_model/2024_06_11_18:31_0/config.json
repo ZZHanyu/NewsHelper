@@ -1,0 +1,1 @@
+{"hidden_size": 32, "hidden_size_linear": 256, "num_layers": 7, "dropout_linear": 0.5, "activation_linear": "tanh", "dropout": 0.5, "learn_rate": 0.001, "batch_size": 64, "optimize_method": "Adam", "loss": "MSELoss", "train_loss": null, "test_loss": null}

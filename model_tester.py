@@ -27,6 +27,7 @@ def test_all_model():
     ).to(preprocess.data_handler._device)
 
     model_path = '/Users/taotao/Documents/GitHub/FYP/trained_model/'
+    
     data_generator = preprocess.data_handler.get_generator()
 
 
@@ -88,7 +89,8 @@ def test_specific_model():
     data_generator = preprocess.data_handler.get_generator()
 
 
-    full_path = "/Users/taotao/Documents/GitHub/FYP/trained_model/model2024_04_22.pth"
+    full_path = "/root/autodl-tmp/NewsHelper/trained_modelmodel2024_06_11_15:16.pth"
+    #"/Users/taotao/Documents/GitHub/FYP/trained_model/model2024_04_22.pth"
     checkpoint = torch.load(full_path)
     try:
         model.load_state_dict(checkpoint)
