@@ -207,6 +207,8 @@ class trainer(preprocess.data_handler):
                     batch: list)-> None:
         
         logging.info("*** \t batch model = True ")
+        print("*** \t batch model = True ")
+
         target_set = []
         feature = []
         batch_size = len(batch)
@@ -225,11 +227,12 @@ class trainer(preprocess.data_handler):
 
         y_pred = self.model.forward_with_batch(tensor_data=pad_datas, # feature
                                                 batch_size=batch_size)
+        y_pred_reshape = y_pred.reshape(-1)
         self.optimizer.zero_grad() # clean all grad
-        loss = self.loss(y_pred, target_set)
+        loss = self.loss(y_pred_reshape, target_set)
         loss.backward()
         self.optimizer.step()
-
+        
         return loss
     
 
@@ -240,7 +243,7 @@ class trainer(preprocess.data_handler):
         logging.info("*** \t batch model = False")
         total_loss = 0
 
-        for data_idx in tqdm(range(len(batch)), desc="SGD", leave= False):
+        for data_idx in tqdm(range(len(batch)), desc="Single Step Train", leave=False):
             feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
             y_pred = self.model.forward(feature)
@@ -257,6 +260,7 @@ class trainer(preprocess.data_handler):
         
 
 
+    
     
     def init_train(self, config: Configuration, seed: int = 0, budget: int = 25):
         '''
@@ -348,16 +352,17 @@ class trainer(preprocess.data_handler):
             preprocess.data_handler.initialize(batch_size=param_selected['batch_size'])
 
             print("\n --------param random choice--------\n")
+            logging.info("\n --------param random choice--------\n")
             for key, item in param_dict.items():
                 if param_selected.get(key, False):
                     raise ValueError
                 else:
                     param_selected[key] = random.choice(item)
                     print(f"param : {key} --- value: {param_selected[key]}")
+                    logging.info(f"param : {key} --- value: {param_selected[key]}")
 
 
             self.normalize = nn.BatchNorm1d(num_features=8).to(main._device)
-
             learn_rate = param_selected['learn_rate']
 
             self.model = LstmNet(
@@ -388,27 +393,37 @@ class trainer(preprocess.data_handler):
                 case 'BCEWithLogitsLoss':
                     self.loss = nn.BCEWithLogitsLoss()
                 case 'MSELoss':
-                    self.loss = nn.MSELoss()
+                    self.loss = nn.MSELoss() 
                 case _:
                     raise ModuleNotFoundError
             
+
+            logging.info(f"\n**** inital done, now start training ....\n")
             
-            avg_cost = self.train(batch_size = param_selected['batch_size'])
+            try:
+                avg_cost = self.train(batch_size = param_selected['batch_size'])
+            except Exception as e:
+                print(f"\n ERROR ON Training: {e} \n")
+                logging.info(f"\n ERROR ON Training: {e} \n")
+                self.force_save_model()
             param_selected['train_loss'] = avg_cost
+            logging.info(f"\n**** train finished! now testing ....\n")
 
             # now test
             total_loss = self.test(batch_size= param_selected['batch_size'])
             param_selected['test_loss'] = total_loss
-        
-        json_result = json.dump(param_selected)
-        with open('data.json', 'w') as f:
-            json.dump(json_result, f, indent=4)
+            # record testing result
+            json_result = json.dumps(param_selected)
+            with open('data.json', 'w') as f:
+                json.dump(json_result, f, indent=4)
+                logging.info(f"\n ***** save to json done! \n")
+            logging.info(f"\n Single epoch finished! \n")
+            
 
 
 
 
-    def train(self, batch_size)-> float:  
-        
+    def train(self, batch_size)-> float:    
         '''
             Our train method:
             1. SGD: every step optimized
@@ -437,11 +452,13 @@ class trainer(preprocess.data_handler):
                 
                 match main._args.batch_model:
                     case True:
-                        step_loss = self._mini_batch(batch=single_chunk)
-                        print(f"\n single loss = {step_loss}\n")
+                        batch_loss = self._mini_batch(batch=single_chunk)
+                        print(f"\n batch loss = {batch_loss}\n")
+                        avg_cost += (1 - batch_loss)
                     case False:
                         step_loss = self._single_step(batch=single_chunk)
                         print(f"\n single loss = {step_loss}\n")
+                        avg_cost += (1 - step_loss)
                     case _:
                         raise KeyError
                 
@@ -453,7 +470,6 @@ class trainer(preprocess.data_handler):
                         self.diagram_drawer.update_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
                 
                 count += 1
-                avg_cost += (1 - step_loss)
         except Exception as e:
             print(f"\n -- Trainer Error! error is = \t{e}\n")
             self.force_save_model()
@@ -462,6 +478,7 @@ class trainer(preprocess.data_handler):
         self.save_model()
         print("\nMODEL SAVED!\n")
         avg_cost = avg_cost / count
+        print(f"\n\t **** AVG_Cost = {avg_cost} ***** \n")
         single_epoch_bar.close()
         
         return avg_cost
@@ -469,6 +486,7 @@ class trainer(preprocess.data_handler):
 
     def test(self, batch_size):
         self.model.eval()
+        total_sample = 0
         test_true = 0 
         test_result = 0
 
@@ -480,14 +498,19 @@ class trainer(preprocess.data_handler):
             single_chunk_tuple = next(data_generator, None)
             single_chunk_idx = single_chunk_tuple[0]
             single_chunk = single_chunk_tuple[1]
-            step_loss = self._single_step(batch=single_chunk)
-            total_loss += step_loss
-        
+            total_sample += len(single_chunk)
+            total_loss = 0
+            
+            for data_idx in tqdm(range(len(single_chunk)), desc="Single Step Train", leave=False):
+                feature = torch.tensor(single_chunk[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
+                target = torch.tensor([single_chunk[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
+                y_pred = self.model.forward(feature)
+                loss = self.loss(y_pred, target)
+                total_loss += loss
+                
         total_loss /= 20
-
+        print(f" \n\t ** Test message: avg_loss (test) is {total_loss}! ** \n")
         return total_loss
- 
-        
         {
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
@@ -703,7 +726,7 @@ class LstmNet(nn.Module, model.module):
         c0 = torch.randn(2*self.num_layers, batch_size , self.hidden_size, device=main._device, dtype=torch.float32)
         h, _ = self.lstm(tensor_data, (h0, c0))
         h, _ = pad_packed_sequence(h)
-        pred = F.sigmoid(self.linears(h[-1, : , :]))
+        pred = F.sigmoid(self.linears(h[-1, :]))
         return pred
         
 

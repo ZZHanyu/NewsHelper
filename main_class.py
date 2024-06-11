@@ -39,6 +39,7 @@ class main(ABC):
     def initialize(cls):
         cls._parser()
         cls.__select_device()
+        cls._inital_logging()
 
 
     @classmethod
@@ -79,8 +80,9 @@ class main(ABC):
                             default=datetime.now().strftime("%Y_%m_%d_%H:%M"), 
                             help="date_form_Y_M_D_h_m")
         parser.add_argument("--logging_path", 
-                            type=str, 
-                            default="/Users/taotao/Documents/GitHub/FYP/log/",
+                            type=str,
+                            default="./log/", 
+                            #default="/Users/taotao/Documents/GitHub/FYP/log/",
                             help="log file recorded path")
         parser.add_argument("--pretrianed_emb_path", 
                             type=str, 
@@ -92,11 +94,11 @@ class main(ABC):
                             help="pretrained embedding model name from gensim")
         parser.add_argument("--model_save_path", 
                             type=str, 
-                            default="/Users/taotao/Documents/GitHub/FYP/trained_model", 
+                            default="./trained_model", 
                             help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
-                             default=False, 
+                             default=True, 
                              help="whether using batch during train step")
         parser.add_argument("--LDA_only", 
                             type=bool, 
@@ -104,11 +106,11 @@ class main(ABC):
                             help="whether start from train")
         parser.add_argument("--LDA_model_path", 
                             type=str, 
-                            default="/Users/taotao/Documents/GitHub/FYP/LDA_Model/", 
+                            default="./LDA_Model/", 
                             help="LDA model path")
         parser.add_argument("--num_epoches", 
                             type=int, 
-                            default=10, 
+                            default=20, 
                             help="epoch means train thourgh a whole dataset")
         parser.add_argument(
             "-date",
@@ -143,12 +145,13 @@ class main(ABC):
         else:
             cls._device = torch.device("cpu")
         logging.info(f"\n *** Devices selected = {cls._device} ! \n")
+        print(f"\n\t***** Device = {cls._device}!\n")
 
 
     @classmethod
     def _inital_logging(cls):
-        logging.basicConfig(filename=cls._args.logging_path + f'{cls._args.date_time}', level=logging.INFO)
-
+        logging.basicConfig(filename=f'{cls._args.logging_path}{cls._args.date_time}', level=logging.INFO)
+        logging.info('Started Logging...\n')
     
     @staticmethod
     def decorated_logging(func):

@@ -49,6 +49,8 @@ class data_handler(main):
 
     @classmethod
     def reset(cls, batch_size = None):
+        if batch_size == None:
+            batch_size = cls._args.chunk_size
         cls._dataloader(batch_size = batch_size)
         
 

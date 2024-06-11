@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - pip
   - abseil-cpp=20220623.0=he4e09e4_6
   - absl-py=2.1.0=pyhd8ed1ab_0
   - accelerate=0.31.0=pyhd8ed1ab_0
