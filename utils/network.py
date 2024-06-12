@@ -23,6 +23,7 @@ import warnings
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import random
+import gc
 
 # AutoML SMAC: Auto Searching Hyperparameters
 from ConfigSpace import (
@@ -422,6 +423,7 @@ class trainer(preprocess.data_handler):
                 logging.info(f"\n ERROR ON Training: {e} \n")
                 self.save_model(new_folder_path)
                 logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
+                continue
 
 
             # param_selected['train_loss'] = avg_cost
@@ -473,6 +475,7 @@ class trainer(preprocess.data_handler):
             while True:
                 # a cuda memory release module:
                 if main._device == torch.device("cuda"):
+                    gc.collect()
                     torch.cuda.empty_cache()
 
                 single_epoch_bar.update(batch_size)

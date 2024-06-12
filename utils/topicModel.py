@@ -17,6 +17,7 @@ import logging
 import os
 import re
 import time
+import json
 
 from utils import model
 from main_class import main
@@ -29,12 +30,31 @@ class LDA_topic_model(model.module, preprocess.data_handler):
     def __init__(self) -> None:
         model.module.__init__(self)
         preprocess.data_handler.initialize()
-        self.classify_model = network.LstmNet(  hidden_size = 128,
-                                                hidden_size_linear = 64,
-                                                num_layers = 2,
-                                                dropout = 0,
-                                                dropout_linear = 0,
-                                                activation_linear = 'LeakyReLU').to(self._device)
+        self.config_path = '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46_0'
+        self.config_dict = None
+        with open(f'{self.config_path}/config.json') as conf:
+            self.config_dict = json.load(conf)
+        self.model_path = '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46.pth'
+        
+        # # Default config
+        # self.classify_model = network.LstmNet(  hidden_size = 128,
+        #                                         hidden_size_linear = 64,
+        #                                         num_layers = 2,
+        #                                         dropout = 0,
+        #                                         dropout_linear = 0,
+        #                                             activation_linear = 'LeakyReLU').to(self._device)
+    
+
+
+        # load config
+        self.classify_model = network.LstmNet(
+            hidden_size = self.config_dict['hidden_size'],
+            hidden_size_linear = self.config_dict['hidden_size_linear'],
+            num_layers = self.config_dict['num_layers'],
+            dropout = self.config_dict['dropout'],
+            dropout_linear = self.config_dict['dropout_linear'],
+            activation_linear = self.config_dict['activation_linear']
+        ).to(self._device)
 
         self.data_generator = preprocess.data_handler.get_generator()
 
@@ -56,7 +76,7 @@ class LDA_topic_model(model.module, preprocess.data_handler):
 
         lda = LdaModel(
             common_corpus, 
-            num_topics=10, 
+            num_topics=5, 
             alpha='auto', 
             eval_every=5,
             passes=20,
@@ -84,28 +104,42 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             else:
                 lda = LdaModel.load(lda_path)
         else:
+            lda = self._train_LDA()
+            self._save_lda(lda)
             raise FileNotFoundError
 
-
         self._init_classification_model()
-        
+
+
         topic_model_vector = []
-        while True:
-            real_news_list = self._classification()
-            if real_news_list == None:
-                break
-            realnews_corpus = [(text, common_dictionary.doc2bow(text.split())) for text in real_news_list]
-            for unseen_text in realnews_corpus:
-                topic_model_vector.append((unseen_text[0], lda[unseen_text[1]]))
-            # lda.update(realnews_corpus)
-            print("\nRESULT:\n")
-            for i in topic_model_vector:
-                print(f"\n{i}\n")
-            time.sleep(2)
+        
+        # # total dataset
+        # while True:
+        #     real_news_list = self._classification()
+        #     if real_news_list == None:
+        #         break
+        #     realnews_corpus = [(text, common_dictionary.doc2bow(text.split())) for text in real_news_list]
+        #     for unseen_text in realnews_corpus:
+        #         topic_model_vector.append((unseen_text[0], lda[unseen_text[1]]))
+        #     # lda.update(realnews_corpus)
+        #     print("\nRESULT:\n")
+        #     for i in topic_model_vector:
+        #         print(f"\n{i}\n")
+        #     time.sleep(2)
+        
+        # single dataset
+        real_news_list = self._classification()
+        realnews_corpus = [(text, common_dictionary.doc2bow(text.split())) for text in real_news_list]
+        for unseen_text in realnews_corpus:
+            topic_model_vector.append((unseen_text[0], lda[unseen_text[1]]))
+        lda.update(realnews_corpus)
+        print("\nRESULT:\n")
+        for i in topic_model_vector:
+            print(f"\n{i}\n")
 
         return topic_model_vector
 
-    
+
     def _save_lda(self, lda):
         path = f"{self._args.LDA_model_path}lda_model{self._args.date}"
         lda.save(path)
@@ -129,7 +163,24 @@ class LDA_topic_model(model.module, preprocess.data_handler):
         self.classify_model.eval()
         
         single_chunk = next(preprocess.data_handler._chunks, None)
-        if isinstance(single_chunk, pd.DataFrame):
+        # if isinstance(single_chunk, pd.DataFrame):
+        #     single_chunk = preprocess.data_handler._remove_empty_line(single_chunk)
+        #     for row in tqdm(single_chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
+        #         temp = preprocess.data_handler._string_handler(raw_text=row[2] + row[3]), row[4]
+        #         feature = torch.tensor(temp[0], dtype=torch.float32, device=main._device, requires_grad=True)
+        #         target = torch.tensor([temp[1]], dtype=torch.float32, device=main._device, requires_grad=True)
+        #         y_pred = self.classify_model.forward(feature)
+        #         if y_pred >= 0.5 and target[0] == 1:
+        #             real_news_list.append(row[2]+row[3])
+        #         else:
+        #             continue
+        #     return real_news_list
+        # else:
+        #     return None
+
+
+        # upper bound:
+        for _ in tqdm(range(100),desc="extra text training for LDA...", leave=True):
             single_chunk = preprocess.data_handler._remove_empty_line(single_chunk)
             for row in tqdm(single_chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
                 temp = preprocess.data_handler._string_handler(raw_text=row[2] + row[3]), row[4]
@@ -140,9 +191,7 @@ class LDA_topic_model(model.module, preprocess.data_handler):
                     real_news_list.append(row[2]+row[3])
                 else:
                     continue
-            return real_news_list
-        else:
-            return None
+        return real_news_list
             
         
                     

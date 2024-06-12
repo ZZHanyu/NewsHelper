@@ -1,0 +1,1 @@
+{"hidden_size": 128, "hidden_size_linear": 32, "num_layers": 6, "dropout_linear": 0.1, "activation_linear": "LeakyReLU", "dropout": 0.4, "learn_rate": 1e-05, "batch_size": 2, "optimize_method": "RMSprop", "loss": "BCEWithLogitsLoss", "train_loss": null, "test_loss": null}

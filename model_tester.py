@@ -7,6 +7,8 @@ import os
 import torch
 from tqdm import tqdm
 import pandas as pd
+import json
+
 
 '''
     A tool-kit used for testing existed trained model
@@ -26,7 +28,10 @@ def test_all_model():
         activation_linear = 'LeakyReLU'
     ).to(preprocess.data_handler._device)
 
-    model_path = '/Users/taotao/Documents/GitHub/FYP/trained_model/'
+    model_path = "/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_19:23_0"
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:19.pth' size not match
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_23:31.pth' accuary low
+    #'/Users/taotao/Documents/GitHub/FYP/trained_model/'
     
     data_generator = preprocess.data_handler.get_generator()
 
@@ -78,19 +83,37 @@ def test_specific_model():
     main.initialize()
     preprocess.data_handler.initialize()
 
+    # load CONFIG file:
+    config_path =  '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46_0'
+    #'/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:19_0'
+    # '/root/autodl-tmp/NewsHelper/trained_modelmodel2024_06_11_15:16.pth' cannot no config
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46_0'
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_23:31_0'
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:19_0'
+    with open(f'{config_path}/config.json') as conf:
+        config_dict = json.load(conf)
+
+
     model = network.LstmNet(
-        hidden_size = 128,
-        hidden_size_linear = 64,
-        num_layers = 2,
-        dropout = 0,
-        dropout_linear = 0,
-        activation_linear = 'LeakyReLU'
+        hidden_size = config_dict['hidden_size'],
+        hidden_size_linear = config_dict['hidden_size_linear'],
+        num_layers = config_dict['num_layers'],
+        dropout = config_dict['dropout'],
+        dropout_linear = config_dict['dropout_linear'],
+        activation_linear = config_dict['activation_linear']
     ).to(preprocess.data_handler._device)
     data_generator = preprocess.data_handler.get_generator()
 
-
-    full_path = "/root/autodl-tmp/NewsHelper/trained_modelmodel2024_06_11_15:16.pth"
+    # .pth model path
+    full_path = '/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46.pth'
+    # '/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:19.pth' accuary = 0.4821246169560776
+    # '/root/autodl-tmp/NewsHelper/trained_modelmodel2024_06_11_15:16.pth' cannot no config
+    #'/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46.pth' accuary =  accuary = 0.7543500511770727 !  0.7686414708886619 ! (100 epoch 20 per )
+    #'/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_23:31.pth'  accuary = 0.4821246169560776 ! 100 chunksize(20 per)
+    #"/root/autodl-tmp/NewsHelper/trained_modelmodel2024_06_11_15:16.pth"
     #"/Users/taotao/Documents/GitHub/FYP/trained_model/model2024_04_22.pth"
+
+
     checkpoint = torch.load(full_path)
     try:
         model.load_state_dict(checkpoint)
@@ -99,7 +122,7 @@ def test_specific_model():
     accuary = 0
     total_size = 0
     model.eval()   
-    for _ in tqdm(range(50), desc="in single model...", leave=False): # 50 * 20 = 1000 test data to calculate the accuary
+    for _ in tqdm(range(100), desc="in single model...", leave=False): # 50 * 20 = 1000 test data to calculate the accuary
         single_chunk_tuple = next(data_generator)
         single_chunk_idx = single_chunk_tuple[0]
         single_chunk = single_chunk_tuple[1]
@@ -117,7 +140,7 @@ def test_specific_model():
                 accuary += 1
             else:
                 continue
-            accuary /= total_size
+    accuary /= total_size
                 
     print(f"\n **** For model = {full_path}, \n accuary = {accuary} !\n")
 

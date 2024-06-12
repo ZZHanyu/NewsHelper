@@ -21,17 +21,17 @@ if __name__ == "__main__":
     main.initialize()
     # preprocess.data_handler.initialize()
 
-    # start training
-    trainer = network.trainer()
-    if main._args.use_smac == True:
-        trainer.auto_ml()
-    else:
-        trainer.manual_init_train()
+    # # start training
+    # trainer = network.trainer()
+    # if main._args.use_smac == True:
+    #     trainer.auto_ml()
+    # else:
+    #     trainer.manual_init_train()
 
 
-    # # topic modeling
-    # tp_model = topicModel.LDA_topic_model()
-    # tp_model.forward()
+    # topic modeling
+    tp_model = topicModel.LDA_topic_model()
+    tp_model.forward()
     end_time = time.time()
 
     logging.info(f"\n ** Total time cost = {end_time - start_time} s! \n")

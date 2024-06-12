@@ -1,0 +1,411 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:gensim.corpora.dictionary:adding document #0 to Dictionary<0 unique tokens: []>
+INFO:gensim.corpora.dictionary:built Dictionary<12 unique tokens: ['computer', 'human', 'interface', 'response', 'survey']...> from 9 documents (total 29 corpus positions)
+INFO:gensim.utils:Dictionary lifecycle event {'msg': "built Dictionary<12 unique tokens: ['computer', 'human', 'interface', 'response', 'survey']...> from 9 documents (total 29 corpus positions)", 'datetime': '2024-06-12T16:35:08.992004', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'created'}
+WARNING:gensim.models.ldamodel:no word id mapping provided; initializing from corpus, assuming identity
+INFO:gensim.models.ldamodel:using autotuned alpha, starting with [0.2, 0.2, 0.2, 0.2, 0.2]
+INFO:gensim.models.ldamodel:using symmetric eta at 0.2
+INFO:gensim.models.ldamodel:using serial LDA version on this node
+INFO:gensim.models.ldamodel:running online (multi-pass) LDA training, 5 topics, 20 passes over the supplied corpus of 9 documents, updating model once every 9 documents, evaluating perplexity every 9 documents, iterating 100x with a convergence threshold of 0.001000
+INFO:gensim.models.ldamodel:-4.921 per-word bound, 30.3 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 0, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.18282336, 0.18343584, 0.18014312, 0.12811702, 0.19832344]
+INFO:gensim.models.ldamodel:topic #0 (0.183): 0.306*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.020*"9" + 0.020*"10" + 0.020*"11" + 0.020*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.183): 0.192*"4" + 0.105*"5" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"10" + 0.105*"11" + 0.019*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.180): 0.142*"2" + 0.142*"1" + 0.142*"7" + 0.142*"0" + 0.142*"6" + 0.142*"3" + 0.025*"9" + 0.025*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.128): 0.085*"9" + 0.085*"10" + 0.084*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.198): 0.378*"9" + 0.261*"10" + 0.143*"11" + 0.025*"7" + 0.024*"5" + 0.024*"2" + 0.024*"3" + 0.024*"1" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=2.691750, rho=1.000000
+INFO:gensim.models.ldamodel:-3.475 per-word bound, 11.1 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 1, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.1709173, 0.17167899, 0.16767344, 0.107373476, 0.19204266]
+INFO:gensim.models.ldamodel:topic #0 (0.171): 0.307*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.020*"9" + 0.020*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.172): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"5" + 0.105*"6" + 0.105*"0" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.168): 0.143*"2" + 0.143*"1" + 0.143*"7" + 0.143*"0" + 0.142*"6" + 0.142*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.107): 0.084*"9" + 0.084*"10" + 0.084*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.192): 0.379*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"3" + 0.024*"1" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.039465, rho=0.577350
+INFO:gensim.models.ldamodel:-3.456 per-word bound, 11.0 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 2, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.16147298, 0.16228677, 0.15797709, 0.0940489, 0.18590695]
+INFO:gensim.models.ldamodel:topic #0 (0.161): 0.307*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.162): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.158): 0.143*"2" + 0.143*"1" + 0.143*"7" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.094): 0.084*"9" + 0.084*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.186): 0.380*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"3" + 0.024*"1" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.014769, rho=0.500000
+INFO:gensim.models.ldamodel:-3.442 per-word bound, 10.9 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 3, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.15366481, 0.15449665, 0.15007015, 0.08449673, 0.18014096]
+INFO:gensim.models.ldamodel:topic #0 (0.154): 0.308*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.154): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.150): 0.143*"2" + 0.143*"1" + 0.143*"7" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.084): 0.084*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.180): 0.380*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"3" + 0.024*"1" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.006668, rho=0.447214
+INFO:gensim.models.ldamodel:-3.431 per-word bound, 10.8 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 4, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.14702865, 0.14785127, 0.14341848, 0.07719165, 0.17479312]
+INFO:gensim.models.ldamodel:topic #0 (0.147): 0.308*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.148): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.143): 0.143*"2" + 0.143*"1" + 0.143*"7" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.077): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.175): 0.380*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"3" + 0.024*"1" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.003388, rho=0.408248
+INFO:gensim.models.ldamodel:-3.423 per-word bound, 10.7 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 5, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.14127122, 0.14207713, 0.13769391, 0.071360104, 0.16984583]
+INFO:gensim.models.ldamodel:topic #0 (0.141): 0.308*"5" + 0.211*"8" + 0.115*"1" + 0.115*"7" + 0.115*"2" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.142): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.138): 0.143*"2" + 0.143*"1" + 0.143*"7" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.071): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.170): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.001869, rho=0.377964
+INFO:gensim.models.ldamodel:-3.415 per-word bound, 10.7 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 6, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.13620135, 0.13698548, 0.13268082, 0.066559754, 0.1652615]
+INFO:gensim.models.ldamodel:topic #0 (0.136): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.137): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.133): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.067): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.165): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"4" + 0.024*"8"
+INFO:gensim.models.ldamodel:topic diff=0.001100, rho=0.353553
+INFO:gensim.models.ldamodel:-3.408 per-word bound, 10.6 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 7, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.13168389, 0.13244477, 0.12823471, 0.06251631, 0.16102068]
+INFO:gensim.models.ldamodel:topic #0 (0.132): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.132): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.128): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.063): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.161): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"4" + 0.024*"6"
+INFO:gensim.models.ldamodel:topic diff=0.000678, rho=0.333333
+INFO:gensim.models.ldamodel:-3.403 per-word bound, 10.6 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 8, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.12761869, 0.12835443, 0.12424816, 0.059048504, 0.1570864]
+INFO:gensim.models.ldamodel:topic #0 (0.128): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.128): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.124): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.059): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.157): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"4" + 0.024*"6"
+INFO:gensim.models.ldamodel:topic diff=0.000435, rho=0.316228
+INFO:gensim.models.ldamodel:-3.397 per-word bound, 10.5 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 9, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.12393029, 0.12464139, 0.12064249, 0.056031063, 0.15342586]
+INFO:gensim.models.ldamodel:topic #0 (0.124): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.125): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.121): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.056): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.153): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"4"
+INFO:gensim.models.ldamodel:topic diff=0.000289, rho=0.301511
+INFO:gensim.models.ldamodel:-3.392 per-word bound, 10.5 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 10, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.12056072, 0.12124804, 0.11735689, 0.05337406, 0.1500059]
+INFO:gensim.models.ldamodel:topic #0 (0.121): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.121): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.117): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.053): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.150): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"4"
+INFO:gensim.models.ldamodel:topic diff=0.000197, rho=0.288675
+INFO:gensim.models.ldamodel:-3.388 per-word bound, 10.5 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 11, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.11746482, 0.118129484, 0.11434446, 0.05101118, 0.1468122]
+INFO:gensim.models.ldamodel:topic #0 (0.117): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.118): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.114): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.051): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.147): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"4"
+INFO:gensim.models.ldamodel:topic diff=0.000138, rho=0.277350
+INFO:gensim.models.ldamodel:-3.384 per-word bound, 10.4 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 12, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.11460523, 0.115247734, 0.11156682, 0.04889195, 0.14381476]
+INFO:gensim.models.ldamodel:topic #0 (0.115): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.115): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.112): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.049): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.144): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000098, rho=0.267261
+INFO:gensim.models.ldamodel:-3.380 per-word bound, 10.4 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 13, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.111952335, 0.11257387, 0.10899367, 0.04697743, 0.14099841]
+INFO:gensim.models.ldamodel:topic #0 (0.112): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.113): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.109): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.047): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.141): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000071, rho=0.258199
+INFO:gensim.models.ldamodel:-3.377 per-word bound, 10.4 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 14, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.109481215, 0.11008258, 0.10659992, 0.04523686, 0.13834526]
+INFO:gensim.models.ldamodel:topic #0 (0.109): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.110): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.107): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"7" + 0.143*"6" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.045): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.138): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000053, rho=0.250000
+INFO:gensim.models.ldamodel:-3.374 per-word bound, 10.4 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 15, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.10717129, 0.10775349, 0.1043649, 0.04364562, 0.13584012]
+INFO:gensim.models.ldamodel:topic #0 (0.107): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.108): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.104): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"6" + 0.143*"7" + 0.143*"3" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.044): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.136): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000039, rho=0.242536
+INFO:gensim.models.ldamodel:-3.371 per-word bound, 10.3 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 16, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.105005324, 0.10556921, 0.10227067, 0.042183734, 0.13347046]
+INFO:gensim.models.ldamodel:topic #0 (0.105): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.106): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.102): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.143*"7" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.042): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.133): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000030, rho=0.235702
+INFO:gensim.models.ldamodel:-3.368 per-word bound, 10.3 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 17, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.10296807, 0.103514865, 0.10030258, 0.04083477, 0.1312236]
+INFO:gensim.models.ldamodel:topic #0 (0.103): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.104): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.100): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.143*"7" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.041): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.131): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000023, rho=0.229416
+INFO:gensim.models.ldamodel:-3.365 per-word bound, 10.3 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 18, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.101047024, 0.10157755, 0.09844799, 0.039585087, 0.12908937]
+INFO:gensim.models.ldamodel:topic #0 (0.101): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.102): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.098): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.143*"7" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.040): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.129): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000018, rho=0.223607
+INFO:gensim.models.ldamodel:-3.362 per-word bound, 10.3 perplexity estimate based on a held-out corpus of 9 documents with 29 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 19, at document #9/9
+INFO:gensim.models.ldamodel:optimized alpha [0.0992313, 0.09974643, 0.09669604, 0.038423277, 0.12706041]
+INFO:gensim.models.ldamodel:topic #0 (0.099): 0.308*"5" + 0.212*"8" + 0.115*"1" + 0.115*"2" + 0.115*"7" + 0.019*"9" + 0.019*"10" + 0.019*"11" + 0.019*"3" + 0.019*"6"
+INFO:gensim.models.ldamodel:topic #1 (0.100): 0.193*"4" + 0.105*"7" + 0.105*"3" + 0.105*"6" + 0.105*"0" + 0.105*"5" + 0.105*"11" + 0.105*"10" + 0.018*"9" + 0.018*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.097): 0.143*"2" + 0.143*"1" + 0.143*"0" + 0.143*"6" + 0.143*"3" + 0.143*"7" + 0.024*"9" + 0.024*"10" + 0.024*"5" + 0.024*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.038): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"11" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.127): 0.381*"9" + 0.262*"10" + 0.143*"11" + 0.024*"7" + 0.024*"5" + 0.024*"2" + 0.024*"1" + 0.024*"3" + 0.024*"6" + 0.024*"0"
+INFO:gensim.models.ldamodel:topic diff=0.000014, rho=0.218218
+INFO:gensim.utils:LdaModel lifecycle event {'msg': 'trained LdaModel<num_terms=12, num_topics=5, decay=0.5, chunksize=2000> in 0.07s', 'datetime': '2024-06-12T16:35:09.059151', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'created'}
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-12T16:38:17.404513', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'load_word2vec_format'}
+INFO:gensim.models.ldamodel:running online (multi-pass) LDA training, 5 topics, 20 passes over the supplied corpus of 23 documents, updating model once every 23 documents, evaluating perplexity every 23 documents, iterating 100x with a convergence threshold of 0.001000
+INFO:gensim.models.ldamodel:-5.164 per-word bound, 35.8 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 0, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09639688, 0.093244955, 0.112568505, 0.037446, 0.11658382]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.096): 0.383*"5" + 0.105*"8" + 0.073*"1" + 0.073*"2" + 0.073*"7" + 0.042*"6" + 0.042*"9" + 0.042*"10" + 0.042*"11" + 0.042*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.093): 0.134*"4" + 0.093*"6" + 0.093*"5" + 0.093*"7" + 0.093*"3" + 0.093*"0" + 0.093*"11" + 0.093*"10" + 0.053*"9" + 0.053*"1"
+INFO:gensim.models.ldamodel:topic #2 (0.113): 0.492*"6" + 0.336*"1" + 0.023*"2" + 0.023*"0" + 0.023*"3" + 0.023*"7" + 0.013*"9" + 0.013*"10" + 0.013*"5" + 0.013*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.037): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"7" + 0.083*"11" + 0.083*"2" + 0.083*"0" + 0.083*"8" + 0.083*"4"
+INFO:gensim.models.ldamodel:topic #4 (0.117): 0.198*"9" + 0.152*"10" + 0.106*"11" + 0.060*"6" + 0.060*"1" + 0.060*"5" + 0.060*"7" + 0.060*"2" + 0.060*"3" + 0.060*"0"
+INFO:gensim.models.ldamodel:topic diff=1.044856, rho=0.847791
+INFO:gensim.models.ldamodel:-2.784 per-word bound, 6.9 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 1, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09488724, 0.089728326, 0.12389798, 0.03687297, 0.11112147]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.095): 0.401*"5" + 0.080*"8" + 0.063*"1" + 0.063*"2" + 0.063*"7" + 0.047*"6" + 0.047*"9" + 0.047*"10" + 0.047*"11" + 0.047*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.090): 0.112*"4" + 0.089*"6" + 0.089*"5" + 0.089*"7" + 0.089*"3" + 0.089*"0" + 0.089*"11" + 0.089*"10" + 0.066*"9" + 0.066*"1"
+INFO:gensim.models.ldamodel:topic #2 (0.124): 0.510*"6" + 0.346*"1" + 0.017*"2" + 0.017*"0" + 0.017*"3" + 0.017*"7" + 0.013*"9" + 0.013*"5" + 0.013*"10" + 0.013*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.037): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"7" + 0.083*"11" + 0.083*"2" + 0.083*"8" + 0.083*"1" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.111): 0.145*"9" + 0.120*"10" + 0.096*"11" + 0.071*"6" + 0.071*"1" + 0.071*"5" + 0.071*"7" + 0.071*"2" + 0.071*"0" + 0.071*"3"
+INFO:gensim.models.ldamodel:topic diff=0.334653, rho=0.543021
+INFO:gensim.models.ldamodel:-2.541 per-word bound, 5.8 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 2, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09372314, 0.086945936, 0.1345461, 0.03639861, 0.10687831]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.094): 0.409*"5" + 0.068*"8" + 0.059*"1" + 0.059*"2" + 0.059*"7" + 0.050*"6" + 0.050*"9" + 0.050*"10" + 0.050*"11" + 0.050*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.087): 0.100*"4" + 0.087*"6" + 0.087*"5" + 0.087*"7" + 0.087*"3" + 0.087*"0" + 0.087*"11" + 0.087*"10" + 0.073*"9" + 0.073*"1"
+INFO:gensim.models.ldamodel:topic #2 (0.135): 0.517*"6" + 0.349*"1" + 0.015*"2" + 0.015*"0" + 0.015*"3" + 0.015*"7" + 0.012*"5" + 0.012*"9" + 0.012*"10" + 0.012*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.036): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"7" + 0.083*"11" + 0.083*"2" + 0.083*"8" + 0.083*"1" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.107): 0.118*"9" + 0.104*"10" + 0.090*"11" + 0.076*"6" + 0.076*"5" + 0.076*"1" + 0.076*"7" + 0.076*"2" + 0.076*"3" + 0.076*"0"
+INFO:gensim.models.ldamodel:topic diff=0.201844, rho=0.477203
+INFO:gensim.models.ldamodel:-2.437 per-word bound, 5.4 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 3, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09279438, 0.08465145, 0.14471927, 0.035992894, 0.10342899]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.093): 0.414*"5" + 0.061*"8" + 0.056*"1" + 0.056*"2" + 0.056*"7" + 0.051*"6" + 0.051*"9" + 0.051*"10" + 0.051*"11" + 0.051*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.085): 0.093*"4" + 0.085*"6" + 0.085*"5" + 0.085*"7" + 0.085*"3" + 0.085*"0" + 0.085*"11" + 0.085*"10" + 0.077*"1" + 0.077*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.145): 0.520*"6" + 0.351*"1" + 0.014*"2" + 0.014*"0" + 0.014*"3" + 0.014*"7" + 0.012*"5" + 0.012*"9" + 0.012*"10" + 0.012*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.036): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"6" + 0.083*"7" + 0.083*"11" + 0.083*"2" + 0.083*"8" + 0.083*"1" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.103): 0.104*"9" + 0.096*"10" + 0.087*"11" + 0.079*"6" + 0.079*"5" + 0.079*"1" + 0.079*"7" + 0.079*"2" + 0.079*"0" + 0.079*"3"
+INFO:gensim.models.ldamodel:topic diff=0.119402, rho=0.430678
+INFO:gensim.models.ldamodel:-2.380 per-word bound, 5.2 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 4, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09203705, 0.08270566, 0.15453924, 0.035638154, 0.10053794]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.092): 0.416*"5" + 0.058*"8" + 0.055*"1" + 0.055*"2" + 0.055*"7" + 0.052*"6" + 0.052*"9" + 0.052*"10" + 0.052*"11" + 0.052*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.083): 0.090*"4" + 0.085*"6" + 0.085*"5" + 0.085*"7" + 0.085*"3" + 0.085*"0" + 0.085*"11" + 0.085*"10" + 0.080*"1" + 0.080*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.155): 0.522*"6" + 0.352*"1" + 0.013*"2" + 0.013*"0" + 0.013*"3" + 0.013*"7" + 0.012*"5" + 0.012*"9" + 0.012*"10" + 0.012*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.036): 0.083*"9" + 0.083*"5" + 0.083*"10" + 0.083*"6" + 0.083*"7" + 0.083*"11" + 0.083*"2" + 0.083*"8" + 0.083*"1" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.101): 0.096*"9" + 0.091*"10" + 0.086*"11" + 0.081*"6" + 0.081*"5" + 0.081*"1" + 0.081*"7" + 0.081*"2" + 0.081*"8" + 0.081*"3"
+INFO:gensim.models.ldamodel:topic diff=0.071059, rho=0.395554
+INFO:gensim.models.ldamodel:-2.342 per-word bound, 5.1 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 5, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09141038, 0.08102174, 0.16408452, 0.03532298, 0.098060526]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.091): 0.417*"5" + 0.056*"8" + 0.054*"1" + 0.054*"2" + 0.054*"7" + 0.052*"6" + 0.052*"9" + 0.052*"10" + 0.052*"0" + 0.052*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.081): 0.087*"4" + 0.084*"6" + 0.084*"5" + 0.084*"7" + 0.084*"3" + 0.084*"0" + 0.084*"11" + 0.084*"10" + 0.081*"1" + 0.081*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.164): 0.522*"6" + 0.353*"1" + 0.013*"2" + 0.013*"0" + 0.013*"3" + 0.013*"7" + 0.012*"5" + 0.012*"9" + 0.012*"10" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.035): 0.083*"9" + 0.083*"5" + 0.083*"10" + 0.083*"7" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.098): 0.091*"9" + 0.088*"10" + 0.085*"11" + 0.082*"6" + 0.082*"5" + 0.082*"1" + 0.082*"7" + 0.082*"2" + 0.082*"8" + 0.082*"3"
+INFO:gensim.models.ldamodel:topic diff=0.043106, rho=0.367823
+INFO:gensim.models.ldamodel:-2.312 per-word bound, 5.0 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 6, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09088664, 0.079541706, 0.1734091, 0.035039507, 0.095901474]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.091): 0.418*"5" + 0.055*"8" + 0.054*"1" + 0.054*"2" + 0.054*"7" + 0.052*"6" + 0.052*"9" + 0.052*"10" + 0.052*"0" + 0.052*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.080): 0.086*"4" + 0.084*"6" + 0.084*"5" + 0.084*"7" + 0.084*"0" + 0.084*"3" + 0.084*"11" + 0.084*"10" + 0.082*"1" + 0.082*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.173): 0.523*"6" + 0.353*"1" + 0.013*"2" + 0.013*"0" + 0.013*"3" + 0.013*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.035): 0.083*"9" + 0.083*"6" + 0.083*"5" + 0.083*"10" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"11" + 0.083*"1" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic #4 (0.096): 0.089*"9" + 0.087*"10" + 0.084*"11" + 0.082*"6" + 0.082*"5" + 0.082*"1" + 0.082*"7" + 0.082*"2" + 0.082*"8" + 0.082*"3"
+INFO:gensim.models.ldamodel:topic diff=0.026788, rho=0.345212
+INFO:gensim.models.ldamodel:-2.287 per-word bound, 4.9 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 7, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09044604, 0.078224815, 0.18255177, 0.03478207, 0.09399463]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.090): 0.419*"5" + 0.054*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.052*"6" + 0.052*"10" + 0.052*"9" + 0.052*"11" + 0.052*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.078): 0.085*"4" + 0.084*"6" + 0.084*"5" + 0.084*"7" + 0.084*"0" + 0.084*"3" + 0.084*"11" + 0.084*"10" + 0.082*"1" + 0.082*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.183): 0.523*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"11"
+INFO:gensim.models.ldamodel:topic #3 (0.035): 0.083*"6" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"7" + 0.083*"0" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.094): 0.087*"9" + 0.085*"10" + 0.084*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.017067, rho=0.326315
+INFO:gensim.models.ldamodel:-2.265 per-word bound, 4.8 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 8, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.09007392, 0.077041335, 0.19154136, 0.034546424, 0.092292204]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.090): 0.419*"5" + 0.054*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.077): 0.085*"4" + 0.084*"6" + 0.084*"5" + 0.084*"7" + 0.084*"0" + 0.084*"3" + 0.084*"11" + 0.084*"10" + 0.083*"1" + 0.083*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.192): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.035): 0.083*"9" + 0.083*"10" + 0.083*"5" + 0.083*"7" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.092): 0.086*"9" + 0.085*"10" + 0.084*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"0" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.011135, rho=0.310217
+INFO:gensim.models.ldamodel:-2.246 per-word bound, 4.7 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 9, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.089759134, 0.075968884, 0.20039992, 0.03432929, 0.09075856]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.090): 0.419*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"9" + 0.053*"10" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.076): 0.084*"4" + 0.084*"6" + 0.084*"5" + 0.084*"7" + 0.084*"3" + 0.084*"0" + 0.084*"11" + 0.084*"10" + 0.083*"1" + 0.083*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.200): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.034): 0.083*"9" + 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.091): 0.085*"9" + 0.084*"10" + 0.084*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"7" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic diff=0.007426, rho=0.296287
+INFO:gensim.models.ldamodel:-2.228 per-word bound, 4.7 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 10, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08949297, 0.07499019, 0.20914471, 0.034128107, 0.08936643]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.419*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"9" + 0.053*"10" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.075): 0.084*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.209): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.034): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.089): 0.085*"9" + 0.084*"10" + 0.084*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"7" + 0.083*"2" + 0.083*"8" + 0.083*"3"
+INFO:gensim.models.ldamodel:topic diff=0.005051, rho=0.284081
+INFO:gensim.models.ldamodel:-2.211 per-word bound, 4.6 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 11, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08926851, 0.07409165, 0.21778946, 0.033940796, 0.08809449]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.419*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.074): 0.084*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.218): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.034): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.088): 0.084*"9" + 0.084*"10" + 0.084*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.003498, rho=0.273268
+INFO:gensim.models.ldamodel:-2.197 per-word bound, 4.6 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 12, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08908015, 0.07326235, 0.2263452, 0.033765666, 0.08692575]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.073): 0.084*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.226): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.034): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.087): 0.084*"9" + 0.084*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.002462, rho=0.263603
+INFO:gensim.models.ldamodel:-2.183 per-word bound, 4.5 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 13, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.0889233, 0.072493404, 0.23482099, 0.03360132, 0.08584651]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.072): 0.084*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.235): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.034): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.086): 0.084*"9" + 0.084*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.001757, rho=0.254896
+INFO:gensim.models.ldamodel:-2.170 per-word bound, 4.5 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 14, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08879415, 0.07177751, 0.24322432, 0.03344659, 0.08484553]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.072): 0.084*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.243): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.085): 0.084*"9" + 0.084*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.001271, rho=0.246998
+INFO:gensim.models.ldamodel:-2.158 per-word bound, 4.5 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 15, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.0886895, 0.07110855, 0.25156137, 0.03330048, 0.08391346]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.071): 0.083*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.252): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.084): 0.084*"9" + 0.084*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.000931, rho=0.239792
+INFO:gensim.models.ldamodel:-2.147 per-word bound, 4.4 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 16, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08860664, 0.07048139, 0.25983733, 0.033162143, 0.083042495]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.070): 0.083*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.260): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.083): 0.084*"9" + 0.083*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.000690, rho=0.233181
+INFO:gensim.models.ldamodel:-2.137 per-word bound, 4.4 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 17, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08854328, 0.06989166, 0.26805663, 0.03303085, 0.08222603]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.089): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.070): 0.083*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"9"
+INFO:gensim.models.ldamodel:topic #2 (0.268): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.082): 0.084*"9" + 0.083*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.000515, rho=0.227089
+INFO:gensim.models.ldamodel:-2.127 per-word bound, 4.4 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 18, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.08849741, 0.069335625, 0.27622297, 0.032905966, 0.081458434]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.088): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.069): 0.083*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.276): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.081): 0.083*"9" + 0.083*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.000390, rho=0.221451
+INFO:gensim.models.ldamodel:-2.118 per-word bound, 4.3 perplexity estimate based on a held-out corpus of 23 documents with 11 words
+INFO:gensim.models.ldamodel:PROGRESS: pass 19, at document #23/23
+INFO:gensim.models.ldamodel:optimized alpha [0.088467315, 0.06881005, 0.2843395, 0.032786943, 0.08073486]
+INFO:gensim.models.ldamodel:merging changes from 23 documents into a model of 32 documents
+INFO:gensim.models.ldamodel:topic #0 (0.088): 0.420*"5" + 0.053*"8" + 0.053*"1" + 0.053*"2" + 0.053*"7" + 0.053*"6" + 0.053*"10" + 0.053*"9" + 0.053*"0" + 0.053*"3"
+INFO:gensim.models.ldamodel:topic #1 (0.069): 0.083*"4" + 0.083*"6" + 0.083*"5" + 0.083*"7" + 0.083*"0" + 0.083*"3" + 0.083*"11" + 0.083*"10" + 0.083*"1" + 0.083*"2"
+INFO:gensim.models.ldamodel:topic #2 (0.284): 0.524*"6" + 0.353*"1" + 0.012*"2" + 0.012*"0" + 0.012*"3" + 0.012*"7" + 0.012*"5" + 0.012*"10" + 0.012*"9" + 0.012*"4"
+INFO:gensim.models.ldamodel:topic #3 (0.033): 0.083*"7" + 0.083*"5" + 0.083*"10" + 0.083*"9" + 0.083*"8" + 0.083*"0" + 0.083*"6" + 0.083*"2" + 0.083*"3" + 0.083*"1"
+INFO:gensim.models.ldamodel:topic #4 (0.081): 0.083*"9" + 0.083*"10" + 0.083*"11" + 0.083*"6" + 0.083*"5" + 0.083*"1" + 0.083*"3" + 0.083*"2" + 0.083*"8" + 0.083*"7"
+INFO:gensim.models.ldamodel:topic diff=0.000297, rho=0.216213
