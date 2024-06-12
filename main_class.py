@@ -106,7 +106,7 @@ class main(ABC):
                             help="whether start from train")
         parser.add_argument("--LDA_model_path", 
                             type=str, 
-                            default="./LDA_Model/", 
+                            default="/root/autodl-tmp/NewsHelper/LDA_Model/", 
                             help="LDA model path")
         parser.add_argument("--num_epoches", 
                             type=int, 

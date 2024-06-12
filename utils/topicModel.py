@@ -18,6 +18,8 @@ import os
 import re
 import time
 import json
+import logging
+from tqdm import tqdm
 
 from utils import model
 from main_class import main
@@ -71,6 +73,13 @@ class LDA_topic_model(model.module, preprocess.data_handler):
 
 
     def _train_LDA(self):
+        '''
+            use comman corpus which download from genism to train a base LDA model 
+        '''
+        
+        # logging.INFO(f"\n ***LDA***:\t LDA training processing...\n")
+        print(f"\n ***LDA***:\t LDA training processing...\n")
+
         common_dictionary = Dictionary(common_texts)
         common_corpus = [common_dictionary.doc2bow(text) for text in common_texts]
 
@@ -84,13 +93,24 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             chunksize=2000
             )
         
-        while True:
-            real_news_list = self._classification()
-            if real_news_list == None:
-                break
-            realnews_corpus = [common_dictionary.doc2bow(text.split()) for text in real_news_list]
-            lda.update(realnews_corpus)
+
+        # # train LDA though whole batch:
+        # while True:
+        #     real_news_list = self._classification()
+        #     if real_news_list == None:
+        #         break
+        #     realnews_corpus = [common_dictionary.doc2bow(text.split()) for text in real_news_list]
+        #     lda.update(realnews_corpus)
+        
+
+        # train LDA using single batch:
+        real_news_list = self._classification()
+        realnews_corpus = [common_dictionary.doc2bow(text.split()) for text in real_news_list]
+        lda.update(realnews_corpus) 
+
         return lda
+
+
                     
 
 
@@ -132,7 +152,7 @@ class LDA_topic_model(model.module, preprocess.data_handler):
         realnews_corpus = [(text, common_dictionary.doc2bow(text.split())) for text in real_news_list]
         for unseen_text in realnews_corpus:
             topic_model_vector.append((unseen_text[0], lda[unseen_text[1]]))
-        lda.update(realnews_corpus)
+        # lda.update(realnews_corpus)
         print("\nRESULT:\n")
         for i in topic_model_vector:
             print(f"\n{i}\n")
