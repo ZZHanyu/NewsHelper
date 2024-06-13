@@ -98,7 +98,7 @@ class main(ABC):
                             help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
-                             default=True, 
+                             default=False, 
                              help="whether using batch during train step")
         parser.add_argument("--LDA_only", 
                             type=bool, 

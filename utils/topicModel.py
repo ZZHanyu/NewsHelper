@@ -64,12 +64,17 @@ class LDA_topic_model(model.module, preprocess.data_handler):
     def _init_classification_model(self):
         # load and run classification model
         print("Loading classification model:")
-        model_name = self._args.model_save_path + self._load_model()
+        model_name = self._args.model_save_path + self._load_model() + '.pth'
         if os.path.exists(model_name):
             check_point = torch.load(model_name)
             self.classify_model.load_state_dict(check_point)
         else:
             raise Exception
+
+    def _init_classification_model2(self):
+        check_point = torch.load('/root/autodl-tmp/NewsHelper/trained_model/2024_06_11_18:46.pth')
+        self.classify_model.load_state_dict(check_point)
+        
 
 
     def _train_LDA(self):
@@ -126,9 +131,9 @@ class LDA_topic_model(model.module, preprocess.data_handler):
         else:
             lda = self._train_LDA()
             self._save_lda(lda)
-            raise FileNotFoundError
 
-        self._init_classification_model()
+        # self._init_classification_model()
+        self._init_classification_model2()
 
 
         topic_model_vector = []
@@ -154,8 +159,33 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             topic_model_vector.append((unseen_text[0], lda[unseen_text[1]]))
         # lda.update(realnews_corpus)
         print("\nRESULT:\n")
-        for i in topic_model_vector:
-            print(f"\n{i}\n")
+
+        class_result = {
+            0:[],
+            1:[],
+            2:[],
+            3:[],
+            4:[]
+            }
+        
+        with open('/root/autodl-tmp/NewsHelper/tp_result.json', 'w+') as f:
+
+            for i in tqdm(topic_model_vector, desc="analysis topic of truth news...", leave=True):
+                maxium = 0
+                maxium_label = None
+                # find maxium:
+                
+                for single_label in i[1]:
+                    if single_label[1] > maxium:
+                        maxium = single_label[1]
+                        maxium_label = single_label[0]
+                    else:
+                        continue
+                class_result[maxium_label].append(i[0])
+            
+            json.dump(class_result, f)
+
+                
 
         return topic_model_vector
 

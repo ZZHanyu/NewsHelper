@@ -191,7 +191,7 @@ class trainer(preprocess.data_handler):
         self.diagram_drawer = diagram_drawer()
         # self.smac_model = True
         self.save_folder = main._args.model_save_path + main._args.date_time
-
+        '/root/autodl-tmp/NewsHelper/trained_model/2024/0612_0038"5'
 
         print("\nTrainer inital succefully!\n")       
 
@@ -203,7 +203,7 @@ class trainer(preprocess.data_handler):
             print(f"-->name: {name} -->grad_requirs: {parms.requires_grad} --weight {torch.mean(parms.data)} -->grad_value: {torch.mean(parms.grad)} \n")
 
 
-    def save_model(self, save_path = None):
+    def save_model(self, save_path=None):
         self._best_model_state = copy.deepcopy(self.model.state_dict())
         if save_path != None:
             torch.save(self._best_model_state, f'{main._args.model_save_path}/{main._args.date_time}.pth')
@@ -214,6 +214,9 @@ class trainer(preprocess.data_handler):
 
 
     def _mini_batch(self, batch: list)-> None:
+        '''
+            This is Mini-Batch Method
+        '''
 
         target_set = []
         feature = []
@@ -230,7 +233,6 @@ class trainer(preprocess.data_handler):
         # feature = torch.tensor(feature, requires_grad=True).to(main._device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
         target_set = torch.tensor(target_set, dtype=torch.float32, device=main._device, requires_grad=True)
         
-
         y_pred = self.model.forward_with_batch(tensor_data=pad_datas, # feature
                                                 batch_size=batch_size)
         y_pred_reshape = y_pred.reshape(-1)
@@ -244,6 +246,10 @@ class trainer(preprocess.data_handler):
 
 
     def _single_step(self, batch:list) -> float:
+
+        '''
+            This is SGD Method
+        '''
 
         total_loss = 0
 
@@ -365,6 +371,8 @@ class trainer(preprocess.data_handler):
                     if key == "batch_size":
                         param_selected["batch_size"] = 2
                         continue
+                    if key == "optimize_method" and main._args.batch_model == False:
+                        param_selected[key] = "SGD"
                     param_selected[key] = random.choice(item)
                     print(f"param : {key} --- value: {param_selected[key]}")
                     logging.info(f"param : {key} --- value: {param_selected[key]}")
@@ -407,7 +415,10 @@ class trainer(preprocess.data_handler):
             
 
             # made a folder to store model .pth and config parameter
-            new_folder_path = f'{self.save_folder}_{epoch_id}'
+                    
+
+            new_folder_path = f'{self.save_folder}_{epoch_id}' 
+            '/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:38_0'
             os.mkdir(path=new_folder_path)
             with open(f'{new_folder_path}/config.json', 'w+') as f:
                 json.dump(param_selected, f)
@@ -421,7 +432,7 @@ class trainer(preprocess.data_handler):
             except Exception as e:
                 print(f"\n ERROR ON Training: {e} \n")
                 logging.info(f"\n ERROR ON Training: {e} \n")
-                self.save_model(new_folder_path)
+                self.save_model(save_path=new_folder_path)
                 logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
                 continue
 
@@ -430,9 +441,10 @@ class trainer(preprocess.data_handler):
             logging.info(f"\n**** train finished! now testing ....\n")
 
             # now test
-            total_loss = self.test(batch_size= param_selected['batch_size'])
+            total_loss, accuary = self.test(batch_size= param_selected['batch_size'])
             logging.info(f"\n ** total_loss = {total_loss}!\n")
-            # param_selected['test_loss'] = total_loss.cpu().numpy()
+            param_selected['accuary'] = accuary
+
             # record testing result
             try:
                 json_result = json.dumps(param_selected)
@@ -509,11 +521,11 @@ class trainer(preprocess.data_handler):
                 count += 1
         except Exception as e:
             print(f"\n -- Trainer Error! error is = \t{e}\n")
-            self.save_model(new_folder_path)
+            self.save_model(save_path=new_folder_path)
         
 
         print("\n** 1 epoch Done, Now SAVEING model! **\n")        
-        self.save_model(new_folder_path)
+        self.save_model(save_path=new_folder_path)
         print("\nMODEL SAVED!\n")
 
         avg_cost = avg_cost / count
@@ -560,7 +572,7 @@ class trainer(preprocess.data_handler):
         print(f" \n\t ** Test message: accuary -> {total_accuary * 100}% ---> avg_loss (test) -> {total_loss}! ** \n")
         logging.info(f" \n\t ** Test Result: accuary -> {total_accuary * 100}% ---> avg_loss (test) -> {total_loss}! ** \n")
 
-        return total_loss
+        return total_loss, total_accuary
         {
             # version 1: using old-school function, which store whole tokenzied dataset
             #   Drawback: Memory cost is extrmely high!
@@ -595,7 +607,6 @@ class trainer(preprocess.data_handler):
         for intensifier_object in [SuccessiveHalving, Hyperband]: # 两种不同的优化策略
             '''
             SuccessiveHalving : 实施连续减半，支持多保真度、多目标和多处理。此增强器的行为如下：-首先，将运行历史的配置添加到跟踪器中。
-
             '''
             scenario = Scenario(
                 self.config.configspace,
