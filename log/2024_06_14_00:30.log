@@ -1,0 +1,16 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : batch_size --- value: 32

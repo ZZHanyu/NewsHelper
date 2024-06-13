@@ -1,0 +1,566 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 64
+INFO:root:param : hidden_size_linear --- value: 64
+INFO:root:param : num_layers --- value: 2
+INFO:root:param : dropout_linear --- value: 0.5
+INFO:root:param : dropout --- value: 0.4
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 0.0001
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+ERROR:gensim.downloader:caught non-fatal exception while trying to update gensim-data cache from 'https://raw.githubusercontent.com/RaRe-Technologies/gensim-data/master/list.json'; using local cache at '/root/gensim-data/information.json' instead
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 1303, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 1349, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 1058, in _send_output
+    self.send(msg)
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 996, in send
+    self.connect()
+  File "/root/miniconda3/envs/fyp/lib/python3.11/http/client.py", line 1475, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/ssl.py", line 1104, in _create
+    self.do_handshake()
+  File "/root/miniconda3/envs/fyp/lib/python3.11/ssl.py", line 1382, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/fyp/lib/python3.11/site-packages/gensim/downloader.py", line 199, in _load_info
+    info_bytes = urlopen(url).read()
+                 ^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/fyp/lib/python3.11/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 104] Connection reset by peer>
+INFO:gensim.models.keyedvectors:loading projection weights from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /root/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-14T00:02:35.612091', 'gensim': '4.3.2', 'python': '3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-169-generic-x86_64-with-glibc2.35', 'event': 'load_word2vec_format'}
+INFO:root: * Batch size = 1 , avg_loss = 0.22089733183383942%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22089733183383942
+INFO:root: * Batch size = 2 , avg_loss = 0.26832830905914307%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26832830905914307
+INFO:root: * Batch size = 2 , avg_loss = 0.23503485321998596%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23503485321998596
+INFO:root: * Batch size = 1 , avg_loss = 0.21024157106876373%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21024157106876373
+INFO:root: * Batch size = 2 , avg_loss = 0.24876978993415833%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24876978993415833
+INFO:root: * Batch size = 2 , avg_loss = 0.2600972652435303%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2600972652435303
+INFO:root: * Batch size = 2 , avg_loss = 0.2648027241230011%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2648027241230011
+INFO:root: * Batch size = 2 , avg_loss = 0.23940691351890564%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23940691351890564
+INFO:root: * Batch size = 2 , avg_loss = 0.23906847834587097%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23906847834587097
+INFO:root: * Batch size = 2 , avg_loss = 0.2586226463317871%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2586226463317871
+INFO:root: * Batch size = 2 , avg_loss = 0.2626495361328125%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2626495361328125
+INFO:root: * Batch size = 2 , avg_loss = 0.2436053454875946%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2436053454875946
+INFO:root: * Batch size = 2 , avg_loss = 0.22891876101493835%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22891876101493835
+INFO:root: * Batch size = 2 , avg_loss = 0.2811076045036316%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2811076045036316
+INFO:root: * Batch size = 2 , avg_loss = 0.25071287155151367%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25071287155151367
+INFO:root: * Batch size = 2 , avg_loss = 0.22934681177139282%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22934681177139282
+INFO:root: * Batch size = 2 , avg_loss = 0.24574688076972961%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24574688076972961
+INFO:root: * Batch size = 2 , avg_loss = 0.2570819854736328%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2570819854736328
+INFO:root: * Batch size = 2 , avg_loss = 0.24522654712200165%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24522654712200165
+INFO:root: * Batch size = 2 , avg_loss = 0.2446824312210083%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2446824312210083
+INFO:root: * Batch size = 2 , avg_loss = 0.2553490698337555%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2553490698337555
+INFO:root: * Batch size = 1 , avg_loss = 0.2668701410293579%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2668701410293579
+INFO:root: * Batch size = 2 , avg_loss = 0.27022892236709595%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27022892236709595
+INFO:root: * Batch size = 2 , avg_loss = 0.27016785740852356%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27016785740852356
+INFO:root: * Batch size = 2 , avg_loss = 0.24911174178123474%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24911174178123474
+INFO:root: * Batch size = 2 , avg_loss = 0.23327577114105225%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23327577114105225
+INFO:root: * Batch size = 2 , avg_loss = 0.2521764636039734%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2521764636039734
+INFO:root: * Batch size = 2 , avg_loss = 0.26119542121887207%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26119542121887207
+INFO:root: * Batch size = 2 , avg_loss = 0.2441260665655136%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2441260665655136
+INFO:root: * Batch size = 2 , avg_loss = 0.2572488784790039%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2572488784790039
+INFO:root: * Batch size = 2 , avg_loss = 0.24765005707740784%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24765005707740784
+INFO:root: * Batch size = 2 , avg_loss = 0.2558490037918091%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2558490037918091
+INFO:root: * Batch size = 2 , avg_loss = 0.24264021217823029%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24264021217823029
+INFO:root: * Batch size = 2 , avg_loss = 0.2535812556743622%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2535812556743622
+INFO:root: * Batch size = 2 , avg_loss = 0.22525537014007568%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22525537014007568
+INFO:root: * Batch size = 2 , avg_loss = 0.23611688613891602%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23611688613891602
+INFO:root: * Batch size = 2 , avg_loss = 0.2568957507610321%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2568957507610321
+INFO:root: * Batch size = 2 , avg_loss = 0.26208701729774475%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26208701729774475
+INFO:root: * Batch size = 2 , avg_loss = 0.23840394616127014%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23840394616127014
+INFO:root: * Batch size = 2 , avg_loss = 0.25837448239326477%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25837448239326477
+INFO:root: * Batch size = 2 , avg_loss = 0.2947443723678589%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2947443723678589
+INFO:root: * Batch size = 2 , avg_loss = 0.27939149737358093%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27939149737358093
+INFO:root: * Batch size = 2 , avg_loss = 0.24819813668727875%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24819813668727875
+INFO:root: * Batch size = 2 , avg_loss = 0.25369250774383545%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25369250774383545
+INFO:root: * Batch size = 2 , avg_loss = 0.2577227056026459%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2577227056026459
+INFO:root: * Batch size = 2 , avg_loss = 0.26665371656417847%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26665371656417847
+INFO:root: * Batch size = 2 , avg_loss = 0.22904938459396362%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22904938459396362
+INFO:root: * Batch size = 2 , avg_loss = 0.22891175746917725%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22891175746917725
+INFO:root: * Batch size = 2 , avg_loss = 0.2791914641857147%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2791914641857147
+INFO:root: * Batch size = 2 , avg_loss = 0.26764798164367676%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26764798164367676
+INFO:root: * Batch size = 2 , avg_loss = 0.2632015347480774%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2632015347480774
+INFO:root: * Batch size = 2 , avg_loss = 0.2299819141626358%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2299819141626358
+INFO:root: * Batch size = 2 , avg_loss = 0.2697482109069824%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2697482109069824
+INFO:root: * Batch size = 1 , avg_loss = 0.21152277290821075%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21152277290821075
+INFO:root: * Batch size = 2 , avg_loss = 0.27087831497192383%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27087831497192383
+INFO:root: * Batch size = 2 , avg_loss = 0.240030437707901%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.240030437707901
+INFO:root: * Batch size = 2 , avg_loss = 0.267608106136322%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.267608106136322
+INFO:root: * Batch size = 2 , avg_loss = 0.22093403339385986%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22093403339385986
+INFO:root: * Batch size = 2 , avg_loss = 0.22501608729362488%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22501608729362488
+INFO:root: * Batch size = 2 , avg_loss = 0.2742508351802826%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2742508351802826
+INFO:root: * Batch size = 2 , avg_loss = 0.2677328586578369%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2677328586578369
+INFO:root: * Batch size = 2 , avg_loss = 0.21546968817710876%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21546968817710876
+INFO:root: * Batch size = 2 , avg_loss = 0.2631336748600006%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2631336748600006
+INFO:root: * Batch size = 2 , avg_loss = 0.26439741253852844%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26439741253852844
+INFO:root: * Batch size = 2 , avg_loss = 0.26978033781051636%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26978033781051636
+INFO:root: * Batch size = 2 , avg_loss = 0.24519991874694824%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24519991874694824
+INFO:root: * Batch size = 2 , avg_loss = 0.26450884342193604%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26450884342193604
+INFO:root: * Batch size = 2 , avg_loss = 0.24066060781478882%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24066060781478882
+INFO:root: * Batch size = 2 , avg_loss = 0.26066678762435913%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26066678762435913
+INFO:root: * Batch size = 2 , avg_loss = 0.23010782897472382%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23010782897472382
+INFO:root: * Batch size = 2 , avg_loss = 0.23698893189430237%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23698893189430237
+INFO:root: * Batch size = 2 , avg_loss = 0.24320363998413086%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24320363998413086
+INFO:root: * Batch size = 2 , avg_loss = 0.2480965405702591%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2480965405702591
+INFO:root: * Batch size = 2 , avg_loss = 0.26662784814834595%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26662784814834595
+INFO:root: * Batch size = 2 , avg_loss = 0.21882443130016327%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21882443130016327
+INFO:root: * Batch size = 2 , avg_loss = 0.24906887114048004%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24906887114048004
+INFO:root: * Batch size = 2 , avg_loss = 0.24895323812961578%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24895323812961578
+INFO:root: * Batch size = 2 , avg_loss = 0.24506773054599762%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24506773054599762
+INFO:root: * Batch size = 2 , avg_loss = 0.24152106046676636%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24152106046676636
+INFO:root: * Batch size = 2 , avg_loss = 0.2464381754398346%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2464381754398346
+INFO:root: * Batch size = 2 , avg_loss = 0.2620173692703247%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2620173692703247
+INFO:root: * Batch size = 1 , avg_loss = 0.2273278683423996%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2273278683423996
+INFO:root: * Batch size = 2 , avg_loss = 0.2638280987739563%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2638280987739563
+INFO:root: * Batch size = 2 , avg_loss = 0.20557492971420288%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.20557492971420288
+INFO:root: * Batch size = 2 , avg_loss = 0.27371349930763245%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27371349930763245
+INFO:root: * Batch size = 2 , avg_loss = 0.2788960039615631%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2788960039615631
+INFO:root: * Batch size = 2 , avg_loss = 0.2588971257209778%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2588971257209778
+INFO:root: * Batch size = 2 , avg_loss = 0.25774747133255005%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25774747133255005
+INFO:root: * Batch size = 2 , avg_loss = 0.24027183651924133%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24027183651924133
+INFO:root: * Batch size = 2 , avg_loss = 0.24365085363388062%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24365085363388062
+INFO:root: * Batch size = 2 , avg_loss = 0.24202309548854828%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24202309548854828
+INFO:root: * Batch size = 2 , avg_loss = 0.2664709985256195%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2664709985256195
+INFO:root: * Batch size = 1 , avg_loss = 0.2455667108297348%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2455667108297348
+INFO:root: * Batch size = 2 , avg_loss = 0.2697768807411194%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2697768807411194
+INFO:root: * Batch size = 2 , avg_loss = 0.27225005626678467%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27225005626678467
+INFO:root: * Batch size = 2 , avg_loss = 0.2507418096065521%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2507418096065521
+INFO:root: * Batch size = 2 , avg_loss = 0.24711504578590393%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24711504578590393
+INFO:root: * Batch size = 2 , avg_loss = 0.2486986368894577%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2486986368894577
+INFO:root: * Batch size = 2 , avg_loss = 0.23974770307540894%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23974770307540894
+INFO:root: * Batch size = 2 , avg_loss = 0.23936283588409424%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23936283588409424
+INFO:root: * Batch size = 2 , avg_loss = 0.29143351316452026%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.29143351316452026
+INFO:root: * Batch size = 2 , avg_loss = 0.2684628963470459%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2684628963470459
+INFO:root: * Batch size = 2 , avg_loss = 0.2124299854040146%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2124299854040146
+INFO:root: * Batch size = 2 , avg_loss = 0.23272430896759033%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23272430896759033
+INFO:root: * Batch size = 2 , avg_loss = 0.23878522217273712%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23878522217273712
+INFO:root: * Batch size = 2 , avg_loss = 0.2597622275352478%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2597622275352478
+INFO:root: * Batch size = 2 , avg_loss = 0.24784350395202637%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24784350395202637
+INFO:root: * Batch size = 2 , avg_loss = 0.2571296989917755%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2571296989917755
+INFO:root: * Batch size = 2 , avg_loss = 0.24884885549545288%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24884885549545288
+INFO:root: * Batch size = 2 , avg_loss = 0.23676733672618866%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23676733672618866
+INFO:root: * Batch size = 2 , avg_loss = 0.23981420695781708%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23981420695781708
+INFO:root: * Batch size = 2 , avg_loss = 0.2500784993171692%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2500784993171692
+INFO:root: * Batch size = 2 , avg_loss = 0.28804975748062134%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.28804975748062134
+INFO:root: * Batch size = 2 , avg_loss = 0.22926852107048035%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22926852107048035
+INFO:root: * Batch size = 2 , avg_loss = 0.2245176136493683%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2245176136493683
+INFO:root: * Batch size = 2 , avg_loss = 0.20685282349586487%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.20685282349586487
+INFO:root: * Batch size = 2 , avg_loss = 0.24258282780647278%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24258282780647278
+INFO:root: * Batch size = 2 , avg_loss = 0.2512354552745819%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2512354552745819
+INFO:root: * Batch size = 2 , avg_loss = 0.28344905376434326%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.28344905376434326
+INFO:root: * Batch size = 2 , avg_loss = 0.22451427578926086%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22451427578926086
+INFO:root: * Batch size = 2 , avg_loss = 0.21329674124717712%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21329674124717712
+INFO:root: * Batch size = 2 , avg_loss = 0.2551199793815613%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2551199793815613
+INFO:root: * Batch size = 2 , avg_loss = 0.2660520374774933%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2660520374774933
+INFO:root: * Batch size = 2 , avg_loss = 0.24752913415431976%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24752913415431976
+INFO:root: * Batch size = 2 , avg_loss = 0.2274560183286667%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2274560183286667
+INFO:root: * Batch size = 2 , avg_loss = 0.24895431101322174%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24895431101322174
+INFO:root: * Batch size = 2 , avg_loss = 0.22914932668209076%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.22914932668209076
+INFO:root: * Batch size = 2 , avg_loss = 0.26642343401908875%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26642343401908875
+INFO:root: * Batch size = 2 , avg_loss = 0.2527569532394409%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2527569532394409
+INFO:root: * Batch size = 2 , avg_loss = 0.2607971727848053%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2607971727848053
+INFO:root: * Batch size = 2 , avg_loss = 0.24952097237110138%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24952097237110138
+INFO:root: * Batch size = 2 , avg_loss = 0.2462165206670761%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2462165206670761
+INFO:root: * Batch size = 2 , avg_loss = 0.2659311294555664%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2659311294555664
+INFO:root: * Batch size = 2 , avg_loss = 0.2575714588165283%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2575714588165283
+INFO:root: * Batch size = 1 , avg_loss = 0.27042755484580994%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27042755484580994
+INFO:root: * Batch size = 2 , avg_loss = 0.24123510718345642%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24123510718345642
+INFO:root: * Batch size = 2 , avg_loss = 0.2649635672569275%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2649635672569275
+INFO:root: * Batch size = 2 , avg_loss = 0.27410411834716797%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27410411834716797
+INFO:root: * Batch size = 2 , avg_loss = 0.24631938338279724%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24631938338279724
+INFO:root: * Batch size = 2 , avg_loss = 0.24153265357017517%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24153265357017517
+INFO:root: * Batch size = 2 , avg_loss = 0.2672930955886841%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2672930955886841
+INFO:root: * Batch size = 2 , avg_loss = 0.2624770998954773%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2624770998954773
+INFO:root: * Batch size = 2 , avg_loss = 0.252893328666687%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.252893328666687
+INFO:root: * Batch size = 2 , avg_loss = 0.23821499943733215%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23821499943733215
+INFO:root: * Batch size = 2 , avg_loss = 0.27123206853866577%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27123206853866577
+INFO:root: * Batch size = 2 , avg_loss = 0.2517707943916321%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2517707943916321
+INFO:root: * Batch size = 2 , avg_loss = 0.2655225396156311%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2655225396156311
+INFO:root: * Batch size = 2 , avg_loss = 0.227836012840271%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.227836012840271
+INFO:root: * Batch size = 2 , avg_loss = 0.24728423357009888%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24728423357009888
+INFO:root: * Batch size = 2 , avg_loss = 0.2519327998161316%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2519327998161316
+INFO:root: * Batch size = 2 , avg_loss = 0.2717709243297577%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2717709243297577
+INFO:root: * Batch size = 2 , avg_loss = 0.24343031644821167%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24343031644821167
+INFO:root: * Batch size = 2 , avg_loss = 0.27579373121261597%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.27579373121261597
+INFO:root: * Batch size = 2 , avg_loss = 0.23796898126602173%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23796898126602173
+INFO:root: * Batch size = 2 , avg_loss = 0.23650097846984863%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.23650097846984863
+INFO:root: * Batch size = 2 , avg_loss = 0.26032203435897827%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.26032203435897827
+INFO:root: * Batch size = 2 , avg_loss = 0.25138574838638306%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.25138574838638306
+INFO:root: * Batch size = 2 , avg_loss = 0.21379481256008148%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.21379481256008148
+INFO:root: * Batch size = 2 , avg_loss = 0.24115349352359772%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.24115349352359772
+INFO:root: * Batch size = 1 , avg_loss = 0.2031676024198532%
+
+INFO:root:	 --> chunk_id = 0 -> batch_loss = 0.2031676024198532

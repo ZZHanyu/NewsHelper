@@ -1,0 +1,1 @@
+{"hidden_size": 256, "hidden_size_linear": 128, "num_layers": 5, "dropout_linear": 0.1, "activation_linear": "LeakyReLU", "dropout": 0.5, "learn_rate": 0.01, "batch_size": 32, "optimize_method": "Adam", "loss": "MSELoss", "train_loss": null, "test_loss": null}

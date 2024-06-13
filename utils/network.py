@@ -196,6 +196,13 @@ class trainer(preprocess.data_handler):
         print("\nTrainer inital succefully!\n")       
 
 
+    def draw_diagram(self, x: list, y: list) -> None:
+        if len(x) != len(y):
+            raise ValueError
+        else:
+            plt.plot(x,y)
+        
+
     def display_all_params(self):
         print("\n\n *** starting print param:\n")
         for name, parms in self.model.named_parameters():
@@ -236,10 +243,11 @@ class trainer(preprocess.data_handler):
         y_pred = self.model.forward_with_batch(tensor_data=pad_datas, # feature
                                                 batch_size=batch_size)
         y_pred_reshape = y_pred.reshape(-1)
-        self.optimizer.zero_grad() # clean all grad
         loss = self.loss(y_pred_reshape, target_set)
         loss.backward()
         self.optimizer.step()
+        self.optimizer.zero_grad() # clean all grad
+        logging.info(f"\t *** batch size = {batch_size}, batch_loss = {loss}! *** \n")
         
         return loss
     
@@ -250,22 +258,21 @@ class trainer(preprocess.data_handler):
         '''
             This is SGD Method
         '''
-
         total_loss = 0
 
         for data_idx in tqdm(range(len(batch)), desc="Single Step Train", leave=False):
             feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
             target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
             y_pred = self.model.forward(feature)
-            self.optimizer.zero_grad() # clean all grad
             loss = self.loss(y_pred, target)
             loss.backward()
             total_loss += loss
             self.optimizer.step()
+            self.optimizer.zero_grad() # clean all grad
                
         total_loss /= len(batch)    
-        logging.info(f" * Batch size = {len(batch)} , avg_loss = {total_loss}%\n")
-        
+        logging.info(f"\t *** single_step avg_loss = {total_loss} % *** \n")
+
         return total_loss
         
 
@@ -338,7 +345,7 @@ class trainer(preprocess.data_handler):
             "activation_linear" : ["tanh", "relu", "LeakyReLU"],
             "learn_rate": [1e-5, 1e-4, 1e-3, 1e-2],
             "batch_size": [8 ,16, 24, 32, 48, 64],
-            "optimize_method": ["Adam", "SGD", "Adagrad", "RMSprop"],
+            "optimize_method": ["Adam", "Adagrad", "RMSprop"],
             "loss": ["BCEWithLogitsLoss", "MSELoss"]
         }
 
@@ -368,11 +375,15 @@ class trainer(preprocess.data_handler):
                 if param_selected.get(key, False):
                     raise ValueError
                 else:
-                    if key == "batch_size":
-                        param_selected["batch_size"] = 2
-                        continue
                     if key == "optimize_method" and main._args.batch_model == False:
                         param_selected[key] = "SGD"
+                    
+                    if key == "batch_size" and main._args.batch_model == False:
+                        param_selected[key] = 1
+                    elif key == "batch_size" and main._args.batch_model == True:
+                        param_selected[key] = 8
+                        continue
+                    
                     param_selected[key] = random.choice(item)
                     print(f"param : {key} --- value: {param_selected[key]}")
                     logging.info(f"param : {key} --- value: {param_selected[key]}")
@@ -472,6 +483,10 @@ class trainer(preprocess.data_handler):
             2. mini-batch: after whole batch then updated
         '''
 
+        # for matplotlib draw diagram only:
+        x = []
+        y = []
+
         single_epoch_bar = tqdm(total=preprocess.data_handler._csv_total_len, desc="inside single epoch", leave=False)        
         self.model.train()
 
@@ -497,17 +512,22 @@ class trainer(preprocess.data_handler):
                 # epoch error, stop and save
                 if not isinstance(single_chunk, list):
                     break
+
                 match main._args.batch_model:
                     case True:
                         batch_loss = self._mini_batch(batch=single_chunk)
                         avg_cost += (1 - batch_loss)
                         print(f"\n batch loss = {batch_loss}\n")
                         logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {batch_loss}")
+                        x.append(single_chunk_idx)
+                        y.append(batch_loss)
                     case False:
                         step_loss = self._single_step(batch=single_chunk)
                         avg_cost += (1 - step_loss)
                         print(f"\n single loss = {step_loss}\n")
                         logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {step_loss}")
+                        x.append(single_chunk_idx)
+                        y.append(step_loss)
                     case _:
                         raise KeyError
                 
@@ -522,11 +542,15 @@ class trainer(preprocess.data_handler):
         except Exception as e:
             print(f"\n -- Trainer Error! error is = \t{e}\n")
             self.save_model(save_path=new_folder_path)
-        
+            self.draw_diagram(x, y)
+                
 
         print("\n** 1 epoch Done, Now SAVEING model! **\n")        
         self.save_model(save_path=new_folder_path)
         print("\nMODEL SAVED!\n")
+
+        # if not error, then draw diagram:
+        self.draw_diagram(x, y)
 
         avg_cost = avg_cost / count
         print(f"\n\t **** AVG_Cost in 1 epoch = {avg_cost} ***** \n")
@@ -595,7 +619,7 @@ class trainer(preprocess.data_handler):
             #     self.save_model()
             #     print(f"\n * ERROR {e}! But model have been saved! \n")
         }
-        
+    
 
 
     def auto_ml(self):
