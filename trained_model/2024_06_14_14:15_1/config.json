@@ -1,0 +1,1 @@
+{"hidden_size": 64, "hidden_size_linear": 256, "num_layers": 1, "dropout_linear": 0.4, "activation_linear": "relu", "dropout": 0.1, "learn_rate": 1e-05, "batch_size": 24, "optimize_method": "Adam", "loss": "BCEWithLogitsLoss", "train_loss": null, "test_loss": null}

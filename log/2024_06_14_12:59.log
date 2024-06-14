@@ -1,0 +1,35 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = cuda ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 32
+INFO:root:param : hidden_size_linear --- value: 32
+INFO:root:param : num_layers --- value: 4
+INFO:root:param : dropout_linear --- value: 0.3
+INFO:root:param : dropout --- value: 0.2
+INFO:root:param : activation_linear --- value: tanh
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : batch_size --- value: 24
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: MSELoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+**** inital done, now start training ....
+
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+

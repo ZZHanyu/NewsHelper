@@ -200,7 +200,17 @@ class trainer(preprocess.data_handler):
         if len(x) != len(y):
             raise ValueError
         else:
-            plt.plot(x,y)
+            plt.ion()
+            fig, ax = plt.subplots()
+            ax.plot(x,y)
+            ax.set(
+                xlabel='batch index', 
+                ylabel='loss',
+                title='loss-batch-index diagram'
+                )
+            ax.grid()
+            fig.savefig("./test.png")
+
         
 
     def display_all_params(self):
@@ -515,14 +525,14 @@ class trainer(preprocess.data_handler):
 
                 match main._args.batch_model:
                     case True:
-                        batch_loss = self._mini_batch(batch=single_chunk)
+                        batch_loss = self._mini_batch(batch=single_chunk).cpu()
                         avg_cost += (1 - batch_loss)
                         print(f"\n batch loss = {batch_loss}\n")
                         logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {batch_loss}")
                         x.append(single_chunk_idx)
                         y.append(batch_loss)
                     case False:
-                        step_loss = self._single_step(batch=single_chunk)
+                        step_loss = self._single_step(batch=single_chunk).cpu()
                         avg_cost += (1 - step_loss)
                         print(f"\n single loss = {step_loss}\n")
                         logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {step_loss}")
