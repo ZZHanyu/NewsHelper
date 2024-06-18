@@ -94,7 +94,7 @@ class main(ABC):
                             help="pretrained embedding model name from gensim")
         parser.add_argument("--model_save_path", 
                             type=str, 
-                            default="/root/autodl-tmp/NewsHelper/trained_model/", 
+                            default="./trained_model/", 
                             help="trained model saving path")
         parser.add_argument("--batch_model",
                              type=bool, 
@@ -106,7 +106,7 @@ class main(ABC):
                             help="whether start from train")
         parser.add_argument("--LDA_model_path", 
                             type=str, 
-                            default="/root/autodl-tmp/NewsHelper/LDA_Model/", 
+                            default="./LDA_Model/", 
                             help="LDA model path")
         parser.add_argument("--num_epoches", 
                             type=int, 

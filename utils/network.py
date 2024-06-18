@@ -454,7 +454,8 @@ class trainer(preprocess.data_handler):
                 print(f"\n ERROR ON Training: {e} \n")
                 logging.info(f"\n ERROR ON Training: {e} \n")
                 self.save_model(save_path=new_folder_path)
-                logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
+                if main._device == torch.device("cuda"):
+                    logging.info(f"\n log memory error summary: {torch.cuda.memory_summary()}\n")
                 continue
 
 

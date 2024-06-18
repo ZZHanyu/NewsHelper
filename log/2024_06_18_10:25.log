@@ -1,0 +1,30 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+ --------epoch:0 : param random choice--------
+
+INFO:root:param : hidden_size --- value: 64
+INFO:root:param : hidden_size_linear --- value: 32
+INFO:root:param : num_layers --- value: 8
+INFO:root:param : dropout_linear --- value: 0.3
+INFO:root:param : dropout --- value: 0.3
+INFO:root:param : activation_linear --- value: LeakyReLU
+INFO:root:param : learn_rate --- value: 0.001
+INFO:root:param : batch_size --- value: 48
+INFO:root:param : optimize_method --- value: Adam
+INFO:root:param : loss --- value: BCEWithLogitsLoss
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
