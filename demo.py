@@ -29,7 +29,7 @@ from api import openai_api
 
 
 main.initialize()
-preprocess.data_handler.initialize()
+preprocess.data_handler.initialize(batch_size=200)
 device = main._device
 
 
@@ -54,6 +54,7 @@ classify_model.load_state_dict(check_point)
 def data_loader():
     # dataset loader
     single_chunk = next(preprocess.data_handler._chunks, None)
+    preprocess.data_handler._remove_empty_line(single_chunk)
     if isinstance(single_chunk, pd.DataFrame):
         return single_chunk
     else:
@@ -71,8 +72,10 @@ def get_classfiy(data):
         
         if y_pred >= 0.5 and target[0] == 1:
             real_news_list.append(row[2]+row[3])
+
         else:
             continue
+
     return real_news_list
 
 
@@ -149,7 +152,6 @@ def get_topic():
 
 
 if __name__ == "__main__":
-
     while True:
         single_batch_data = data_loader()
         if not isinstance(single_batch_data, pd.core.frame.DataFrame):

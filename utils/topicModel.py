@@ -20,6 +20,8 @@ import time
 import json
 import logging
 from tqdm import tqdm
+import sys
+
 
 from utils import model
 from main_class import main
@@ -82,22 +84,12 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             use comman corpus which download from genism to train a base LDA model 
         '''
         
+        lda=None
         # logging.INFO(f"\n ***LDA***:\t LDA training processing...\n")
         print(f"\n ***LDA***:\t LDA training processing...\n")
 
         common_dictionary = Dictionary(common_texts)
         common_corpus = [common_dictionary.doc2bow(text) for text in common_texts]
-
-        lda = LdaModel(
-            common_corpus, 
-            num_topics=5, 
-            alpha='auto', 
-            eval_every=5,
-            passes=20,
-            iterations=100,
-            chunksize=2000
-            )
-        
 
         # train LDA though whole batch:
         while True:
@@ -105,7 +97,25 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             if real_news_list == None:
                 break
             realnews_corpus = [common_dictionary.doc2bow(text.split()) for text in real_news_list]
-            lda.update(realnews_corpus)
+            
+            if lda == None:
+                
+                lda = LdaModel(
+                    realnews_corpus + common_corpus, 
+                    num_topics=5, 
+                    alpha='auto', 
+                    eval_every=5,
+                    passes=20,
+                    iterations=100,
+                    chunksize=2000
+                    )
+            else:
+                lda.update(realnews_corpus)
+
+        
+        
+
+        
         
 
         # # train LDA using single batch:
@@ -152,6 +162,11 @@ class LDA_topic_model(model.module, preprocess.data_handler):
             print("\nRESULT:\n")
             for i in topic_model_vector:
                 print(f"\n{i}\n")
+                print(f"\n *** Size of topic modeling vector = {len(topic_model_vector)}, memory size = {sys.getsizeof(topic_model_vector)}\n")
+            if sys.getsizeof(topic_model_vector) > 15000 or len(topic_model_vector) > 1500: # (15000 bytes)
+                print("\nFetch done!\n")
+                break
+                
         
         # # single dataset
         # real_news_list = self._classification()

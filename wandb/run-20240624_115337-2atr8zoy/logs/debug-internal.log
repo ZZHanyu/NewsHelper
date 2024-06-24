@@ -1,0 +1,85 @@
+2024-06-24 11:53:37,780 INFO    StreamThr :65171 [internal.py:wandb_internal():85] W&B internal server running at pid: 65171, started at: 2024-06-24 11:53:37.779843
+2024-06-24 11:53:37,784 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status
+2024-06-24 11:53:37,799 INFO    WriterThread:65171 [datastore.py:open_for_write():87] open: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/run-2atr8zoy.wandb
+2024-06-24 11:53:37,799 DEBUG   SenderThread:65171 [sender.py:send():379] send: header
+2024-06-24 11:53:37,838 DEBUG   SenderThread:65171 [sender.py:send():379] send: run
+2024-06-24 11:53:38,565 INFO    SenderThread:65171 [dir_watcher.py:__init__():211] watching files in: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files
+2024-06-24 11:53:38,566 INFO    SenderThread:65171 [sender.py:_start_run_threads():1188] run started: 2atr8zoy with start time 1719201217.789682
+2024-06-24 11:53:38,566 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: check_version
+2024-06-24 11:53:38,566 DEBUG   SenderThread:65171 [sender.py:send_request():406] send_request: check_version
+2024-06-24 11:53:39,322 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: run_start
+2024-06-24 11:53:39,330 DEBUG   HandlerThread:65171 [system_info.py:__init__():26] System info init
+2024-06-24 11:53:39,330 DEBUG   HandlerThread:65171 [system_info.py:__init__():41] System info init done
+2024-06-24 11:53:39,330 INFO    HandlerThread:65171 [system_monitor.py:start():194] Starting system monitor
+2024-06-24 11:53:39,331 INFO    HandlerThread:65171 [system_monitor.py:probe():214] Collecting system info
+2024-06-24 11:53:39,331 INFO    SystemMonitor:65171 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-24 11:53:39,334 INFO    SystemMonitor:65171 [interfaces.py:start():188] Started cpu monitoring
+2024-06-24 11:53:39,336 INFO    SystemMonitor:65171 [interfaces.py:start():188] Started disk monitoring
+2024-06-24 11:53:39,337 INFO    SystemMonitor:65171 [interfaces.py:start():188] Started gpuapple monitoring
+2024-06-24 11:53:39,339 INFO    SystemMonitor:65171 [interfaces.py:start():188] Started memory monitoring
+2024-06-24 11:53:39,341 INFO    SystemMonitor:65171 [interfaces.py:start():188] Started network monitoring
+2024-06-24 11:53:40,457 DEBUG   HandlerThread:65171 [system_info.py:probe():152] Probing system
+2024-06-24 11:53:40,462 DEBUG   HandlerThread:65171 [system_info.py:_probe_git():137] Probing git
+2024-06-24 11:53:40,482 DEBUG   HandlerThread:65171 [system_info.py:_probe_git():145] Probing git done
+2024-06-24 11:53:40,483 DEBUG   HandlerThread:65171 [system_info.py:probe():200] Probing system done
+2024-06-24 11:53:40,483 DEBUG   HandlerThread:65171 [system_monitor.py:probe():223] {'os': 'macOS-14.5-arm64-arm-64bit', 'python': '3.11.9', 'heartbeatAt': '2024-06-24T03:53:40.458009', 'startedAt': '2024-06-24T03:53:37.770548', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/taotao/Documents/GitHub/FYP/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/ZZHanyu/NewsHelper.git', 'commit': 'f16d1867b49a45b8860872a047af8dd0684c2890'}, 'email': '2538285586@qq.com', 'root': '/Users/taotao/Documents/GitHub/FYP', 'host': 'ZhyPro14.local', 'username': 'taotao', 'executable': '/opt/anaconda3/bin/python', 'cpu_count': 12, 'cpu_count_logical': 12, 'cpu_freq': {'current': 4056, 'min': 696, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 696, 'max': 4056}], 'disk': {'/': {'total': 926.3517189025879, 'used': 330.9229278564453}}, 'gpuapple': {'type': 'Apple M3 Pro', 'vendor': 'sppci_vendor_Apple'}, 'memory': {'total': 18.0}}
+2024-06-24 11:53:40,483 INFO    HandlerThread:65171 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-24 11:53:40,483 INFO    HandlerThread:65171 [system_monitor.py:probe():227] Publishing system info
+2024-06-24 11:53:40,484 DEBUG   HandlerThread:65171 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-06-24 11:53:40,578 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/conda-environment.yaml
+2024-06-24 11:53:46,219 DEBUG   HandlerThread:65171 [system_info.py:_save_conda():224] Saving conda packages done
+2024-06-24 11:53:46,220 INFO    HandlerThread:65171 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-24 11:53:46,248 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:53:46,248 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-24 11:53:46,249 DEBUG   SenderThread:65171 [sender.py:send():379] send: files
+2024-06-24 11:53:46,249 INFO    SenderThread:65171 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-24 11:53:46,596 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/conda-environment.yaml
+2024-06-24 11:53:46,597 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/wandb-metadata.json
+2024-06-24 11:53:46,618 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-24 11:53:46,618 DEBUG   SenderThread:65171 [sender.py:send_request():406] send_request: python_packages
+2024-06-24 11:53:46,620 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:46,621 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 11:53:46,621 DEBUG   SenderThread:65171 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 11:53:46,974 DEBUG   SenderThread:65171 [sender.py:send():379] send: telemetry
+2024-06-24 11:53:46,974 DEBUG   SenderThread:65171 [sender.py:send():379] send: telemetry
+2024-06-24 11:53:46,975 DEBUG   SenderThread:65171 [sender.py:send():379] send: config
+2024-06-24 11:53:47,353 INFO    wandb-upload_0:65171 [upload_job.py:push():130] Uploaded file /var/folders/0k/yky3rpf909q6ybtw__sn071m0000gn/T/tmppgm23endwandb/hleftkgf-wandb-metadata.json
+2024-06-24 11:53:47,602 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/requirements.txt
+2024-06-24 11:53:47,602 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/output.log
+2024-06-24 11:53:47,625 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:48,626 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:48,864 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:53:49,610 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/output.log
+2024-06-24 11:53:49,631 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:50,634 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:51,635 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:52,640 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:53,643 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:54,638 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:53:54,645 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:55,646 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:56,651 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:57,656 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:58,661 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:53:59,639 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:53:59,665 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:00,667 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:01,624 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 11:54:01,625 DEBUG   SenderThread:65171 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 11:54:01,668 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:02,674 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:03,676 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:04,682 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:04,919 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:54:05,686 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:06,686 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:07,691 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:08,693 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:09,691 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/output.log
+2024-06-24 11:54:09,698 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:10,707 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 11:54:10,707 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:11,701 INFO    Thread-17 :65171 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_115337-2atr8zoy/files/config.yaml
+2024-06-24 11:54:11,708 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:12,713 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 11:54:13,718 DEBUG   HandlerThread:65171 [handler.py:handle_request():158] handle_request: internal_messages

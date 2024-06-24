@@ -1,0 +1,41 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:
+Before Train...
+
+INFO:root:LstmNet(
+  (lstm): LSTM(300, 512, num_layers=2, dropout=0.5, bidirectional=True)
+  (linears): Sequential(
+    (0): Linear(in_features=1024, out_features=512, bias=True)
+    (1): LeakyReLU(negative_slope=0.01)
+    (2): Dropout(p=0.5, inplace=False)
+    (3): Linear(in_features=512, out_features=256, bias=True)
+    (4): LeakyReLU(negative_slope=0.01)
+    (5): Dropout(p=0.5, inplace=False)
+    (6): Linear(in_features=256, out_features=128, bias=True)
+    (7): LeakyReLU(negative_slope=0.01)
+    (8): Dropout(p=0.5, inplace=False)
+    (9): Linear(in_features=128, out_features=1, bias=True)
+  )
+)
+INFO:root:
+ NOW training...
+INFO:root:* Loading pretrained embedding model: {'num_records': 3000000, 'file_size': 1743563840, 'base_dataset': 'Google News (about 100 billion words)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/word2vec-google-news-300/__init__.py', 'license': 'not found', 'parameters': {'dimension': 300}, 'description': "Pre-trained vectors trained on a part of the Google News dataset (about 100 billion words). The model contains 300-dimensional vectors for 3 million words and phrases. The phrases were obtained using a simple data-driven approach described in 'Distributed Representations of Words and Phrases and their Compositionality' (https://code.google.com/archive/p/word2vec/).", 'read_more': ['https://code.google.com/archive/p/word2vec/', 'https://arxiv.org/abs/1301.3781', 'https://arxiv.org/abs/1310.4546', 'https://www.microsoft.com/en-us/research/publication/linguistic-regularities-in-continuous-space-word-representations/?from=http%3A%2F%2Fresearch.microsoft.com%2Fpubs%2F189726%2Frvecs.pdf'], 'checksum': 'a5e5354d40acb95f9ec66d5977d140ef', 'file_name': 'word2vec-google-news-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /Users/taotao/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (3000000, 300) matrix of type float32 from /Users/taotao/gensim-data/word2vec-google-news-300/word2vec-google-news-300.gz', 'binary': True, 'encoding': 'utf8', 'datetime': '2024-06-24T15:12:57.644843', 'gensim': '4.3.2', 'python': '3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:34:54) [Clang 16.0.6 ]', 'platform': 'macOS-14.5-arm64-arm-64bit', 'event': 'load_word2vec_format'}

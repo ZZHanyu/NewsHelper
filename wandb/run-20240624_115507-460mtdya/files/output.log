@@ -1,0 +1,421 @@
+/opt/anaconda3/lib/python3.11/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+inside single epoch: 20it [00:00, 24.24it/s]
+Handling single row in a chunk: 0it [00:00, ?it/s]
+Start iterator building...
+Iterator building Sucessfully!.
+
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device)                         | 0/18 [00:00<?, ?it/s]
+inside single epoch: 40it [01:39,  2.91s/it]
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 15.76it/s]
+ --> Single loss round 1 is = 0.6864015460014343!
+
+Single Step Train:  89%|█████████████████████████████████████████████████████████████████████▊        | 17/19 [00:01<00:00, 13.07it/s]
+
+Single Step Train:  75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:00<00:00, 18.74it/s]
+ --> Single loss round 4 is = 0.696715235710144!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:01, 12.85it/s]
+
+Single Step Train:  70%|██████████████████████████████████████████████████████▌                       | 14/20 [00:01<00:00, 11.66it/s]
+ --> Single loss round 7 is = 0.6992655396461487!
+
+Single Step Train:  37%|█████████████████████████████                                                  | 7/19 [00:00<00:00, 13.78it/s]
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 10 is = 0.6934787631034851!
+
+Single Step Train:  75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:00<00:00, 19.63it/s]
+ --> Single loss round 12 is = 0.6964690685272217!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:02,  6.41it/s]
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 15 is = 0.6981521844863892!
+
+
+Single Step Train:  47%|█████████████████████████████████████▍                                         | 9/19 [00:00<00:00, 20.82it/s]
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 22.32it/s]
+ --> Single loss round 18 is = 0.6973245143890381!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:01, 13.70it/s]
+ --> Single loss round 20 is = 0.6942328214645386!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 22 is = 0.6885925531387329!
+
+Single Step Train:   0%|                                                                                       | 0/18 [00:00<?, ?it/s]
+ --> Single loss round 24 is = 0.690451979637146!
+
+Single Step Train:  47%|█████████████████████████████████████▍                                         | 9/19 [00:00<00:00, 25.42it/s]
+ --> Single loss round 26 is = 0.6976516246795654!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:00<00:00, 31.91it/s]
+ --> Single loss round 28 is = 0.6942276358604431!
+ --> Single loss round 29 is = 0.6933063268661499!
+
+Single Step Train:  53%|█████████████████████████████████████████                                     | 10/19 [00:00<00:00, 23.16it/s]
+ --> Single loss round 31 is = 0.6887089014053345!
+
+Single Step Train:  18%|█████████████▉                                                                 | 3/17 [00:00<00:00, 25.54it/s]
+
+Single Step Train:   0%|                                                                                       | 0/19 [00:00<?, ?it/s]
+ --> Single loss round 34 is = 0.7007813453674316!
+
+Single Step Train:  26%|████████████████████▊                                                          | 5/19 [00:00<00:00, 39.39it/s]
+ --> Single loss round 36 is = 0.702329695224762!
+
+Single Step Train:  10%|███████▉                                                                       | 2/20 [00:00<00:01,  9.63it/s]
+ --> Single loss round 38 is = 0.6955447196960449!
+
+Single Step Train:  75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:00<00:00, 21.69it/s]
+ --> Single loss round 40 is = 0.6983762383460999!
+
+Single Step Train:  10%|███████▉                                                                       | 2/20 [00:00<00:01, 16.04it/s]
+ --> Single loss round 42 is = 0.698137104511261!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:00<00:00, 22.72it/s]
+ --> Single loss round 44 is = 0.6985170245170593!
+
+ --> Single loss round 45 is = 0.6954541802406311!
+inside single epoch: 960it [02:33, 16.30it/s]
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 15.13it/s]
+
+Single Step Train:  75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:01<00:00, 12.67it/s]
+ --> Single loss round 48 is = 0.6952747702598572!
+
+Single Step Train:  53%|█████████████████████████████████████████                                     | 10/19 [00:00<00:00, 14.67it/s]
+ --> Single loss round 50 is = 0.6926581263542175!
+
+Single Step Train:  45%|███████████████████████████████████▌                                           | 9/20 [00:00<00:00, 20.00it/s]
+ --> Single loss round 52 is = 0.7011630535125732!
+
+Single Step Train:  47%|█████████████████████████████████████▍                                         | 9/19 [00:00<00:00, 25.92it/s]
+
+Single Step Train:  11%|████████▊                                                                      | 2/18 [00:00<00:01, 10.50it/s]
+ --> Single loss round 55 is = 0.6856153011322021!
+
+Single Step Train:  70%|██████████████████████████████████████████████████████▌                       | 14/20 [00:00<00:00, 23.51it/s]
+ --> Single loss round 57 is = 0.6877256035804749!
+ --> Single loss round 58 is = 0.6937291026115417!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 22.17it/s]
+ --> Single loss round 60 is = 0.6948727369308472!
+
+Single Step Train:   0%|                                                                                       | 0/19 [00:00<?, ?it/s]
+ --> Single loss round 62 is = 0.6840999722480774!
+
+Single Step Train:  63%|█████████████████████████████████████████████████▎                            | 12/19 [00:00<00:00, 32.21it/s]
+ --> Single loss round 64 is = 0.685452938079834!
+ --> Single loss round 65 is = 0.6892132759094238!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 67 is = 0.7028371095657349!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 20.11it/s]
+ --> Single loss round 69 is = 0.6980549097061157!
+ --> Single loss round 70 is = 0.6906858086585999!
+
+Single Step Train:  90%|██████████████████████████████████████████████████████████████████████▏       | 18/20 [00:00<00:00, 24.22it/s]
+ --> Single loss round 72 is = 0.6886016130447388!
+
+Single Step Train:  17%|█████████████▏                                                                 | 3/18 [00:00<00:00, 24.94it/s]
+ --> Single loss round 74 is = 0.6941574215888977!
+
+Single Step Train:  95%|█████████████████████████████████████████████████████████████████████████▉    | 18/19 [00:01<00:00, 15.44it/s]
+ --> Single loss round 76 is = 0.6993589997291565!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:00, 16.13it/s]
+ --> Single loss round 78 is = 0.6970590353012085!
+
+Single Step Train:  53%|█████████████████████████████████████████                                     | 10/19 [00:00<00:00, 21.57it/s]
+ --> Single loss round 80 is = 0.6975209712982178!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 82 is = 0.6874223947525024!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 23.51it/s]
+ --> Single loss round 84 is = 0.6970669627189636!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 28.43it/s]
+ --> Single loss round 86 is = 0.6914329528808594!
+ --> Single loss round 87 is = 0.6892955303192139!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 23.99it/s]
+
+Single Step Train:  60%|██████████████████████████████████████████████▊                               | 12/20 [00:00<00:00, 21.25it/s]
+ --> Single loss round 90 is = 0.7008683085441589!
+ --> Single loss round 91 is = 0.6940687894821167!
+
+Single Step Train:  37%|█████████████████████████████                                                  | 7/19 [00:00<00:00, 31.90it/s]
+ --> Single loss round 93 is = 0.7078967690467834!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 95 is = 0.6979074478149414!
+ --> Single loss round 96 is = 0.6912891268730164!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:01<00:00, 14.83it/s]
+ --> Single loss round 98 is = 0.6909659504890442!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 100 is = 0.6917588710784912!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 45.63it/s]
+ --> Single loss round 102 is = 0.6874163746833801!
+ --> Single loss round 103 is = 0.6819791793823242!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 105 is = 0.6821148991584778!
+ --> Single loss round 106 is = 0.6982663869857788!
+ --> Single loss round 107 is = 0.6995369791984558!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 42.63it/s]
+ --> Single loss round 109 is = 0.6964672207832336!
+
+Single Step Train:  16%|████████████▍                                                                  | 3/19 [00:00<00:01,  8.13it/s]
+ --> Single loss round 111 is = 0.692294716835022!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:00, 27.32it/s]
+ --> Single loss round 113 is = 0.7002034783363342!
+
+Single Step Train:  17%|█████████████▏                                                                 | 3/18 [00:00<00:00, 19.71it/s]
+ --> Single loss round 115 is = 0.6886700987815857!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:00<00:00, 29.89it/s]
+ --> Single loss round 117 is = 0.6930292844772339!
+ --> Single loss round 118 is = 0.6953691840171814!
+
+Single Step Train:  45%|███████████████████████████████████▌                                           | 9/20 [00:00<00:00, 26.06it/s]
+ --> Single loss round 120 is = 0.6866452097892761!
+
+Single Step Train:  80%|██████████████████████████████████████████████████████████████▍               | 16/20 [00:00<00:00, 18.83it/s]
+ --> Single loss round 122 is = 0.6953747272491455!
+ --> Single loss round 123 is = 0.6830818057060242!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 125 is = 0.677095890045166!
+
+Single Step Train:  84%|█████████████████████████████████████████████████████████████████▋            | 16/19 [00:00<00:00, 26.44it/s]
+ --> Single loss round 127 is = 0.7027074098587036!
+
+Single Step Train:  15%|███████████▊                                                                   | 3/20 [00:00<00:00, 25.91it/s]
+ --> Single loss round 129 is = 0.6965839862823486!
+
+Single Step Train:  21%|████████████████▋                                                              | 4/19 [00:00<00:00, 25.71it/s]
+ --> Single loss round 131 is = 0.6906118988990784!
+
+Single Step Train:  84%|█████████████████████████████████████████████████████████████████▋            | 16/19 [00:00<00:00, 26.78it/s]
+ --> Single loss round 133 is = 0.6981309056282043!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 24.56it/s]
+ --> Single loss round 135 is = 0.6714495420455933!
+ --> Single loss round 136 is = 0.6876945495605469!
+
+Single Step Train:  68%|█████████████████████████████████████████████████████▎                        | 13/19 [00:00<00:00, 24.33it/s]
+ --> Single loss round 138 is = 0.6945851445198059!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:01, 10.69it/s]
+ --> Single loss round 140 is = 0.688276469707489!
+
+Single Step Train:  25%|███████████████████▊                                                           | 5/20 [00:00<00:00, 43.99it/s]
+ --> Single loss round 142 is = 0.689212441444397!
+
+Single Step Train:  16%|████████████▍                                                                  | 3/19 [00:00<00:00, 29.97it/s]
+ --> Single loss round 144 is = 0.6836448907852173!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 23.61it/s]
+ --> Single loss round 146 is = 0.6882507801055908!
+
+Single Step Train:  65%|██████████████████████████████████████████████████▋                           | 13/20 [00:00<00:00, 25.97it/s]
+ --> Single loss round 148 is = 0.6870466470718384!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:00<00:00, 26.71it/s]
+ --> Single loss round 150 is = 0.7007420063018799!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 16.91it/s]
+ --> Single loss round 152 is = 0.7141494750976562!
+
+Single Step Train:  40%|███████████████████████████████▌                                               | 8/20 [00:00<00:00, 23.35it/s]
+ --> Single loss round 154 is = 0.6980471611022949!
+
+Single Step Train:  65%|██████████████████████████████████████████████████▋                           | 13/20 [00:00<00:00, 28.26it/s]
+ --> Single loss round 156 is = 0.6959807276725769!
+
+Single Step Train:  45%|███████████████████████████████████▌                                           | 9/20 [00:00<00:00, 13.45it/s]
+
+Single Step Train:  35%|███████████████████████████▋                                                   | 7/20 [00:00<00:00, 15.75it/s]
+ --> Single loss round 159 is = 0.7027139663696289!
+ --> Single loss round 160 is = 0.6915498971939087!
+
+Single Step Train:  16%|████████████▍                                                                  | 3/19 [00:00<00:00, 27.41it/s]
+ --> Single loss round 162 is = 0.6967407464981079!
+
+Single Step Train:  65%|██████████████████████████████████████████████████▋                           | 13/20 [00:00<00:00, 20.14it/s]
+ --> Single loss round 164 is = 0.6914547085762024!
+
+Single Step Train:  60%|██████████████████████████████████████████████▊                               | 12/20 [00:00<00:00, 43.58it/s]
+ --> Single loss round 166 is = 0.6847186088562012!
+ --> Single loss round 167 is = 0.6894136667251587!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 169 is = 0.7067354321479797!
+
+Single Step Train:  40%|███████████████████████████████▌                                               | 8/20 [00:00<00:00, 37.77it/s]
+ --> Single loss round 171 is = 0.6970690488815308!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 173 is = 0.6878841519355774!
+ --> Single loss round 174 is = 0.6874962449073792!
+ --> Single loss round 175 is = 0.6919171214103699!
+ --> Single loss round 176 is = 0.7003094553947449!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 178 is = 0.6861698627471924!
+
+Single Step Train:  35%|███████████████████████████▋                                                   | 7/20 [00:00<00:00, 31.28it/s]
+ --> Single loss round 180 is = 0.6938855648040771!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 182 is = 0.6925255060195923!
+ --> Single loss round 183 is = 0.7042806148529053!
+
+Single Step Train:  17%|█████████████▏                                                                 | 3/18 [00:00<00:00, 27.80it/s]
+ --> Single loss round 185 is = 0.691997230052948!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 26.47it/s]
+ --> Single loss round 187 is = 0.6968073844909668!
+
+Single Step Train:  15%|███████████▊                                                                   | 3/20 [00:00<00:02,  5.70it/s]
+ --> Single loss round 189 is = 0.700322687625885!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 32.40it/s]
+ --> Single loss round 191 is = 0.6868570446968079!
+ --> Single loss round 192 is = 0.6915598511695862!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 194 is = 0.6941369771957397!
+ --> Single loss round 195 is = 0.688291072845459!
+ --> Single loss round 196 is = 0.7073491811752319!
+
+Single Step Train:   0%|                                                                                       | 0/19 [00:00<?, ?it/s]
+ --> Single loss round 198 is = 0.7040650248527527!
+
+Single Step Train:  25%|███████████████████▊                                                           | 5/20 [00:00<00:00, 44.10it/s]
+ --> Single loss round 200 is = 0.69098299741745!
+
+Single Step Train:   0%|                                                                                       | 0/19 [00:00<?, ?it/s]
+ --> Single loss round 202 is = 0.6995949745178223!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 204 is = 0.6879234910011292!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 22.02it/s]
+ --> Single loss round 206 is = 0.6847937107086182!
+
+Handling single row in a chunk: 17it [00:00, 159.78it/s]
+ --> Single loss round 208 is = 0.6946967244148254!
+ --> Single loss round 209 is = 0.6866288185119629!
+
+ --> Single loss round 210 is = 0.6972752809524536!
+inside single epoch: 4280it [05:08, 20.84it/s]
+Single Step Train:  67%|████████████████████████████████████████████████████                          | 12/18 [00:00<00:00, 27.25it/s]
+ --> Single loss round 212 is = 0.6794568300247192!
+ --> Single loss round 213 is = 0.703461229801178!
+
+Single Step Train:  26%|████████████████████▊                                                          | 5/19 [00:00<00:00, 25.37it/s]
+ --> Single loss round 215 is = 0.7007763385772705!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 40.27it/s]
+ --> Single loss round 217 is = 0.700225293636322!
+
+Single Step Train:  47%|█████████████████████████████████████▍                                         | 9/19 [00:00<00:00, 17.36it/s]
+ --> Single loss round 219 is = 0.691471517086029!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 16.70it/s]
+ --> Single loss round 221 is = 0.6943977475166321!
+
+Single Step Train:  60%|██████████████████████████████████████████████▊                               | 12/20 [00:00<00:00, 23.47it/s]
+ --> Single loss round 223 is = 0.6958389282226562!
+
+Single Step Train:  65%|██████████████████████████████████████████████████▋                           | 13/20 [00:00<00:00, 18.84it/s]
+ --> Single loss round 225 is = 0.6989643573760986!
+ --> Single loss round 226 is = 0.6860772371292114!
+
+Single Step Train:  45%|███████████████████████████████████▌                                           | 9/20 [00:00<00:00, 23.99it/s]
+ --> Single loss round 228 is = 0.690719723701477!
+
+Single Step Train:  75%|██████████████████████████████████████████████████████████▌                   | 15/20 [00:00<00:00, 23.27it/s]
+ --> Single loss round 230 is = 0.6958502531051636!
+ --> Single loss round 231 is = 0.6831415891647339!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 233 is = 0.6927477121353149!
+ --> Single loss round 234 is = 0.6840746998786926!
+ --> Single loss round 235 is = 0.6938714385032654!
+
+Single Step Train:  42%|█████████████████████████████████▎                                             | 8/19 [00:00<00:00, 35.18it/s]
+ --> Single loss round 237 is = 0.6790404319763184!
+
+Single Step Train:  40%|███████████████████████████████▌                                               | 8/20 [00:00<00:00, 20.04it/s]
+ --> Single loss round 239 is = 0.6978859305381775!
+ --> Single loss round 240 is = 0.7008479237556458!
+
+Single Step Train:  10%|███████▉                                                                       | 2/20 [00:00<00:01, 15.36it/s]
+ --> Single loss round 242 is = 0.6916963458061218!
+ --> Single loss round 243 is = 0.7039040327072144!
+
+Single Step Train:  21%|████████████████▋                                                              | 4/19 [00:00<00:00, 37.99it/s]
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 18.74it/s]
+ --> Single loss round 246 is = 0.6901174783706665!
+ --> Single loss round 247 is = 0.6871283054351807!
+
+Single Step Train:  45%|███████████████████████████████████▌                                           | 9/20 [00:00<00:00, 28.79it/s]
+ --> Single loss round 249 is = 0.7024055123329163!
+ --> Single loss round 250 is = 0.685495138168335!
+
+Single Step Train:  85%|██████████████████████████████████████████████████████████████████▎           | 17/20 [00:00<00:00, 20.91it/s]
+ --> Single loss round 252 is = 0.6926551461219788!
+
+Single Step Train:  30%|███████████████████████▋                                                       | 6/20 [00:00<00:00, 24.59it/s]
+ --> Single loss round 254 is = 0.6829332113265991!
+
+Single Step Train:  50%|███████████████████████████████████████                                       | 10/20 [00:00<00:00, 27.54it/s]
+ --> Single loss round 256 is = 0.6946943998336792!
+ --> Single loss round 257 is = 0.6910860538482666!
+
+ --> Single loss round 258 is = 0.6867154240608215!
+ --> Single loss round 259 is = 0.688709020614624!
+inside single epoch: 5260it [05:50, 23.31it/s]
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:00, 39.05it/s]
+ --> Single loss round 261 is = 0.6984491944313049!
+ --> Single loss round 262 is = 0.6892356872558594!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 264 is = 0.7023237943649292!
+
+Single Step Train:  60%|██████████████████████████████████████████████▊                               | 12/20 [00:00<00:00, 32.53it/s]
+ --> Single loss round 266 is = 0.6864539384841919!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 268 is = 0.6820817589759827!
+
+Single Step Train:  55%|██████████████████████████████████████████▉                                   | 11/20 [00:00<00:00, 26.49it/s]
+ --> Single loss round 270 is = 0.6894271969795227!
+ --> Single loss round 271 is = 0.6953395009040833!
+
+Single Step Train:   0%|                                                                                       | 0/20 [00:00<?, ?it/s]
+ --> Single loss round 273 is = 0.695329487323761!
+
+Single Step Train:  20%|███████████████▊                                                               | 4/20 [00:00<00:00, 33.39it/s]
+ --> Single loss round 275 is = 0.6879739165306091!
+ --> Single loss round 276 is = 0.7037647366523743!
+
+Single Step Train:  84%|█████████████████████████████████████████████████████████████████▋            | 16/19 [00:00<00:00, 32.95it/s]
+ --> Single loss round 278 is = 0.6902967095375061!
+
+Handling single row in a chunk: 0it [00:00, ?it/s]
+ --> Single loss round 280 is = 0.705661952495575!
+ --> Single loss round 281 is = 0.6853039264678955!
+ --> Single loss round 282 is = 0.6905999779701233!

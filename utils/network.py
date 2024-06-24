@@ -46,6 +46,9 @@ from smac.intensifier.hyperband import Hyperband
 from smac.intensifier.successive_halving import SuccessiveHalving
 from smac.runhistory.runhistory import RunHistory
 
+# visualization
+import wandb
+
 
 # from other packages
 from utils import preprocess
@@ -212,7 +215,6 @@ class trainer(preprocess.data_handler):
             fig.savefig("./test.png")
 
         
-
     def display_all_params(self):
         print("\n\n *** starting print param:\n")
         for name, parms in self.model.named_parameters():
@@ -246,9 +248,9 @@ class trainer(preprocess.data_handler):
         seq_len = [s.size(0) for s in feature]
         pad_datas = pad_sequence(sequences=feature, padding_value=0.0, batch_first=False)
         pad_datas = pack_padded_sequence(input=pad_datas, lengths=seq_len, enforce_sorted=False, batch_first=False)
-
         # feature = torch.tensor(feature, requires_grad=True).to(main._device) # 513: 句子长度不一致 54个词/句子 vs 888个词/句子
         target_set = torch.tensor(target_set, dtype=torch.float32, device=main._device, requires_grad=True)
+        self.optimizer.zero_grad() # clean all grad
         
         y_pred = self.model.forward_with_batch(tensor_data=pad_datas, # feature
                                                 batch_size=batch_size)
@@ -256,7 +258,10 @@ class trainer(preprocess.data_handler):
         loss = self.loss(y_pred_reshape, target_set)
         loss.backward()
         self.optimizer.step()
-        self.optimizer.zero_grad() # clean all grad
+        for name, param in self.model.named_parameters():
+            if param.grad is not None:
+                logging.info(f"\nGradient for {name}: {param.grad}")
+        
         logging.info(f"\t *** batch size = {batch_size}, batch_loss = {loss}! *** \n")
         
         return loss
@@ -271,19 +276,24 @@ class trainer(preprocess.data_handler):
         total_loss = 0
 
         for data_idx in tqdm(range(len(batch)), desc="Single Step Train", leave=False):
-            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device, requires_grad=True)
-            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device, requires_grad=True)
+            feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device)
+            target = torch.tensor([batch[data_idx][1]], dtype=torch.float32, device=main._device)
+            self.optimizer.zero_grad() # clean all grad
             y_pred = self.model.forward(feature)
             loss = self.loss(y_pred, target)
             loss.backward()
             total_loss += loss
             self.optimizer.step()
-            self.optimizer.zero_grad() # clean all grad
-               
-        total_loss /= len(batch)    
-        logging.info(f"\t *** single_step avg_loss = {total_loss} % *** \n")
 
-        return total_loss
+            for name, param in self.model.named_parameters():
+                if param.grad is not None:
+                    logging.info(f"\nGradient for {name}: {param.grad}")
+            
+        
+        with torch.no_grad():
+            total_loss /= len(batch)    
+            logging.info(f"\t *** single_step avg_loss = {total_loss} % *** \n")
+            return total_loss
         
 
 
@@ -436,8 +446,6 @@ class trainer(preprocess.data_handler):
             
 
             # made a folder to store model .pth and config parameter
-                    
-
             new_folder_path = f'{self.save_folder}_{epoch_id}' 
             '/root/autodl-tmp/NewsHelper/trained_model/2024_06_12_00:38_0'
             os.mkdir(path=new_folder_path)
@@ -484,15 +492,57 @@ class trainer(preprocess.data_handler):
                 pass
             
 
+    def default_init_train(self):
+        wandb.login()
+        run = wandb.init(project="LSTM_classifier")
+        config = run.config
+        config.learning_rate = 10e-4
+        
+
+        self.model = LstmNet(
+            hidden_size=512,
+            hidden_size_linear=512,
+            num_layers=2,
+            dropout=0.5,
+            dropout_linear=0.5,
+            activation_linear='LeakyReLU'
+            ).to(main._device)
+        self.loss = nn.BCELoss()
+        self.optimizer = torch.optim.SGD(params=self.model.parameters(), lr=10e-3)
+        
+        
+        self.train(batch_size=20, run=run )
+        
+    
+    def use_past_config(self):
+        wandb.login()
+        run = wandb.init(project="LSTM_classifier")
+        config = run.config
+        config.learning_rate = 10e-4
+
+        self.model = LstmNet(
+                hidden_size=64,
+                hidden_size_linear=128,
+                num_layers=2,
+                dropout=0.3,
+                dropout_linear=0.2,
+                activation_linear='relu'
+        ).to(main._device)
+        self.loss = nn.BCEWithLogitsLoss()
+        self.optimizer = torch.optim.Adam(params=self.model.parameters(), lr=10e-2)
+
+        self.train(batch_size=100, run=run)
 
 
 
-    def train(self, batch_size, new_folder_path)-> float:    
+
+
+    def train(self, batch_size, new_folder_path='/Users/taotao/Documents/GitHub/FYP/trained_model/', run=None)-> float:    
         '''
             Our train method:
             1. SGD: every step optimized
             2. mini-batch: after whole batch then updated
-        '''
+        '''            
 
         # for matplotlib draw diagram only:
         x = []
@@ -504,12 +554,49 @@ class trainer(preprocess.data_handler):
         data_generator = super().get_generator(batch_size = batch_size)
         avg_cost = 0
         count = 0  
+
+        logging.info(f"\nBefore Train...\n")
+        logging.info(self.model)
+        for name, param in self.model.named_parameters():
+                if param.grad is not None:
+                    logging.info(f"\nGradient for {name}: {param.grad}")
+        logging.info(f"\n NOW training...")
         
         # for every epoch, reset the data genertor
         preprocess.data_handler.reset(batch_size)
 
         # Version 2: Using data generator to handle raw data only when trainer need them 
-        try:
+        if main._args.batch_model == True:
+            while True:
+                # a cuda memory release module:
+                if main._device == torch.device("cuda"):
+                    gc.collect()
+                    torch.cuda.empty_cache()
+                single_epoch_bar.update(batch_size)
+                single_chunk_tuple = next(data_generator, None)
+                if single_chunk_tuple == None:
+                    # break check point 1
+                    break
+                single_chunk_idx = single_chunk_tuple[0]
+                single_chunk = single_chunk_tuple[1]                
+                
+                try:
+                    batch_loss = self._mini_batch(batch=single_chunk).cpu()
+                except Exception as e:
+                    print(f"\n -- Trainer Error! error is = \t{e}\n")
+                    if count < 1000:
+                        print("\nModel train failded, not enough to save! \n")
+                    else:
+                        self.save_model(save_path=new_folder_path)
+                        self.draw_diagram(x, y)
+                avg_cost += (1 - batch_loss)
+                print(f"\n --> Batch loss round {single_chunk_idx} is = {batch_loss}!")
+                
+                logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {batch_loss}")
+                x.append(single_chunk_idx)
+                y.append(batch_loss)
+                count += 1
+        else:
             while True:
                 # a cuda memory release module:
                 if main._device == torch.device("cuda"):
@@ -518,43 +605,32 @@ class trainer(preprocess.data_handler):
 
                 single_epoch_bar.update(batch_size)
                 single_chunk_tuple = next(data_generator, None)
+
+                if single_chunk_tuple == None:
+                    # break check point 1
+                    break
                 single_chunk_idx = single_chunk_tuple[0]
                 single_chunk = single_chunk_tuple[1]
-                # epoch error, stop and save
-                if not isinstance(single_chunk, list):
-                    break
+                
+                try:
+                    step_loss = self._single_step(batch=single_chunk).cpu()
+                except Exception as e:
+                    print(f"\n -- Trainer Error! error is = \t{e}\n")
+                    if count < 1000:
+                        print("\nModel train failded, not enough to save! \n")
+                    else:
+                        self.save_model(save_path=new_folder_path)
+                        self.draw_diagram(x, y)
 
-                match main._args.batch_model:
-                    case True:
-                        batch_loss = self._mini_batch(batch=single_chunk).cpu()
-                        avg_cost += (1 - batch_loss)
-                        print(f"\n batch loss = {batch_loss}\n")
-                        logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {batch_loss}")
-                        x.append(single_chunk_idx)
-                        y.append(batch_loss)
-                    case False:
-                        step_loss = self._single_step(batch=single_chunk).cpu()
-                        avg_cost += (1 - step_loss)
-                        print(f"\n single loss = {step_loss}\n")
-                        logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {step_loss}")
-                        x.append(single_chunk_idx)
-                        y.append(step_loss)
-                    case _:
-                        raise KeyError
-                
-                # with torch.no_grad():
-                #     if not self.diagram_drawer.flag:
-                #         # need init draw helper
-                #         self.diagram_drawer.init_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
-                #     else:
-                #         self.diagram_drawer.update_diagram(batch_id=single_chunk_idx, accuary=step_loss.detach().cpu().numpy())
-                
+                if run != None:
+                    run.log({"loss":step_loss})
+                    
+                avg_cost += (1 - step_loss)
+                print(f"\n --> Single loss round {single_chunk_idx} is = {step_loss}!")
+                logging.info(f"\t --> chunk_id = {single_chunk_idx} -> batch_loss = {step_loss}")
+                x.append(single_chunk_idx)
+                y.append(step_loss)
                 count += 1
-        except Exception as e:
-            print(f"\n -- Trainer Error! error is = \t{e}\n")
-            self.save_model(save_path=new_folder_path)
-            self.draw_diagram(x, y)
-                
 
         print("\n** 1 epoch Done, Now SAVEING model! **\n")        
         self.save_model(save_path=new_folder_path)
@@ -688,13 +764,15 @@ class LstmNet(nn.Module, model.module):
             - LSTM + Double-Linear
     '''
     
-    def __init__(self,
-                 hidden_size,
-                 hidden_size_linear,
-                 num_layers,
-                 dropout,
-                 dropout_linear,
-                 activation_linear):
+    def __init__(
+        self,
+        hidden_size,
+        hidden_size_linear,
+        num_layers,
+        dropout,
+        dropout_linear,
+        activation_linear
+        ):
         
         super(LstmNet, self).__init__()    
         model.module.__init__(self)
@@ -723,14 +801,39 @@ class LstmNet(nn.Module, model.module):
                 activation = nn.LeakyReLU()
             case _:
                 raise ModuleNotFoundError
+            
+        self.residual_connection = nn.Linear(300, hidden_size*2)
         
         # construct linear layer (MLP)
         self.linears = nn.Sequential(
-            nn.Linear(hidden_size*2, hidden_size_linear), # [lstm hidden dim, num class]
+            nn.Linear(hidden_size*2, hidden_size), # [lstm hidden dim, num class] # linear 1
             activation,
             nn.Dropout(dropout_linear),
-            nn.Linear(hidden_size_linear, 1) # [hidden dim, num class]
+            nn.Linear(int(hidden_size), int(hidden_size / 2)), # linear 2
+            activation,
+            nn.Dropout(dropout_linear),
+            nn.Linear(int(hidden_size/2), int(hidden_size/4)), # linear 3
+            activation,
+            nn.Dropout(dropout_linear),
+            nn.Linear(int(hidden_size/4),  1), # [hidden dim, num class] # linear 4
+            # nn.Sigmoid()
         )
+
+
+        # self.linears = nn.Sequential(
+        #     nn.LSTM(
+        #         input_size=300,
+        #         hidden_size=hidden_size, 
+        #         num_layers=num_layers,
+        #         bidirectional=True,
+        #         dropout=dropout
+        #         ),
+        #     nn.Linear(hidden_size*2, hidden_size_linear), # [lstm hidden dim, num class]
+        #     activation,
+        #     nn.Dropout(dropout_linear),
+        #     nn.Linear(hidden_size_linear, 1), # [hidden dim, num class]
+        #     nn.Sigmoid()
+        # )
 
 
         # init weight
@@ -740,6 +843,7 @@ class LstmNet(nn.Module, model.module):
         self.hidden_size = hidden_size
         self.num_layers = num_layers
 
+
         logging.info(f"\n --> Model weight initalization succefuly!\n")
 
     
@@ -748,12 +852,19 @@ class LstmNet(nn.Module, model.module):
 
 
     def init_weights(self) -> None:
+        # torch.nn.init.xavier_uniform_(self.lstm.weight)
+        # torch.nn.init.xavier_uniform_(self.linears.weight)
+        # if self.linears.bias is not None:
+        #     init.zeros_(self.linears.bias)
+
+
         for name, param in self.lstm.named_parameters():
             if param.dim() > 2:
                 if 'weight' in name:
                         torch.nn.init.xavier_uniform_(param)
                 elif 'bias' in name:
                         torch.nn.init.xavier_uniform_(param, 0.0)
+                print("init lstm succefully!")
 
         for name, param in self.linears.named_parameters():
             if param.dim() > 2:     
@@ -761,6 +872,8 @@ class LstmNet(nn.Module, model.module):
                     torch.nn.init.xavier_uniform(param)
                 elif 'bias' in name:
                     torch.nn.init.xavier_uniform_(param, 0.0)
+                print("init lstm succefully!")
+
             
         
         logging.info("initize model parameter done!\n")
@@ -784,37 +897,27 @@ class LstmNet(nn.Module, model.module):
         weights = torch.FloatTensor(model.vectors) # formerly syn0, which is soon deprecated
         return weights
     
-    def forward(self, tensor_data:torch.tensor):
-        # inital parameters
-        # 4 = 2 if bidirectional=True else 1, * num_layers, 
+    def forward(self, tensor_data:torch.tensor):        
+
+        x = tensor_data
         h0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
         c0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
         
-        # Normalization:
-        # tensor_data = self.normalization(tensor_data)
+        # output, (hidden, cell) = self.lstm(tensor_data, (h0, c0))
+        # if self.lstm.bidirectional:
+        #     hidden =(torch.cat((hidden[-2,:], hidden[-1,:]), dim=1))
+        # else:
+        #     hidden = (hidden[-1,:])
+        # return self.linears(hidden)
+
         
         h, _ = self.lstm(tensor_data, (h0, c0))
-        # h = F.relu(h)
-        # in [sequence_lenght,  hidden_feature_dim]
-        # out [sequence_lenght, hidden dim]
-        
-        # pred = F.relu(self.dropout(self.linear(h)))
-        #pred = F.sigmoid(self.dropout(self.linear(h[-1, :]))) # tensor size = [1,256]
-        # pred = F.sigmoid(self.linear(h[-1, :]))
-        # pred = self.linear(h[-1, :])
-        #print(h[-1, :])
-        #print(h[-1, :].size())
-        pred = F.sigmoid(self.linears(h[-1, :]))
-        # print(pred)
 
-        # pred = self.dropout(self.linear(h)) 
-        # in [sequence_lenght, hidden dim]
-        # out [hidden dim, output size]    
-        # 输出的形状为 [sequence_length, 1] 的矩阵表示了每个时间步上的模型预测结果。
-        # 在这种情况下，每个时间步的预测结果是一个标量值，表示该时间步上模型对样本属于正类的置信度或概率。
+        residual = self.residual_connection(x)
+        h = h + residual # residual connection
 
+        pred = self.linears(h[-1, :])
         return pred
-    
 
 
     def forward_with_batch(self, tensor_data: torch.tensor, batch_size: int):

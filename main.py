@@ -23,17 +23,31 @@ if __name__ == "__main__":
     # preprocess.data_handler.initialize()
 
 
-    # # start training LSTM network (fake news classifier)
-    # trainer = network.trainer()
-    # if main._args.use_smac == True:
-    #     trainer.auto_ml()
-    # else:
-    #     trainer.manual_init_train()
+    # start training LSTM network (fake news classifier)
+    trainer = network.trainer()
+    if main._args.use_smac == True:
+        trainer.auto_ml()
+    else:
+        choice = input("whether costmize parameters? \n1.use defualt parameters, \n2.randomly choose parameter \n3. use post config\n")
+        match choice:
+            case '1':
+                print("\n use defualt parameters")
+                trainer.default_init_train()
+
+            case '2':
+                print("\n randomly choose parameter")
+                trainer.manual_init_train()
+            case '3':
+                print("\n use post config") 
+                trainer.use_past_config()
+            case _:
+                quit(1)
+    
 
 
-    # topic modeling
-    tp_model = topicModel.LDA_topic_model()
-    tp_model.forward()
+    # # topic modeling
+    # tp_model = topicModel.LDA_topic_model()
+    # tp_model.forward()
 
     
 

@@ -1,0 +1,21 @@
+/opt/anaconda3/lib/python3.11/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.3 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+inside single epoch: 20it [00:00, 23.89it/s]
+Handling single row in a chunk: 0it [00:00, ?it/s]
+Start iterator building...
+Iterator building Sucessfully!.
+
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device)                                              | 0/18 [00:00<?, ?it/s]
+Gradient for lstm.weight_ih_l0: tensor([[ 2.8760e-08, -2.9794e-09,  8.7210e-09,  ..., -3.7943e-08,
+         -2.1252e-08, -1.3406e-08],
+        [ 1.0965e-07,  9.3981e-09, -1.1160e-07,  ..., -1.5907e-07,
+          1.3749e-08,  7.2044e-09],
+        [-1.0367e-07,  1.1338e-07, -3.3501e-07,  ..., -2.8611e-08,
+          5.7074e-07, -1.2726e-08],
+        ...,
+        [-2.1350e-07,  3.9666e-08, -9.0079e-08,  ...,  2.0371e-07,
+          2.2897e-07,  7.0863e-08],
+        [ 2.3032e-08,  2.4996e-08, -2.3705e-08,  ..., -6.3985e-08,
+          7.8522e-08, -3.1285e-08],
+        [ 5.6888e-07, -1.3447e-07,  3.2934e-07,  ..., -4.8663e-07,
+         -7.1563e-07, -2.0182e-07]], device='mps:0')

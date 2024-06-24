@@ -1,0 +1,867 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-24T11:56:49.098698', 'gensim': '4.3.2', 'python': '3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:34:54) [Clang 16.0.6 ]', 'platform': 'macOS-14.5-arm64-arm-64bit', 'event': 'load_word2vec_format'}
+INFO:root:	 *** single_step avg_loss = 0.6864015460014343 % *** 
+
+INFO:root:	 --> chunk_id = 1 -> batch_loss = 0.6864015460014343
+INFO:root:	 *** single_step avg_loss = 0.6861070394515991 % *** 
+
+INFO:root:	 --> chunk_id = 2 -> batch_loss = 0.6861070394515991
+INFO:root:	 *** single_step avg_loss = 0.6961789131164551 % *** 
+
+INFO:root:	 --> chunk_id = 3 -> batch_loss = 0.6961789131164551
+INFO:root:	 *** single_step avg_loss = 0.696715235710144 % *** 
+
+INFO:root:	 --> chunk_id = 4 -> batch_loss = 0.696715235710144
+INFO:root:	 *** single_step avg_loss = 0.6963480710983276 % *** 
+
+INFO:root:	 --> chunk_id = 5 -> batch_loss = 0.6963480710983276
+INFO:root:	 *** single_step avg_loss = 0.6943854093551636 % *** 
+
+INFO:root:	 --> chunk_id = 6 -> batch_loss = 0.6943854093551636
+INFO:root:	 *** single_step avg_loss = 0.6992655396461487 % *** 
+
+INFO:root:	 --> chunk_id = 7 -> batch_loss = 0.6992655396461487
+INFO:root:	 *** single_step avg_loss = 0.6853289008140564 % *** 
+
+INFO:root:	 --> chunk_id = 8 -> batch_loss = 0.6853289008140564
+INFO:root:	 *** single_step avg_loss = 0.6922674775123596 % *** 
+
+INFO:root:	 --> chunk_id = 9 -> batch_loss = 0.6922674775123596
+INFO:root:	 *** single_step avg_loss = 0.6934787631034851 % *** 
+
+INFO:root:	 --> chunk_id = 10 -> batch_loss = 0.6934787631034851
+INFO:root:	 *** single_step avg_loss = 0.6959087252616882 % *** 
+
+INFO:root:	 --> chunk_id = 11 -> batch_loss = 0.6959087252616882
+INFO:root:	 *** single_step avg_loss = 0.6964690685272217 % *** 
+
+INFO:root:	 --> chunk_id = 12 -> batch_loss = 0.6964690685272217
+INFO:root:	 *** single_step avg_loss = 0.6918792724609375 % *** 
+
+INFO:root:	 --> chunk_id = 13 -> batch_loss = 0.6918792724609375
+INFO:root:	 *** single_step avg_loss = 0.6908344626426697 % *** 
+
+INFO:root:	 --> chunk_id = 14 -> batch_loss = 0.6908344626426697
+INFO:root:	 *** single_step avg_loss = 0.6981521844863892 % *** 
+
+INFO:root:	 --> chunk_id = 15 -> batch_loss = 0.6981521844863892
+INFO:root:	 *** single_step avg_loss = 0.6946313381195068 % *** 
+
+INFO:root:	 --> chunk_id = 16 -> batch_loss = 0.6946313381195068
+INFO:root:	 *** single_step avg_loss = 0.690307080745697 % *** 
+
+INFO:root:	 --> chunk_id = 17 -> batch_loss = 0.690307080745697
+INFO:root:	 *** single_step avg_loss = 0.6973245143890381 % *** 
+
+INFO:root:	 --> chunk_id = 18 -> batch_loss = 0.6973245143890381
+INFO:root:	 *** single_step avg_loss = 0.689282238483429 % *** 
+
+INFO:root:	 --> chunk_id = 19 -> batch_loss = 0.689282238483429
+INFO:root:	 *** single_step avg_loss = 0.6942328214645386 % *** 
+
+INFO:root:	 --> chunk_id = 20 -> batch_loss = 0.6942328214645386
+INFO:root:	 *** single_step avg_loss = 0.6850515604019165 % *** 
+
+INFO:root:	 --> chunk_id = 21 -> batch_loss = 0.6850515604019165
+INFO:root:	 *** single_step avg_loss = 0.6885925531387329 % *** 
+
+INFO:root:	 --> chunk_id = 22 -> batch_loss = 0.6885925531387329
+INFO:root:	 *** single_step avg_loss = 0.6910008788108826 % *** 
+
+INFO:root:	 --> chunk_id = 23 -> batch_loss = 0.6910008788108826
+INFO:root:	 *** single_step avg_loss = 0.690451979637146 % *** 
+
+INFO:root:	 --> chunk_id = 24 -> batch_loss = 0.690451979637146
+INFO:root:	 *** single_step avg_loss = 0.6940553784370422 % *** 
+
+INFO:root:	 --> chunk_id = 25 -> batch_loss = 0.6940553784370422
+INFO:root:	 *** single_step avg_loss = 0.6976516246795654 % *** 
+
+INFO:root:	 --> chunk_id = 26 -> batch_loss = 0.6976516246795654
+INFO:root:	 *** single_step avg_loss = 0.695550262928009 % *** 
+
+INFO:root:	 --> chunk_id = 27 -> batch_loss = 0.695550262928009
+INFO:root:	 *** single_step avg_loss = 0.6942276358604431 % *** 
+
+INFO:root:	 --> chunk_id = 28 -> batch_loss = 0.6942276358604431
+INFO:root:	 *** single_step avg_loss = 0.6933063268661499 % *** 
+
+INFO:root:	 --> chunk_id = 29 -> batch_loss = 0.6933063268661499
+INFO:root:	 *** single_step avg_loss = 0.6896420121192932 % *** 
+
+INFO:root:	 --> chunk_id = 30 -> batch_loss = 0.6896420121192932
+INFO:root:	 *** single_step avg_loss = 0.6887089014053345 % *** 
+
+INFO:root:	 --> chunk_id = 31 -> batch_loss = 0.6887089014053345
+INFO:root:	 *** single_step avg_loss = 0.6922767162322998 % *** 
+
+INFO:root:	 --> chunk_id = 32 -> batch_loss = 0.6922767162322998
+INFO:root:	 *** single_step avg_loss = 0.700598418712616 % *** 
+
+INFO:root:	 --> chunk_id = 33 -> batch_loss = 0.700598418712616
+INFO:root:	 *** single_step avg_loss = 0.7007813453674316 % *** 
+
+INFO:root:	 --> chunk_id = 34 -> batch_loss = 0.7007813453674316
+INFO:root:	 *** single_step avg_loss = 0.6944090723991394 % *** 
+
+INFO:root:	 --> chunk_id = 35 -> batch_loss = 0.6944090723991394
+INFO:root:	 *** single_step avg_loss = 0.702329695224762 % *** 
+
+INFO:root:	 --> chunk_id = 36 -> batch_loss = 0.702329695224762
+INFO:root:	 *** single_step avg_loss = 0.6841962337493896 % *** 
+
+INFO:root:	 --> chunk_id = 37 -> batch_loss = 0.6841962337493896
+INFO:root:	 *** single_step avg_loss = 0.6955447196960449 % *** 
+
+INFO:root:	 --> chunk_id = 38 -> batch_loss = 0.6955447196960449
+INFO:root:	 *** single_step avg_loss = 0.6928514242172241 % *** 
+
+INFO:root:	 --> chunk_id = 39 -> batch_loss = 0.6928514242172241
+INFO:root:	 *** single_step avg_loss = 0.6983762383460999 % *** 
+
+INFO:root:	 --> chunk_id = 40 -> batch_loss = 0.6983762383460999
+INFO:root:	 *** single_step avg_loss = 0.6923558115959167 % *** 
+
+INFO:root:	 --> chunk_id = 41 -> batch_loss = 0.6923558115959167
+INFO:root:	 *** single_step avg_loss = 0.698137104511261 % *** 
+
+INFO:root:	 --> chunk_id = 42 -> batch_loss = 0.698137104511261
+INFO:root:	 *** single_step avg_loss = 0.6979401111602783 % *** 
+
+INFO:root:	 --> chunk_id = 43 -> batch_loss = 0.6979401111602783
+INFO:root:	 *** single_step avg_loss = 0.6985170245170593 % *** 
+
+INFO:root:	 --> chunk_id = 44 -> batch_loss = 0.6985170245170593
+INFO:root:	 *** single_step avg_loss = 0.6954541802406311 % *** 
+
+INFO:root:	 --> chunk_id = 45 -> batch_loss = 0.6954541802406311
+INFO:root:	 *** single_step avg_loss = 0.6896001696586609 % *** 
+
+INFO:root:	 --> chunk_id = 46 -> batch_loss = 0.6896001696586609
+INFO:root:	 *** single_step avg_loss = 0.6926435232162476 % *** 
+
+INFO:root:	 --> chunk_id = 47 -> batch_loss = 0.6926435232162476
+INFO:root:	 *** single_step avg_loss = 0.6952747702598572 % *** 
+
+INFO:root:	 --> chunk_id = 48 -> batch_loss = 0.6952747702598572
+INFO:root:	 *** single_step avg_loss = 0.6998854279518127 % *** 
+
+INFO:root:	 --> chunk_id = 49 -> batch_loss = 0.6998854279518127
+INFO:root:	 *** single_step avg_loss = 0.6926581263542175 % *** 
+
+INFO:root:	 --> chunk_id = 50 -> batch_loss = 0.6926581263542175
+INFO:root:	 *** single_step avg_loss = 0.6971322894096375 % *** 
+
+INFO:root:	 --> chunk_id = 51 -> batch_loss = 0.6971322894096375
+INFO:root:	 *** single_step avg_loss = 0.7011630535125732 % *** 
+
+INFO:root:	 --> chunk_id = 52 -> batch_loss = 0.7011630535125732
+INFO:root:	 *** single_step avg_loss = 0.6957306861877441 % *** 
+
+INFO:root:	 --> chunk_id = 53 -> batch_loss = 0.6957306861877441
+INFO:root:	 *** single_step avg_loss = 0.6958837509155273 % *** 
+
+INFO:root:	 --> chunk_id = 54 -> batch_loss = 0.6958837509155273
+INFO:root:	 *** single_step avg_loss = 0.6856153011322021 % *** 
+
+INFO:root:	 --> chunk_id = 55 -> batch_loss = 0.6856153011322021
+INFO:root:	 *** single_step avg_loss = 0.6921790838241577 % *** 
+
+INFO:root:	 --> chunk_id = 56 -> batch_loss = 0.6921790838241577
+INFO:root:	 *** single_step avg_loss = 0.6877256035804749 % *** 
+
+INFO:root:	 --> chunk_id = 57 -> batch_loss = 0.6877256035804749
+INFO:root:	 *** single_step avg_loss = 0.6937291026115417 % *** 
+
+INFO:root:	 --> chunk_id = 58 -> batch_loss = 0.6937291026115417
+INFO:root:	 *** single_step avg_loss = 0.695355236530304 % *** 
+
+INFO:root:	 --> chunk_id = 59 -> batch_loss = 0.695355236530304
+INFO:root:	 *** single_step avg_loss = 0.6948727369308472 % *** 
+
+INFO:root:	 --> chunk_id = 60 -> batch_loss = 0.6948727369308472
+INFO:root:	 *** single_step avg_loss = 0.6871117949485779 % *** 
+
+INFO:root:	 --> chunk_id = 61 -> batch_loss = 0.6871117949485779
+INFO:root:	 *** single_step avg_loss = 0.6840999722480774 % *** 
+
+INFO:root:	 --> chunk_id = 62 -> batch_loss = 0.6840999722480774
+INFO:root:	 *** single_step avg_loss = 0.699023425579071 % *** 
+
+INFO:root:	 --> chunk_id = 63 -> batch_loss = 0.699023425579071
+INFO:root:	 *** single_step avg_loss = 0.685452938079834 % *** 
+
+INFO:root:	 --> chunk_id = 64 -> batch_loss = 0.685452938079834
+INFO:root:	 *** single_step avg_loss = 0.6892132759094238 % *** 
+
+INFO:root:	 --> chunk_id = 65 -> batch_loss = 0.6892132759094238
+INFO:root:	 *** single_step avg_loss = 0.6897371411323547 % *** 
+
+INFO:root:	 --> chunk_id = 66 -> batch_loss = 0.6897371411323547
+INFO:root:	 *** single_step avg_loss = 0.7028371095657349 % *** 
+
+INFO:root:	 --> chunk_id = 67 -> batch_loss = 0.7028371095657349
+INFO:root:	 *** single_step avg_loss = 0.6866456270217896 % *** 
+
+INFO:root:	 --> chunk_id = 68 -> batch_loss = 0.6866456270217896
+INFO:root:	 *** single_step avg_loss = 0.6980549097061157 % *** 
+
+INFO:root:	 --> chunk_id = 69 -> batch_loss = 0.6980549097061157
+INFO:root:	 *** single_step avg_loss = 0.6906858086585999 % *** 
+
+INFO:root:	 --> chunk_id = 70 -> batch_loss = 0.6906858086585999
+INFO:root:	 *** single_step avg_loss = 0.6875330209732056 % *** 
+
+INFO:root:	 --> chunk_id = 71 -> batch_loss = 0.6875330209732056
+INFO:root:	 *** single_step avg_loss = 0.6886016130447388 % *** 
+
+INFO:root:	 --> chunk_id = 72 -> batch_loss = 0.6886016130447388
+INFO:root:	 *** single_step avg_loss = 0.6952808499336243 % *** 
+
+INFO:root:	 --> chunk_id = 73 -> batch_loss = 0.6952808499336243
+INFO:root:	 *** single_step avg_loss = 0.6941574215888977 % *** 
+
+INFO:root:	 --> chunk_id = 74 -> batch_loss = 0.6941574215888977
+INFO:root:	 *** single_step avg_loss = 0.7036669850349426 % *** 
+
+INFO:root:	 --> chunk_id = 75 -> batch_loss = 0.7036669850349426
+INFO:root:	 *** single_step avg_loss = 0.6993589997291565 % *** 
+
+INFO:root:	 --> chunk_id = 76 -> batch_loss = 0.6993589997291565
+INFO:root:	 *** single_step avg_loss = 0.702894389629364 % *** 
+
+INFO:root:	 --> chunk_id = 77 -> batch_loss = 0.702894389629364
+INFO:root:	 *** single_step avg_loss = 0.6970590353012085 % *** 
+
+INFO:root:	 --> chunk_id = 78 -> batch_loss = 0.6970590353012085
+INFO:root:	 *** single_step avg_loss = 0.6937247514724731 % *** 
+
+INFO:root:	 --> chunk_id = 79 -> batch_loss = 0.6937247514724731
+INFO:root:	 *** single_step avg_loss = 0.6975209712982178 % *** 
+
+INFO:root:	 --> chunk_id = 80 -> batch_loss = 0.6975209712982178
+INFO:root:	 *** single_step avg_loss = 0.6931285858154297 % *** 
+
+INFO:root:	 --> chunk_id = 81 -> batch_loss = 0.6931285858154297
+INFO:root:	 *** single_step avg_loss = 0.6874223947525024 % *** 
+
+INFO:root:	 --> chunk_id = 82 -> batch_loss = 0.6874223947525024
+INFO:root:	 *** single_step avg_loss = 0.699758768081665 % *** 
+
+INFO:root:	 --> chunk_id = 83 -> batch_loss = 0.699758768081665
+INFO:root:	 *** single_step avg_loss = 0.6970669627189636 % *** 
+
+INFO:root:	 --> chunk_id = 84 -> batch_loss = 0.6970669627189636
+INFO:root:	 *** single_step avg_loss = 0.6992612481117249 % *** 
+
+INFO:root:	 --> chunk_id = 85 -> batch_loss = 0.6992612481117249
+INFO:root:	 *** single_step avg_loss = 0.6914329528808594 % *** 
+
+INFO:root:	 --> chunk_id = 86 -> batch_loss = 0.6914329528808594
+INFO:root:	 *** single_step avg_loss = 0.6892955303192139 % *** 
+
+INFO:root:	 --> chunk_id = 87 -> batch_loss = 0.6892955303192139
+INFO:root:	 *** single_step avg_loss = 0.6893212199211121 % *** 
+
+INFO:root:	 --> chunk_id = 88 -> batch_loss = 0.6893212199211121
+INFO:root:	 *** single_step avg_loss = 0.6943536996841431 % *** 
+
+INFO:root:	 --> chunk_id = 89 -> batch_loss = 0.6943536996841431
+INFO:root:	 *** single_step avg_loss = 0.7008683085441589 % *** 
+
+INFO:root:	 --> chunk_id = 90 -> batch_loss = 0.7008683085441589
+INFO:root:	 *** single_step avg_loss = 0.6940687894821167 % *** 
+
+INFO:root:	 --> chunk_id = 91 -> batch_loss = 0.6940687894821167
+INFO:root:	 *** single_step avg_loss = 0.6936774253845215 % *** 
+
+INFO:root:	 --> chunk_id = 92 -> batch_loss = 0.6936774253845215
+INFO:root:	 *** single_step avg_loss = 0.7078967690467834 % *** 
+
+INFO:root:	 --> chunk_id = 93 -> batch_loss = 0.7078967690467834
+INFO:root:	 *** single_step avg_loss = 0.7006808519363403 % *** 
+
+INFO:root:	 --> chunk_id = 94 -> batch_loss = 0.7006808519363403
+INFO:root:	 *** single_step avg_loss = 0.6979074478149414 % *** 
+
+INFO:root:	 --> chunk_id = 95 -> batch_loss = 0.6979074478149414
+INFO:root:	 *** single_step avg_loss = 0.6912891268730164 % *** 
+
+INFO:root:	 --> chunk_id = 96 -> batch_loss = 0.6912891268730164
+INFO:root:	 *** single_step avg_loss = 0.6916581392288208 % *** 
+
+INFO:root:	 --> chunk_id = 97 -> batch_loss = 0.6916581392288208
+INFO:root:	 *** single_step avg_loss = 0.6909659504890442 % *** 
+
+INFO:root:	 --> chunk_id = 98 -> batch_loss = 0.6909659504890442
+INFO:root:	 *** single_step avg_loss = 0.6908203363418579 % *** 
+
+INFO:root:	 --> chunk_id = 99 -> batch_loss = 0.6908203363418579
+INFO:root:	 *** single_step avg_loss = 0.6917588710784912 % *** 
+
+INFO:root:	 --> chunk_id = 100 -> batch_loss = 0.6917588710784912
+INFO:root:	 *** single_step avg_loss = 0.6936930418014526 % *** 
+
+INFO:root:	 --> chunk_id = 101 -> batch_loss = 0.6936930418014526
+INFO:root:	 *** single_step avg_loss = 0.6874163746833801 % *** 
+
+INFO:root:	 --> chunk_id = 102 -> batch_loss = 0.6874163746833801
+INFO:root:	 *** single_step avg_loss = 0.6819791793823242 % *** 
+
+INFO:root:	 --> chunk_id = 103 -> batch_loss = 0.6819791793823242
+INFO:root:	 *** single_step avg_loss = 0.6914969682693481 % *** 
+
+INFO:root:	 --> chunk_id = 104 -> batch_loss = 0.6914969682693481
+INFO:root:	 *** single_step avg_loss = 0.6821148991584778 % *** 
+
+INFO:root:	 --> chunk_id = 105 -> batch_loss = 0.6821148991584778
+INFO:root:	 *** single_step avg_loss = 0.6982663869857788 % *** 
+
+INFO:root:	 --> chunk_id = 106 -> batch_loss = 0.6982663869857788
+INFO:root:	 *** single_step avg_loss = 0.6995369791984558 % *** 
+
+INFO:root:	 --> chunk_id = 107 -> batch_loss = 0.6995369791984558
+INFO:root:	 *** single_step avg_loss = 0.6881440877914429 % *** 
+
+INFO:root:	 --> chunk_id = 108 -> batch_loss = 0.6881440877914429
+INFO:root:	 *** single_step avg_loss = 0.6964672207832336 % *** 
+
+INFO:root:	 --> chunk_id = 109 -> batch_loss = 0.6964672207832336
+INFO:root:	 *** single_step avg_loss = 0.6875936985015869 % *** 
+
+INFO:root:	 --> chunk_id = 110 -> batch_loss = 0.6875936985015869
+INFO:root:	 *** single_step avg_loss = 0.692294716835022 % *** 
+
+INFO:root:	 --> chunk_id = 111 -> batch_loss = 0.692294716835022
+INFO:root:	 *** single_step avg_loss = 0.6868342161178589 % *** 
+
+INFO:root:	 --> chunk_id = 112 -> batch_loss = 0.6868342161178589
+INFO:root:	 *** single_step avg_loss = 0.7002034783363342 % *** 
+
+INFO:root:	 --> chunk_id = 113 -> batch_loss = 0.7002034783363342
+INFO:root:	 *** single_step avg_loss = 0.692855715751648 % *** 
+
+INFO:root:	 --> chunk_id = 114 -> batch_loss = 0.692855715751648
+INFO:root:	 *** single_step avg_loss = 0.6886700987815857 % *** 
+
+INFO:root:	 --> chunk_id = 115 -> batch_loss = 0.6886700987815857
+INFO:root:	 *** single_step avg_loss = 0.6844448447227478 % *** 
+
+INFO:root:	 --> chunk_id = 116 -> batch_loss = 0.6844448447227478
+INFO:root:	 *** single_step avg_loss = 0.6930292844772339 % *** 
+
+INFO:root:	 --> chunk_id = 117 -> batch_loss = 0.6930292844772339
+INFO:root:	 *** single_step avg_loss = 0.6953691840171814 % *** 
+
+INFO:root:	 --> chunk_id = 118 -> batch_loss = 0.6953691840171814
+INFO:root:	 *** single_step avg_loss = 0.7011232376098633 % *** 
+
+INFO:root:	 --> chunk_id = 119 -> batch_loss = 0.7011232376098633
+INFO:root:	 *** single_step avg_loss = 0.6866452097892761 % *** 
+
+INFO:root:	 --> chunk_id = 120 -> batch_loss = 0.6866452097892761
+INFO:root:	 *** single_step avg_loss = 0.697903573513031 % *** 
+
+INFO:root:	 --> chunk_id = 121 -> batch_loss = 0.697903573513031
+INFO:root:	 *** single_step avg_loss = 0.6953747272491455 % *** 
+
+INFO:root:	 --> chunk_id = 122 -> batch_loss = 0.6953747272491455
+INFO:root:	 *** single_step avg_loss = 0.6830818057060242 % *** 
+
+INFO:root:	 --> chunk_id = 123 -> batch_loss = 0.6830818057060242
+INFO:root:	 *** single_step avg_loss = 0.6992322206497192 % *** 
+
+INFO:root:	 --> chunk_id = 124 -> batch_loss = 0.6992322206497192
+INFO:root:	 *** single_step avg_loss = 0.677095890045166 % *** 
+
+INFO:root:	 --> chunk_id = 125 -> batch_loss = 0.677095890045166
+INFO:root:	 *** single_step avg_loss = 0.7014035582542419 % *** 
+
+INFO:root:	 --> chunk_id = 126 -> batch_loss = 0.7014035582542419
+INFO:root:	 *** single_step avg_loss = 0.7027074098587036 % *** 
+
+INFO:root:	 --> chunk_id = 127 -> batch_loss = 0.7027074098587036
+INFO:root:	 *** single_step avg_loss = 0.6976296305656433 % *** 
+
+INFO:root:	 --> chunk_id = 128 -> batch_loss = 0.6976296305656433
+INFO:root:	 *** single_step avg_loss = 0.6965839862823486 % *** 
+
+INFO:root:	 --> chunk_id = 129 -> batch_loss = 0.6965839862823486
+INFO:root:	 *** single_step avg_loss = 0.6953366994857788 % *** 
+
+INFO:root:	 --> chunk_id = 130 -> batch_loss = 0.6953366994857788
+INFO:root:	 *** single_step avg_loss = 0.6906118988990784 % *** 
+
+INFO:root:	 --> chunk_id = 131 -> batch_loss = 0.6906118988990784
+INFO:root:	 *** single_step avg_loss = 0.6884918808937073 % *** 
+
+INFO:root:	 --> chunk_id = 132 -> batch_loss = 0.6884918808937073
+INFO:root:	 *** single_step avg_loss = 0.6981309056282043 % *** 
+
+INFO:root:	 --> chunk_id = 133 -> batch_loss = 0.6981309056282043
+INFO:root:	 *** single_step avg_loss = 0.6851940751075745 % *** 
+
+INFO:root:	 --> chunk_id = 134 -> batch_loss = 0.6851940751075745
+INFO:root:	 *** single_step avg_loss = 0.6714495420455933 % *** 
+
+INFO:root:	 --> chunk_id = 135 -> batch_loss = 0.6714495420455933
+INFO:root:	 *** single_step avg_loss = 0.6876945495605469 % *** 
+
+INFO:root:	 --> chunk_id = 136 -> batch_loss = 0.6876945495605469
+INFO:root:	 *** single_step avg_loss = 0.686803936958313 % *** 
+
+INFO:root:	 --> chunk_id = 137 -> batch_loss = 0.686803936958313
+INFO:root:	 *** single_step avg_loss = 0.6945851445198059 % *** 
+
+INFO:root:	 --> chunk_id = 138 -> batch_loss = 0.6945851445198059
+INFO:root:	 *** single_step avg_loss = 0.7049660682678223 % *** 
+
+INFO:root:	 --> chunk_id = 139 -> batch_loss = 0.7049660682678223
+INFO:root:	 *** single_step avg_loss = 0.688276469707489 % *** 
+
+INFO:root:	 --> chunk_id = 140 -> batch_loss = 0.688276469707489
+INFO:root:	 *** single_step avg_loss = 0.6810196042060852 % *** 
+
+INFO:root:	 --> chunk_id = 141 -> batch_loss = 0.6810196042060852
+INFO:root:	 *** single_step avg_loss = 0.689212441444397 % *** 
+
+INFO:root:	 --> chunk_id = 142 -> batch_loss = 0.689212441444397
+INFO:root:	 *** single_step avg_loss = 0.6890865564346313 % *** 
+
+INFO:root:	 --> chunk_id = 143 -> batch_loss = 0.6890865564346313
+INFO:root:	 *** single_step avg_loss = 0.6836448907852173 % *** 
+
+INFO:root:	 --> chunk_id = 144 -> batch_loss = 0.6836448907852173
+INFO:root:	 *** single_step avg_loss = 0.6923431754112244 % *** 
+
+INFO:root:	 --> chunk_id = 145 -> batch_loss = 0.6923431754112244
+INFO:root:	 *** single_step avg_loss = 0.6882507801055908 % *** 
+
+INFO:root:	 --> chunk_id = 146 -> batch_loss = 0.6882507801055908
+INFO:root:	 *** single_step avg_loss = 0.6916616559028625 % *** 
+
+INFO:root:	 --> chunk_id = 147 -> batch_loss = 0.6916616559028625
+INFO:root:	 *** single_step avg_loss = 0.6870466470718384 % *** 
+
+INFO:root:	 --> chunk_id = 148 -> batch_loss = 0.6870466470718384
+INFO:root:	 *** single_step avg_loss = 0.6782549619674683 % *** 
+
+INFO:root:	 --> chunk_id = 149 -> batch_loss = 0.6782549619674683
+INFO:root:	 *** single_step avg_loss = 0.7007420063018799 % *** 
+
+INFO:root:	 --> chunk_id = 150 -> batch_loss = 0.7007420063018799
+INFO:root:	 *** single_step avg_loss = 0.7008087038993835 % *** 
+
+INFO:root:	 --> chunk_id = 151 -> batch_loss = 0.7008087038993835
+INFO:root:	 *** single_step avg_loss = 0.7141494750976562 % *** 
+
+INFO:root:	 --> chunk_id = 152 -> batch_loss = 0.7141494750976562
+INFO:root:	 *** single_step avg_loss = 0.6851814985275269 % *** 
+
+INFO:root:	 --> chunk_id = 153 -> batch_loss = 0.6851814985275269
+INFO:root:	 *** single_step avg_loss = 0.6980471611022949 % *** 
+
+INFO:root:	 --> chunk_id = 154 -> batch_loss = 0.6980471611022949
+INFO:root:	 *** single_step avg_loss = 0.6994608640670776 % *** 
+
+INFO:root:	 --> chunk_id = 155 -> batch_loss = 0.6994608640670776
+INFO:root:	 *** single_step avg_loss = 0.6959807276725769 % *** 
+
+INFO:root:	 --> chunk_id = 156 -> batch_loss = 0.6959807276725769
+INFO:root:	 *** single_step avg_loss = 0.6996198892593384 % *** 
+
+INFO:root:	 --> chunk_id = 157 -> batch_loss = 0.6996198892593384
+INFO:root:	 *** single_step avg_loss = 0.6810153722763062 % *** 
+
+INFO:root:	 --> chunk_id = 158 -> batch_loss = 0.6810153722763062
+INFO:root:	 *** single_step avg_loss = 0.7027139663696289 % *** 
+
+INFO:root:	 --> chunk_id = 159 -> batch_loss = 0.7027139663696289
+INFO:root:	 *** single_step avg_loss = 0.6915498971939087 % *** 
+
+INFO:root:	 --> chunk_id = 160 -> batch_loss = 0.6915498971939087
+INFO:root:	 *** single_step avg_loss = 0.6927522420883179 % *** 
+
+INFO:root:	 --> chunk_id = 161 -> batch_loss = 0.6927522420883179
+INFO:root:	 *** single_step avg_loss = 0.6967407464981079 % *** 
+
+INFO:root:	 --> chunk_id = 162 -> batch_loss = 0.6967407464981079
+INFO:root:	 *** single_step avg_loss = 0.6922378540039062 % *** 
+
+INFO:root:	 --> chunk_id = 163 -> batch_loss = 0.6922378540039062
+INFO:root:	 *** single_step avg_loss = 0.6914547085762024 % *** 
+
+INFO:root:	 --> chunk_id = 164 -> batch_loss = 0.6914547085762024
+INFO:root:	 *** single_step avg_loss = 0.6996122002601624 % *** 
+
+INFO:root:	 --> chunk_id = 165 -> batch_loss = 0.6996122002601624
+INFO:root:	 *** single_step avg_loss = 0.6847186088562012 % *** 
+
+INFO:root:	 --> chunk_id = 166 -> batch_loss = 0.6847186088562012
+INFO:root:	 *** single_step avg_loss = 0.6894136667251587 % *** 
+
+INFO:root:	 --> chunk_id = 167 -> batch_loss = 0.6894136667251587
+INFO:root:	 *** single_step avg_loss = 0.6914993524551392 % *** 
+
+INFO:root:	 --> chunk_id = 168 -> batch_loss = 0.6914993524551392
+INFO:root:	 *** single_step avg_loss = 0.7067354321479797 % *** 
+
+INFO:root:	 --> chunk_id = 169 -> batch_loss = 0.7067354321479797
+INFO:root:	 *** single_step avg_loss = 0.6972954273223877 % *** 
+
+INFO:root:	 --> chunk_id = 170 -> batch_loss = 0.6972954273223877
+INFO:root:	 *** single_step avg_loss = 0.6970690488815308 % *** 
+
+INFO:root:	 --> chunk_id = 171 -> batch_loss = 0.6970690488815308
+INFO:root:	 *** single_step avg_loss = 0.6938914060592651 % *** 
+
+INFO:root:	 --> chunk_id = 172 -> batch_loss = 0.6938914060592651
+INFO:root:	 *** single_step avg_loss = 0.6878841519355774 % *** 
+
+INFO:root:	 --> chunk_id = 173 -> batch_loss = 0.6878841519355774
+INFO:root:	 *** single_step avg_loss = 0.6874962449073792 % *** 
+
+INFO:root:	 --> chunk_id = 174 -> batch_loss = 0.6874962449073792
+INFO:root:	 *** single_step avg_loss = 0.6919171214103699 % *** 
+
+INFO:root:	 --> chunk_id = 175 -> batch_loss = 0.6919171214103699
+INFO:root:	 *** single_step avg_loss = 0.7003094553947449 % *** 
+
+INFO:root:	 --> chunk_id = 176 -> batch_loss = 0.7003094553947449
+INFO:root:	 *** single_step avg_loss = 0.6915255188941956 % *** 
+
+INFO:root:	 --> chunk_id = 177 -> batch_loss = 0.6915255188941956
+INFO:root:	 *** single_step avg_loss = 0.6861698627471924 % *** 
+
+INFO:root:	 --> chunk_id = 178 -> batch_loss = 0.6861698627471924
+INFO:root:	 *** single_step avg_loss = 0.6944254636764526 % *** 
+
+INFO:root:	 --> chunk_id = 179 -> batch_loss = 0.6944254636764526
+INFO:root:	 *** single_step avg_loss = 0.6938855648040771 % *** 
+
+INFO:root:	 --> chunk_id = 180 -> batch_loss = 0.6938855648040771
+INFO:root:	 *** single_step avg_loss = 0.6920287013053894 % *** 
+
+INFO:root:	 --> chunk_id = 181 -> batch_loss = 0.6920287013053894
+INFO:root:	 *** single_step avg_loss = 0.6925255060195923 % *** 
+
+INFO:root:	 --> chunk_id = 182 -> batch_loss = 0.6925255060195923
+INFO:root:	 *** single_step avg_loss = 0.7042806148529053 % *** 
+
+INFO:root:	 --> chunk_id = 183 -> batch_loss = 0.7042806148529053
+INFO:root:	 *** single_step avg_loss = 0.6926645040512085 % *** 
+
+INFO:root:	 --> chunk_id = 184 -> batch_loss = 0.6926645040512085
+INFO:root:	 *** single_step avg_loss = 0.691997230052948 % *** 
+
+INFO:root:	 --> chunk_id = 185 -> batch_loss = 0.691997230052948
+INFO:root:	 *** single_step avg_loss = 0.6837225556373596 % *** 
+
+INFO:root:	 --> chunk_id = 186 -> batch_loss = 0.6837225556373596
+INFO:root:	 *** single_step avg_loss = 0.6968073844909668 % *** 
+
+INFO:root:	 --> chunk_id = 187 -> batch_loss = 0.6968073844909668
+INFO:root:	 *** single_step avg_loss = 0.6986965537071228 % *** 
+
+INFO:root:	 --> chunk_id = 188 -> batch_loss = 0.6986965537071228
+INFO:root:	 *** single_step avg_loss = 0.700322687625885 % *** 
+
+INFO:root:	 --> chunk_id = 189 -> batch_loss = 0.700322687625885
+INFO:root:	 *** single_step avg_loss = 0.7002359628677368 % *** 
+
+INFO:root:	 --> chunk_id = 190 -> batch_loss = 0.7002359628677368
+INFO:root:	 *** single_step avg_loss = 0.6868570446968079 % *** 
+
+INFO:root:	 --> chunk_id = 191 -> batch_loss = 0.6868570446968079
+INFO:root:	 *** single_step avg_loss = 0.6915598511695862 % *** 
+
+INFO:root:	 --> chunk_id = 192 -> batch_loss = 0.6915598511695862
+INFO:root:	 *** single_step avg_loss = 0.6862903833389282 % *** 
+
+INFO:root:	 --> chunk_id = 193 -> batch_loss = 0.6862903833389282
+INFO:root:	 *** single_step avg_loss = 0.6941369771957397 % *** 
+
+INFO:root:	 --> chunk_id = 194 -> batch_loss = 0.6941369771957397
+INFO:root:	 *** single_step avg_loss = 0.688291072845459 % *** 
+
+INFO:root:	 --> chunk_id = 195 -> batch_loss = 0.688291072845459
+INFO:root:	 *** single_step avg_loss = 0.7073491811752319 % *** 
+
+INFO:root:	 --> chunk_id = 196 -> batch_loss = 0.7073491811752319
+INFO:root:	 *** single_step avg_loss = 0.6833794713020325 % *** 
+
+INFO:root:	 --> chunk_id = 197 -> batch_loss = 0.6833794713020325
+INFO:root:	 *** single_step avg_loss = 0.7040650248527527 % *** 
+
+INFO:root:	 --> chunk_id = 198 -> batch_loss = 0.7040650248527527
+INFO:root:	 *** single_step avg_loss = 0.6948703527450562 % *** 
+
+INFO:root:	 --> chunk_id = 199 -> batch_loss = 0.6948703527450562
+INFO:root:	 *** single_step avg_loss = 0.69098299741745 % *** 
+
+INFO:root:	 --> chunk_id = 200 -> batch_loss = 0.69098299741745
+INFO:root:	 *** single_step avg_loss = 0.6902741193771362 % *** 
+
+INFO:root:	 --> chunk_id = 201 -> batch_loss = 0.6902741193771362
+INFO:root:	 *** single_step avg_loss = 0.6995949745178223 % *** 
+
+INFO:root:	 --> chunk_id = 202 -> batch_loss = 0.6995949745178223
+INFO:root:	 *** single_step avg_loss = 0.6822105646133423 % *** 
+
+INFO:root:	 --> chunk_id = 203 -> batch_loss = 0.6822105646133423
+INFO:root:	 *** single_step avg_loss = 0.6879234910011292 % *** 
+
+INFO:root:	 --> chunk_id = 204 -> batch_loss = 0.6879234910011292
+INFO:root:	 *** single_step avg_loss = 0.6979340314865112 % *** 
+
+INFO:root:	 --> chunk_id = 205 -> batch_loss = 0.6979340314865112
+INFO:root:	 *** single_step avg_loss = 0.6847937107086182 % *** 
+
+INFO:root:	 --> chunk_id = 206 -> batch_loss = 0.6847937107086182
+INFO:root:	 *** single_step avg_loss = 0.6810520887374878 % *** 
+
+INFO:root:	 --> chunk_id = 207 -> batch_loss = 0.6810520887374878
+INFO:root:	 *** single_step avg_loss = 0.6946967244148254 % *** 
+
+INFO:root:	 --> chunk_id = 208 -> batch_loss = 0.6946967244148254
+INFO:root:	 *** single_step avg_loss = 0.6866288185119629 % *** 
+
+INFO:root:	 --> chunk_id = 209 -> batch_loss = 0.6866288185119629
+INFO:root:	 *** single_step avg_loss = 0.6972752809524536 % *** 
+
+INFO:root:	 --> chunk_id = 210 -> batch_loss = 0.6972752809524536
+INFO:root:	 *** single_step avg_loss = 0.6908575296401978 % *** 
+
+INFO:root:	 --> chunk_id = 211 -> batch_loss = 0.6908575296401978
+INFO:root:	 *** single_step avg_loss = 0.6794568300247192 % *** 
+
+INFO:root:	 --> chunk_id = 212 -> batch_loss = 0.6794568300247192
+INFO:root:	 *** single_step avg_loss = 0.703461229801178 % *** 
+
+INFO:root:	 --> chunk_id = 213 -> batch_loss = 0.703461229801178
+INFO:root:	 *** single_step avg_loss = 0.686522901058197 % *** 
+
+INFO:root:	 --> chunk_id = 214 -> batch_loss = 0.686522901058197
+INFO:root:	 *** single_step avg_loss = 0.7007763385772705 % *** 
+
+INFO:root:	 --> chunk_id = 215 -> batch_loss = 0.7007763385772705
+INFO:root:	 *** single_step avg_loss = 0.6952183246612549 % *** 
+
+INFO:root:	 --> chunk_id = 216 -> batch_loss = 0.6952183246612549
+INFO:root:	 *** single_step avg_loss = 0.700225293636322 % *** 
+
+INFO:root:	 --> chunk_id = 217 -> batch_loss = 0.700225293636322
+INFO:root:	 *** single_step avg_loss = 0.684853196144104 % *** 
+
+INFO:root:	 --> chunk_id = 218 -> batch_loss = 0.684853196144104
+INFO:root:	 *** single_step avg_loss = 0.691471517086029 % *** 
+
+INFO:root:	 --> chunk_id = 219 -> batch_loss = 0.691471517086029
+INFO:root:	 *** single_step avg_loss = 0.6964259147644043 % *** 
+
+INFO:root:	 --> chunk_id = 220 -> batch_loss = 0.6964259147644043
+INFO:root:	 *** single_step avg_loss = 0.6943977475166321 % *** 
+
+INFO:root:	 --> chunk_id = 221 -> batch_loss = 0.6943977475166321
+INFO:root:	 *** single_step avg_loss = 0.6908159255981445 % *** 
+
+INFO:root:	 --> chunk_id = 222 -> batch_loss = 0.6908159255981445
+INFO:root:	 *** single_step avg_loss = 0.6958389282226562 % *** 
+
+INFO:root:	 --> chunk_id = 223 -> batch_loss = 0.6958389282226562
+INFO:root:	 *** single_step avg_loss = 0.6869117021560669 % *** 
+
+INFO:root:	 --> chunk_id = 224 -> batch_loss = 0.6869117021560669
+INFO:root:	 *** single_step avg_loss = 0.6989643573760986 % *** 
+
+INFO:root:	 --> chunk_id = 225 -> batch_loss = 0.6989643573760986
+INFO:root:	 *** single_step avg_loss = 0.6860772371292114 % *** 
+
+INFO:root:	 --> chunk_id = 226 -> batch_loss = 0.6860772371292114
+INFO:root:	 *** single_step avg_loss = 0.6978325843811035 % *** 
+
+INFO:root:	 --> chunk_id = 227 -> batch_loss = 0.6978325843811035
+INFO:root:	 *** single_step avg_loss = 0.690719723701477 % *** 
+
+INFO:root:	 --> chunk_id = 228 -> batch_loss = 0.690719723701477
+INFO:root:	 *** single_step avg_loss = 0.6868211627006531 % *** 
+
+INFO:root:	 --> chunk_id = 229 -> batch_loss = 0.6868211627006531
+INFO:root:	 *** single_step avg_loss = 0.6958502531051636 % *** 
+
+INFO:root:	 --> chunk_id = 230 -> batch_loss = 0.6958502531051636
+INFO:root:	 *** single_step avg_loss = 0.6831415891647339 % *** 
+
+INFO:root:	 --> chunk_id = 231 -> batch_loss = 0.6831415891647339
+INFO:root:	 *** single_step avg_loss = 0.695040225982666 % *** 
+
+INFO:root:	 --> chunk_id = 232 -> batch_loss = 0.695040225982666
+INFO:root:	 *** single_step avg_loss = 0.6927477121353149 % *** 
+
+INFO:root:	 --> chunk_id = 233 -> batch_loss = 0.6927477121353149
+INFO:root:	 *** single_step avg_loss = 0.6840746998786926 % *** 
+
+INFO:root:	 --> chunk_id = 234 -> batch_loss = 0.6840746998786926
+INFO:root:	 *** single_step avg_loss = 0.6938714385032654 % *** 
+
+INFO:root:	 --> chunk_id = 235 -> batch_loss = 0.6938714385032654
+INFO:root:	 *** single_step avg_loss = 0.6940947771072388 % *** 
+
+INFO:root:	 --> chunk_id = 236 -> batch_loss = 0.6940947771072388
+INFO:root:	 *** single_step avg_loss = 0.6790404319763184 % *** 
+
+INFO:root:	 --> chunk_id = 237 -> batch_loss = 0.6790404319763184
+INFO:root:	 *** single_step avg_loss = 0.6970490217208862 % *** 
+
+INFO:root:	 --> chunk_id = 238 -> batch_loss = 0.6970490217208862
+INFO:root:	 *** single_step avg_loss = 0.6978859305381775 % *** 
+
+INFO:root:	 --> chunk_id = 239 -> batch_loss = 0.6978859305381775
+INFO:root:	 *** single_step avg_loss = 0.7008479237556458 % *** 
+
+INFO:root:	 --> chunk_id = 240 -> batch_loss = 0.7008479237556458
+INFO:root:	 *** single_step avg_loss = 0.6908835768699646 % *** 
+
+INFO:root:	 --> chunk_id = 241 -> batch_loss = 0.6908835768699646
+INFO:root:	 *** single_step avg_loss = 0.6916963458061218 % *** 
+
+INFO:root:	 --> chunk_id = 242 -> batch_loss = 0.6916963458061218
+INFO:root:	 *** single_step avg_loss = 0.7039040327072144 % *** 
+
+INFO:root:	 --> chunk_id = 243 -> batch_loss = 0.7039040327072144
+INFO:root:	 *** single_step avg_loss = 0.6932862997055054 % *** 
+
+INFO:root:	 --> chunk_id = 244 -> batch_loss = 0.6932862997055054
+INFO:root:	 *** single_step avg_loss = 0.698852002620697 % *** 
+
+INFO:root:	 --> chunk_id = 245 -> batch_loss = 0.698852002620697
+INFO:root:	 *** single_step avg_loss = 0.6901174783706665 % *** 
+
+INFO:root:	 --> chunk_id = 246 -> batch_loss = 0.6901174783706665
+INFO:root:	 *** single_step avg_loss = 0.6871283054351807 % *** 
+
+INFO:root:	 --> chunk_id = 247 -> batch_loss = 0.6871283054351807
+INFO:root:	 *** single_step avg_loss = 0.6775009036064148 % *** 
+
+INFO:root:	 --> chunk_id = 248 -> batch_loss = 0.6775009036064148
+INFO:root:	 *** single_step avg_loss = 0.7024055123329163 % *** 
+
+INFO:root:	 --> chunk_id = 249 -> batch_loss = 0.7024055123329163
+INFO:root:	 *** single_step avg_loss = 0.685495138168335 % *** 
+
+INFO:root:	 --> chunk_id = 250 -> batch_loss = 0.685495138168335
+INFO:root:	 *** single_step avg_loss = 0.6887205839157104 % *** 
+
+INFO:root:	 --> chunk_id = 251 -> batch_loss = 0.6887205839157104
+INFO:root:	 *** single_step avg_loss = 0.6926551461219788 % *** 
+
+INFO:root:	 --> chunk_id = 252 -> batch_loss = 0.6926551461219788
+INFO:root:	 *** single_step avg_loss = 0.6958087682723999 % *** 
+
+INFO:root:	 --> chunk_id = 253 -> batch_loss = 0.6958087682723999
+INFO:root:	 *** single_step avg_loss = 0.6829332113265991 % *** 
+
+INFO:root:	 --> chunk_id = 254 -> batch_loss = 0.6829332113265991
+INFO:root:	 *** single_step avg_loss = 0.6894376873970032 % *** 
+
+INFO:root:	 --> chunk_id = 255 -> batch_loss = 0.6894376873970032
+INFO:root:	 *** single_step avg_loss = 0.6946943998336792 % *** 
+
+INFO:root:	 --> chunk_id = 256 -> batch_loss = 0.6946943998336792
+INFO:root:	 *** single_step avg_loss = 0.6910860538482666 % *** 
+
+INFO:root:	 --> chunk_id = 257 -> batch_loss = 0.6910860538482666
+INFO:root:	 *** single_step avg_loss = 0.6867154240608215 % *** 
+
+INFO:root:	 --> chunk_id = 258 -> batch_loss = 0.6867154240608215
+INFO:root:	 *** single_step avg_loss = 0.688709020614624 % *** 
+
+INFO:root:	 --> chunk_id = 259 -> batch_loss = 0.688709020614624
+INFO:root:	 *** single_step avg_loss = 0.6919093132019043 % *** 
+
+INFO:root:	 --> chunk_id = 260 -> batch_loss = 0.6919093132019043
+INFO:root:	 *** single_step avg_loss = 0.6984491944313049 % *** 
+
+INFO:root:	 --> chunk_id = 261 -> batch_loss = 0.6984491944313049
+INFO:root:	 *** single_step avg_loss = 0.6892356872558594 % *** 
+
+INFO:root:	 --> chunk_id = 262 -> batch_loss = 0.6892356872558594
+INFO:root:	 *** single_step avg_loss = 0.6938125491142273 % *** 
+
+INFO:root:	 --> chunk_id = 263 -> batch_loss = 0.6938125491142273
+INFO:root:	 *** single_step avg_loss = 0.7023237943649292 % *** 
+
+INFO:root:	 --> chunk_id = 264 -> batch_loss = 0.7023237943649292
+INFO:root:	 *** single_step avg_loss = 0.6905684471130371 % *** 
+
+INFO:root:	 --> chunk_id = 265 -> batch_loss = 0.6905684471130371
+INFO:root:	 *** single_step avg_loss = 0.6864539384841919 % *** 
+
+INFO:root:	 --> chunk_id = 266 -> batch_loss = 0.6864539384841919
+INFO:root:	 *** single_step avg_loss = 0.6995460391044617 % *** 
+
+INFO:root:	 --> chunk_id = 267 -> batch_loss = 0.6995460391044617
+INFO:root:	 *** single_step avg_loss = 0.6820817589759827 % *** 
+
+INFO:root:	 --> chunk_id = 268 -> batch_loss = 0.6820817589759827
+INFO:root:	 *** single_step avg_loss = 0.6913779973983765 % *** 
+
+INFO:root:	 --> chunk_id = 269 -> batch_loss = 0.6913779973983765
+INFO:root:	 *** single_step avg_loss = 0.6894271969795227 % *** 
+
+INFO:root:	 --> chunk_id = 270 -> batch_loss = 0.6894271969795227
+INFO:root:	 *** single_step avg_loss = 0.6953395009040833 % *** 
+
+INFO:root:	 --> chunk_id = 271 -> batch_loss = 0.6953395009040833
+INFO:root:	 *** single_step avg_loss = 0.685919463634491 % *** 
+
+INFO:root:	 --> chunk_id = 272 -> batch_loss = 0.685919463634491
+INFO:root:	 *** single_step avg_loss = 0.695329487323761 % *** 
+
+INFO:root:	 --> chunk_id = 273 -> batch_loss = 0.695329487323761
+INFO:root:	 *** single_step avg_loss = 0.691825807094574 % *** 
+
+INFO:root:	 --> chunk_id = 274 -> batch_loss = 0.691825807094574
+INFO:root:	 *** single_step avg_loss = 0.6879739165306091 % *** 
+
+INFO:root:	 --> chunk_id = 275 -> batch_loss = 0.6879739165306091
+INFO:root:	 *** single_step avg_loss = 0.7037647366523743 % *** 
+
+INFO:root:	 --> chunk_id = 276 -> batch_loss = 0.7037647366523743
+INFO:root:	 *** single_step avg_loss = 0.6902276277542114 % *** 
+
+INFO:root:	 --> chunk_id = 277 -> batch_loss = 0.6902276277542114
+INFO:root:	 *** single_step avg_loss = 0.6902967095375061 % *** 
+
+INFO:root:	 --> chunk_id = 278 -> batch_loss = 0.6902967095375061
+INFO:root:	 *** single_step avg_loss = 0.6976392865180969 % *** 
+
+INFO:root:	 --> chunk_id = 279 -> batch_loss = 0.6976392865180969
+INFO:root:	 *** single_step avg_loss = 0.705661952495575 % *** 
+
+INFO:root:	 --> chunk_id = 280 -> batch_loss = 0.705661952495575
+INFO:root:	 *** single_step avg_loss = 0.6853039264678955 % *** 
+
+INFO:root:	 --> chunk_id = 281 -> batch_loss = 0.6853039264678955
+INFO:root:	 *** single_step avg_loss = 0.6905999779701233 % *** 
+
+INFO:root:	 --> chunk_id = 282 -> batch_loss = 0.6905999779701233

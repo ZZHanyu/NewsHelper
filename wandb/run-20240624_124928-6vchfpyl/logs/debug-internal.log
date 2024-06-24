@@ -1,0 +1,202 @@
+2024-06-24 12:49:28,212 INFO    StreamThr :1475 [internal.py:wandb_internal():85] W&B internal server running at pid: 1475, started at: 2024-06-24 12:49:28.211698
+2024-06-24 12:49:28,214 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status
+2024-06-24 12:49:28,220 INFO    WriterThread:1475 [datastore.py:open_for_write():87] open: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/run-6vchfpyl.wandb
+2024-06-24 12:49:28,220 DEBUG   SenderThread:1475 [sender.py:send():379] send: header
+2024-06-24 12:49:28,245 DEBUG   SenderThread:1475 [sender.py:send():379] send: run
+2024-06-24 12:49:28,965 INFO    SenderThread:1475 [dir_watcher.py:__init__():211] watching files in: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files
+2024-06-24 12:49:28,966 INFO    SenderThread:1475 [sender.py:_start_run_threads():1188] run started: 6vchfpyl with start time 1719204568.212875
+2024-06-24 12:49:28,971 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: check_version
+2024-06-24 12:49:28,971 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: check_version
+2024-06-24 12:49:29,222 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: run_start
+2024-06-24 12:49:29,229 DEBUG   HandlerThread:1475 [system_info.py:__init__():26] System info init
+2024-06-24 12:49:29,229 DEBUG   HandlerThread:1475 [system_info.py:__init__():41] System info init done
+2024-06-24 12:49:29,230 INFO    HandlerThread:1475 [system_monitor.py:start():194] Starting system monitor
+2024-06-24 12:49:29,230 INFO    HandlerThread:1475 [system_monitor.py:probe():214] Collecting system info
+2024-06-24 12:49:29,230 INFO    SystemMonitor:1475 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-24 12:49:29,234 INFO    SystemMonitor:1475 [interfaces.py:start():188] Started cpu monitoring
+2024-06-24 12:49:29,235 INFO    SystemMonitor:1475 [interfaces.py:start():188] Started disk monitoring
+2024-06-24 12:49:29,236 INFO    SystemMonitor:1475 [interfaces.py:start():188] Started gpuapple monitoring
+2024-06-24 12:49:29,238 INFO    SystemMonitor:1475 [interfaces.py:start():188] Started memory monitoring
+2024-06-24 12:49:29,240 INFO    SystemMonitor:1475 [interfaces.py:start():188] Started network monitoring
+2024-06-24 12:49:29,578 DEBUG   HandlerThread:1475 [system_info.py:probe():152] Probing system
+2024-06-24 12:49:29,582 DEBUG   HandlerThread:1475 [system_info.py:_probe_git():137] Probing git
+2024-06-24 12:49:29,598 DEBUG   HandlerThread:1475 [system_info.py:_probe_git():145] Probing git done
+2024-06-24 12:49:29,598 DEBUG   HandlerThread:1475 [system_info.py:probe():200] Probing system done
+2024-06-24 12:49:29,598 DEBUG   HandlerThread:1475 [system_monitor.py:probe():223] {'os': 'macOS-14.5-arm64-arm-64bit', 'python': '3.11.9', 'heartbeatAt': '2024-06-24T04:49:29.578601', 'startedAt': '2024-06-24T04:49:28.202955', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/taotao/Documents/GitHub/FYP/main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/ZZHanyu/NewsHelper.git', 'commit': 'f16d1867b49a45b8860872a047af8dd0684c2890'}, 'email': '2538285586@qq.com', 'root': '/Users/taotao/Documents/GitHub/FYP', 'host': 'ZhyPro14.local', 'username': 'taotao', 'executable': '/opt/anaconda3/bin/python', 'cpu_count': 12, 'cpu_count_logical': 12, 'cpu_freq': {'current': 4056, 'min': 696, 'max': 4056}, 'cpu_freq_per_core': [{'current': 4056, 'min': 696, 'max': 4056}], 'disk': {'/': {'total': 926.3517189025879, 'used': 331.02227783203125}}, 'gpuapple': {'type': 'Apple M3 Pro', 'vendor': 'sppci_vendor_Apple'}, 'memory': {'total': 18.0}}
+2024-06-24 12:49:29,598 INFO    HandlerThread:1475 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-24 12:49:29,598 INFO    HandlerThread:1475 [system_monitor.py:probe():227] Publishing system info
+2024-06-24 12:49:29,598 DEBUG   HandlerThread:1475 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-06-24 12:49:29,973 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/conda-environment.yaml
+2024-06-24 12:49:33,405 DEBUG   HandlerThread:1475 [system_info.py:_save_conda():224] Saving conda packages done
+2024-06-24 12:49:33,405 INFO    HandlerThread:1475 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-24 12:49:33,418 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:49:33,418 DEBUG   SenderThread:1475 [sender.py:send():379] send: files
+2024-06-24 12:49:33,418 INFO    SenderThread:1475 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-24 12:49:33,812 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-24 12:49:33,813 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: python_packages
+2024-06-24 12:49:33,813 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:49:33,814 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:49:33,815 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:33,993 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/conda-environment.yaml
+2024-06-24 12:49:33,993 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/requirements.txt
+2024-06-24 12:49:33,993 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/wandb-metadata.json
+2024-06-24 12:49:34,153 DEBUG   SenderThread:1475 [sender.py:send():379] send: telemetry
+2024-06-24 12:49:34,153 DEBUG   SenderThread:1475 [sender.py:send():379] send: telemetry
+2024-06-24 12:49:34,153 DEBUG   SenderThread:1475 [sender.py:send():379] send: config
+2024-06-24 12:49:34,562 INFO    wandb-upload_0:1475 [upload_job.py:push():130] Uploaded file /var/folders/0k/yky3rpf909q6ybtw__sn071m0000gn/T/tmp3e22r6slwandb/lrjaj6vs-wandb-metadata.json
+2024-06-24 12:49:34,817 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:34,997 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/output.log
+2024-06-24 12:49:35,819 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:36,822 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:37,005 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/output.log
+2024-06-24 12:49:37,827 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:38,720 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:49:38,832 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:39,835 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:40,841 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:41,845 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:42,848 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:43,824 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:49:43,849 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:44,854 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:45,857 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:46,860 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:47,862 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:48,817 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:49:48,817 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:49:48,864 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:49,109 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:49:49,870 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:50,873 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:51,877 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:52,882 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:53,884 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:54,882 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:49:54,887 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:55,892 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:56,895 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:57,898 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:58,903 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:49:59,908 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:00,852 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:00,914 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:01,915 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:02,124 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/config.yaml
+2024-06-24 12:50:02,920 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:03,822 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:50:03,823 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:50:03,924 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:04,928 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:05,933 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:06,298 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:06,937 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:07,941 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:08,946 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:09,950 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:10,951 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:11,862 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:11,958 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:12,959 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:13,966 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:14,971 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:15,192 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/output.log
+2024-06-24 12:50:15,973 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:16,954 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:16,973 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:17,979 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:18,831 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:50:18,832 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:50:18,984 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:19,987 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:20,988 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:21,991 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:22,211 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:22,996 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:23,998 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:25,003 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:26,006 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:27,010 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:27,870 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:28,014 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:29,016 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:29,240 DEBUG   SystemMonitor:1475 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-24 12:50:29,241 DEBUG   SenderThread:1475 [sender.py:send():379] send: telemetry
+2024-06-24 12:50:29,242 DEBUG   SenderThread:1475 [sender.py:send():379] send: stats
+2024-06-24 12:50:30,019 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:31,023 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:32,026 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:33,032 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:33,269 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:33,831 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:50:33,831 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:50:34,036 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:34,284 INFO    Thread-17 :1475 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/taotao/Documents/GitHub/FYP/wandb/run-20240624_124928-6vchfpyl/files/config.yaml
+2024-06-24 12:50:35,041 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:36,044 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:37,048 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:38,053 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:38,872 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:39,059 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:40,063 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:41,065 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:42,068 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:43,069 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:43,882 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:44,069 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:45,069 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:46,075 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:47,079 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:48,082 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:48,832 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:50:48,832 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:50:49,087 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:49,142 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:50,091 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:51,096 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:52,096 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:53,101 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:54,105 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:54,887 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:50:55,110 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:56,116 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:57,120 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:58,123 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:59,124 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:50:59,253 DEBUG   SenderThread:1475 [sender.py:send():379] send: stats
+2024-06-24 12:51:00,128 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:00,256 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:51:01,135 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:02,134 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:03,136 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:03,835 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:51:03,836 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:51:04,142 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:05,146 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:06,147 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:06,173 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:51:07,153 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:08,158 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:09,162 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:10,165 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:11,169 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:11,899 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:51:12,173 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:13,179 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:14,179 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:15,181 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:16,187 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:16,909 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:51:17,190 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:18,194 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:18,836 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-24 12:51:18,836 DEBUG   SenderThread:1475 [sender.py:send_request():406] send_request: stop_status
+2024-06-24 12:51:19,199 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:20,204 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:21,205 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:22,206 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:22,259 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: status_report
+2024-06-24 12:51:23,212 DEBUG   HandlerThread:1475 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-24 12:51:23,495 INFO    cpu       :1475 [interfaces.py:monitor():138] Process cpu has exited.
+2024-06-24 12:51:23,496 DEBUG   SystemMonitor:1475 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-24 12:51:23,496 DEBUG   SystemMonitor:1475 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-24 12:51:23,497 DEBUG   SenderThread:1475 [sender.py:send():379] send: stats

@@ -1,0 +1,127 @@
+inside single epoch: 20it [00:00, 24.50it/s]
+Handling single row in a chunk: 0it [00:00, ?it/s]
+Start iterator building...
+Iterator building Sucessfully!.
+Embedding model missing, NOW Loading...
+
+inside single epoch: 20it [00:20, 24.50it/s]                                                                                                               /Users/taotao/Documents/GitHub/FYP/utils/network.py:279: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /Users/runner/miniforge3/conda-bld/libtorch_1718580163515/work/torch/csrc/utils/tensor_new.cpp:277.)
+  feature = torch.tensor(batch[data_idx][0], dtype=torch.float32, device=main._device)                                              | 0/18 [00:00<?, ?it/s]
+
+
+Single Step Train:  15%|███████████████                                                                                     | 3/20 [00:00<00:04,  3.94it/s]
+
+
+
+Single Step Train:  11%|██████████▌                                                                                         | 2/19 [00:00<00:06,  2.64it/s]
+
+
+
+Single Step Train:   5%|█████                                                                                               | 1/20 [00:00<00:04,  4.32it/s]
+
+
+
+Single Step Train:  10%|██████████                                                                                          | 2/20 [00:00<00:07,  2.26it/s]
+
+
+
+Single Step Train:  11%|██████████▌                                                                                         | 2/19 [00:00<00:05,  3.18it/s]
+
+
+
+Single Step Train:  10%|██████████                                                                                          | 2/20 [00:00<00:08,  2.14it/s]
+
+
+
+Single Step Train:  15%|███████████████                                                                                     | 3/20 [00:00<00:04,  3.62it/s]
+
+
+
+
+Single Step Train:  26%|██████████████████████████▎                                                                         | 5/19 [00:01<00:04,  3.24it/s]
+
+
+Single Step Train:   0%|                                                                                                            | 0/19 [00:00<?, ?it/s]
+
+
+
+
+Single Step Train:  20%|████████████████████                                                                                | 4/20 [00:01<00:03,  4.20it/s]
+
+
+
+Single Step Train:  25%|█████████████████████████                                                                           | 5/20 [00:01<00:05,  2.77it/s]
+
+
+
+Single Step Train:  35%|███████████████████████████████████                                                                 | 7/20 [00:01<00:03,  4.01it/s]
+
+
+
+Single Step Train:  32%|███████████████████████████████▌                                                                    | 6/19 [00:01<00:03,  3.40it/s]
+
+
+Single Step Train:   0%|                                                                                                            | 0/20 [00:00<?, ?it/s]
+
+
+
+Single Step Train:  90%|█████████████████████████████████████████████████████████████████████████████████████████          | 18/20 [00:05<00:00,  3.53it/s]
+
+
+
+Handling single row in a chunk: 7it [00:00, 50.26it/s]
+
+
+
+
+Single Step Train:  58%|█████████████████████████████████████████████████████████▎                                         | 11/19 [00:07<00:04,  1.68it/s]
+inside single epoch: 360it [02:32,  2.77it/s]
+
+
+Single Step Train:  11%|██████████▌                                                                                         | 2/19 [00:00<00:03,  5.51it/s]
+
+
+Single Step Train:  89%|████████████████████████████████████████████████████████████████████████████████████████▌          | 17/19 [00:04<00:00,  3.93it/s]
+
+
+
+Single Step Train:  90%|█████████████████████████████████████████████████████████████████████████████████████████          | 18/20 [00:05<00:00,  3.68it/s]
+
+
+
+Single Step Train:  10%|██████████                                                                                          | 2/20 [00:00<00:04,  4.08it/s]
+
+
+
+
+Single Step Train:  30%|██████████████████████████████                                                                      | 6/20 [00:01<00:03,  3.61it/s]
+
+
+Single Step Train:   5%|█████                                                                                               | 1/20 [00:00<00:04,  4.39it/s]
+
+
+
+Single Step Train:  25%|█████████████████████████                                                                           | 5/20 [00:01<00:04,  3.52it/s]
+
+
+
+Single Step Train:  28%|███████████████████████████▊                                                                        | 5/18 [00:01<00:02,  4.74it/s]
+
+
+Single Step Train:   0%|                                                                                                            | 0/20 [00:00<?, ?it/s]
+
+
+
+Single Step Train:  16%|███████████████▊                                                                                    | 3/19 [00:00<00:03,  4.32it/s]
+
+
+Single Step Train:  95%|█████████████████████████████████████████████████████████████████████████████████████████████▊     | 18/19 [00:04<00:00,  3.70it/s]
+
+
+
+Single Step Train:   5%|█████                                                                                               | 1/20 [00:00<00:05,  3.36it/s]
+
+
+
+Single Step Train:   5%|█████                                                                                               | 1/20 [00:00<00:07,  2.57it/s]
+
+

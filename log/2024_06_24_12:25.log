@@ -1,0 +1,17 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:root:
+ ** Total time cost = 10.437554121017456 s! 
+
+INFO:root:
+----------------------- End loging -----------------------
+

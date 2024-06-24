@@ -1,0 +1,35 @@
+INFO:root:
+Started Logging...
+
+INFO:root:
+ *** Devices selected = mps ! 
+
+INFO:root:
+ ** DataFile have 362556 rows of csv data! 
+
+INFO:root:
+ ** DataFile have 18127 chunks! 
+
+INFO:root:initize model parameter done!
+
+INFO:root:
+ --> Model weight initalization succefuly!
+
+INFO:gensim.utils:loading LdaModel object from /Users/taotao/Documents/GitHub/FYP/LDA_Model/lda_model2024_06_18
+INFO:gensim.utils:loading expElogbeta from /Users/taotao/Documents/GitHub/FYP/LDA_Model/lda_model2024_06_18.expElogbeta.npy with mmap=None
+INFO:gensim.utils:setting ignored attribute state to None
+INFO:gensim.utils:setting ignored attribute dispatcher to None
+INFO:gensim.utils:setting ignored attribute id2word to None
+INFO:gensim.utils:LdaModel lifecycle event {'fname': '/Users/taotao/Documents/GitHub/FYP/LDA_Model/lda_model2024_06_18', 'datetime': '2024-06-22T15:02:17.870596', 'gensim': '4.3.2', 'python': '3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:34:54) [Clang 16.0.6 ]', 'platform': 'macOS-14.5-arm64-arm-64bit', 'event': 'loaded'}
+INFO:gensim.utils:loading LdaState object from /Users/taotao/Documents/GitHub/FYP/LDA_Model/lda_model2024_06_18.state
+INFO:gensim.utils:LdaState lifecycle event {'fname': '/Users/taotao/Documents/GitHub/FYP/LDA_Model/lda_model2024_06_18.state', 'datetime': '2024-06-22T15:02:17.872120', 'gensim': '4.3.2', 'python': '3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:34:54) [Clang 16.0.6 ]', 'platform': 'macOS-14.5-arm64-arm-64bit', 'event': 'loaded'}
+INFO:root:* Loading pretrained embedding model: {'num_records': 999999, 'file_size': 1005007116, 'base_dataset': 'Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens)', 'reader_code': 'https://github.com/RaRe-Technologies/gensim-data/releases/download/fasttext-wiki-news-subwords-300/__init__.py', 'license': 'https://creativecommons.org/licenses/by-sa/3.0/', 'parameters': {'dimension': 300}, 'description': '1 million word vectors trained on Wikipedia 2017, UMBC webbase corpus and statmt.org news dataset (16B tokens).', 'read_more': ['https://fasttext.cc/docs/en/english-vectors.html', 'https://arxiv.org/abs/1712.09405', 'https://arxiv.org/abs/1607.01759'], 'checksum': 'de2bb3a20c46ce65c9c131e1ad9a77af', 'file_name': 'fasttext-wiki-news-subwords-300.gz', 'parts': 1}
+
+INFO:gensim.models.keyedvectors:loading projection weights from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz
+INFO:gensim.utils:KeyedVectors lifecycle event {'msg': 'loaded (999999, 300) matrix of type float32 from /Users/taotao/gensim-data/fasttext-wiki-news-subwords-300/fasttext-wiki-news-subwords-300.gz', 'binary': False, 'encoding': 'utf8', 'datetime': '2024-06-22T15:03:47.925927', 'gensim': '4.3.2', 'python': '3.11.9 | packaged by conda-forge | (main, Apr 19 2024, 18:34:54) [Clang 16.0.6 ]', 'platform': 'macOS-14.5-arm64-arm-64bit', 'event': 'load_word2vec_format'}
+INFO:root:
+ ** Total time cost = 334.04672288894653 s! 
+
+INFO:root:
+----------------------- End loging -----------------------
+

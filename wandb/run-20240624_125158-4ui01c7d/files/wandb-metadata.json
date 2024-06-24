@@ -1,0 +1,49 @@
+{
+    "os": "macOS-14.5-arm64-arm-64bit",
+    "python": "3.11.9",
+    "heartbeatAt": "2024-06-24T04:52:00.500479",
+    "startedAt": "2024-06-24T04:51:58.634790",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/taotao/Documents/GitHub/FYP/main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/ZZHanyu/NewsHelper.git",
+        "commit": "f16d1867b49a45b8860872a047af8dd0684c2890"
+    },
+    "email": "2538285586@qq.com",
+    "root": "/Users/taotao/Documents/GitHub/FYP",
+    "host": "ZhyPro14.local",
+    "username": "taotao",
+    "executable": "/opt/anaconda3/bin/python",
+    "cpu_count": 12,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 4056,
+        "min": 696,
+        "max": 4056
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4056,
+            "min": 696,
+            "max": 4056
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 926.3517189025879,
+            "used": 333.03164291381836
+        }
+    },
+    "gpuapple": {
+        "type": "Apple M3 Pro",
+        "vendor": "sppci_vendor_Apple"
+    },
+    "memory": {
+        "total": 18.0
+    }
+}

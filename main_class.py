@@ -89,9 +89,11 @@ class main(ABC):
                             default="/Users/taotao/Documents/GitHub/FYP/pretrain_embedding/", 
                             help="path store pretrianed embeddings model")
         parser.add_argument("--pretrained_embedding_model_name", 
-                            type=str, 
-                            default="fasttext-wiki-news-subwords-300", 
+                            type=str,       
+                            #default="fasttext-wiki-news-subwords-300", 
+                            default="word2vec-google-news-300",
                             help="pretrained embedding model name from gensim")
+        
         parser.add_argument("--model_save_path", 
                             type=str, 
                             default="./trained_model/", 

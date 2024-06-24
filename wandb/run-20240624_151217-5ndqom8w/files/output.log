@@ -1,0 +1,6 @@
+inside single epoch: 20it [00:00, 22.66it/s]
+Handling single row in a chunk: 0it [00:00, ?it/s]
+Start iterator building...
+Iterator building Sucessfully!.
+
+inside single epoch: 20it [00:20, 22.66it/s]                                                                                                               /Users/taotao/Documents/GitHub/FYP/utils/network.py:279: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /Users/runner/miniforge3/conda-bld/libtorch_1718580163515/work/torch/csrc/utils/tensor_new.cpp:277.)

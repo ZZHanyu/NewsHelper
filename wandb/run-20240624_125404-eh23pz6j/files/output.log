@@ -1,0 +1,7 @@
+inside single epoch: 100it [00:00, 122.12it/s]
+Handling single row in a chunk: 0it [00:00, ?it/s]
+Start iterator building...
+Iterator building Sucessfully!.
+
+Handling single row in a chunk: 53it [00:39,  2.32it/s]
+

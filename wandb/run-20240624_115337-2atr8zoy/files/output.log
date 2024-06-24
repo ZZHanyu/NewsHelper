@@ -1,0 +1,8 @@
+/opt/anaconda3/lib/python3.11/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+inside single epoch: 20it [00:00, 24.74it/s]      [nltk_data] Downloading package stopwords to
+[nltk_data]     /Users/taotao/nltk_data..., ?it/s]
+[nltk_data]   Package stopwords is already up-to-date!
+Start iterator building...
+Iterator building Sucessfully!.
+Backend MacOSX is interactive backend. Turning interactive mode on.

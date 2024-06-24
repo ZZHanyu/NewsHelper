@@ -32,9 +32,9 @@ def get_response(prompt):
   )
 
   # print(completion)
-  print(completion.choices[0].message.content)
+  # print(completion.choices[0].message.content)
 
-  return completion
+  return completion.choices[0].message.content
 
 
 
@@ -90,6 +90,7 @@ def get_prompt(news):
     instruction = '''Task: Classify what the labels of the news described in <News Context> below. 
       Requirement 1. No explaination or think of chain rquired. Just give the words that describe the class (e.g., Politics,Sports, Entertainment);
       Requirement 2. The word or words needs to summarize the theme well;
+      Requirement 3. Please divide the subtopic as much as possible(Don't generalize.)
       '''
     news_example = '''Now, most of the demonstrators gathered last night were exercising their constitutional and protected right to peaceful protest in order to raise issues and create change.  Loretta Lynch aka Eric Holder in a skir.'''
 

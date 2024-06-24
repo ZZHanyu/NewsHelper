@@ -21,9 +21,18 @@ import opendatasets as od
 import pandas as pd
 from abc import ABC, abstractmethod
 
+# for the one hot encoding
+import nltk
+from nltk.stem import PorterStemmer,WordNetLemmatizer
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+# from tensorflow.keras.preprocessing.text import one_hot
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from nltk.tokenize import wordpunct_tokenize
+
 
 # utils
-
 # from other package
 from main_class import main
 
@@ -150,6 +159,34 @@ class data_handler(main):
                 sentences[idx] = np.zeros(shape=(cls._embedding_dim), dtype=np.float32)
 
         return sentences
+    
+
+    # @classmethod
+    # def _one_hot_embeddings(cls, sentences):
+    #     lm = WordNetLemmatizer()
+    #     # Vocab_size = Unique words in our Corpus (entire document)
+    #     vocab_size = 10000
+
+    #     nltk.download('stopwords')
+    #     #stopwords = stopwords.words('english')
+    #     corpus = []
+    #     for i in range(len(sentences)):
+    #         review = re.sub('^a-zA-Z0-9',' ',sentences)
+    #         review = review.lower()
+    #         review = review.split()
+    #         review =[lm.lemmatize(x) for x in review if x not in stopwords]
+    #         review = " ".join(review)
+    #         corpus.append(review)
+
+    #     max_length = max(len(sentence.split()) for sentence in corpus)
+    #     print("Maximum sentence length:", max_length)
+
+
+    #     onehot_repr=[one_hot(words,vocab_size) for words in corpus]
+    #     print(onehot_repr[:5])
+
+
+
 
 
     @classmethod
@@ -163,6 +200,7 @@ class data_handler(main):
 
         # STEP 3: embedding string into vector represeation
         processed_text = cls._words_embeddings(raw_text)
+        #processed_text = cls._one_hot_embeddings(raw_text)
         return processed_text
     
 
@@ -202,6 +240,7 @@ class data_handler_iterator(data_handler):
     def __init__(self) -> None:
         print("\nStart iterator building...\n")
         super().__init__()
+        self.chunk_idx = 0
         print("\nIterator building Sucessfully!.\n")
 
 
@@ -219,16 +258,18 @@ class data_handler_iterator(data_handler):
         # if not isinstance(chunk, pd.DataFrame):
         #     raise StopIteration
         
-        for chunk_idx, chunk in enumerate(super()._chunks):        
+        for chunk in super()._chunks:        
             chunk_tokenized = [] # initiaize and re-initiaze
             # STEP 1: Remove empty line
             chunk = super()._remove_empty_line(single_chunk=chunk)
+            self.chunk_idx += 1
             for row in tqdm(chunk.itertuples(), desc="Handling single row in a chunk", leave=False):
+                # one hot embedding model:
+                # chunk_tokenized.append((super()._one_hot_embeddings(sentences=row[2] + row[3]), row[4]))
+
+                # pre-trained embedding model:
                 chunk_tokenized.append((super()._string_handler(raw_text=row[2] + row[3]), row[4]))
-                # print(f"row is = {row}, dtype = {type(row)} row[1] = {row[0]}, type = {type(row[0])}")
-                # chunk_tokenized.append((self._string_handler(raw_text=(row['title'] + row['text'])), row['label']))
-                # [ [01231232] , [21131313],  [2134123232] , .....]
-            return chunk_idx, chunk_tokenized
+            return self.chunk_idx, chunk_tokenized
             
 
     def reset(self):
