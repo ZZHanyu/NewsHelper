@@ -2,6 +2,7 @@ from tqdm import tqdm
 import re
 import pandas as pd
 import matplotlib.pyplot as plt
+import spacy
 
 def _remove_empty_line(single_chunk):
     for index, row in single_chunk.iterrows():
@@ -18,14 +19,21 @@ def simple_str_handler(single_string):
     '''
         return a word of bag
     '''
+    # stopword loader
+    stpw_filter = spacy.load("en_core_web_sm")
+
     single_string = single_string.lower()
     
     # 把标点符号用用空格替换  
     single_string = re.sub(r'[\!"#$%&\*+,-./:;<=>?@^_`()|~=]','',single_string).strip()
 
-    single_string = single_string.split()
+    single_string = stpw_filter(single_string)
+    filtered_words = [token.text for token in single_string if not token.is_stop]
+    filtered_words = [single_value for single_value in filtered_words if single_value!=' ' and single_value != None]
 
-    return single_string
+    # single_string = single_string.split()
+
+    return filtered_words
 
 
 def csv_reader(freq_dict):
@@ -67,9 +75,9 @@ def label_balance_checker():
             else:
                 for row in single_chunk.iterrows():
                     if row[1]['label'] == 1:
-                        truth += 1
-                    else:
                         fake += 1
+                    else:
+                        truth += 1
         
         
     except StopIteration:

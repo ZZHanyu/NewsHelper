@@ -67,7 +67,7 @@ def get_prompt_test():
             ''',
         },
 
-        {"role": "assistant", "content": "Answer: The classification result =  '1. Politics, 2. Laws'."},
+        {"role": "assistant", "content": "Answer: The classification result =  '1. Public opinion and voter behavior, 2. Laws and regulations'."},
 
         {"role": "user", "content": f"- Instruction: {instruction} \n-News Context {news2}\n" },
     ]
@@ -88,9 +88,11 @@ def get_prompt_test():
 
 def get_prompt(news):
     instruction = '''Task: Classify what the labels of the news described in <News Context> below. 
-      Requirement 1. No explaination or think of chain rquired. Just give the words that describe the class (e.g., Politics,Sports, Entertainment);
+      Requirement 1. No explaination or think of chain rquired. Just give the words that describe the class;
       Requirement 2. The word or words needs to summarize the theme well;
-      Requirement 3. Please divide the subtopic as much as possible(Don't generalize.)
+      Requirement 3. Please divide the subtopic as much as possible(Don't generalize. for example: )
+      Below is your refer classfifcation:
+        Policies and Regulations, Conflict, legislate, diplomacy, political parties, etc.
       '''
     news_example = '''Now, most of the demonstrators gathered last night were exercising their constitutional and protected right to peaceful protest in order to raise issues and create change.  Loretta Lynch aka Eric Holder in a skir.'''
 
@@ -101,7 +103,7 @@ def get_prompt(news):
             ''',
         },
 
-        {"role": "assistant", "content": "Answer: The classification result =  '1. Laws, 2. dissent'."},
+        {"role": "assistant", "content": "Answer: The classification result =  '1. Public opinion and voter behavior, 2. Laws and regulations''."},
 
         {"role": "user", "content": f"- Instruction: {instruction} \n-News Context {news}\n" },
     ]

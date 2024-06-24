@@ -129,7 +129,7 @@ def get_topic():
     result = []
     with open('./tp_result.json', 'r') as f:
         tp_result = json.load(f)
-        for topic_idx in range(1, 5):
+        for topic_idx in range(2, 5):
             text = tp_result[str(topic_idx)][0]
             prompt = openai_api.get_prompt(text)
             result.append(openai_api.get_response(prompt))

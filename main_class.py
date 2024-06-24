@@ -90,8 +90,8 @@ class main(ABC):
                             help="path store pretrianed embeddings model")
         parser.add_argument("--pretrained_embedding_model_name", 
                             type=str,       
-                            #default="fasttext-wiki-news-subwords-300", 
-                            default="word2vec-google-news-300",
+                            default="fasttext-wiki-news-subwords-300", 
+                            #default="word2vec-google-news-300",
                             help="pretrained embedding model name from gensim")
         
         parser.add_argument("--model_save_path", 

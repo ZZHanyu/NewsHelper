@@ -802,38 +802,31 @@ class LstmNet(nn.Module, model.module):
             case _:
                 raise ModuleNotFoundError
             
-        self.residual_connection = nn.Linear(300, hidden_size*2)
+        #self.residual_connection = nn.Linear(300, hidden_size*2)
         
-        # construct linear layer (MLP)
-        self.linears = nn.Sequential(
-            nn.Linear(hidden_size*2, hidden_size), # [lstm hidden dim, num class] # linear 1
-            activation,
-            nn.Dropout(dropout_linear),
-            nn.Linear(int(hidden_size), int(hidden_size / 2)), # linear 2
-            activation,
-            nn.Dropout(dropout_linear),
-            nn.Linear(int(hidden_size/2), int(hidden_size/4)), # linear 3
-            activation,
-            nn.Dropout(dropout_linear),
-            nn.Linear(int(hidden_size/4),  1), # [hidden dim, num class] # linear 4
-            # nn.Sigmoid()
-        )
-
-
+        # # construct linear layer (MLP)
         # self.linears = nn.Sequential(
-        #     nn.LSTM(
-        #         input_size=300,
-        #         hidden_size=hidden_size, 
-        #         num_layers=num_layers,
-        #         bidirectional=True,
-        #         dropout=dropout
-        #         ),
-        #     nn.Linear(hidden_size*2, hidden_size_linear), # [lstm hidden dim, num class]
+        #     nn.Linear(hidden_size*2, hidden_size), # [lstm hidden dim, num class] # linear 1
         #     activation,
         #     nn.Dropout(dropout_linear),
-        #     nn.Linear(hidden_size_linear, 1), # [hidden dim, num class]
-        #     nn.Sigmoid()
+        #     nn.Linear(int(hidden_size), int(hidden_size / 2)), # linear 2
+        #     activation,
+        #     nn.Dropout(dropout_linear),
+        #     nn.Linear(int(hidden_size/2), int(hidden_size/4)), # linear 3
+        #     activation,
+        #     nn.Dropout(dropout_linear),
+        #     nn.Linear(int(hidden_size/4),  1), # [hidden dim, num class] # linear 4
+        #     # nn.Sigmoid()
         # )
+
+
+        self.linears = nn.Sequential(
+            nn.Linear(hidden_size*2, hidden_size_linear), # [lstm hidden dim, num class]
+            activation,
+            nn.Dropout(dropout_linear),
+            nn.Linear(hidden_size_linear, 1), # [hidden dim, num class]
+            nn.Sigmoid()
+        )
 
 
         # init weight
@@ -861,9 +854,9 @@ class LstmNet(nn.Module, model.module):
         for name, param in self.lstm.named_parameters():
             if param.dim() > 2:
                 if 'weight' in name:
-                        torch.nn.init.xavier_uniform_(param)
+                    torch.nn.init.xavier_uniform_(param)
                 elif 'bias' in name:
-                        torch.nn.init.xavier_uniform_(param, 0.0)
+                    torch.nn.init.xavier_uniform_(param, 0.0)
                 print("init lstm succefully!")
 
         for name, param in self.linears.named_parameters():
@@ -874,8 +867,6 @@ class LstmNet(nn.Module, model.module):
                     torch.nn.init.xavier_uniform_(param, 0.0)
                 print("init lstm succefully!")
 
-            
-        
         logging.info("initize model parameter done!\n")
 
 
@@ -899,7 +890,7 @@ class LstmNet(nn.Module, model.module):
     
     def forward(self, tensor_data:torch.tensor):        
 
-        x = tensor_data
+        #x = tensor_data
         h0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
         c0 = torch.randn(2*self.num_layers, self.hidden_size, device=main._device, dtype=torch.float32)
         
@@ -913,8 +904,8 @@ class LstmNet(nn.Module, model.module):
         
         h, _ = self.lstm(tensor_data, (h0, c0))
 
-        residual = self.residual_connection(x)
-        h = h + residual # residual connection
+        #residual = self.residual_connection(x)
+        #h = h + residual # residual connection
 
         pred = self.linears(h[-1, :])
         return pred
